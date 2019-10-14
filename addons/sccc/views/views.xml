@@ -1,5 +1,5 @@
 <odoo>
-  <record model="ir.actions.act_window" id="room_list_actions">
+  <record model="ir.actions.act_window" id="room_list_action">
     <field name="name">Rooms</field>
     <field name="res_model">sccc.room</field>
     <field name="view_type">form</field>
