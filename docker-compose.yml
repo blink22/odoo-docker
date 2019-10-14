@@ -1,6 +1,7 @@
 version: '2'
 services:
-  web:
+  odoo:
+    container_name: odoo
     image: odoo:12.0
     restart: always
     tty: true
@@ -10,10 +11,11 @@ services:
     ports:
       - "8069:8069"
     volumes:
-      - odoo-web-data:/var/lib/odoo
+      - odoo-data:/var/lib/odoo
       - ./config:/etc/odoo
       - ./addons:/mnt/extra-addons
   db:
+    container_name: db
     image: postgres:10
     environment:
       - POSTGRES_DB=postgres
@@ -21,7 +23,7 @@ services:
       - POSTGRES_USER=odoo
       - PGDATA=/var/lib/postgresql/data/pgdata
     volumes:
-      - odoo-db-data:/var/lib/postgresql/data/pgdata
+      - db-data:/var/lib/postgresql/data/pgdata
 volumes:
-  odoo-web-data:
-  odoo-db-data:
+  odoo-data:
+  db-data:
