@@ -1,15 +1,17 @@
 <odoo>
-  <record model="ir.actions.act_window" id="room_list_action">
-    <field name="name">Rooms</field>
-    <field name="res_model">sccc.room</field>
-    <field name="view_type">form</field>
-    <field name="view_mode">tree,form</field>
-    <field name="help" type="html">
-        <p class="o_view_nocontent_smiling_face">Create the first room
-        </p>
-    </field>
-  </record>
-  <menuitem id="rooms_menu" name="Rooms" action="room_list_action"/>
+  <data>
+    <record model="ir.actions.act_window" id="room_list_action">
+      <field name="name">Rooms</field>
+      <field name="res_model">sccc.room</field>
+      <field name="view_type">form</field>
+      <field name="view_mode">tree,form</field>
+      <field name="help" type="html">
+          <p class="o_view_nocontent_smiling_face">Create the first room
+          </p>
+      </field>
+    </record>
+    <menuitem id="main_rooms_menu" name="Rooms" action="room_list_action"/>
+  </data>
     <!-- explicit list view definition -->
     <!--
     <record model="ir.ui.view" id="sccc.list">

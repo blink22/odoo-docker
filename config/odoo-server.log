@@ -1745,3 +1745,827 @@ None" while parsing /mnt/extra-addons/sccc/views/views.xml:3, near
 2019-10-13 22:18:26,064 1 INFO ? werkzeug: 172.21.0.1 - - [13/Oct/2019 22:18:26] "GET /web/static/src/img/form_sheetbg.png HTTP/1.1" 200 - - - -
 2019-10-13 22:18:44,315 1 INFO ? odoo.service.server: Initiating shutdown 
 2019-10-13 22:18:44,315 1 INFO ? odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+2019-10-14 10:52:05,420 1 INFO ? odoo: Odoo version 12.0-20190816 
+2019-10-14 10:52:05,421 1 INFO ? odoo: Using configuration file at /etc/odoo/odoo.conf 
+2019-10-14 10:52:05,421 1 INFO ? odoo: addons paths: ['/var/lib/odoo/addons/12.0', '/mnt/extra-addons', '/usr/lib/python3/dist-packages/odoo/addons'] 
+2019-10-14 10:52:05,421 1 INFO ? odoo: database: odoo@db:5432 
+2019-10-14 10:52:05,512 1 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltopdf binary at /usr/local/bin/wkhtmltopdf 
+2019-10-14 10:52:05,611 1 INFO ? odoo.service.server: Watching addons folder /var/lib/odoo/addons/12.0 
+2019-10-14 10:52:05,612 1 INFO ? odoo.service.server: Watching addons folder /mnt/extra-addons 
+2019-10-14 10:52:05,612 1 INFO ? odoo.service.server: Watching addons folder /usr/lib/python3/dist-packages/odoo/addons 
+2019-10-14 10:52:05,764 1 INFO ? odoo.service.server: AutoReload watcher running with watchdog 
+2019-10-14 10:52:05,773 1 INFO ? odoo.service.server: HTTP service (werkzeug) running on e9a4dcac5678:8069 
+2019-10-14 10:52:12,699 1 INFO ? odoo.http: HTTP Configuring static files 
+2019-10-14 10:52:12,715 1 INFO odoo odoo.modules.loading: loading 1 modules... 
+2019-10-14 10:52:12,729 1 INFO odoo odoo.modules.loading: 1 modules loaded in 0.01s, 0 queries 
+2019-10-14 10:52:12,734 1 INFO odoo odoo.modules.loading: loading 10 modules... 
+2019-10-14 10:52:12,736 1 WARNING odoo odoo.models: The model sccc.location has no _description 
+2019-10-14 10:52:12,736 1 WARNING odoo odoo.models: The model sccc.room has no _description 
+2019-10-14 10:52:12,742 1 WARNING odoo odoo.models: The model sccc.location has no _description 
+2019-10-14 10:52:12,742 1 WARNING odoo odoo.models: The model sccc.room has no _description 
+2019-10-14 10:52:12,752 1 WARNING odoo odoo.models: The model sccc.location has no _description 
+2019-10-14 10:52:12,752 1 WARNING odoo odoo.models: The model sccc.room has no _description 
+2019-10-14 10:52:12,771 1 INFO odoo odoo.modules.loading: 10 modules loaded in 0.04s, 0 queries 
+2019-10-14 10:52:12,915 1 INFO odoo odoo.modules.loading: Modules loaded. 
+2019-10-14 10:52:12,918 1 INFO odoo odoo.addons.base.models.ir_http: Generating routing map 
+2019-10-14 10:52:12,961 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:12] "POST /web/dataset/search_read HTTP/1.1" 200 - 17 0.017 0.243
+2019-10-14 10:52:15,232 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:15] "POST /web/dataset/search_read HTTP/1.1" 200 - 3 0.006 0.003
+2019-10-14 10:52:17,655 1 INFO odoo odoo.addons.base.models.ir_module: ALLOW access to module.button_immediate_upgrade on ['sccc'] to user odoo #2 via 172.18.0.1 
+2019-10-14 10:52:17,656 1 INFO odoo odoo.addons.base.models.ir_module: ALLOW access to module.button_upgrade on ['sccc'] to user odoo #2 via 172.18.0.1 
+2019-10-14 10:52:17,656 1 INFO odoo odoo.addons.base.models.ir_module: ALLOW access to module.update_list on ['sccc'] to user odoo #2 via 172.18.0.1 
+2019-10-14 10:52:18,333 1 INFO odoo odoo.addons.base.models.ir_module: ALLOW access to module.button_install on [] to user odoo #2 via 172.18.0.1 
+2019-10-14 10:52:18,351 1 INFO odoo odoo.modules.loading: loading 1 modules... 
+2019-10-14 10:52:18,365 1 INFO odoo odoo.modules.loading: 1 modules loaded in 0.01s, 0 queries 
+2019-10-14 10:52:18,486 1 INFO odoo odoo.modules.loading: updating modules list 
+2019-10-14 10:52:18,487 1 INFO odoo odoo.addons.base.models.ir_module: ALLOW access to module.update_list on [] to user __system__ #1 via 172.18.0.1 
+2019-10-14 10:52:19,020 1 INFO odoo odoo.modules.loading: loading 10 modules... 
+2019-10-14 10:52:19,050 1 WARNING odoo odoo.models: The model sccc.location has no _description 
+2019-10-14 10:52:19,051 1 WARNING odoo odoo.models: The model sccc.room has no _description 
+2019-10-14 10:52:19,082 1 INFO odoo odoo.modules.registry: module sccc: creating or updating database tables 
+2019-10-14 10:52:19,169 1 INFO odoo odoo.modules.loading: loading sccc/views/views.xml 
+2019-10-14 10:52:19,193 1 INFO odoo odoo.modules.loading: loading sccc/views/templates.xml 
+2019-10-14 10:52:19,223 1 WARNING odoo odoo.models: The model sccc.location has no _description 
+2019-10-14 10:52:19,223 1 WARNING odoo odoo.models: The model sccc.room has no _description 
+2019-10-14 10:52:19,230 1 WARNING odoo odoo.models: The model sccc.location has no _description 
+2019-10-14 10:52:19,230 1 WARNING odoo odoo.models: The model sccc.room has no _description 
+2019-10-14 10:52:19,237 1 INFO odoo odoo.modules.loading: 10 modules loaded in 0.22s, 0 queries 
+2019-10-14 10:52:19,275 1 WARNING odoo odoo.modules.loading: The model sccc.location has no access rules, consider adding one. E.g. access_sccc_location,access_sccc_location,model_sccc_location,base.group_user,1,0,0,0 
+2019-10-14 10:52:19,276 1 WARNING odoo odoo.modules.loading: The model sccc.room has no access rules, consider adding one. E.g. access_sccc_room,access_sccc_room,model_sccc_room,base.group_user,1,0,0,0 
+2019-10-14 10:52:19,341 1 INFO odoo odoo.addons.base.models.ir_model: Deleting 66@ir.ui.menu (sccc.rooms_menu) 
+2019-10-14 10:52:19,352 1 INFO odoo odoo.models.unlink: User #1 deleted ir.model.data records with IDs: [3906] 
+2019-10-14 10:52:19,356 1 INFO odoo odoo.models.unlink: User #1 deleted ir.ui.menu records with IDs: [66] 
+2019-10-14 10:52:19,357 1 INFO odoo odoo.addons.base.models.ir_model: Deleting 80@ir.actions.act_window (sccc.room_list_action) 
+2019-10-14 10:52:19,367 1 INFO odoo odoo.models.unlink: User #1 deleted ir.model.data records with IDs: [3905] 
+2019-10-14 10:52:19,371 1 INFO odoo odoo.models.unlink: User #1 deleted ir.actions.act_window records with IDs: [80] 
+2019-10-14 10:52:19,372 1 INFO odoo odoo.modules.registry: verifying fields for every extended model 
+2019-10-14 10:52:19,474 1 INFO odoo odoo.modules.loading: Modules loaded. 
+2019-10-14 10:52:19,479 1 INFO odoo odoo.addons.base.models.ir_module: getting next ir.actions.todo() 
+2019-10-14 10:52:19,483 1 INFO odoo odoo.modules.registry: Registry changed, signaling through the database 
+2019-10-14 10:52:19,484 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:19] "POST /web/dataset/call_button HTTP/1.1" 200 - 1400 0.511 1.327
+2019-10-14 10:52:19,498 1 INFO odoo odoo.addons.base.models.ir_http: Generating routing map 
+2019-10-14 10:52:19,993 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:19] "GET /web HTTP/1.1" 200 - 314 0.140 0.357
+2019-10-14 10:52:20,179 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:20] "GET /web/webclient/qweb?mods=base,web,base_import,web_settings_dashboard,iap,web_diagram,web_editor,web_kanban_gauge,web_tour HTTP/1.1" 200 - 1 0.000 0.039
+2019-10-14 10:52:20,226 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:20] "POST /web/dataset/call HTTP/1.1" 200 - 12 0.004 0.008
+2019-10-14 10:52:20,252 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:20] "POST /web/webclient/translations HTTP/1.1" 200 - 6 0.003 0.006
+2019-10-14 10:52:20,272 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:20] "POST /web/dataset/call_kw/ir.ui.menu/load_menus HTTP/1.1" 200 - 1 0.000 0.003
+2019-10-14 10:52:20,302 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:20] "POST /web/dataset/call_kw/res.users/read HTTP/1.1" 200 - 2 0.001 0.004
+2019-10-14 10:52:20,326 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:20] "GET /web/image?model=res.users&field=image_small&id=2 HTTP/1.1" 304 - 27 0.017 0.016
+2019-10-14 10:52:20,372 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:20] "POST /web/action/load HTTP/1.1" 200 - 49 0.031 0.033
+2019-10-14 10:52:20,501 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:20] "POST /web/dataset/call_kw/ir.module.module/load_views HTTP/1.1" 200 - 95 0.046 0.071
+2019-10-14 10:52:20,557 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:20] "POST /web/dataset/search_read HTTP/1.1" 200 - 5 0.004 0.008
+2019-10-14 10:52:26,872 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:26] "POST /web/action/load HTTP/1.1" 200 - 12 0.007 0.009
+2019-10-14 10:52:26,897 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:26] "POST /web_settings_dashboard/data HTTP/1.1" 200 - 19 0.007 0.008
+2019-10-14 10:52:26,909 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:26] "POST /web/dataset/call_kw/iap.account/get_account_url HTTP/1.1" 200 - 4 0.001 0.004
+2019-10-14 10:52:32,908 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:32] "GET /web?debug=assets HTTP/1.1" 200 - 781 0.248 0.953
+2019-10-14 10:52:32,953 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:32] "GET /web/static/lib/bootstrap/scss/web.assets_common/_functions.scss.css HTTP/1.1" 200 - 6 0.005 0.017
+2019-10-14 10:52:32,968 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:32] "GET /web/static/src/scss/web.assets_common/utils.scss.css HTTP/1.1" 200 - 6 0.006 0.027
+2019-10-14 10:52:32,970 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:32] "GET /web/static/src/scss/web.assets_common/bs_mixins_overrides.scss.css HTTP/1.1" 200 - 6 0.009 0.026
+2019-10-14 10:52:32,976 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:32] "GET /web/static/src/scss/web.assets_common/primary_variables.scss.css HTTP/1.1" 200 - 6 0.011 0.026
+2019-10-14 10:52:32,978 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:32] "GET /web/static/lib/bootstrap/scss/web.assets_common/_mixins.scss.css HTTP/1.1" 200 - 6 0.012 0.032
+2019-10-14 10:52:32,979 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:32] "GET /web_editor/static/src/scss/web.assets_common/web_editor.variables.scss.css HTTP/1.1" 200 - 6 0.010 0.026
+2019-10-14 10:52:33,006 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/lib/jquery.ui/jquery-ui.css HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,007 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/lib/select2-bootstrap-css/select2-bootstrap.css HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,007 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/lib/select2/select2.css HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,023 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/scss/web.assets_common/secondary_variables.scss.css HTTP/1.1" 200 - 6 0.007 0.012
+2019-10-14 10:52:33,031 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/lib/bootstrap/scss/web.assets_common/_variables.scss.css HTTP/1.1" 200 - 6 0.006 0.020
+2019-10-14 10:52:33,039 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/lib/tempusdominus/web.assets_common/tempusdominus.scss.css HTTP/1.1" 200 - 6 0.008 0.026
+2019-10-14 10:52:33,046 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/scss/web.assets_common/fonts.scss.css HTTP/1.1" 200 - 6 0.007 0.026
+2019-10-14 10:52:33,049 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/scss/web.assets_common/ui.scss.css HTTP/1.1" 200 - 6 0.009 0.026
+2019-10-14 10:52:33,056 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/scss/web.assets_common/ui_extra.scss.css HTTP/1.1" 200 - 6 0.012 0.025
+2019-10-14 10:52:33,058 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/scss/web.assets_common/navbar.scss.css HTTP/1.1" 200 - 6 0.010 0.020
+2019-10-14 10:52:33,061 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/scss/web.assets_common/mimetypes.scss.css HTTP/1.1" 200 - 6 0.010 0.015
+2019-10-14 10:52:33,095 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/scss/web.assets_common/modal.scss.css HTTP/1.1" 200 - 6 0.006 0.041
+2019-10-14 10:52:33,104 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/scss/web.assets_common/animation.scss.css HTTP/1.1" 200 - 6 0.014 0.030
+2019-10-14 10:52:33,107 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/scss/web.assets_common/rainbow.scss.css HTTP/1.1" 200 - 6 0.015 0.030
+2019-10-14 10:52:33,111 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/scss/web.assets_common/datepicker.scss.css HTTP/1.1" 200 - 6 0.013 0.031
+2019-10-14 10:52:33,114 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/scss/web.assets_common/banner.scss.css HTTP/1.1" 200 - 6 0.009 0.035
+2019-10-14 10:52:33,125 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/scss/web.assets_common/colorpicker.scss.css HTTP/1.1" 200 - 6 0.012 0.041
+2019-10-14 10:52:33,138 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/scss/web.assets_common/keyboard.scss.css HTTP/1.1" 200 - 6 0.011 0.016
+2019-10-14 10:52:33,156 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/scss/web.assets_common/fontawesome_overriden.scss.css HTTP/1.1" 200 - 6 0.008 0.032
+2019-10-14 10:52:33,160 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web_tour/static/src/scss/web.assets_common/tip.scss.css HTTP/1.1" 200 - 6 0.016 0.025
+2019-10-14 10:52:33,166 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web_tour/static/src/scss/web.assets_common/keyframes.scss.css HTTP/1.1" 200 - 6 0.008 0.034
+2019-10-14 10:52:33,181 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/lib/bootstrap/scss/web.assets_backend/_mixins.scss.css HTTP/1.1" 200 - 6 0.017 0.030
+2019-10-14 10:52:33,182 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/scss/web.assets_backend/utils.scss.css HTTP/1.1" 200 - 6 0.011 0.027
+2019-10-14 10:52:33,182 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/lib/bootstrap/scss/web.assets_backend/_functions.scss.css HTTP/1.1" 200 - 6 0.012 0.041
+2019-10-14 10:52:33,200 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/scss/web.assets_backend/bs_mixins_overrides.scss.css HTTP/1.1" 200 - 6 0.009 0.026
+2019-10-14 10:52:33,201 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/scss/web.assets_backend/primary_variables.scss.css HTTP/1.1" 200 - 6 0.008 0.017
+2019-10-14 10:52:33,215 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web_editor/static/src/scss/web.assets_backend/web_editor.variables.scss.css HTTP/1.1" 200 - 6 0.010 0.021
+2019-10-14 10:52:33,222 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/scss/web.assets_backend/secondary_variables.scss.css HTTP/1.1" 200 - 6 0.010 0.026
+2019-10-14 10:52:33,226 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web_editor/static/src/scss/web.assets_backend/bootstrap_overridden.scss.css HTTP/1.1" 200 - 6 0.012 0.023
+2019-10-14 10:52:33,230 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/scss/web.assets_backend/bootstrap_overridden.scss.css HTTP/1.1" 200 - 6 0.014 0.025
+2019-10-14 10:52:33,237 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /base/static/src/css/modules.css HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,238 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/scss/web.assets_backend/import_bootstrap_part1.scss.css HTTP/1.1" 200 - 6 0.012 0.018
+2019-10-14 10:52:33,252 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/scss/web.assets_backend/bootstrap_review.scss.css HTTP/1.1" 200 - 6 0.006 0.024
+2019-10-14 10:52:33,266 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/scss/web.assets_backend/webclient_layout.scss.css HTTP/1.1" 200 - 6 0.007 0.023
+2019-10-14 10:52:33,277 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/scss/web.assets_backend/import_bootstrap_part2.scss.css HTTP/1.1" 200 - 6 0.010 0.041
+2019-10-14 10:52:33,285 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/scss/web.assets_backend/webclient_extra.scss.css HTTP/1.1" 200 - 6 0.018 0.033
+2019-10-14 10:52:33,291 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/scss/web.assets_backend/domain_selector.scss.css HTTP/1.1" 200 - 6 0.014 0.027
+2019-10-14 10:52:33,292 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/scss/web.assets_backend/webclient.scss.css HTTP/1.1" 200 - 6 0.014 0.032
+2019-10-14 10:52:33,303 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/scss/web.assets_backend/model_field_selector.scss.css HTTP/1.1" 200 - 6 0.007 0.028
+2019-10-14 10:52:33,320 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/scss/web.assets_backend/progress_bar.scss.css HTTP/1.1" 200 - 6 0.004 0.030
+2019-10-14 10:52:33,321 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/scss/web.assets_backend/dropdown_extra.scss.css HTTP/1.1" 200 - 6 0.009 0.016
+2019-10-14 10:52:33,321 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/scss/web.assets_backend/dropdown.scss.css HTTP/1.1" 200 - 6 0.011 0.021
+2019-10-14 10:52:33,334 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/scss/web.assets_backend/debug_manager.scss.css HTTP/1.1" 200 - 6 0.012 0.023
+2019-10-14 10:52:33,336 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/scss/web.assets_backend/tooltip.scss.css HTTP/1.1" 200 - 6 0.008 0.031
+2019-10-14 10:52:33,344 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/scss/web.assets_backend/control_panel.scss.css HTTP/1.1" 200 - 6 0.014 0.019
+2019-10-14 10:52:33,359 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/scss/web.assets_backend/fields.scss.css HTTP/1.1" 200 - 6 0.007 0.023
+2019-10-14 10:52:33,371 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/scss/web.assets_backend/views.scss.css HTTP/1.1" 200 - 6 0.008 0.024
+2019-10-14 10:52:33,372 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/scss/web.assets_backend/fields_extra.scss.css HTTP/1.1" 200 - 6 0.008 0.025
+2019-10-14 10:52:33,379 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/scss/web.assets_backend/graph_view.scss.css HTTP/1.1" 200 - 6 0.010 0.022
+2019-10-14 10:52:33,390 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/scss/web.assets_backend/form_view.scss.css HTTP/1.1" 200 - 6 0.012 0.023
+2019-10-14 10:52:33,396 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/scss/web.assets_backend/pivot_view.scss.css HTTP/1.1" 200 - 6 0.015 0.036
+2019-10-14 10:52:33,401 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/scss/web.assets_backend/form_view_extra.scss.css HTTP/1.1" 200 - 6 0.012 0.022
+2019-10-14 10:52:33,417 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/scss/web.assets_backend/kanban_dashboard.scss.css HTTP/1.1" 200 - 6 0.010 0.017
+2019-10-14 10:52:33,420 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/scss/web.assets_backend/list_view_extra.scss.css HTTP/1.1" 200 - 6 0.007 0.025
+2019-10-14 10:52:33,426 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/scss/web.assets_backend/kanban_examples_dialog.scss.css HTTP/1.1" 200 - 6 0.011 0.021
+2019-10-14 10:52:33,433 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/scss/web.assets_backend/list_view.scss.css HTTP/1.1" 200 - 6 0.010 0.036
+2019-10-14 10:52:33,445 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/scss/web.assets_backend/kanban_view.scss.css HTTP/1.1" 200 - 6 0.014 0.024
+2019-10-14 10:52:33,448 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/scss/web.assets_backend/kanban_column_progressbar.scss.css HTTP/1.1" 200 - 6 0.014 0.032
+2019-10-14 10:52:33,466 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/scss/web.assets_backend/kanban_view_mobile.scss.css HTTP/1.1" 200 - 6 0.015 0.026
+2019-10-14 10:52:33,471 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/scss/web.assets_backend/web_calendar.scss.css HTTP/1.1" 200 - 6 0.011 0.026
+2019-10-14 10:52:33,476 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/scss/web.assets_backend/search_view.scss.css HTTP/1.1" 200 - 6 0.009 0.031
+2019-10-14 10:52:33,487 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/scss/web.assets_backend/search_view_mobile.scss.css HTTP/1.1" 200 - 6 0.014 0.030
+2019-10-14 10:52:33,491 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/scss/web.assets_backend/dropdown_menu.scss.css HTTP/1.1" 200 - 6 0.012 0.025
+2019-10-14 10:52:33,496 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/scss/web.assets_backend/search_view_extra.scss.css HTTP/1.1" 200 - 6 0.012 0.028
+2019-10-14 10:52:33,510 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /base/static/src/scss/web.assets_backend/onboarding.scss.css HTTP/1.1" 200 - 6 0.010 0.017
+2019-10-14 10:52:33,513 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/scss/web.assets_backend/data_export.scss.css HTTP/1.1" 200 - 6 0.010 0.029
+2019-10-14 10:52:33,535 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/scss/web.assets_backend/base_settings.scss.css HTTP/1.1" 200 - 6 0.012 0.036
+2019-10-14 10:52:33,535 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /base_import/static/src/scss/web.assets_backend/base_import.scss.css HTTP/1.1" 200 - 6 0.009 0.026
+2019-10-14 10:52:33,539 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web_diagram/static/src/scss/web.assets_backend/diagram_view.scss.css HTTP/1.1" 200 - 6 0.012 0.023
+2019-10-14 10:52:33,541 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/scss/web.assets_backend/report_backend.scss.css HTTP/1.1" 200 - 6 0.015 0.033
+2019-10-14 10:52:33,555 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web_editor/static/src/scss/web.assets_backend/web_editor.backend.scss.css HTTP/1.1" 200 - 6 0.012 0.020
+2019-10-14 10:52:33,556 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web_editor/static/src/scss/web.assets_backend/web_editor.common.scss.css HTTP/1.1" 200 - 6 0.010 0.024
+2019-10-14 10:52:33,560 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web_editor/static/lib/summernote/src/css/summernote.css HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,582 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web_settings_dashboard/static/src/scss/web.assets_backend/dashboard.scss.css HTTP/1.1" 200 - 6 0.015 0.020
+2019-10-14 10:52:33,583 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/lib/bootstrap/scss/web_editor.assets_editor/_functions.scss.css HTTP/1.1" 200 - 6 0.013 0.016
+2019-10-14 10:52:33,649 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/lib/bootstrap/scss/web_editor.assets_editor/_mixins.scss.css HTTP/1.1" 200 - 6 0.007 0.086
+2019-10-14 10:52:33,650 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/scss/web_editor.assets_editor/primary_variables.scss.css HTTP/1.1" 200 - 6 0.059 0.016
+2019-10-14 10:52:33,650 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/scss/web_editor.assets_editor/bs_mixins_overrides.scss.css HTTP/1.1" 200 - 6 0.010 0.075
+2019-10-14 10:52:33,651 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/scss/web_editor.assets_editor/utils.scss.css HTTP/1.1" 200 - 6 0.011 0.079
+2019-10-14 10:52:33,669 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/lib/underscore/underscore.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,670 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web_editor/static/src/scss/web_editor.assets_editor/web_editor.variables.scss.css HTTP/1.1" 200 - 6 0.007 0.072
+2019-10-14 10:52:33,670 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/lib/es5-shim/es5-shim.min.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,673 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web_editor/static/src/scss/web_editor.assets_editor/web_editor.ui.scss.css HTTP/1.1" 200 - 6 0.009 0.008
+2019-10-14 10:52:33,674 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/scss/web_editor.assets_editor/secondary_variables.scss.css HTTP/1.1" 200 - 6 0.012 0.069
+2019-10-14 10:52:33,679 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/lib/bootstrap/scss/web_editor.assets_editor/_variables.scss.css HTTP/1.1" 200 - 6 0.009 0.016
+2019-10-14 10:52:33,679 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/lib/underscore.string/lib/underscore.string.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,683 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/lib/moment/moment.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,683 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/lib/jquery.ui/jquery-ui.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,688 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/lib/jquery/jquery.browser.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,689 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/lib/jquery.blockUI/jquery.blockUI.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,690 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/lib/jquery.hotkeys/jquery.hotkeys.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,691 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/lib/jquery.placeholder/jquery.placeholder.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,693 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/lib/jquery.form/jquery.form.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,695 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/lib/jquery.ba-bbq/jquery.ba-bbq.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,702 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/lib/jquery.mjs.nestedSortable/jquery.mjs.nestedSortable.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,703 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/lib/tempusdominus/tempusdominus.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,703 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/lib/select2/select2.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,704 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/lib/clipboard/clipboard.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,705 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/js/boot.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,706 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/lib/qweb/qweb2.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,711 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/js/libs/bootstrap.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,712 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/js/libs/autocomplete.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,714 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/js/libs/jquery.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,715 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/js/libs/download.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,718 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/js/libs/content-disposition.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,719 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/js/libs/underscore.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,719 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/js/services/config.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,720 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/js/core/abstract_service.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,722 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/js/core/abstract_storage_service.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,724 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/js/core/class.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,726 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/js/core/collections.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,727 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/js/core/translation.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,729 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/js/core/ajax.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,732 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/js/services/ajax_service.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,733 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/js/core/time.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,734 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/js/core/mixins.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,736 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/js/core/service_mixins.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,738 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/js/core/rpc.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,739 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/js/core/widget.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,740 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/js/core/registry.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,741 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/js/core/session.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,742 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/js/core/dom.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,743 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/js/core/concurrency.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,747 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/js/core/utils.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,748 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/js/core/qweb.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,749 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/js/core/bus.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,750 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/js/services/core.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,751 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/js/core/dialog.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,753 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/js/core/local_storage.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,754 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/js/services/local_storage_service.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,757 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/js/services/session_storage_service.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,758 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/js/core/session_storage.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,758 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/js/core/ram_storage.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,760 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/js/widgets/rainbow_man.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,761 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/js/widgets/colorpicker.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,762 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web_editor/static/src/js/base.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,765 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web_editor/static/lib/vkbeautify/vkbeautify.0.99.00.beta.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,766 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web_editor/static/src/js/widgets/ace.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,768 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web_tour/static/src/js/tip.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,768 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web_tour/static/src/js/tour_utils.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,769 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web_tour/static/src/js/running_tour_action_helper.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,772 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web_tour/static/src/js/tour_service.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,773 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web_tour/static/src/js/tour_manager.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,775 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /base/static/src/js/res_config_settings.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,777 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/lib/jquery.scrollTo/jquery.scrollTo.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,781 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/lib/backbone/backbone.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,782 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/lib/py.js/lib/py.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,782 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/lib/fuzzy-master/fuzzy.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,784 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/lib/py.js/lib/py_extras.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,787 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/js/core/domain.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,787 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/js/core/py_utils.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,792 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/js/chrome/action_manager_act_window.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,793 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/js/chrome/abstract_action.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,793 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/js/chrome/action_manager.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,793 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/js/chrome/action_manager_report.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,795 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/js/chrome/control_panel.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,800 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/js/chrome/keyboard_navigation_mixin.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,801 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/js/core/browser_detection.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,802 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/js/chrome/abstract_web_client.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,804 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/js/chrome/web_client.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,806 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/js/chrome/root_widget.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,807 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/js/core/context.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,806 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/js/_deprecated/data.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,811 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/js/core/misc.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,811 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/js/core/data_comparison_utils.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,811 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/js/services/crash_manager.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,812 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/js/services/data_manager.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,813 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/js/services/report_service.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,817 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/js/services/session.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,818 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/js/services/notification_service.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,818 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/js/widgets/auto_complete.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,820 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/js/tools/debug_manager.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,820 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/js/widgets/change_password.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,822 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/js/tools/test_menus_loader.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,822 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/js/widgets/data_export.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,827 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/js/widgets/domain_selector_dialog.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,827 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/js/widgets/date_picker.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,829 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/js/widgets/domain_selector.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,832 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/js/chrome/loading.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,833 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/js/widgets/iframe_widget.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,835 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/js/widgets/model_field_selector.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,837 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/js/chrome/sidebar.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,837 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/js/widgets/notification.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,838 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/js/chrome/pager.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,841 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/js/chrome/systray_menu.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,842 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/js/widgets/switch_company_menu.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,843 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/js/chrome/user_menu.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,850 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/js/chrome/apps_menu.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,850 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/js/views/search/search_view.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,850 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/js/chrome/menu.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,851 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/js/views/search/search_view_mobile.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,853 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/js/views/search/search_filters.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,854 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/js/views/search/search_inputs.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,855 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/js/views/search/favorites_menu.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,857 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/js/views/search/groupby_menu.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,860 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/js/views/search/time_range_menu.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,860 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/js/views/search/time_range_menu_options.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,864 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/js/views/search/groupby_menu_interface_mixin.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,867 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/js/widgets/dropdown_menu.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,867 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/js/widgets/pie_chart.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,869 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/js/views/search/filters_menu.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,870 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/js/apps.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,872 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/js/fields/abstract_field.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,873 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/js/fields/basic_fields.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,874 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/js/fields/field_registry.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,876 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/js/views/basic/widget_registry.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,878 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/js/fields/field_utils.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,880 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/js/fields/relational_fields.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,884 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/js/fields/special_fields.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,885 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/js/fields/upgrade_fields.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,885 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/js/views/abstract_view.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,886 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/js/views/abstract_renderer.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,890 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/js/views/abstract_controller.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,890 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/js/views/basic/basic_model.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,890 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/js/views/abstract_model.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,892 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/js/views/basic/basic_view.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,894 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/js/views/basic/basic_controller.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,896 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/js/views/basic/basic_renderer.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,896 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/js/views/field_manager_mixin.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,897 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/js/views/standalone_field_manager_mixin.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,900 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/js/views/view_registry.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,902 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/js/views/view_dialogs.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,903 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/js/views/form/form_renderer.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,904 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/js/views/form/form_controller.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,906 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/js/views/form/form_view.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,909 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/js/views/graph/graph_model.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,909 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/js/views/graph/graph_controller.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,912 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/js/views/graph/graph_view.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,913 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/js/views/graph/graph_renderer.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,915 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/js/views/kanban/kanban_column.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,917 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/js/views/kanban/kanban_column_progressbar.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,919 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/js/views/kanban/kanban_column_quick_create.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,920 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/js/views/kanban/kanban_model.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,922 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/js/views/kanban/kanban_controller.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,922 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/js/views/kanban/kanban_examples_registry.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,922 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/js/views/kanban/kanban_record.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,924 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/js/views/kanban/kanban_record_quick_create.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,925 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/js/views/kanban/kanban_renderer.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,931 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/js/views/kanban/kanban_renderer_mobile.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,932 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/js/views/kanban/kanban_view.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,932 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/js/views/kanban/quick_create_form_view.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,933 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/js/views/list/list_editable_renderer.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,939 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/js/views/list/list_renderer.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,939 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/js/views/list/list_view.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,940 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/js/views/list/list_controller.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,941 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/js/views/pivot/pivot_model.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,941 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/js/views/pivot/pivot_controller.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,947 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/js/views/calendar/calendar_controller.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,947 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/js/views/pivot/pivot_renderer.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,948 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/js/views/pivot/pivot_view.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,948 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/js/views/calendar/calendar_model.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,952 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/js/views/calendar/calendar_quick_create.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,952 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/js/views/calendar/calendar_renderer.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,955 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/js/widgets/attach_document.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,955 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/js/report/utils.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,955 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/js/views/calendar/calendar_view.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,959 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web/static/src/js/report/client_action.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,960 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /base_import/static/src/js/import_action.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,962 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /base_import/static/src/js/import_buttons.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,962 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /base_import/static/lib/javascript-state-machine/state-machine.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,963 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web_diagram/static/src/js/vec2.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,963 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web_diagram/static/src/js/graph.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,964 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web_diagram/static/src/js/diagram_model.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,969 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web_diagram/static/src/js/diagram_controller.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,970 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web_diagram/static/src/js/diagram_view.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,970 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web_diagram/static/src/js/diagram_renderer.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,973 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web_diagram/static/src/js/view_registry.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,974 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web_editor/static/src/js/backend/fields.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,974 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web_kanban_gauge/static/src/js/kanban_gauge.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,976 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web_tour/static/src/js/debug_manager.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,976 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /iap/static/src/js/iap_credit.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,977 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /iap/static/src/js/crash_manager.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,978 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /iap/static/src/js/dashboard.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,981 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /iap/static/src/js/iap_credit_checker_widget.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,984 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web_settings_dashboard/static/src/js/dashboard.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,985 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web_editor/static/lib/summernote/src/js/core/func.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,985 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web_editor/static/lib/summernote/src/js/core/async.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,988 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web_editor/static/lib/summernote/src/js/core/agent.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,988 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web_editor/static/lib/summernote/src/js/core/list.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,989 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web_editor/static/lib/summernote/src/js/core/dom.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,989 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web_editor/static/lib/summernote/src/js/core/key.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,991 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web_editor/static/lib/summernote/src/js/core/range.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,993 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web_editor/static/lib/summernote/src/js/editing/History.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,993 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web_editor/static/lib/summernote/src/js/editing/Bullet.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:33,999 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:33] "GET /web_editor/static/lib/summernote/src/js/editing/Table.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:34,001 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:34] "GET /web_editor/static/lib/summernote/src/js/editing/Style.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:34,002 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:34] "GET /web_editor/static/lib/summernote/src/js/module/Editor.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:34,003 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:34] "GET /web_editor/static/lib/summernote/src/js/editing/Typing.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:34,004 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:34] "GET /web_editor/static/lib/summernote/src/js/module/Button.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:34,005 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:34] "GET /web_editor/static/lib/summernote/src/js/module/Clipboard.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:34,008 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:34] "GET /web_editor/static/lib/summernote/src/js/module/Codeview.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:34,008 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:34] "GET /web_editor/static/lib/summernote/src/js/module/DragAndDrop.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:34,009 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:34] "GET /web_editor/static/lib/summernote/src/js/module/Fullscreen.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:34,011 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:34] "GET /web_editor/static/lib/summernote/src/js/module/Handle.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:34,014 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:34] "GET /web_editor/static/lib/summernote/src/js/module/HelpDialog.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:34,015 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:34] "GET /web_editor/static/lib/summernote/src/js/module/ImageDialog.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:34,017 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:34] "GET /web_editor/static/lib/summernote/src/js/module/LinkDialog.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:34,018 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:34] "GET /web_editor/static/lib/summernote/src/js/module/Popover.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:34,019 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:34] "GET /web_editor/static/lib/summernote/src/js/module/Statusbar.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:34,021 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:34] "GET /web_editor/static/lib/summernote/src/js/module/Toolbar.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:34,022 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:34] "GET /web_editor/static/lib/summernote/src/js/Renderer.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:34,023 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:34] "GET /web_editor/static/lib/summernote/src/js/EventHandler.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:34,024 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:34] "GET /web_editor/static/lib/summernote/src/js/defaults.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:34,026 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:34] "GET /web_editor/static/lib/summernote/src/js/summernote.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:34,027 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:34] "GET /web_editor/static/src/js/editor/summernote.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:34,031 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:34] "GET /web_editor/static/lib/nearest/jquery.nearest.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:34,034 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:34] "GET /web_editor/static/src/js/editor/editor.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:34,034 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:34] "GET /web_editor/static/src/js/editor/rte.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:34,036 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:34] "GET /web_editor/static/src/js/editor/rte.summernote.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:34,037 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:34] "GET /web_editor/static/src/js/editor/snippets.editor.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:34,038 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:34] "GET /web_editor/static/src/js/editor/snippets.options.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:34,040 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:34] "GET /web_editor/static/src/js/editor/transcoder.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:34,041 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:34] "GET /web_editor/static/src/js/editor/translator.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:34,042 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:34] "GET /web_editor/static/src/js/tours/rte.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:34,045 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:34] "GET /web_editor/static/src/js/widgets/widgets.js HTTP/1.1" 200 - - - -
+2019-10-14 10:52:34,093 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:34] "GET /web/webclient/qweb?mods=base,web,base_import,web_settings_dashboard,iap,web_diagram,web_editor,web_kanban_gauge,web_tour HTTP/1.1" 200 - 1 0.000 0.049
+2019-10-14 10:52:34,145 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:34] "POST /web/dataset/call HTTP/1.1" 200 - 4 0.003 0.004
+2019-10-14 10:52:34,167 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:34] "POST /web/webclient/translations HTTP/1.1" 200 - 4 0.002 0.006
+2019-10-14 10:52:34,187 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:34] "POST /web/dataset/call_kw/ir.ui.menu/load_menus HTTP/1.1" 200 - 1 0.000 0.003
+2019-10-14 10:52:34,234 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:34] "POST /web/dataset/call_kw/res.users/check_access_rights HTTP/1.1" 200 - 2 0.006 0.010
+2019-10-14 10:52:34,235 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:34] "POST /web/dataset/call_kw/ir.model.data/xmlid_to_res_id HTTP/1.1" 200 - 1 0.002 0.012
+2019-10-14 10:52:34,238 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:34] "POST /web/dataset/call_kw/res.users/has_group HTTP/1.1" 200 - 1 0.002 0.017
+2019-10-14 10:52:34,242 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:34] "GET /web/image?model=res.users&field=image_small&id=2 HTTP/1.1" 304 - 13 0.017 0.013
+2019-10-14 10:52:34,244 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:34] "POST /web/dataset/call_kw/ir.ui.view/check_access_rights HTTP/1.1" 200 - 2 0.004 0.013
+2019-10-14 10:52:34,244 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:34] "POST /web/dataset/call_kw/res.users/read HTTP/1.1" 200 - 2 0.002 0.008
+2019-10-14 10:52:34,294 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:34] "POST /web/action/load HTTP/1.1" 200 - 20 0.021 0.017
+2019-10-14 10:52:34,364 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:34] "POST /web/dataset/call_kw/ir.module.module/load_views HTTP/1.1" 200 - 34 0.013 0.045
+2019-10-14 10:52:34,420 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:34] "POST /web/dataset/search_read HTTP/1.1" 200 - 3 0.004 0.007
+2019-10-14 10:52:39,155 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:39] "POST /web/action/load HTTP/1.1" 200 - 9 0.003 0.007
+2019-10-14 10:52:39,169 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:39] "POST /web/dataset/call_kw/ir.module.module/get_apps_server HTTP/1.1" 200 - 1 0.000 0.002
+2019-10-14 10:52:46,144 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:46] "POST /web/webclient/version_info HTTP/1.1" 200 - 1 0.000 0.003
+2019-10-14 10:52:46,167 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:46] "POST /web/dataset/call_kw/ir.module.module/search_read HTTP/1.1" 200 - 4 0.003 0.012
+2019-10-14 10:52:48,397 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:48] "POST /web/action/load HTTP/1.1" 200 - 9 0.006 0.010
+2019-10-14 10:52:48,420 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:48] "POST /web_settings_dashboard/data HTTP/1.1" 200 - 13 0.007 0.007
+2019-10-14 10:52:48,429 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:48] "POST /web/dataset/call_kw/iap.account/get_account_url HTTP/1.1" 200 - 1 0.001 0.004
+2019-10-14 10:52:52,786 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:52] "POST /web/action/load HTTP/1.1" 200 - 32 0.017 0.024
+2019-10-14 10:52:52,834 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:52] "POST /web/dataset/call_kw/ir.ui.menu/load_views HTTP/1.1" 200 - 29 0.016 0.025
+2019-10-14 10:52:52,879 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:52:52] "POST /web/dataset/search_read HTTP/1.1" 200 - 7 0.004 0.023
+2019-10-14 10:53:22,659 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:53:22] "POST /web/dataset/call_kw/res.groups/load_views HTTP/1.1" 200 - 6 0.005 0.012
+2019-10-14 10:53:22,677 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:53:22] "POST /web/dataset/call_kw/ir.ui.menu/read HTTP/1.1" 200 - 6 0.005 0.006
+2019-10-14 10:53:22,691 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:53:22] "POST /web/dataset/call_kw/ir.ui.menu/read HTTP/1.1" 200 - 2 0.002 0.004
+2019-10-14 10:55:07,971 1 INFO ? odoo.service.server: Initiating shutdown 
+2019-10-14 10:55:07,971 1 INFO ? odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+2019-10-14 10:55:35,337 1 INFO ? odoo: Odoo version 12.0-20190816 
+2019-10-14 10:55:35,338 1 INFO ? odoo: Using configuration file at /etc/odoo/odoo.conf 
+2019-10-14 10:55:35,338 1 INFO ? odoo: addons paths: ['/var/lib/odoo/addons/12.0', '/mnt/extra-addons', '/usr/lib/python3/dist-packages/odoo/addons'] 
+2019-10-14 10:55:35,338 1 INFO ? odoo: database: odoo@db:5432 
+2019-10-14 10:55:35,430 1 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltopdf binary at /usr/local/bin/wkhtmltopdf 
+2019-10-14 10:55:35,522 1 INFO ? odoo.service.server: Watching addons folder /var/lib/odoo/addons/12.0 
+2019-10-14 10:55:35,522 1 INFO ? odoo.service.server: Watching addons folder /mnt/extra-addons 
+2019-10-14 10:55:35,522 1 INFO ? odoo.service.server: Watching addons folder /usr/lib/python3/dist-packages/odoo/addons 
+2019-10-14 10:55:35,672 1 INFO ? odoo.service.server: AutoReload watcher running with watchdog 
+2019-10-14 10:55:35,682 1 INFO ? odoo.service.server: HTTP service (werkzeug) running on e9a4dcac5678:8069 
+2019-10-14 10:56:12,727 1 INFO ? odoo.http: HTTP Configuring static files 
+2019-10-14 10:56:12,735 1 INFO odoo odoo.modules.loading: loading 1 modules... 
+2019-10-14 10:56:12,750 1 INFO odoo odoo.modules.loading: 1 modules loaded in 0.01s, 0 queries 
+2019-10-14 10:56:12,755 1 INFO odoo odoo.modules.loading: loading 10 modules... 
+2019-10-14 10:56:12,757 1 WARNING odoo odoo.models: The model sccc.location has no _description 
+2019-10-14 10:56:12,758 1 WARNING odoo odoo.models: The model sccc.room has no _description 
+2019-10-14 10:56:12,764 1 WARNING odoo odoo.models: The model sccc.location has no _description 
+2019-10-14 10:56:12,764 1 WARNING odoo odoo.models: The model sccc.room has no _description 
+2019-10-14 10:56:12,774 1 WARNING odoo odoo.models: The model sccc.location has no _description 
+2019-10-14 10:56:12,774 1 WARNING odoo odoo.models: The model sccc.room has no _description 
+2019-10-14 10:56:12,794 1 INFO odoo odoo.modules.loading: 10 modules loaded in 0.04s, 0 queries 
+2019-10-14 10:56:12,946 1 INFO odoo odoo.modules.loading: Modules loaded. 
+2019-10-14 10:56:12,951 1 INFO odoo odoo.addons.base.models.ir_http: Generating routing map 
+2019-10-14 10:56:12,972 1 INFO odoo odoo.addons.base.models.ir_http: Generating routing map 
+2019-10-14 10:56:13,003 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:56:13] "POST /web/dataset/search_read HTTP/1.1" 200 - 16 0.017 0.264
+2019-10-14 10:56:13,003 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:56:13] "POST /web/dataset/search_read HTTP/1.1" 200 - 6 0.021 0.252
+2019-10-14 10:56:18,631 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:56:18] "POST /web/dataset/search_read HTTP/1.1" 200 - 4 0.003 0.009
+2019-10-14 10:56:20,498 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:56:20] "POST /web/dataset/search_read HTTP/1.1" 200 - 3 0.006 0.004
+2019-10-14 10:56:23,712 1 INFO odoo odoo.addons.base.models.ir_module: ALLOW access to module.button_immediate_upgrade on ['sccc'] to user odoo #2 via 172.18.0.1 
+2019-10-14 10:56:23,713 1 INFO odoo odoo.addons.base.models.ir_module: ALLOW access to module.button_upgrade on ['sccc'] to user odoo #2 via 172.18.0.1 
+2019-10-14 10:56:23,713 1 INFO odoo odoo.addons.base.models.ir_module: ALLOW access to module.update_list on ['sccc'] to user odoo #2 via 172.18.0.1 
+2019-10-14 10:56:24,386 1 INFO odoo odoo.addons.base.models.ir_module: ALLOW access to module.button_install on [] to user odoo #2 via 172.18.0.1 
+2019-10-14 10:56:24,399 1 INFO odoo odoo.modules.loading: loading 1 modules... 
+2019-10-14 10:56:24,415 1 INFO odoo odoo.modules.loading: 1 modules loaded in 0.02s, 0 queries 
+2019-10-14 10:56:24,534 1 INFO odoo odoo.modules.loading: updating modules list 
+2019-10-14 10:56:24,536 1 INFO odoo odoo.addons.base.models.ir_module: ALLOW access to module.update_list on [] to user __system__ #1 via 172.18.0.1 
+2019-10-14 10:56:25,094 1 INFO odoo odoo.modules.loading: loading 10 modules... 
+2019-10-14 10:56:25,126 1 WARNING odoo odoo.models: The model sccc.location has no _description 
+2019-10-14 10:56:25,126 1 WARNING odoo odoo.models: The model sccc.room has no _description 
+2019-10-14 10:56:25,158 1 INFO odoo odoo.modules.registry: module sccc: creating or updating database tables 
+2019-10-14 10:56:25,235 1 INFO odoo odoo.modules.loading: loading sccc/views/views.xml 
+2019-10-14 10:56:25,258 1 INFO odoo odoo.modules.loading: loading sccc/views/templates.xml 
+2019-10-14 10:56:25,290 1 WARNING odoo odoo.models: The model sccc.location has no _description 
+2019-10-14 10:56:25,291 1 WARNING odoo odoo.models: The model sccc.room has no _description 
+2019-10-14 10:56:25,297 1 WARNING odoo odoo.models: The model sccc.location has no _description 
+2019-10-14 10:56:25,297 1 WARNING odoo odoo.models: The model sccc.room has no _description 
+2019-10-14 10:56:25,304 1 INFO odoo odoo.modules.loading: 10 modules loaded in 0.21s, 0 queries 
+2019-10-14 10:56:25,342 1 WARNING odoo odoo.modules.loading: The model sccc.location has no access rules, consider adding one. E.g. access_sccc_location,access_sccc_location,model_sccc_location,base.group_user,1,0,0,0 
+2019-10-14 10:56:25,342 1 WARNING odoo odoo.modules.loading: The model sccc.room has no access rules, consider adding one. E.g. access_sccc_room,access_sccc_room,model_sccc_room,base.group_user,1,0,0,0 
+2019-10-14 10:56:25,407 1 INFO odoo odoo.modules.registry: verifying fields for every extended model 
+2019-10-14 10:56:25,507 1 INFO odoo odoo.modules.loading: Modules loaded. 
+2019-10-14 10:56:25,513 1 INFO odoo odoo.addons.base.models.ir_module: getting next ir.actions.todo() 
+2019-10-14 10:56:25,517 1 INFO odoo odoo.modules.registry: Registry changed, signaling through the database 
+2019-10-14 10:56:25,518 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:56:25] "POST /web/dataset/call_button HTTP/1.1" 200 - 1359 0.482 1.331
+2019-10-14 10:56:25,536 1 INFO odoo odoo.addons.base.models.ir_http: Generating routing map 
+2019-10-14 10:56:26,044 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:56:26] "GET /web?debug=true HTTP/1.1" 200 - 333 0.145 0.365
+2019-10-14 10:56:26,248 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:56:26] "GET /web/webclient/qweb?mods=base,web,base_import,web_settings_dashboard,iap,web_diagram,web_editor,web_kanban_gauge,web_tour HTTP/1.1" 200 - 1 0.000 0.038
+2019-10-14 10:56:26,316 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:56:26] "POST /web/dataset/call HTTP/1.1" 200 - 12 0.006 0.009
+2019-10-14 10:56:26,337 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:56:26] "POST /web/webclient/translations HTTP/1.1" 200 - 6 0.002 0.004
+2019-10-14 10:56:26,358 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:56:26] "POST /web/dataset/call_kw/ir.ui.menu/load_menus HTTP/1.1" 200 - 1 0.000 0.003
+2019-10-14 10:56:26,417 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:56:26] "POST /web/dataset/call_kw/res.users/check_access_rights HTTP/1.1" 200 - 2 0.005 0.027
+2019-10-14 10:56:26,420 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:56:26] "POST /web/dataset/call_kw/ir.model.data/xmlid_to_res_id HTTP/1.1" 200 - 3 0.005 0.026
+2019-10-14 10:56:26,420 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:56:26] "POST /web/dataset/call_kw/res.users/has_group HTTP/1.1" 200 - 2 0.002 0.031
+2019-10-14 10:56:26,421 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:56:26] "POST /web/dataset/call_kw/ir.ui.view/check_access_rights HTTP/1.1" 200 - 2 0.005 0.023
+2019-10-14 10:56:26,421 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:56:26] "POST /web/dataset/call_kw/res.users/read HTTP/1.1" 200 - 2 0.003 0.022
+2019-10-14 10:56:26,435 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:56:26] "GET /web/image?model=res.users&field=image_small&id=2 HTTP/1.1" 304 - 27 0.027 0.027
+2019-10-14 10:56:26,516 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:56:26] "POST /web/action/load HTTP/1.1" 200 - 49 0.028 0.029
+2019-10-14 10:56:26,648 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:56:26] "POST /web/dataset/call_kw/ir.module.module/load_views HTTP/1.1" 200 - 94 0.053 0.067
+2019-10-14 10:56:26,703 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:56:26] "POST /web/dataset/search_read HTTP/1.1" 200 - 5 0.003 0.007
+2019-10-14 10:56:31,516 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:56:31] "GET /web?debug=true HTTP/1.1" 200 - 9 0.004 0.010
+2019-10-14 10:56:31,554 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:56:31] "GET /web/content/246-5086be3/web.assets_common.0.css HTTP/1.1" 200 - 7 0.007 0.016
+2019-10-14 10:56:31,562 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:56:31] "GET /web/content/248-a0aa1fa/web.assets_backend.1.css HTTP/1.1" 200 - 4 0.009 0.019
+2019-10-14 10:56:31,562 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:56:31] "GET /web/content/249-4f411d5/web_editor.summernote.0.css HTTP/1.1" 200 - 4 0.008 0.019
+2019-10-14 10:56:31,566 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:56:31] "GET /web/content/247-a0aa1fa/web.assets_backend.0.css HTTP/1.1" 200 - 4 0.006 0.027
+2019-10-14 10:56:31,576 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:56:31] "GET /web/content/250-447701b/web_editor.assets_editor.0.css HTTP/1.1" 200 - 4 0.010 0.028
+2019-10-14 10:56:31,582 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:56:31] "GET /web/content/251-5086be3/web.assets_common.js HTTP/1.1" 200 - 4 0.011 0.032
+2019-10-14 10:56:31,592 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:56:31] "GET /web/content/253-4f411d5/web_editor.summernote.js HTTP/1.1" 200 - 4 0.007 0.016
+2019-10-14 10:56:31,607 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:56:31] "GET /web/content/254-447701b/web_editor.assets_editor.js HTTP/1.1" 200 - 4 0.003 0.026
+2019-10-14 10:56:31,607 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:56:31] "GET /web/content/252-a0aa1fa/web.assets_backend.js HTTP/1.1" 200 - 4 0.014 0.026
+2019-10-14 10:56:31,721 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:56:31] "GET /web/webclient/qweb?mods=base,web,base_import,web_settings_dashboard,iap,web_diagram,web_editor,web_kanban_gauge,web_tour HTTP/1.1" 200 - 1 0.000 0.040
+2019-10-14 10:56:31,743 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:56:31] "POST /web/dataset/call HTTP/1.1" 200 - 4 0.003 0.004
+2019-10-14 10:56:31,756 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:56:31] "GET /web/static/src/img/favicon.ico HTTP/1.1" 200 - - - -
+2019-10-14 10:56:31,761 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:56:31] "POST /web/webclient/translations HTTP/1.1" 200 - 4 0.001 0.006
+2019-10-14 10:56:31,778 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:56:31] "POST /web/dataset/call_kw/ir.ui.menu/load_menus HTTP/1.1" 200 - 1 0.000 0.003
+2019-10-14 10:56:31,803 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:56:31] "GET /web/static/lib/fontawesome/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1" 200 - - - -
+2019-10-14 10:56:31,813 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:56:31] "POST /web/dataset/call_kw/res.users/check_access_rights HTTP/1.1" 200 - 1 0.001 0.010
+2019-10-14 10:56:31,830 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:56:31] "POST /web/dataset/call_kw/ir.model.data/xmlid_to_res_id HTTP/1.1" 200 - 1 0.001 0.020
+2019-10-14 10:56:31,832 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:56:31] "POST /web/dataset/call_kw/ir.ui.view/check_access_rights HTTP/1.1" 200 - 1 0.001 0.016
+2019-10-14 10:56:31,833 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:56:31] "POST /web/dataset/call_kw/res.users/has_group HTTP/1.1" 200 - 1 0.002 0.024
+2019-10-14 10:56:31,835 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:56:31] "GET /web/image?model=res.users&field=image_small&id=2 HTTP/1.1" 304 - 13 0.023 0.014
+2019-10-14 10:56:31,863 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:56:31] "POST /web/action/load HTTP/1.1" 200 - 20 0.015 0.024
+2019-10-14 10:56:31,931 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:56:31] "POST /web/dataset/call_kw/ir.module.module/load_views HTTP/1.1" 200 - 34 0.015 0.043
+2019-10-14 10:56:31,978 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:56:31] "POST /web/dataset/search_read HTTP/1.1" 200 - 3 0.003 0.007
+2019-10-14 10:56:41,512 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:56:41] "POST /web/dataset/search_read HTTP/1.1" 200 - 4 0.003 0.007
+2019-10-14 10:56:46,563 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:56:46] "POST /web/dataset/search_read HTTP/1.1" 200 - 3 0.004 0.003
+2019-10-14 10:56:52,801 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:56:52] "POST /web/dataset/call_kw/ir.module.module/read HTTP/1.1" 200 - 11 0.010 0.018
+2019-10-14 10:56:52,820 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:56:52] "POST /web/dataset/call_kw/ir.module.module.dependency/read HTTP/1.1" 200 - 4 0.003 0.006
+2019-10-14 10:56:52,844 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:56:52] "POST /web/dataset/call_kw/ir.module.category/name_search HTTP/1.1" 200 - 5 0.005 0.011
+2019-10-14 10:56:52,920 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:56:52] "GET /base/static/src/css/description.css HTTP/1.1" 200 - - - -
+2019-10-14 10:56:55,152 1 INFO odoo odoo.addons.base.models.ir_module: ALLOW access to module.button_immediate_upgrade on ['sccc'] to user odoo #2 via 172.18.0.1 
+2019-10-14 10:56:55,153 1 INFO odoo odoo.addons.base.models.ir_module: ALLOW access to module.button_upgrade on ['sccc'] to user odoo #2 via 172.18.0.1 
+2019-10-14 10:56:55,153 1 INFO odoo odoo.addons.base.models.ir_module: ALLOW access to module.update_list on ['sccc'] to user odoo #2 via 172.18.0.1 
+2019-10-14 10:56:55,805 1 INFO odoo odoo.addons.base.models.ir_module: ALLOW access to module.button_install on [] to user odoo #2 via 172.18.0.1 
+2019-10-14 10:56:55,818 1 INFO odoo odoo.modules.loading: loading 1 modules... 
+2019-10-14 10:56:55,835 1 INFO odoo odoo.modules.loading: 1 modules loaded in 0.02s, 0 queries 
+2019-10-14 10:56:55,948 1 INFO odoo odoo.modules.loading: updating modules list 
+2019-10-14 10:56:55,949 1 INFO odoo odoo.addons.base.models.ir_module: ALLOW access to module.update_list on [] to user __system__ #1 via 172.18.0.1 
+2019-10-14 10:56:56,493 1 INFO odoo odoo.modules.loading: loading 10 modules... 
+2019-10-14 10:56:56,525 1 WARNING odoo odoo.models: The model sccc.location has no _description 
+2019-10-14 10:56:56,526 1 WARNING odoo odoo.models: The model sccc.room has no _description 
+2019-10-14 10:56:56,558 1 INFO odoo odoo.modules.registry: module sccc: creating or updating database tables 
+2019-10-14 10:56:56,590 1 INFO odoo odoo.modules.loading: loading sccc/views/views.xml 
+2019-10-14 10:56:56,612 1 INFO odoo odoo.modules.loading: loading sccc/views/templates.xml 
+2019-10-14 10:56:56,643 1 WARNING odoo odoo.models: The model sccc.location has no _description 
+2019-10-14 10:56:56,643 1 WARNING odoo odoo.models: The model sccc.room has no _description 
+2019-10-14 10:56:56,650 1 WARNING odoo odoo.models: The model sccc.location has no _description 
+2019-10-14 10:56:56,650 1 WARNING odoo odoo.models: The model sccc.room has no _description 
+2019-10-14 10:56:56,657 1 INFO odoo odoo.modules.loading: 10 modules loaded in 0.16s, 0 queries 
+2019-10-14 10:56:56,696 1 WARNING odoo odoo.modules.loading: The model sccc.location has no access rules, consider adding one. E.g. access_sccc_location,access_sccc_location,model_sccc_location,base.group_user,1,0,0,0 
+2019-10-14 10:56:56,696 1 WARNING odoo odoo.modules.loading: The model sccc.room has no access rules, consider adding one. E.g. access_sccc_room,access_sccc_room,model_sccc_room,base.group_user,1,0,0,0 
+2019-10-14 10:56:56,760 1 INFO odoo odoo.modules.registry: verifying fields for every extended model 
+2019-10-14 10:56:56,860 1 INFO odoo odoo.modules.loading: Modules loaded. 
+2019-10-14 10:56:56,863 1 INFO odoo odoo.addons.base.models.ir_module: getting next ir.actions.todo() 
+2019-10-14 10:56:56,866 1 INFO odoo odoo.modules.registry: Registry changed, signaling through the database 
+2019-10-14 10:56:56,867 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:56:56] "POST /web/dataset/call_button HTTP/1.1" 200 - 1345 0.463 1.258
+2019-10-14 10:56:56,881 1 INFO odoo odoo.addons.base.models.ir_http: Generating routing map 
+2019-10-14 10:56:57,362 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:56:57] "GET /web?debug=true HTTP/1.1" 200 - 333 0.141 0.342
+2019-10-14 10:56:57,405 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:56:57] "GET /web/content/246-5086be3/web.assets_common.0.css HTTP/1.1" 200 - 7 0.006 0.023
+2019-10-14 10:56:57,408 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:56:57] "GET /web/content/247-a0aa1fa/web.assets_backend.0.css HTTP/1.1" 200 - 4 0.004 0.027
+2019-10-14 10:56:57,409 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:56:57] "GET /web/content/248-a0aa1fa/web.assets_backend.1.css HTTP/1.1" 200 - 4 0.009 0.023
+2019-10-14 10:56:57,413 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:56:57] "GET /web/content/249-4f411d5/web_editor.summernote.0.css HTTP/1.1" 200 - 4 0.009 0.025
+2019-10-14 10:56:57,426 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:56:57] "GET /web/content/250-447701b/web_editor.assets_editor.0.css HTTP/1.1" 200 - 4 0.010 0.034
+2019-10-14 10:56:57,427 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:56:57] "GET /web/content/251-5086be3/web.assets_common.js HTTP/1.1" 304 - 4 0.004 0.038
+2019-10-14 10:56:57,443 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:56:57] "GET /web/content/254-447701b/web_editor.assets_editor.js HTTP/1.1" 304 - 4 0.004 0.013
+2019-10-14 10:56:57,444 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:56:57] "GET /web/content/252-a0aa1fa/web.assets_backend.js HTTP/1.1" 304 - 4 0.004 0.028
+2019-10-14 10:56:57,445 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:56:57] "GET /web/content/253-4f411d5/web_editor.summernote.js HTTP/1.1" 304 - 4 0.005 0.015
+2019-10-14 10:56:57,605 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:56:57] "GET /web/webclient/qweb?mods=base,web,base_import,web_settings_dashboard,iap,web_diagram,web_editor,web_kanban_gauge,web_tour HTTP/1.1" 200 - 1 0.000 0.041
+2019-10-14 10:56:57,668 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:56:57] "POST /web/dataset/call HTTP/1.1" 200 - 12 0.005 0.009
+2019-10-14 10:56:57,688 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:56:57] "POST /web/webclient/translations HTTP/1.1" 200 - 6 0.002 0.005
+2019-10-14 10:56:57,708 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:56:57] "POST /web/dataset/call_kw/ir.ui.menu/load_menus HTTP/1.1" 200 - 1 0.000 0.003
+2019-10-14 10:56:57,753 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:56:57] "POST /web/dataset/call_kw/res.users/check_access_rights HTTP/1.1" 200 - 2 0.003 0.014
+2019-10-14 10:56:57,761 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:56:57] "POST /web/dataset/call_kw/res.users/has_group HTTP/1.1" 200 - 2 0.002 0.020
+2019-10-14 10:56:57,762 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:56:57] "POST /web/dataset/call_kw/res.users/read HTTP/1.1" 200 - 2 0.002 0.012
+2019-10-14 10:56:57,763 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:56:57] "POST /web/dataset/call_kw/ir.ui.view/check_access_rights HTTP/1.1" 200 - 2 0.002 0.018
+2019-10-14 10:56:57,766 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:56:57] "POST /web/dataset/call_kw/ir.model.data/xmlid_to_res_id HTTP/1.1" 200 - 3 0.003 0.021
+2019-10-14 10:56:57,779 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:56:57] "GET /web/image?model=res.users&field=image_small&id=2 HTTP/1.1" 304 - 27 0.030 0.016
+2019-10-14 10:56:57,832 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:56:57] "POST /web/action/load HTTP/1.1" 200 - 49 0.024 0.034
+2019-10-14 10:56:57,956 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:56:57] "POST /web/dataset/call_kw/ir.module.module/load_views HTTP/1.1" 200 - 94 0.044 0.062
+2019-10-14 10:56:58,016 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:56:58] "POST /web/dataset/search_read HTTP/1.1" 200 - 5 0.003 0.007
+2019-10-14 10:57:01,944 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:57:01] "POST /web/dataset/search_read HTTP/1.1" 200 - 4 0.003 0.008
+2019-10-14 10:57:03,022 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:57:03] "POST /web/dataset/search_read HTTP/1.1" 200 - 3 0.004 0.003
+2019-10-14 10:57:05,827 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:57:05] "POST /web/dataset/call_kw/ir.module.module/read HTTP/1.1" 200 - 11 0.007 0.014
+2019-10-14 10:57:05,850 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:57:05] "POST /web/dataset/call_kw/ir.module.module.dependency/read HTTP/1.1" 200 - 4 0.004 0.006
+2019-10-14 10:57:05,871 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:57:05] "POST /web/dataset/call_kw/ir.module.category/name_search HTTP/1.1" 200 - 5 0.004 0.011
+2019-10-14 10:57:05,938 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:57:05] "GET /base/static/src/css/description.css HTTP/1.1" 200 - - - -
+2019-10-14 10:57:13,548 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:57:13] "POST /web/dataset/call_kw/ir.module.module.dependency/load_views HTTP/1.1" 200 - 3 0.002 0.005
+2019-10-14 10:57:13,570 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:57:13] "POST /web/dataset/call_kw/ir.module.module.dependency/read HTTP/1.1" 200 - 7 0.006 0.008
+2019-10-14 10:57:13,589 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:57:13] "GET /web/static/src/xml/dialog.xml?debug=1571050633586 HTTP/1.1" 200 - - - -
+2019-10-14 10:57:30,360 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:57:30] "POST /web/action/load HTTP/1.1" 200 - 12 0.006 0.007
+2019-10-14 10:57:30,384 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:57:30] "POST /web_settings_dashboard/data HTTP/1.1" 200 - 19 0.008 0.008
+2019-10-14 10:57:30,395 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:57:30] "POST /web/dataset/call_kw/iap.account/get_account_url HTTP/1.1" 200 - 4 0.001 0.004
+2019-10-14 10:57:34,089 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:57:34] "POST /web/action/load HTTP/1.1" 200 - 15 0.008 0.016
+2019-10-14 10:57:34,109 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:57:34] "POST /web/dataset/call_kw/ir.demo/load_views HTTP/1.1" 200 - 10 0.004 0.010
+2019-10-14 10:57:34,118 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:57:34] "POST /web/dataset/call_kw/ir.demo/default_get HTTP/1.1" 200 - 2 0.001 0.003
+2019-10-14 10:57:34,153 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:57:34] "POST /web/dataset/call_kw/res.users/check_access_rights HTTP/1.1" 200 - 1 0.002 0.004
+2019-10-14 10:57:34,157 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:57:34] "POST /web/dataset/call_kw/ir.model.data/xmlid_to_res_id HTTP/1.1" 200 - 1 0.003 0.004
+2019-10-14 10:57:34,159 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:57:34] "POST /web/dataset/call_kw/ir.ui.view/check_access_rights HTTP/1.1" 200 - 1 0.001 0.004
+2019-10-14 10:57:52,827 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:57:52] "GET /web HTTP/1.1" 200 - 9 0.004 0.011
+2019-10-14 10:57:52,860 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:57:52] "GET /web/content/246-5086be3/web.assets_common.0.css HTTP/1.1" 200 - 4 0.004 0.013
+2019-10-14 10:57:52,864 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:57:52] "GET /web/content/247-a0aa1fa/web.assets_backend.0.css HTTP/1.1" 200 - 4 0.007 0.012
+2019-10-14 10:57:52,878 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:57:52] "GET /web/content/248-a0aa1fa/web.assets_backend.1.css HTTP/1.1" 200 - 4 0.006 0.019
+2019-10-14 10:57:52,882 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:57:52] "GET /web/content/249-4f411d5/web_editor.summernote.0.css HTTP/1.1" 200 - 4 0.007 0.024
+2019-10-14 10:57:52,890 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:57:52] "GET /web/content/250-447701b/web_editor.assets_editor.0.css HTTP/1.1" 200 - 4 0.007 0.030
+2019-10-14 10:57:52,904 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:57:52] "GET /web/content/251-5086be3/web.assets_common.js HTTP/1.1" 304 - 4 0.007 0.039
+2019-10-14 10:57:52,910 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:57:52] "GET /web/content/252-a0aa1fa/web.assets_backend.js HTTP/1.1" 304 - 4 0.010 0.033
+2019-10-14 10:57:52,913 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:57:52] "GET /web/content/253-4f411d5/web_editor.summernote.js HTTP/1.1" 304 - 4 0.013 0.022
+2019-10-14 10:57:52,913 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:57:52] "GET /web/content/254-447701b/web_editor.assets_editor.js HTTP/1.1" 304 - 4 0.003 0.022
+2019-10-14 10:57:53,020 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:57:53] "GET /web/webclient/qweb?mods=base,web,base_import,web_settings_dashboard,iap,web_diagram,web_editor,web_kanban_gauge,web_tour HTTP/1.1" 200 - 1 0.000 0.041
+2019-10-14 10:57:53,047 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:57:53] "POST /web/dataset/call HTTP/1.1" 200 - 4 0.002 0.004
+2019-10-14 10:57:53,070 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:57:53] "POST /web/webclient/translations HTTP/1.1" 200 - 4 0.002 0.005
+2019-10-14 10:57:53,166 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:57:53] "POST /web/dataset/call_kw/ir.ui.menu/load_menus HTTP/1.1" 200 - 57 0.019 0.060
+2019-10-14 10:57:53,195 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:57:53] "POST /web/dataset/call_kw/res.users/read HTTP/1.1" 200 - 2 0.001 0.005
+2019-10-14 10:57:53,202 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:57:53] "GET /web/image?model=res.users&field=image_small&id=2 HTTP/1.1" 304 - 13 0.008 0.010
+2019-10-14 10:57:53,234 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:57:53] "POST /web/action/load HTTP/1.1" 200 - 20 0.012 0.018
+2019-10-14 10:57:53,306 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:57:53] "POST /web/dataset/call_kw/ir.module.module/load_views HTTP/1.1" 200 - 34 0.012 0.041
+2019-10-14 10:57:53,359 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:57:53] "POST /web/dataset/search_read HTTP/1.1" 200 - 3 0.002 0.006
+2019-10-14 10:57:58,320 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:57:58] "POST /web/action/load HTTP/1.1" 200 - 9 0.005 0.010
+2019-10-14 10:57:58,341 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:57:58] "POST /web_settings_dashboard/data HTTP/1.1" 200 - 13 0.005 0.007
+2019-10-14 10:57:58,350 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:57:58] "POST /web/dataset/call_kw/iap.account/get_account_url HTTP/1.1" 200 - 1 0.000 0.004
+2019-10-14 10:58:02,793 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:58:02] "GET /web?debug HTTP/1.1" 200 - 9 0.004 0.010
+2019-10-14 10:58:02,928 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:58:02] "GET /web/webclient/qweb?mods=base,web,base_import,web_settings_dashboard,iap,web_diagram,web_editor,web_kanban_gauge,web_tour HTTP/1.1" 200 - 1 0.000 0.041
+2019-10-14 10:58:02,952 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:58:02] "POST /web/dataset/call HTTP/1.1" 200 - 4 0.002 0.003
+2019-10-14 10:58:02,977 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:58:02] "POST /web/webclient/translations HTTP/1.1" 200 - 4 0.002 0.003
+2019-10-14 10:58:03,002 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:58:03] "POST /web/dataset/call_kw/ir.ui.menu/load_menus HTTP/1.1" 200 - 1 0.000 0.003
+2019-10-14 10:58:03,042 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:58:03] "POST /web/dataset/call_kw/res.users/check_access_rights HTTP/1.1" 200 - 1 0.001 0.014
+2019-10-14 10:58:03,051 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:58:03] "POST /web/dataset/call_kw/res.users/has_group HTTP/1.1" 200 - 1 0.003 0.017
+2019-10-14 10:58:03,052 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:58:03] "POST /web/dataset/call_kw/ir.ui.view/check_access_rights HTTP/1.1" 200 - 1 0.001 0.016
+2019-10-14 10:58:03,053 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:58:03] "GET /web/image?model=res.users&field=image_small&id=2 HTTP/1.1" 304 - 13 0.016 0.014
+2019-10-14 10:58:03,053 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:58:03] "POST /web/dataset/call_kw/ir.model.data/xmlid_to_res_id HTTP/1.1" 200 - 1 0.001 0.021
+2019-10-14 10:58:03,056 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:58:03] "POST /web/dataset/call_kw/res.users/read HTTP/1.1" 200 - 2 0.003 0.012
+2019-10-14 10:58:03,096 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:58:03] "POST /web/action/load HTTP/1.1" 200 - 20 0.009 0.018
+2019-10-14 10:58:03,169 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:58:03] "POST /web/dataset/call_kw/ir.module.module/load_views HTTP/1.1" 200 - 34 0.012 0.041
+2019-10-14 10:58:03,225 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:58:03] "POST /web/dataset/search_read HTTP/1.1" 200 - 3 0.002 0.006
+2019-10-14 10:58:06,501 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:58:06] "POST /web/action/load HTTP/1.1" 200 - 9 0.004 0.008
+2019-10-14 10:58:06,522 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:58:06] "POST /web_settings_dashboard/data HTTP/1.1" 200 - 13 0.004 0.006
+2019-10-14 10:58:06,531 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:58:06] "POST /web/dataset/call_kw/iap.account/get_account_url HTTP/1.1" 200 - 1 0.000 0.003
+2019-10-14 10:58:07,865 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:58:07] "POST /web/action/load HTTP/1.1" 200 - 11 0.005 0.009
+2019-10-14 10:58:07,912 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:58:07] "POST /web/dataset/call_kw/ir.demo/load_views HTTP/1.1" 200 - 10 0.003 0.008
+2019-10-14 10:58:07,938 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:58:07] "POST /web/dataset/call_kw/ir.demo/default_get HTTP/1.1" 200 - 1 0.000 0.002
+2019-10-14 10:58:07,951 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:58:07] "GET /web/static/src/xml/dialog.xml?debug=1571050687948 HTTP/1.1" 200 - - - -
+2019-10-14 10:58:08,041 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:58:08] "POST /web/dataset/call_kw/res.users/check_access_rights HTTP/1.1" 200 - 1 0.001 0.063
+2019-10-14 10:58:08,041 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:58:08] "POST /web/dataset/call_kw/ir.model.data/xmlid_to_res_id HTTP/1.1" 200 - 1 0.001 0.061
+2019-10-14 10:58:08,044 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:58:08] "POST /web/dataset/call_kw/ir.ui.view/check_access_rights HTTP/1.1" 200 - 1 0.001 0.063
+2019-10-14 10:58:09,275 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:58:09] "POST /web/dataset/call_kw/ir.demo/create HTTP/1.1" 200 - 3 0.002 0.006
+2019-10-14 10:58:09,286 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:58:09] "POST /web/dataset/call_kw/ir.demo/read HTTP/1.1" 200 - 2 0.001 0.003
+2019-10-14 10:58:09,309 1 INFO odoo odoo.modules.loading: Module base: loading demo 
+2019-10-14 10:58:09,310 1 INFO odoo odoo.modules.loading: loading base/data/res_company_demo.xml 
+2019-10-14 10:58:09,336 1 INFO odoo odoo.modules.loading: loading base/data/res_users_demo.xml 
+2019-10-14 10:58:09,733 1 INFO odoo odoo.modules.loading: loading base/data/res_partner_bank_demo.xml 
+2019-10-14 10:58:09,742 1 INFO odoo odoo.modules.loading: loading base/data/res_currency_rate_demo.xml 
+2019-10-14 10:58:10,212 1 INFO odoo odoo.modules.loading: loading base/data/res_bank_demo.xml 
+2019-10-14 10:58:10,220 1 INFO odoo odoo.modules.loading: loading base/data/res_partner_demo.xml 
+2019-10-14 10:58:10,989 1 INFO odoo odoo.modules.loading: loading base/data/res_partner_image_demo.xml 
+2019-10-14 10:58:11,758 1 INFO odoo odoo.modules.loading: Module sccc: loading demo 
+2019-10-14 10:58:11,759 1 INFO odoo odoo.modules.loading: loading sccc/demo/demo.xml 
+2019-10-14 10:58:11,760 1 WARNING odoo odoo.modules.loading: Module sccc demo data failed to install, installed without demo data 
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/tools/convert.py", line 758, in parse
+    self._tags[rec.tag](rec, de, mode=mode)
+  File "/usr/lib/python3/dist-packages/odoo/tools/convert.py", line 574, in _tag_record
+    model = self.env[rec_model]
+  File "/usr/lib/python3/dist-packages/odoo/api.py", line 821, in __getitem__
+    return self.registry[model_name]._browse((), self)
+  File "/usr/lib/python3/dist-packages/odoo/modules/registry.py", line 176, in __getitem__
+    return self.models[model_name]
+KeyError: 'sccc.sccc'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/modules/loading.py", line 84, in load_demo
+    load_data(cr, idref, mode, kind='demo', package=package, report=report)
+  File "/usr/lib/python3/dist-packages/odoo/modules/loading.py", line 68, in load_data
+    tools.convert_file(cr, package.name, filename, idref, mode, noupdate, kind, report)
+  File "/usr/lib/python3/dist-packages/odoo/tools/convert.py", line 802, in convert_file
+    convert_xml_import(cr, module, fp, idref, mode, noupdate, report)
+  File "/usr/lib/python3/dist-packages/odoo/tools/convert.py", line 865, in convert_xml_import
+    obj.parse(doc.getroot(), mode=mode)
+  File "/usr/lib/python3/dist-packages/odoo/tools/convert.py", line 755, in parse
+    self.parse(rec, mode)
+  File "/usr/lib/python3/dist-packages/odoo/tools/convert.py", line 764, in parse
+    exc_info[2]
+  File "/usr/lib/python3/dist-packages/odoo/tools/pycompat.py", line 86, in reraise
+    raise value.with_traceback(tb)
+  File "/usr/lib/python3/dist-packages/odoo/tools/convert.py", line 758, in parse
+    self._tags[rec.tag](rec, de, mode=mode)
+  File "/usr/lib/python3/dist-packages/odoo/tools/convert.py", line 574, in _tag_record
+    model = self.env[rec_model]
+  File "/usr/lib/python3/dist-packages/odoo/api.py", line 821, in __getitem__
+    return self.registry[model_name]._browse((), self)
+  File "/usr/lib/python3/dist-packages/odoo/modules/registry.py", line 176, in __getitem__
+    return self.models[model_name]
+odoo.tools.convert.ParseError: "sccc.sccc" while parsing /mnt/extra-addons/sccc/demo/demo.xml:3, near
+<record id="object0" model="sccc.sccc">
+            <field name="name">Object 0</field>
+            <field name="value">0</field> 
+        </record>
+2019-10-14 10:58:11,768 1 INFO odoo odoo.modules.loading: Module web: loading demo 
+2019-10-14 10:58:11,768 1 INFO odoo odoo.modules.loading: Module base_import: loading demo 
+2019-10-14 10:58:11,768 1 INFO odoo odoo.modules.loading: Module web_diagram: loading demo 
+2019-10-14 10:58:11,769 1 INFO odoo odoo.modules.loading: Module web_editor: loading demo 
+2019-10-14 10:58:11,769 1 INFO odoo odoo.modules.loading: Module web_kanban_gauge: loading demo 
+2019-10-14 10:58:11,769 1 INFO odoo odoo.modules.loading: Module web_settings_dashboard: loading demo 
+2019-10-14 10:58:11,770 1 INFO odoo odoo.modules.loading: Module web_tour: loading demo 
+2019-10-14 10:58:11,770 1 INFO odoo odoo.modules.loading: loading web_tour/data/web_tour_demo.xml 
+2019-10-14 10:58:11,794 1 INFO odoo odoo.modules.loading: Module iap: loading demo 
+2019-10-14 10:58:11,797 1 INFO odoo odoo.modules.registry: At least one model cache has been invalidated, signaling through the database. 
+2019-10-14 10:58:11,797 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:58:11] "POST /web/dataset/call_button HTTP/1.1" 200 - 3286 1.033 1.471
+2019-10-14 10:58:12,211 1 INFO odoo odoo.models.unlink: User #1 deleted ir.attachment records with IDs: [246] 
+2019-10-14 10:58:12,940 1 INFO odoo odoo.models.unlink: User #1 deleted ir.attachment records with IDs: [251] 
+2019-10-14 10:58:13,155 1 INFO odoo odoo.modules.registry: At least one model cache has been invalidated, signaling through the database. 
+2019-10-14 10:58:13,157 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:58:13] "GET /web HTTP/1.1" 200 - 593 0.239 1.110
+2019-10-14 10:58:13,189 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:58:13] "GET /web/content/442-c0e1488/web.assets_common.0.css HTTP/1.1" 200 - 8 0.005 0.013
+2019-10-14 10:58:13,194 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:58:13] "GET /web/content/443-c0e1488/web.assets_common.js HTTP/1.1" 200 - 8 0.005 0.016
+2019-10-14 10:58:13,346 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:58:13] "GET /web/webclient/qweb?mods=base,web,base_import,web_settings_dashboard,iap,web_diagram,web_editor,web_kanban_gauge,web_tour HTTP/1.1" 200 - 1 0.000 0.042
+2019-10-14 10:58:13,373 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:58:13] "POST /web/dataset/call HTTP/1.1" 200 - 12 0.004 0.007
+2019-10-14 10:58:13,392 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:58:13] "POST /web/webclient/translations HTTP/1.1" 200 - 6 0.002 0.005
+2019-10-14 10:58:13,519 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:58:13] "POST /web/dataset/call_kw/ir.ui.menu/load_menus HTTP/1.1" 200 - 96 0.041 0.069
+2019-10-14 10:58:13,548 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:58:13] "POST /web/dataset/call_kw/res.users/read HTTP/1.1" 200 - 2 0.001 0.005
+2019-10-14 10:58:13,571 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:58:13] "GET /web/image?model=res.users&field=image_small&id=2 HTTP/1.1" 200 - 27 0.016 0.016
+2019-10-14 10:58:13,609 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:58:13] "POST /web/action/load HTTP/1.1" 200 - 49 0.022 0.032
+2019-10-14 10:58:13,738 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:58:13] "POST /web/dataset/call_kw/ir.module.module/load_views HTTP/1.1" 200 - 96 0.046 0.067
+2019-10-14 10:58:13,790 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:58:13] "POST /web/dataset/search_read HTTP/1.1" 200 - 5 0.004 0.006
+2019-10-14 10:58:16,693 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:58:16] "POST /web/action/load HTTP/1.1" 200 - 12 0.009 0.010
+2019-10-14 10:58:16,716 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:58:16] "POST /web_settings_dashboard/data HTTP/1.1" 200 - 20 0.007 0.009
+2019-10-14 10:58:16,727 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:58:16] "POST /web/dataset/call_kw/iap.account/get_account_url HTTP/1.1" 200 - 4 0.001 0.005
+2019-10-14 10:58:27,659 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:58:27] "POST /web/action/load HTTP/1.1" 200 - 51 0.018 0.050
+2019-10-14 10:58:27,777 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:58:27] "POST /web/dataset/call_kw/res.users/load_views HTTP/1.1" 200 - 72 0.035 0.077
+2019-10-14 10:58:27,816 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:58:27] "POST /web/dataset/search_read HTTP/1.1" 200 - 11 0.004 0.007
+2019-10-14 10:58:32,750 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:58:32] "POST /web/dataset/call_kw/res.users/read HTTP/1.1" 200 - 30 0.010 0.016
+2019-10-14 10:58:32,763 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:58:32] "POST /web/dataset/call_kw/res.company/read HTTP/1.1" 200 - 4 0.002 0.004
+2019-10-14 10:58:32,851 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:58:32] "GET /web/image?model=res.users&id=6&field=image_medium&unique=10142019125809 HTTP/1.1" 200 - 13 0.004 0.010
+2019-10-14 10:58:40,931 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:58:40] "POST /web/dataset/search_read HTTP/1.1" 200 - 11 0.004 0.008
+2019-10-14 10:58:41,959 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:58:41] "POST /web/dataset/call_kw/res.users/read HTTP/1.1" 200 - 21 0.009 0.016
+2019-10-14 10:58:41,972 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:58:41] "POST /web/dataset/call_kw/res.company/read HTTP/1.1" 200 - 3 0.002 0.004
+2019-10-14 10:58:42,051 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:58:42] "GET /web/image?model=res.users&id=2&field=image_medium&unique=10142019095610 HTTP/1.1" 200 - 13 0.005 0.010
+2019-10-14 10:58:53,929 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:58:53] "POST /web_settings_dashboard/data HTTP/1.1" 200 - 13 0.004 0.007
+2019-10-14 10:58:53,938 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:58:53] "POST /web/dataset/call_kw/iap.account/get_account_url HTTP/1.1" 200 - 1 0.000 0.003
+2019-10-14 10:58:56,396 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:58:56] "POST /web/action/load HTTP/1.1" 200 - 22 0.009 0.019
+2019-10-14 10:58:56,432 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:58:56] "POST /web/dataset/search_read HTTP/1.1" 200 - 3 0.003 0.007
+2019-10-14 10:58:58,312 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:58:58] "POST /web/dataset/search_read HTTP/1.1" 200 - 4 0.004 0.009
+2019-10-14 10:59:00,188 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:59:00] "POST /web/dataset/search_read HTTP/1.1" 200 - 3 0.004 0.003
+2019-10-14 10:59:04,103 1 INFO odoo odoo.addons.base.models.ir_module: ALLOW access to module.button_immediate_upgrade on ['sccc'] to user odoo #2 via 172.18.0.1 
+2019-10-14 10:59:04,104 1 INFO odoo odoo.addons.base.models.ir_module: ALLOW access to module.button_upgrade on ['sccc'] to user odoo #2 via 172.18.0.1 
+2019-10-14 10:59:04,104 1 INFO odoo odoo.addons.base.models.ir_module: ALLOW access to module.update_list on ['sccc'] to user odoo #2 via 172.18.0.1 
+2019-10-14 10:59:04,696 1 INFO odoo odoo.addons.base.models.ir_module: ALLOW access to module.button_install on [] to user odoo #2 via 172.18.0.1 
+2019-10-14 10:59:04,708 1 INFO odoo odoo.modules.loading: loading 1 modules... 
+2019-10-14 10:59:04,722 1 INFO odoo odoo.modules.loading: 1 modules loaded in 0.01s, 0 queries 
+2019-10-14 10:59:04,900 1 INFO odoo odoo.modules.loading: updating modules list 
+2019-10-14 10:59:04,902 1 INFO odoo odoo.addons.base.models.ir_module: ALLOW access to module.update_list on [] to user __system__ #1 via 172.18.0.1 
+2019-10-14 10:59:05,433 1 INFO odoo odoo.modules.loading: loading 10 modules... 
+2019-10-14 10:59:05,466 1 WARNING odoo odoo.models: The model sccc.location has no _description 
+2019-10-14 10:59:05,467 1 WARNING odoo odoo.models: The model sccc.room has no _description 
+2019-10-14 10:59:05,500 1 INFO odoo odoo.modules.registry: module sccc: creating or updating database tables 
+2019-10-14 10:59:05,536 1 INFO odoo odoo.modules.loading: loading sccc/views/views.xml 
+2019-10-14 10:59:05,558 1 INFO odoo odoo.modules.loading: loading sccc/views/templates.xml 
+2019-10-14 10:59:05,560 1 INFO odoo odoo.modules.loading: Module sccc: loading demo 
+2019-10-14 10:59:05,560 1 INFO odoo odoo.modules.loading: loading sccc/demo/demo.xml 
+2019-10-14 10:59:05,562 1 WARNING odoo odoo.modules.loading: Module sccc demo data failed to install, installed without demo data 
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/tools/convert.py", line 758, in parse
+    self._tags[rec.tag](rec, de, mode=mode)
+  File "/usr/lib/python3/dist-packages/odoo/tools/convert.py", line 574, in _tag_record
+    model = self.env[rec_model]
+  File "/usr/lib/python3/dist-packages/odoo/api.py", line 821, in __getitem__
+    return self.registry[model_name]._browse((), self)
+  File "/usr/lib/python3/dist-packages/odoo/modules/registry.py", line 176, in __getitem__
+    return self.models[model_name]
+KeyError: 'sccc.sccc'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/modules/loading.py", line 84, in load_demo
+    load_data(cr, idref, mode, kind='demo', package=package, report=report)
+  File "/usr/lib/python3/dist-packages/odoo/modules/loading.py", line 68, in load_data
+    tools.convert_file(cr, package.name, filename, idref, mode, noupdate, kind, report)
+  File "/usr/lib/python3/dist-packages/odoo/tools/convert.py", line 802, in convert_file
+    convert_xml_import(cr, module, fp, idref, mode, noupdate, report)
+  File "/usr/lib/python3/dist-packages/odoo/tools/convert.py", line 865, in convert_xml_import
+    obj.parse(doc.getroot(), mode=mode)
+  File "/usr/lib/python3/dist-packages/odoo/tools/convert.py", line 755, in parse
+    self.parse(rec, mode)
+  File "/usr/lib/python3/dist-packages/odoo/tools/convert.py", line 764, in parse
+    exc_info[2]
+  File "/usr/lib/python3/dist-packages/odoo/tools/pycompat.py", line 86, in reraise
+    raise value.with_traceback(tb)
+  File "/usr/lib/python3/dist-packages/odoo/tools/convert.py", line 758, in parse
+    self._tags[rec.tag](rec, de, mode=mode)
+  File "/usr/lib/python3/dist-packages/odoo/tools/convert.py", line 574, in _tag_record
+    model = self.env[rec_model]
+  File "/usr/lib/python3/dist-packages/odoo/api.py", line 821, in __getitem__
+    return self.registry[model_name]._browse((), self)
+  File "/usr/lib/python3/dist-packages/odoo/modules/registry.py", line 176, in __getitem__
+    return self.models[model_name]
+odoo.tools.convert.ParseError: "sccc.sccc" while parsing /mnt/extra-addons/sccc/demo/demo.xml:3, near
+<record id="object0" model="sccc.sccc">
+            <field name="name">Object 0</field>
+            <field name="value">0</field> 
+        </record>
+2019-10-14 10:59:05,603 1 WARNING odoo odoo.models: The model sccc.location has no _description 
+2019-10-14 10:59:05,603 1 WARNING odoo odoo.models: The model sccc.room has no _description 
+2019-10-14 10:59:05,609 1 WARNING odoo odoo.models: The model sccc.location has no _description 
+2019-10-14 10:59:05,609 1 WARNING odoo odoo.models: The model sccc.room has no _description 
+2019-10-14 10:59:05,616 1 INFO odoo odoo.modules.loading: 10 modules loaded in 0.18s, 0 queries 
+2019-10-14 10:59:05,655 1 WARNING odoo odoo.modules.loading: The model sccc.location has no access rules, consider adding one. E.g. access_sccc_location,access_sccc_location,model_sccc_location,base.group_user,1,0,0,0 
+2019-10-14 10:59:05,655 1 WARNING odoo odoo.modules.loading: The model sccc.room has no access rules, consider adding one. E.g. access_sccc_room,access_sccc_room,model_sccc_room,base.group_user,1,0,0,0 
+2019-10-14 10:59:05,720 1 INFO odoo odoo.modules.registry: verifying fields for every extended model 
+2019-10-14 10:59:05,819 1 INFO odoo odoo.modules.loading: Modules loaded. 
+2019-10-14 10:59:05,825 1 INFO odoo odoo.addons.base.models.ir_module: getting next ir.actions.todo() 
+2019-10-14 10:59:05,829 1 INFO odoo odoo.addons.base.models.ir_module: next action is "Demo Failure Notification" 
+2019-10-14 10:59:05,858 1 INFO odoo odoo.modules.registry: Registry changed, signaling through the database 
+2019-10-14 10:59:05,859 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:59:05] "POST /web/dataset/call_button HTTP/1.1" 200 - 1389 0.472 1.291
+2019-10-14 10:59:05,867 1 INFO odoo odoo.addons.base.models.ir_http: Generating routing map 
+2019-10-14 10:59:05,894 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:59:05] "POST /web/action/run HTTP/1.1" 200 - 15 0.007 0.021
+2019-10-14 10:59:05,929 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:59:05] "POST /web/dataset/call_kw/ir.demo_failure.wizard/load_views HTTP/1.1" 200 - 17 0.011 0.019
+2019-10-14 10:59:05,940 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:59:05] "POST /web/dataset/call_kw/ir.demo_failure.wizard/read HTTP/1.1" 200 - 3 0.001 0.004
+2019-10-14 10:59:05,962 1 INFO ? werkzeug: 172.18.0.1 - - [14/Oct/2019 10:59:05] "GET /web/static/src/xml/dialog.xml HTTP/1.1" 200 - - - -
+2019-10-14 10:59:11,582 1 INFO odoo odoo.addons.base.models.ir_module: getting next ir.actions.todo() 
+2019-10-14 10:59:11,583 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:59:11] "POST /web/dataset/call_button HTTP/1.1" 200 - 2 0.001 0.003
+2019-10-14 10:59:12,052 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:59:12] "GET /web HTTP/1.1" 200 - 309 0.129 0.329
+2019-10-14 10:59:12,234 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:59:12] "GET /web/webclient/qweb?mods=base,web,base_import,web_settings_dashboard,iap,web_diagram,web_editor,web_kanban_gauge,web_tour HTTP/1.1" 200 - 1 0.000 0.039
+2019-10-14 10:59:12,269 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:59:12] "POST /web/dataset/call HTTP/1.1" 200 - 12 0.005 0.010
+2019-10-14 10:59:12,288 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:59:12] "POST /web/webclient/translations HTTP/1.1" 200 - 4 0.001 0.003
+2019-10-14 10:59:12,312 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:59:12] "POST /web/dataset/call_kw/ir.ui.menu/load_menus HTTP/1.1" 200 - 1 0.000 0.003
+2019-10-14 10:59:12,342 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:59:12] "POST /web/dataset/call_kw/res.users/read HTTP/1.1" 200 - 2 0.001 0.006
+2019-10-14 10:59:12,369 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:59:12] "GET /web/image?model=res.users&field=image_small&id=2 HTTP/1.1" 304 - 27 0.021 0.017
+2019-10-14 10:59:12,415 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:59:12] "POST /web/action/load HTTP/1.1" 200 - 46 0.032 0.033
+2019-10-14 10:59:12,534 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:59:12] "POST /web/dataset/call_kw/ir.module.module/load_views HTTP/1.1" 200 - 90 0.039 0.065
+2019-10-14 10:59:12,587 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:59:12] "POST /web/dataset/search_read HTTP/1.1" 200 - 5 0.003 0.006
+2019-10-14 10:59:14,182 1 INFO odoo werkzeug: 172.18.0.1 - - [14/Oct/2019 10:59:14] "POST /web/dataset/search_read HTTP/1.1" 200 - 3 0.002 0.006
+2019-10-14 11:03:04,467 1 INFO ? odoo.service.server: Initiating shutdown 
+2019-10-14 11:03:04,467 1 INFO ? odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
