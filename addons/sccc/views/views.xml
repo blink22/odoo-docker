@@ -9,7 +9,7 @@
         </p>
     </field>
   </record>
-
+  <menuitem id="rooms_menu" name="Rooms" action="room_list_action"/>
     <!-- explicit list view definition -->
     <!--
     <record model="ir.ui.view" id="sccc.list">
