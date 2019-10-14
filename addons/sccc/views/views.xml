@@ -1,14 +1,12 @@
 <odoo>
   <data>
-    <record model="ir.ui.view" id="room_tree_view">
-      <field name="name">room list tree</field>
-      <field name="model">sccc.room</field>
-      <field name="arch" type="xml">
-        <tree>
-          <field name="name"/>
-        </tree>
-      </field>
+    <record model="ir.actions.act_window" id="room_tree_view">
+      <field name="name">Room ListTree</field>
+      <field name="res_model">sccc.room</field>
+      <field name="view_mode">tree,form</field>
     </record>
+    <menuitem id="menu_ideas" parent="menu_root" name="Ideas" sequence="10"
+              action="room_tree_view"/>
     <!-- explicit list view definition -->
     <!--
     <record model="ir.ui.view" id="sccc.list">
