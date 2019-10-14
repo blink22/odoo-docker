@@ -1,12 +1,15 @@
 <odoo>
-  <data>
-    <record model="ir.actions.act_window" id="room_tree_view">
-      <field name="name">Room ListTree</field>
-      <field name="res_model">sccc.room</field>
-      <field name="view_mode">tree,form</field>
-    </record>
-    <menuitem id="menu_ideas" parent="menu_root" name="Ideas" sequence="10"
-              action="room_tree_view"/>
+  <record model="ir.actions.act_window" id="room_list_action">
+    <field name="name">Rooms</field>
+    <field name="res_model">sccc.room</field>
+    <field name="view_type">form</field>
+    <field name="view_mode">tree,form</field>
+    <field name="help" type="html">
+        <p class="o_view_nocontent_smiling_face">Create the first room
+        </p>
+    </field>
+  </record>
+
     <!-- explicit list view definition -->
     <!--
     <record model="ir.ui.view" id="sccc.list">
@@ -63,5 +66,4 @@
     <menuitem name="Server to list" id="sccc" parent="sccc.menu_2"
               action="sccc.action_server"/>
     -->
-  </data>
 </odoo>
