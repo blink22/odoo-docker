@@ -17,7 +17,7 @@ ports:
  - "8069:8069"
 ```
 
-* Log file is printed @ **etc/odoo-server.log**
+* Log file is printed @ **config/odoo-server.log**
 
 To run in detached mode, execute this command:
 
@@ -31,7 +31,7 @@ The **addons** folder contains custom addons. Just put your custom addons if you
 
 # Odoo configuration
 
-To change Odoo configuration, edit file: **etc/odoo.conf**.
+To change Odoo configuration, edit file: **config/odoo.conf**.
 
 # docker-compose.yml
 
