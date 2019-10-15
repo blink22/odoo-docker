@@ -71,8 +71,8 @@ RUN set -x; \
 # Copy entrypoint script and Odoo configuration file
 RUN pip3 install num2words xlwt
 # COPY ./entrypoint.sh /
-COPY ../config/ /etc/odoo/
-COPY ../addons/ /mnt/extra-addons
+COPY ./config/ /etc/odoo/
+COPY ./addons/ /mnt/extra-addons
 RUN chown odoo /etc/odoo/odoo.conf
 
 # Mount /var/lib/odoo to allow restoring filestore and /mnt/extra-addons for users addons
