@@ -6,7 +6,7 @@
       <field name="name">my_module list</field>
       <field name="model">my_module.my_module</field>
       <field name="arch" type="xml">
-        <tree string="Rooms" colors="darkred" create="true" editable="top" edit="true" delete="true">
+        <tree string="Rooms" colors="darkred" create="true" edit="true" delete="true">
           <field name="name"/>
           <field name="value"/>
           <field name="value2"/>

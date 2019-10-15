@@ -1,0 +1,58 @@
+<odoo>
+    <!--Clients Views-->​
+    <!--tree view-->
+    <record model="ir.ui.view" id="client_tree_view">
+              <field name="name">client list tree</field>
+              <field name="model">sccc.client</field>
+              <field name="arch" type="xml">
+                  <tree create="true">
+                      <field name="name"/>
+                      <field name="first_name"/>
+                      <field name="last_name"/>
+                      <field name="date_of_birth"/>
+                      <field name="email"/>
+                      <field name="cell_phone"/>
+                      <field name="counseling_type"/>
+                  </tree>
+              </field>
+    </record>
+
+    <!--form view-->
+    <record model="ir.ui.view" id="client_form_view">
+              <field name="name">client form</field>
+              <field name="model">sccc.client</field>
+              <field name="arch" type="xml">
+                   <form string="Client Form">
+                       <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="first_name"/>
+                            <field name="last_name"/>
+                            <field name="date_of_birth"/>
+                            <field name="email"/>
+                            <field name="cell_phone"/>
+                            <field name="counseling_type"/>
+                        </group>
+                       </sheet>
+                </form>
+              </field>
+    </record>
+
+    <!--search view-->
+    <record model="ir.ui.view" id="client_search_view">
+      <field name="name">client list search</field>
+      <field name="model">sccc.client</field>
+      <field name="arch" type="xml">
+        <search>
+          <field name="name"/>
+          <field name="first_name"/>
+          <field name="last_name"/>
+          <field name="date_of_birth"/>
+          <field name="email"/>
+          <field name="cell_phone"/>
+          <field name="counseling_type"/>
+        </search>
+      </field>
+    </record>
+    ​
+</odoo>

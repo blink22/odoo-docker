@@ -1,0 +1,57 @@
+<odoo>
+
+    <!--Actions -->
+    <record model="ir.actions.act_window" id="action_locations">
+      <field name="name">Locations</field>
+      <field name="res_model">sccc.location</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <record model="ir.actions.act_window" id="action_room">
+      <field name="name">Rooms</field>
+      <field name="res_model">sccc.room</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <record model="ir.actions.act_window" id="action_counselor">
+      <field name="name">Staff</field>
+      <field name="res_model">sccc.counselor</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+​
+    <record model="ir.actions.act_window" id="action_files">
+      <field name="name">Files</field>
+      <field name="res_model">sccc.file</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <record model="ir.actions.act_window" id="action_clients">
+      <field name="name">Clients</field>
+      <field name="res_model">sccc.client</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <record model="ir.actions.act_window" id="action_payments">
+      <field name="name">Payments</field>
+      <field name="res_model">sccc.payment</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <record model="ir.actions.act_window" id="action_calendar">
+      <field name="name">Calendar</field>
+      <field name="res_model">sccc.calendar</field>
+      <field name="view_mode">tree,form,calendar</field>
+    </record>
+
+    <!-- Menu Builder -->
+    <menuitem name="SCCC" id="sccc.menu_root" sequence="0"/>
+        <menuitem name="Calendar" id="sccc.calendar" parent="sccc.menu_root"  action="action_calendar" sequence="1"/>
+        <menuitem name="Files" id="sccc.files" parent="sccc.menu_root"  action="action_files" sequence="2"/>
+        <menuitem name="Clients" id="sccc.clients" parent="sccc.menu_root"  action="action_clients" sequence="3"/>
+        <menuitem name="Payments" id="sccc.payments" parent="sccc.menu_root"  action="action_payments" sequence="4"/>
+        <menuitem name="Config" id="sccc.config" parent="sccc.menu_root"  action="action_locations" sequence="5"/>
+            <menuitem name="Locations" id="sccc.menu_location" parent="sccc.config"  action="action_locations"/>
+            <menuitem name="Rooms" id="sccc.menu_room" parent="sccc.config"  action="action_room"/>
+            <menuitem name="Staff" id="sccc.menu_counselor" parent="sccc.config"  action="action_counselor"/>
+
+</odoo>

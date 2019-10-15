@@ -1,0 +1,67 @@
+<odoo>
+    <!--Files Views-->​
+    <!--tree view-->
+    <record model="ir.ui.view" id="file_tree_view">
+              <field name="name">file list tree</field>
+              <field name="model">sccc.file</field>
+              <field name="arch" type="xml">
+                  <tree create="true">
+                      <field name="file_number"/>
+                      <field name="name"/>
+                      <field name="clients"/>
+                      <field name="intake_date"/>
+                      <field name="availability"/>
+                      <field name="waitlist"/>
+                      <field name="double_fee"/>
+                      <field name="lgbtq_counselor"/>
+                      <field name="other_considerations"/>
+                      <field name="additional_notes"/>
+                  </tree>
+              </field>
+    </record>
+​
+    <!--form view-->
+    <record model="ir.ui.view" id="file_form_view">
+              <field name="name">file form</field>
+              <field name="model">sccc.file</field>
+              <field name="arch" type="xml">
+                   <form string="File Form">
+                       <sheet>
+                        <group>
+                            <field name="file_number"/>
+                            <field name="name"/>
+                            <field name="clients"/>
+                            <field name="intake_date"/>
+                            <field name="availability"/>
+                            <field name="waitlist"/>
+                            <field name="double_fee"/>
+                            <field name="lgbtq_counselor"/>
+                            <field name="other_considerations"/>
+                            <field name="additional_notes"/>
+                        </group>
+                       </sheet>
+                </form>
+              </field>
+    </record>
+
+    <!--search view-->
+    <record model="ir.ui.view" id="file_search_view">
+      <field name="name">file list search</field>
+      <field name="model">sccc.file</field>
+      <field name="arch" type="xml">
+        <search>
+          <field name="file_number"/>
+          <field name="name"/>
+          <field name="clients"/>
+          <field name="intake_date"/>
+          <field name="availability"/>
+          <field name="waitlist"/>
+          <field name="double_fee"/>
+          <field name="lgbtq_counselor"/>
+          <field name="other_considerations"/>
+          <field name="additional_notes"/>
+        </search>
+      </field>
+    </record>
+    ​
+</odoo>

@@ -1,0 +1,8 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_sccc_location,sccc.location,sccc.model_sccc_location,,1,1,1,1
+access_sccc_room,sccc.room,sccc.model_sccc_room,,1,1,1,1
+access_sccc_counselor,sccc.counselor,sccc.model_sccc_counselor,,1,1,1,1
+access_sccc_file,sccc.file,sccc.model_sccc_file,,1,1,1,1
+access_sccc_client,sccc.client,sccc.model_sccc_client,,1,1,1,1
+access_sccc_payment,sccc.payment,sccc.model_sccc_payment,,1,1,1,1
+access_sccc_calendar,sccc.calendar,sccc.model_sccc_calendar,,1,1,1,1

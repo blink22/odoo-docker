@@ -1,0 +1,77 @@
+<odoo>
+    <!--Payments Views-->​
+    <!--tree view-->
+    <record model="ir.ui.view" id="calendar_tree_view">
+              <field name="name">calendar list tree</field>
+              <field name="model">sccc.calendar</field>
+              <field name="arch" type="xml">
+                  <tree create="true">
+                      <field name="name"/>
+                      <field name="files"/>
+                      <field name="counselor"/>
+                      <field name="start_date"/>
+                      <field name="end_date"/>
+                      <field name="duration" widget="float_time"/>
+                      <field name="room"/>
+
+                  </tree>
+              </field>
+    </record>
+
+    <!--form view-->
+    <record model="ir.ui.view" id="calendar_form_view">
+              <field name="name">calendar form</field>
+              <field name="model">sccc.calendar</field>
+              <field name="arch" type="xml">
+                   <form string="Payment Form">
+                       <sheet>
+                        <group>
+                          <field name="name"/>
+                          <field name="files"/>
+                        </group>
+                        <notebook>
+                        <page name="general_info" string="General Info">
+                            <group>
+                              <field name="counselor"/>
+                              <field name="start_date"/>
+                              <field name="end_date"/>
+                              <field name="duration" widget="float_time"/>
+                              <field name="room"/>
+                            </group>
+                        </page>
+                       </notebook>
+                       </sheet>
+                </form>
+              </field>
+    </record>
+
+    <!--search view-->
+    <record model="ir.ui.view" id="calendar_search_view">
+      <field name="name">calendar list search</field>
+      <field name="model">sccc.calendar</field>
+      <field name="arch" type="xml">
+        <search>
+          <field name="name"/>
+          <field name="files"/>
+          <field name="counselor"/>
+          <field name="start_date"/>
+          <field name="end_date"/>
+          <field name="duration" widget="float_time"/>
+          <field name="room"/>
+        </search>
+      </field>
+    </record>
+
+    <!--calendar view-->
+    <record model="ir.ui.view" id="sccc_calendar_view">
+            <field name="name">sccc calendar</field>
+            <field name="model">sccc.calendar</field>
+            <field name="arch" type="xml">
+                <calendar string="Calendar" date_start="start_date" date_stop="end_date" color="room">
+                    <field name="name"/>
+                    <field name="room"/>
+                </calendar>
+            </field>
+    </record>
+    ​
+</odoo>

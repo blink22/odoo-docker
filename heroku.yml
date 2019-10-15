@@ -1,0 +1,4 @@
+build:
+  docker:
+    odoo: ./odoo/Dockerfile
+    db: ./db/Dockerfile

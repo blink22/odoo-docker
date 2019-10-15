@@ -1,0 +1,152 @@
+<odoo>
+    <!--Location Views-->​
+    <!--tree view-->
+    <record model="ir.ui.view" id="location_tree_view">
+              <field name="name">location list tree</field>
+              <field name="model">sccc.location</field>
+              <field name="arch" type="xml">
+                  <tree create="true">
+                      <field name="name"/>
+                      <field name="location_id"/>
+                  </tree>
+              </field>
+    </record>
+​
+    <!--form view-->
+    <record model="ir.ui.view" id="location_form_view">
+              <field name="name">location form</field>
+              <field name="model">sccc.location</field>
+              <field name="arch" type="xml">
+                   <form string="Location Form">
+                       <sheet>
+                        <group>
+                            <field name="name"/>
+                        </group>
+                       </sheet>
+                </form>
+              </field>
+    </record>
+
+    <!--search view-->
+    <record model="ir.ui.view" id="location_search_view">
+      <field name="name">location list search</field>
+      <field name="model">sccc.location</field>
+      <field name="arch" type="xml">
+        <search>
+          <field name="name"/>
+          <field name="location_id"/>
+        </search>
+      </field>
+    </record>
+​
+    <!-- Sequences for sccc.location_id_generate -->
+        <record id="location_id_generate" model="ir.sequence">
+            <field name="name">Location ID Generate</field>
+            <field name="code">sccc.location_id_generate</field>
+            <field name="prefix"></field>
+            <field name="padding">1</field>
+        </record>
+
+    <!--Room Views-->​
+    <!--tree view-->
+    <record model="ir.ui.view" id="room_tree_view">
+              <field name="name">room list tree</field>
+              <field name="model">sccc.room</field>
+              <field name="arch" type="xml">
+                  <tree create="true">
+                      <field name="name"/>
+                      <field name="location"/>
+                      <field name="type"/>
+                  </tree>
+              </field>
+    </record>
+​
+    <!--form view-->
+    <record model="ir.ui.view" id="room_form_view">
+              <field name="name">room form</field>
+              <field name="model">sccc.room</field>
+              <field name="arch" type="xml">
+                   <form string="Room Form">
+                        <group>
+                            <field name="name"/>
+                            <field name="location" />
+                            <field name="type"/>
+                        </group>
+                </form>
+              </field>
+    </record>
+​
+    ​<!--search view-->
+    <record model="ir.ui.view" id="room_search_view">
+      <field name="name">room list search</field>
+      <field name="model">sccc.room</field>
+      <field name="arch" type="xml">
+        <search>
+          <field name="name"/>
+          <field name="location"/>
+          <field name="type"/>
+        </search>
+      </field>
+    </record>
+
+    <!--Counselor Views-->​
+    <!--tree view-->
+    <record model="ir.ui.view" id="counselor_tree_view">
+              <field name="name">counselor list tree</field>
+              <field name="model">sccc.counselor</field>
+              <field name="arch" type="xml">
+                  <tree create="true">
+                      <field name="name"/>
+                      <field name="in_crawl"/>
+                      <field name="availability"/>
+                      <field name="files"/>
+                  </tree>
+              </field>
+    </record>
+​
+    <!--form view-->
+    <record model="ir.ui.view" id="counselor_form_view">
+          <field name="name">counselor.form</field>
+          <field name="model">sccc.counselor</field>
+          <field name="arch" type="xml">
+               <form string="Counselor Form">
+                   <sheet>
+                       <notebook>
+                       <page name="personal_details" string="Personal Details">
+                            <group>
+                              <field name="name"/>
+                              <field name="in_crawl"/>
+                              <field name="availability"/>
+                            </group>
+                       </page>
+                       <page name="caseload" string="Caseload">
+                           <group>
+                               <field name="files"/>
+                           </group>
+                       </page>
+                       </notebook>
+                   </sheet>
+                </form>
+          </field>
+    </record>
+​
+    ​<!--search view-->
+    <record model="ir.ui.view" id="counselor_search_view">
+      <field name="name">counselor list search</field>
+      <field name="model">sccc.counselor</field>
+      <field name="arch" type="xml">
+        <search>
+          <field name="name"/>
+          <field name="in_crawl"/>
+          <field name="availability"/>
+          <field name="files"/>
+        </search>
+      </field>
+    </record>
+
+</odoo>
+
+
+
+
+

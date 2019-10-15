@@ -1,5 +1,4 @@
-# Usage
-
+# Development Usage
 Change the folder permission to make sure that the container is able to access the directory:
 ```
 $ sudo chmod -R 777 addons
@@ -38,3 +37,5 @@ To change Odoo configuration, edit file: **etc/odoo.conf**.
 
 * odoo:12.0
 * postgres:10
+
+# Deployment on heroku
