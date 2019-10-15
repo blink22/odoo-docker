@@ -1,4 +1,0 @@
-build:
-  docker:
-    db: ./db/Dockerfile
-    odoo: Dockerfile
