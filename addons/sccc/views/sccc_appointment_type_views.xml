@@ -1,0 +1,40 @@
+<odoo>
+    <!--SCCC Appointment Type Views-->​
+    <!--tree view-->
+    <record model="ir.ui.view" id="sccc_appointment_type_tree_view">
+              <field name="name">sccc_appointment_type list tree</field>
+              <field name="model">sccc.sccc_appointment_type</field>
+              <field name="arch" type="xml">
+                  <tree create="true">
+                      <field name="type_name"/>
+                  </tree>
+              </field>
+    </record>
+
+    <!--form view-->
+    <record model="ir.ui.view" id="sccc_appointment_type_form_view">
+              <field name="name">sccc_appointment_type form</field>
+              <field name="model">sccc.sccc_appointment_type</field>
+              <field name="arch" type="xml">
+                   <form string="SCCC Appointment Type Form">
+                       <sheet>
+                        <group>
+                            <field name="type_name"/>
+                        </group>
+                       </sheet>
+                </form>
+              </field>
+    </record>
+
+    <!--search view-->
+    <record model="ir.ui.view" id="sccc_appointment_type_search_view">
+      <field name="name">sccc_appointment_type list search</field>
+      <field name="model">sccc.sccc_appointment_type</field>
+      <field name="arch" type="xml">
+        <search>
+          <field name="type_name"/>
+        </search>
+      </field>
+    </record>
+    ​
+</odoo>

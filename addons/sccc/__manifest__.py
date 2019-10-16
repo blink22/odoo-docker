@@ -31,6 +31,16 @@
         'views/client_views.xml',
         'views/payment_views.xml',
         'views/calendar_views.xml',
+        'views/ethnicity_views.xml',
+        'views/fam_assessment_views.xml',
+        'views/fee_adjustment_views.xml',
+        'views/fee_setting_views.xml',
+        'views/individual_assessment_views.xml',
+        'views/language_views.xml',
+        'views/progress_notes_views.xml',
+        'views/sccc_appointment_type_views.xml',
+        'views/sessions_views.xml',
+        'views/time_slots_views.xml',
     ],
     # only loaded in demonstration mode
     'demo': [

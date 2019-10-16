@@ -4,7 +4,7 @@ class FeeSetting(models.Model):
 
   form_upload = fields.Binary ('Upload Fee Form')
   added_date = fields.Date('Date added to system')
-  today_date = fields.Date('Today\'s date')
+  today_date = fields.Date('Today\'s date', compute='_get_today')
   fee = fields.Monetary('Fee Set at')
   refered_to_fee = fields.Selection([ ('yes', 'Yes'), ('no', 'No') ], 'Referred to Fee Review Committee?')
   currency = fields.Monetary('Currency')
@@ -27,3 +27,6 @@ class FeeSetting(models.Model):
   # Relations
   files = fields.Many2one('sccc.file', 'File')
   counselor = fields.Many2one('sccc.counselor', 'Counselor')
+
+  def _get_today(self):
+    self.today_date = date.today()

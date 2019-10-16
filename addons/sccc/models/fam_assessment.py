@@ -13,12 +13,16 @@ class FamAssessment(models.Model):
   outstanding_balance = fields.Monetary('Any outstanding balance?')
   mandated_therapy = fields.Selection([('yes', 'Yes'), ('no', 'No')], 'Is client mandated to attend therapy?')
   mandated_therapy_agency = fields.Text('If yes, which agency?')
-  #mandated_attachments = fields.Binary('If Mandated, attach documents here')
+  # Is this right?
+  mandated_attachments = fields.Binary('If Mandated, attach documents here')
+  #
   bringing_reason = fields.Text('What is your sense of what is bringing this couple/family?')
   concerns = fields.Text('Please document your concerns')
   referral = fields.Text('Any other referrals made to this couple/family?')
   able_assign = fields.Selection([('yes', 'Yes'), ('no', 'No')], 'Were you able to assign this couple/family?')
-  #client = fields.Many2one('sccc.client', 'If so, who were they assigned to?')
+  # Is this right?
+  client = fields.Many2one('sccc.client', 'If so, who were they assigned to?')
+  #
   appointment_date = fields.Date('Date/time of appointment')
   fee = fields.Monetary('Fee')
   additional_notes = fields.Text('Additional notes')
