@@ -8,4 +8,4 @@ class Language(models.Model):
   code = fields.Char('Language Code')
 
   # Relations
-  clients = fields.One2many('sccc.clients', string='Clients')
+  clients = fields.One2many('sccc.client', 'client_language', string='Clients')

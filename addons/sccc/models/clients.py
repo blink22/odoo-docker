@@ -32,8 +32,8 @@ class Clients(models.Model):
 
   # Relations
   files = fields.Many2many('sccc.file', string='Files')
-  ethnicity = fields.Many2one('sccc.ethnicity', string='Ethnicity')
-  language = fields.Many2one('sccc.language', string='Language')
+  client_ethnicity = fields.Many2one('sccc.ethnicity', string='Ethnicity')
+  client_language = fields.Many2one('sccc.language', string='Language')
 
   @api.depends('last_name', 'first_name')
   def _set_name(self):

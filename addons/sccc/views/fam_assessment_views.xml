@@ -37,22 +37,22 @@
                    <form string="Fam Assessment Form">
                        <sheet>
                         <group>
-                            <field name="intake"/>
+                            <field widget="binary" height = "64" name="intake" filename="intake_namex" />
                             <field name="date"/>
                             <field name="therapy_type"/>
                             <field name="language_needs"/>
                             <field name="individual_counseling"/>
-                            <field name="outstanding_balance"/>
+                            <field name="outstanding_balance" widget="monetary" options="{'currency_field': 'currency_id'}"/>
                             <field name="mandated_therapy"/>
                             <field name="mandated_therapy_agency"/>
-                            <field name="mandated_attachments"/>
+                            <field widget="binary" height = "64" name="mandated_attachments" filename="mandated_attachments_namex" />
                             <field name="bringing_reason"/>
                             <field name="concerns"/>
                             <field name="referral"/>
                             <field name="able_assign"/>
                             <field name="client"/>
                             <field name="appointment_date"/>
-                            <field name="fee"/>
+                            <field name="fee" widget="monetary" options="{'currency_field': 'currency_id'}"/>
                             <field name="additional_notes"/>
                             <field name="file"/>
                             <field name="counselor"/>

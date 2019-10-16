@@ -12,6 +12,7 @@ class Files(models.Model):
     preferred_age = fields.Selection([ ('1', '21'), ('2', '22') ], 'Preferred Age')
     intake_date = fields.Date('Intake Date')
     
+    currency_id = fields.Integer(_computed='_get_currency')
     fee = fields.Monetary('Fee')
     balance = fields.Monetary('Balance')
     double_fee = fields.Boolean('Double Fee Hold')
@@ -38,3 +39,12 @@ class Files(models.Model):
     availability = fields.Many2many('sccc.time_slots', string='Availability (Time Slots)')
     progress_notes = fields.Many2many('sccc.progress_notes', string='Progress Notes')
     clients = fields.Many2many('sccc.client', string='Clients')
+
+    def _get_currency(self):
+        user_obj = self.pool.get('res.users')
+        currency_obj = self.pool.get('res.currency')
+        user = user_obj.browse(cr, uid, uid, context = context)
+        if user.company_id:
+            self.currency_id = user.company_id.currency_id.id
+        else:
+            self.currency_id = currency_obj.search(cr, uid, [('rate', '=', 1.0)])[0]

@@ -8,7 +8,7 @@
                   <tree create="true">
                       <field name="updated_fee"/>
                       <field name="added_date"/>
-                      <field name="today_date" readonly="1"/>
+                      <field name="today_date"/>
                       <field name="currency"/>
                       <field name="currency_fee"/>
                       <field name="requested_fee"/>
@@ -38,24 +38,24 @@
                    <form string="Fee Adjustment Form">
                        <sheet>
                         <group>
-                            <field name="updated_fee"/>
+                            <field widget="binary" height = "64" name="updated_fee" filename="updated_fee_namex" />
                             <field name="added_date"/>
                             <field name="today_date" readonly="1"/>
-                            <field name="currency"/>
-                            <field name="currency_fee"/>
-                            <field name="requested_fee"/>
+                            <field name="currency" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+                            <field name="currency_fee" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+                            <field name="requested_fee" widget="monetary" options="{'currency_field': 'currency_id'}"/>
                             <field name="people_inhouse"/>
                             <field name="ages"/>
-                            <field name="monthly_gross"/>
+                            <field name="monthly_gross" widget="monetary" options="{'currency_field': 'currency_id'}"/>
                             <field name="income_source"/>
-                            <field name="monthly_net"/>
-                            <field name="partner_monthly_net"/>
+                            <field name="monthly_net" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+                            <field name="partner_monthly_net" widget="monetary" options="{'currency_field': 'currency_id'}"/>
                             <field name="net_source"/>
-                            <field name="other_income"/>
-                            <field name="total_income"/>
-                            <field name="paystub"/>
+                            <field name="other_income" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+                            <field name="total_income" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+                            <field widget="binary" height = "64" name="paystub" filename="paystub_namex" />
                             <field name="board_approval"/>
-                            <field name="fee"/>
+                            <field name="fee" widget="monetary" options="{'currency_field': 'currency_id'}"/>
                             <field name="file"/>
                             <field name="counselor"/>
                         </group>

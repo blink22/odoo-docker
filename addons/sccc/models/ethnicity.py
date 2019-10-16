@@ -6,4 +6,4 @@ class Ethnicity(models.Model):
   name = fields.Char('Ethnicity Name')
 
   # Relations
-  clients = fields.One2many('sccc.clients', string='Clients')
+  clients = fields.One2many('sccc.client', 'client_ethnicity', string='Clients')

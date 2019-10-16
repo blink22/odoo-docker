@@ -25,4 +25,4 @@ class Payments(models.Model):
 
     # Relations
     files = fields.Many2many('sccc.file', string='Files')
-    counselor = fields.Many2one('sccc.counselor', 'Counselor')
+    counselor = fields.Many2one('sccc.counselor', string='Counselor')

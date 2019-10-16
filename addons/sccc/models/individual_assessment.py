@@ -40,7 +40,7 @@ class IndividualAssessment(models.Model):
   additional_notes = fields.Text('Any Additional Notes')
 
   # Relations
-  file = fields.One2many('sccc.file', 'File #')
-  counselor = fields.Many2one('sccc.counselor', 'Counselor')
-  ethnicity = fields.Many2many('sccc.ethnicity', 'Ethnicity')
-  client = fields.Many2one('sccc.client', 'Client')
+  file = fields.One2many('sccc.file', 'individual_assessment', string='File')
+  counselor = fields.Many2one('sccc.counselor', string='Counselor')
+  ethnicity = fields.Many2many('sccc.ethnicity', string='Ethnicity')
+  client = fields.Many2one('sccc.client', string='Client')
