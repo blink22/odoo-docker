@@ -47,23 +47,11 @@
                         <group>
                           <table>
                             <tr>
-                              <td style="width: 50%">
-                                <group>
-                                  <field name="name"/>
-                                </group>
-                              </td>
-                              <td style="width: 50%">
-                                <group>
-                                  <field name="file_number"/>
-                                </group>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td style="width: 100%">
-                                <group>
-                                  <field name="additional_notes"/>
-                                </group>
-                              </td>
+                              <group>
+                                <field name="name"/>
+                                <field name="file_number"/>
+                                <field name="additional_notes"/>
+                              </group>
                             </tr>
                             <tr>
                               <notebook>
