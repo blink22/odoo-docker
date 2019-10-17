@@ -9,6 +9,7 @@
                       <field name="name"/>
                       <field name="time"/>
                       <field name="day_of_week"/>
+                      <field name="files"/>
                   </tree>
               </field>
     </record>
@@ -24,6 +25,7 @@
                             <field name="name"/>
                             <field name="time"/>
                             <field name="day_of_week"/>
+                            <field name="files"/>
                         </group>
                        </sheet>
                 </form>

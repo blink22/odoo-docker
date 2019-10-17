@@ -24,5 +24,5 @@ class Payments(models.Model):
                                         ('other','Other') ], 'Payment Method')
 
     # Relations
-    files = fields.Many2many('sccc.file', string='Files')
+    files = fields.Many2many('sccc.file', 'payments', string='Files')
     counselor = fields.Many2one('sccc.counselor', string='Counselor')

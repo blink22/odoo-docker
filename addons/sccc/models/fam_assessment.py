@@ -29,7 +29,7 @@ class FamAssessment(models.Model):
   additional_notes = fields.Text('Additional notes')
 
   # Relations
-  file = fields.Many2one('sccc.file', string='File')
+  file = fields.One2many('sccc.file', 'fam_assessment', string='File')
   counselor = fields.Many2one('sccc.counselor', string='Counselor')
 
   def _get_currency(self):

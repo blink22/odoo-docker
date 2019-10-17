@@ -12,7 +12,7 @@
                       <field name="documentation"/>
                       <field name="follow_up"/>
                       <field name="next_session"/>
-                      <field name="file"/>
+                      <field name="files"/>
                       <field name="clients"/>
                       <field name="counselor"/>
                   </tree>
@@ -33,7 +33,7 @@
                             <field name="documentation"/>
                             <field name="follow_up"/>
                             <field name="next_session"/>
-                            <field name="file"/>
+                            <field name="files"/>
                             <field name="clients"/>
                             <field name="counselor"/>
                         </group>

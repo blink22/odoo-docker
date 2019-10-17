@@ -31,8 +31,8 @@
                       <field name="counseling_type"/>
                       <field name="interset"/>
                       <field name="files"/>
-                      <field name="ethnicity"/>
-                      <field name="language"/>
+                      <field name="client_ethnicity"/>
+                      <field name="client_language"/>
                   </tree>
               </field>
     </record>
@@ -70,8 +70,8 @@
                             <field name="counseling_type"/>
                             <field name="interset"/>
                             <field name="files"/>
-                            <field name="ethnicity"/>
-                            <field name="language"/>
+                            <field name="client_ethnicity"/>
+                            <field name="client_language"/>
                         </group>
                        </sheet>
                 </form>

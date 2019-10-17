@@ -15,7 +15,7 @@ class FeeAdjustment(models.Model):
   monthly_gross = fields.Monetary('Your total monthly gross income')
   income_source = fields.Char('Describe income source')
   monthly_net = fields.Monetary('Your total monthly net income')
-  partener_monthly_net = fields.Monetary('Spouse/partner\'s total monthly net income')
+  partner_monthly_net = fields.Monetary('Spouse/partner\'s total monthly net income')
   net_source = fields.Char('Describe income source')
   other_income = fields.Monetary('Any other monthly after-tax income')
   total_income = fields.Monetary('Total after-tax income')
@@ -24,7 +24,7 @@ class FeeAdjustment(models.Model):
   fee = fields.Monetary('Fee')
 
   # Relations
-  file = fields.Many2one('sccc.file', string='File')
+  files = fields.Many2many('sccc.file', 'fee_adjustment', string='Files')
   counselor = fields.Many2one('sccc.counselor', string='Counselor')
 
   def _get_today(self):

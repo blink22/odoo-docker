@@ -42,5 +42,5 @@ class IndividualAssessment(models.Model):
   # Relations
   file = fields.One2many('sccc.file', 'individual_assessment', string='File')
   counselor = fields.Many2one('sccc.counselor', string='Counselor')
-  ethnicity = fields.Many2many('sccc.ethnicity', string='Ethnicity')
+  ethnicity = fields.Many2many('sccc.ethnicity', 'individual_assessment', string='Ethnicity')
   client = fields.Many2one('sccc.client', string='Client')

@@ -6,7 +6,7 @@
               <field name="model">sccc.payment</field>
               <field name="arch" type="xml">
                   <tree create="true">
-                      <field name="file"/>
+                      <field name="files"/>
                       <field name="name"/>
                       <field name="date"/>
                       <field name="amount_due"/>
@@ -25,7 +25,7 @@
                        <sheet>
                         <group>
                           <field name="name"/>
-                          <field name="file"/>
+                          <field name="files"/>
                           <field name="counselor"/>
                           <field name="date"/>
                           <field name="description_tag"/>
@@ -44,7 +44,7 @@
       <field name="model">sccc.payment</field>
       <field name="arch" type="xml">
         <search>
-          <field name="file"/>
+          <field name="files"/>
           <field name="name"/>
           <field name="date"/>
           <field name="amount_due"/>
