@@ -9,6 +9,6 @@ class Calendar(models.Model):
     duration = fields.Float('Duration')
     
     # Relations
-    room = fields.Many2one('sccc.room', 'Room')
+    room = fields.Many2one('sccc.room', string='Room')
     files = fields.Many2many('sccc.file', 'meetings', string='Files')
     counselor = fields.Many2one('sccc.counselor', string='Counselor')

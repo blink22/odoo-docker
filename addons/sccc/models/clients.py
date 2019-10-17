@@ -31,9 +31,9 @@ class Clients(models.Model):
   interset = fields.Selection([('a', 'A'), ('b', 'B')], 'Interset in online psychotherapy')
 
   # Relations
-  files = fields.Many2many('sccc.file', string='Files')
-  ethnicity = fields.Many2one('sccc.ethnicity', string='Ethnicity')
-  language = fields.Many2one('sccc.language', string='Language')
+  files = fields.Many2many('sccc.file', 'clients', string='Files')
+  client_ethnicity = fields.Many2one('sccc.ethnicity', string='Ethnicity')
+  client_language = fields.Many2one('sccc.language', string='Language')
 
   @api.depends('last_name', 'first_name')
   def _set_name(self):

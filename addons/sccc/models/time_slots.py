@@ -4,3 +4,6 @@ class TimeSlots(models.Model):
   name = fields.Char('Name')
   time = fields.Float('Name')
   day_of_week = fields.Char('Day of Week')
+
+  # Relations
+  files = fields.Many2many('sccc.file', 'availability', string='Files')

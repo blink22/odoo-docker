@@ -1,0 +1,56 @@
+<odoo>
+    <!--Progress Notes Views-->​
+    <!--tree view-->
+    <record model="ir.ui.view" id="progress_notes_tree_view">
+              <field name="name">progress_notes list tree</field>
+              <field name="model">sccc.progress_notes</field>
+              <field name="arch" type="xml">
+                  <tree create="true">
+                      <field name="date"/>
+                      <field name="synopsis"/>
+                      <field name="goals"/>
+                      <field name="documentation"/>
+                      <field name="follow_up"/>
+                      <field name="next_session"/>
+                      <field name="files"/>
+                      <field name="clients"/>
+                      <field name="counselor"/>
+                  </tree>
+              </field>
+    </record>
+
+    <!--form view-->
+    <record model="ir.ui.view" id="progress_notes_form_view">
+              <field name="name">progress_notes form</field>
+              <field name="model">sccc.progress_notes</field>
+              <field name="arch" type="xml">
+                   <form string="Progress Notes Form">
+                       <sheet>
+                        <group>
+                            <field name="date"/>
+                            <field name="synopsis"/>
+                            <field name="goals"/>
+                            <field name="documentation"/>
+                            <field name="follow_up"/>
+                            <field name="next_session"/>
+                            <field name="files"/>
+                            <field name="clients"/>
+                            <field name="counselor"/>
+                        </group>
+                       </sheet>
+                </form>
+              </field>
+    </record>
+
+    <!--search view-->
+    <record model="ir.ui.view" id="progress_notes_search_view">
+      <field name="name">progress_notes list search</field>
+      <field name="model">sccc.progress_notes</field>
+      <field name="arch" type="xml">
+        <search>
+          <field name="date"/>
+        </search>
+      </field>
+    </record>
+    ​
+</odoo>

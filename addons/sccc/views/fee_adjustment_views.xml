@@ -1,0 +1,78 @@
+<odoo>
+    <!--Fee Adjustment Views-->​
+    <!--tree view-->
+    <record model="ir.ui.view" id="fee_adjustment_tree_view">
+              <field name="name">fee_adjustment list tree</field>
+              <field name="model">sccc.fee_adjustment</field>
+              <field name="arch" type="xml">
+                  <tree create="true">
+                      <field name="upload_fee"/>
+                      <field name="added_date"/>
+                      <field name="today_date"/>
+                      <field name="currency"/>
+                      <field name="currency_fee"/>
+                      <field name="requested_fee"/>
+                      <field name="people_inhouse"/>
+                      <field name="ages"/>
+                      <field name="monthly_gross"/>
+                      <field name="income_source"/>
+                      <field name="monthly_net"/>
+                      <field name="partner_monthly_net"/>
+                      <field name="net_source"/>
+                      <field name="other_income"/>
+                      <field name="total_income"/>
+                      <field name="paystub"/>
+                      <field name="board_approval"/>
+                      <field name="fee"/>
+                      <field name="files"/>
+                      <field name="counselor"/>
+                  </tree>
+              </field>
+    </record>
+
+    <!--form view-->
+    <record model="ir.ui.view" id="fee_adjustment_form_view">
+              <field name="name">fee_adjustment form</field>
+              <field name="model">sccc.fee_adjustment</field>
+              <field name="arch" type="xml">
+                   <form string="Fee Adjustment Form">
+                       <sheet>
+                        <group>
+                            <field widget="binary" height = "64" name="upload_fee" filename="upload_fee_namex" />
+                            <field name="added_date"/>
+                            <field name="today_date" readonly="1"/>
+                            <field name="currency" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+                            <field name="currency_fee" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+                            <field name="requested_fee" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+                            <field name="people_inhouse"/>
+                            <field name="ages"/>
+                            <field name="monthly_gross" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+                            <field name="income_source"/>
+                            <field name="monthly_net" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+                            <field name="partner_monthly_net" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+                            <field name="net_source"/>
+                            <field name="other_income" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+                            <field name="total_income" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+                            <field widget="binary" height = "64" name="paystub" filename="paystub_namex" />
+                            <field name="board_approval"/>
+                            <field name="fee" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+                            <field name="files"/>
+                            <field name="counselor"/>
+                        </group>
+                       </sheet>
+                </form>
+              </field>
+    </record>
+
+    <!--search view-->
+    <record model="ir.ui.view" id="fee_adjustment_search_view">
+      <field name="name">fee_adjustment list search</field>
+      <field name="model">sccc.fee_adjustment</field>
+      <field name="arch" type="xml">
+        <search>
+          <field name="added_date"/>
+        </search>
+      </field>
+    </record>
+    ​
+</odoo>

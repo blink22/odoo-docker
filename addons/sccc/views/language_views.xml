@@ -1,0 +1,46 @@
+<odoo>
+    <!--Language Views-->​
+    <!--tree view-->
+    <record model="ir.ui.view" id="language_tree_view">
+              <field name="name">language list tree</field>
+              <field name="model">sccc.language</field>
+              <field name="arch" type="xml">
+                  <tree create="true">
+                      <field name="name"/>
+                      <field name="local"/>
+                      <field name="code"/>
+                      <field name="clients"/>
+                  </tree>
+              </field>
+    </record>
+
+    <!--form view-->
+    <record model="ir.ui.view" id="language_form_view">
+              <field name="name">language form</field>
+              <field name="model">sccc.language</field>
+              <field name="arch" type="xml">
+                   <form string="Language Form">
+                       <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="local"/>
+                            <field name="code"/>
+                            <field name="clients"/>
+                        </group>
+                       </sheet>
+                </form>
+              </field>
+    </record>
+
+    <!--search view-->
+    <record model="ir.ui.view" id="language_search_view">
+      <field name="name">language list search</field>
+      <field name="model">sccc.language</field>
+      <field name="arch" type="xml">
+        <search>
+          <field name="name"/>
+        </search>
+      </field>
+    </record>
+    ​
+</odoo>

@@ -43,6 +43,56 @@
       <field name="view_mode">tree,form,calendar</field>
     </record>
 
+    <record model="ir.actions.act_window" id="action_ethnicity">
+      <field name="name">Ethnicity</field>
+      <field name="res_model">sccc.ethnicity</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+    <record model="ir.actions.act_window" id="action_fam_assessment">
+      <field name="name">Fam Assessment</field>
+      <field name="res_model">sccc.fam_assessment</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+    <record model="ir.actions.act_window" id="action_fee_adjustment">
+      <field name="name">Fee Adjustment</field>
+      <field name="res_model">sccc.fee_adjustment</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+    <record model="ir.actions.act_window" id="action_fee_setting">
+      <field name="name">Fee Setting</field>
+      <field name="res_model">sccc.fee_setting</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+    <record model="ir.actions.act_window" id="action_individual_assessment">
+      <field name="name">Individual Assessment</field>
+      <field name="res_model">sccc.individual_assessment</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+    <record model="ir.actions.act_window" id="action_language">
+      <field name="name">Language</field>
+      <field name="res_model">sccc.language</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+    <record model="ir.actions.act_window" id="action_progress_notes">
+      <field name="name">Progress Notes</field>
+      <field name="res_model">sccc.progress_notes</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+    <record model="ir.actions.act_window" id="action_sccc_appointment_type">
+      <field name="name">SCCC Appointment Type</field>
+      <field name="res_model">sccc.sccc_appointment_type</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+    <record model="ir.actions.act_window" id="action_sessions">
+      <field name="name">Sessions</field>
+      <field name="res_model">sccc.sessions</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+    <record model="ir.actions.act_window" id="action_time_slots">
+      <field name="name">Time Slots</field>
+      <field name="res_model">sccc.time_slots</field>
+      <field name="view_mode">tree,form</field>
+    </record>
     <!-- Menu Builder -->
     <menuitem name="SCCC" id="sccc.menu_root" sequence="0"/>
         <menuitem name="Calendar" id="sccc.calendar" parent="sccc.menu_root"  action="action_calendar" sequence="1"/>
@@ -53,5 +103,15 @@
             <menuitem name="Locations" id="sccc.menu_location" parent="sccc.config"  action="action_locations"/>
             <menuitem name="Rooms" id="sccc.menu_room" parent="sccc.config"  action="action_room"/>
             <menuitem name="Staff" id="sccc.menu_counselor" parent="sccc.config"  action="action_counselor"/>
+            <menuitem name="Ethnicity" id="sccc.menu_ethnicity" parent="sccc.config"  action="action_ethnicity"/>
+            <menuitem name="Fam Assessment" id="sccc.menu_fam_assessment" parent="sccc.config"  action="action_fam_assessment"/>
+            <menuitem name="Fee Adjustment" id="sccc.menu_fee_adjustment" parent="sccc.config"  action="action_fee_adjustment"/>
+            <menuitem name="Fee Setting" id="sccc.menu_fee_setting" parent="sccc.config"  action="action_fee_setting"/>
+            <menuitem name="Individual Assessment" id="sccc.menu_individual_assessment" parent="sccc.config"  action="action_individual_assessment"/>
+            <menuitem name="Language" id="sccc.menu_language" parent="sccc.config"  action="action_language"/>
+            <menuitem name="Progress Notes" id="sccc.menu_progress_notes" parent="sccc.config"  action="action_progress_notes"/>
+            <menuitem name="SCCC Appointment Type" id="sccc.menu_sccc_appointment_type" parent="sccc.config"  action="action_sccc_appointment_type"/>
+            <menuitem name="Sessions" id="sccc.menu_sessions" parent="sccc.config"  action="action_sessions"/>
+            <menuitem name="Time Slots" id="sccc.menu_time_slots" parent="sccc.config"  action="action_time_slots"/>
 
 </odoo>

@@ -1,0 +1,82 @@
+<odoo>
+    <!--Fee Setting Views-->​
+    <!--tree view-->
+    <record model="ir.ui.view" id="fee_setting_tree_view">
+              <field name="name">fee_setting list tree</field>
+              <field name="model">sccc.fee_setting</field>
+              <field name="arch" type="xml">
+                  <tree create="true">
+                      <field name="form_upload"/>
+                      <field name="added_date"/>
+                      <field name="today_date"/>
+                      <field name="fee" options="{'currency_field': 'currency_id'}"/>
+                      <field name="refered_to_fee"/>
+                      <field name="currency" options="{'currency_field': 'currency_id'}"/>
+                      <field name="people_in"/>
+                      <field name="client_employed"/>
+                      <field name="monthly_gross" options="{'currency_field': 'currency_id'}"/>
+                      <field name="source_of_salary"/>
+                      <field name="public_assistance"/>
+                      <field name="monthly_income" options="{'currency_field': 'currency_id'}"/>
+                      <field name="source_of_pa_salary"/>
+                      <field name="pa_source"/>
+                      <field name="source_of_client_income"/>
+                      <field name="source_of_client"/>
+                      <field name="client_source"/>
+                      <field name="has_members"/>
+                      <field name="gross_monthly" options="{'currency_field': 'currency_id'}"/>
+                      <field name="total_gross" options="{'currency_field': 'currency_id'}"/>
+                      <field name="files"/>
+                      <field name="counselor"/>
+                  </tree>
+              </field>
+    </record>
+
+    <!--form view-->
+    <record model="ir.ui.view" id="fee_setting_form_view">
+              <field name="name">fee_setting form</field>
+              <field name="model">sccc.fee_setting</field>
+              <field name="arch" type="xml">
+                   <form string="Fee Setting Form">
+                       <sheet>
+                        <group>
+                            <field widget="binary" height = "64" name="form_upload" filename="form_namex" />
+                            <field name="added_date"/>
+                            <field name="today_date"/>
+                            <field name="fee" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+                            <field name="refered_to_fee"/>
+                            <field name="currency" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+                            <field name="people_in"/>
+                            <field name="client_employed"/>
+                            <field name="monthly_gross" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+                            <field name="source_of_salary"/>
+                            <field name="public_assistance"/>
+                            <field name="monthly_income" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+                            <field name="source_of_pa_salary"/>
+                            <field name="pa_source"/>
+                            <field name="source_of_client_income"/>
+                            <field name="source_of_client"/>
+                            <field name="client_source"/>
+                            <field name="has_members"/>
+                            <field name="gross_monthly" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+                            <field name="total_gross" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+                            <field name="files"/>
+                            <field name="counselor"/>
+                        </group>
+                       </sheet>
+                </form>
+              </field>
+    </record>
+
+    <!--search view-->
+    <record model="ir.ui.view" id="fee_setting_search_view">
+      <field name="name">fee_setting list search</field>
+      <field name="model">sccc.fee_setting</field>
+      <field name="arch" type="xml">
+        <search>
+          <field name="added_date"/>
+        </search>
+      </field>
+    </record>
+    ​
+</odoo>

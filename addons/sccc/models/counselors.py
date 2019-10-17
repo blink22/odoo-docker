@@ -8,4 +8,5 @@ class Counselors(models.Model):
     availability = fields.Char('Availability')
 
     # Relations
-    files = fields.Many2many('sccc.file', string='Case Load')
+    files = fields.Many2many('sccc.file', 'counselor', string='Case Load')
+    fam_assessment = fields.One2many('sccc.fam_assessment', 'counselor', string='Fam Assessment')

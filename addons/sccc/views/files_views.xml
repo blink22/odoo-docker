@@ -8,14 +8,31 @@
                   <tree create="true">
                       <field name="file_number"/>
                       <field name="name"/>
-                      <field name="clients"/>
+                      <field name="out_reach"/>
+                      <field name="preferred_gender"/>
                       <field name="intake_date"/>
-                      <field name="availability"/>
-                      <field name="waitlist"/>
+                      <field name="fee"/>
+                      <field name="balance"/>
                       <field name="double_fee"/>
+                      <field name="created_on"/>
+                      <field name="on_waitlist"/>
+                      <field name="attended_session"/>
+                      <field name="terminated"/>
                       <field name="lgbtq_counselor"/>
                       <field name="other_considerations"/>
                       <field name="additional_notes"/>
+                      <field name="counselor"/>
+                      <field name="meetings"/>
+                      <field name="sessions"/>
+                      <field name="fee_setting"/>
+                      <field name="fee_adjustment"/>
+                      <field name="payments"/>
+                      <field name="individual_assessment"/>
+                      <field name="fam_assessment"/>
+                      <field name="sccc_appointment_type"/>
+                      <field name="availability"/>
+                      <field name="progress_notes"/>
+                      <field name="clients"/>
                   </tree>
               </field>
     </record>
@@ -30,14 +47,31 @@
                         <group>
                             <field name="file_number"/>
                             <field name="name"/>
-                            <field name="clients"/>
+                            <field name="out_reach"/>
+                            <field name="preferred_gender"/>
                             <field name="intake_date"/>
-                            <field name="availability"/>
-                            <field name="waitlist"/>
+                            <field name="fee" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+                            <field name="balance" widget="monetary" options="{'currency_field': 'currency_id'}"/>
                             <field name="double_fee"/>
+                            <field name="created_on"/>
+                            <field name="on_waitlist"/>
+                            <field name="attended_session"/>
+                            <field name="terminated"/>
                             <field name="lgbtq_counselor"/>
                             <field name="other_considerations"/>
                             <field name="additional_notes"/>
+                            <field name="counselor"/>
+                            <field name="meetings"/>
+                            <field name="sessions"/>
+                            <field name="fee_setting"/>
+                            <field name="fee_adjustment"/>
+                            <field name="payments"/>
+                            <field name="individual_assessment"/>
+                            <field name="fam_assessment"/>
+                            <field name="sccc_appointment_type"/>
+                            <field name="availability"/>
+                            <field name="progress_notes"/>
+                            <field name="clients"/>
                         </group>
                        </sheet>
                 </form>
@@ -55,7 +89,7 @@
           <field name="clients"/>
           <field name="intake_date"/>
           <field name="availability"/>
-          <field name="waitlist"/>
+          <field name="on_waitlist"/>
           <field name="double_fee"/>
           <field name="lgbtq_counselor"/>
           <field name="other_considerations"/>
