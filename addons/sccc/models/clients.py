@@ -5,14 +5,14 @@ from dateutil.relativedelta import relativedelta
 class Clients(models.Model):
   _name = 'sccc.client'
 
-  name = fields.Char('Name', compute='_set_name')
+  name = fields.Char('Name', compute='_set_name', store="True")
   last_name = fields.Char('Last Name')
   first_name = fields.Char('First Name')
   out_reach = fields.Boolean('Outreach?')
   gender = fields.Selection([ ('m', 'Male'), ('f', 'Female') ], 'Gender')
   gender_pronouns = fields.Selection([('HE/SHE', 'HE/SHE'), ('HIM/HER', 'HIM/HER'), ('HIS/HER', 'HIS/HER'), ('HIS/HERS', 'HIS/HERS'), ('HIMSELF/HERSELF', 'HIMSELF/HERSELF')], 'Gender Pronouns')
   date_of_birth = fields.Date('Date of Birth')
-  age = fields.Integer('Age', compute='_calculate_age')
+  age = fields.Integer('Age', compute='_calculate_age', store="True")
   email = fields.Char('Email')
   cell_phone = fields.Char('Cell #')
   found_us = fields.Selection([('friend', 'Friend'), ('ads', 'Ads')], 'How did client find out about us?')

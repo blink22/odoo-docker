@@ -11,12 +11,12 @@ class Files(models.Model):
     preferred_age = fields.Selection([ ('1', '21'), ('2', '22') ], 'Preferred Age')
     intake_date = fields.Date('Intake Date')
     
-    currency_id = fields.Integer(_computed='_get_currency')
+    currency_id = fields.Integer(compute='_get_currency', store="True")
     fee = fields.Monetary('Fee')
     balance = fields.Monetary('Balance')
     double_fee = fields.Boolean('Double Fee Hold')
 
-    created_on = fields.Date('Created On')
+    created_on = fields.Date('Created On',)
     on_waitlist = fields.Boolean('On Waitlist?')
     attended_session = fields.Boolean('Has Attended Session?')
     terminated = fields.Boolean('Terminated?')

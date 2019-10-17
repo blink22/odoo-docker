@@ -4,8 +4,8 @@ class FeeAdjustment(models.Model):
   _name = 'sccc.fee_adjustment'
   upload_fee = fields.Binary('Upload Fee Form')
   added_date = fields.Date('Date added to system')
-  today_date = fields.Date('Today\'s date', compute='_get_today')
-  currency_id = fields.Integer(_computed='_get_currency')
+  today_date = fields.Date('Today\'s date')
+  currency_id = fields.Integer(compute='_get_currency', store="True")
   currency = fields.Monetary('Currency')
   currency_fee = fields.Monetary('Currency Fee')
   requested_fee = fields.Monetary('Requested Fee')
@@ -26,9 +26,6 @@ class FeeAdjustment(models.Model):
   # Relations
   files = fields.Many2many('sccc.file', 'fee_adjustment', string='Files')
   counselor = fields.Many2one('sccc.counselor', string='Counselor')
-
-  def _get_today(self):
-    self.today_date = date.today()
 
   def _get_currency(self):
     user_obj = self.pool.get('res.users')

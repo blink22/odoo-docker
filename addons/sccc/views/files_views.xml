@@ -58,13 +58,13 @@
                                 <page string="General Info">
                                   <table style='width:100%;' border='0'>
                                     <tr>
-                                      <td style="width: 50%">
+                                      <td style="width: 30%">
                                         <group>
                                           <field name="clients" widget="many2many_tags"/>
-                                          <field name="sccc_appointment_type" widget="selection"/>
+                                          <field name="sccc_appointment_type" widget="many2many_tags"/>
                                         </group>
                                       </td>
-                                      <td style="width: 50%">
+                                      <td >
                                         <group>
                                           <field name="out_reach"/>
                                           <field name="created_on"/>
@@ -89,34 +89,36 @@
                                   </table>
                                 </page>
                                 <page string="Financial Info">
+                                  <group>
+                                    <field name="fee" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+                                    <field name="balance" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+                                    <field name="payments"/>
+                                  </group>
                                 </page>
                                 <page string="Forms">
+                                  <group>
+                                    <field name="individual_assessment" widget="selection"/>
+                                    <field name="fam_assessment" widget="selection"/>
+                                    <field name="fee_setting" widget="selection"/>
+                                    <field name="fee_adjustment" widget="many2many_tags"/>
+                                  </group>
                                 </page>
                                 <page string="Counseling History">
+                                  <group>
+                                    <field name="meetings"/>
+                                    <field name="progress_notes"/>
+                                  </group>
                                 </page>
                               </notebook>
                             </tr>
                           </table>
-                            <!-- <field name="fee" widget="monetary" options="{'currency_field': 'currency_id'}" colspan="2"/>
-                            <field name="balance" widget="monetary" options="{'currency_field': 'currency_id'}" colspan="2"/>
-                            
-                            
-                            
+                            <!--   
                             <field name="terminated" colspan="2"/>
-                            
                             <field name="other_considerations" colspan="2"/>
-                            <field name="counselor" colspan="2"/>
-                            <field name="meetings" colspan="2"/>
+                            <field name="counselor" colspan="2"/>                            
                             <field name="sessions" colspan="2"/>
-                            <field name="fee_setting" colspan="2"/>
-                            <field name="fee_adjustment" colspan="2"/>
-                            <field name="payments" colspan="2"/>
-                            <field name="individual_assessment" colspan="2"/>
-                            <field name="fam_assessment" colspan="2"/>
-                            
                             <field name="availability" colspan="2"/>
-                            <field name="progress_notes" colspan="2"/> -->
-                            
+                             -->
                         </group>
                       </sheet>
                 </form>
