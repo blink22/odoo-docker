@@ -22,7 +22,7 @@ class FamAssessment(models.Model):
   referral = fields.Text('Any other referrals made to this couple/family?')
   able_assign = fields.Selection([('yes', 'Yes'), ('no', 'No')], 'Were you able to assign this couple/family?')
   # Is this right?
-  client = fields.Many2one('sccc.client', 'If so, who were they assigned to?')
+  
   #
   appointment_date = fields.Date('Date/time of appointment')
   fee = fields.Monetary('Fee')
@@ -30,7 +30,9 @@ class FamAssessment(models.Model):
 
   # Relations
   file = fields.One2many('sccc.file', 'fam_assessment', string='File')
+  client = fields.Many2one('sccc.client', 'Client')
   counselor = fields.Many2one('sccc.counselor', string='Counselor')
+  # assigned_to = fields.Many2many('sccc.counselor', string='If so, who were they assigned to?')
 
   def _get_currency(self):
     user_obj = self.pool.get('res.users')
