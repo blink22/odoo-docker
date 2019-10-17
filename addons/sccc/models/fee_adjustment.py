@@ -7,7 +7,7 @@ class FeeAdjustment(models.Model):
   today_date = fields.Date('Today\'s date')
   currency_id = fields.Integer(compute='_get_currency', store="True")
   currency = fields.Monetary('Currency')
-  currency_fee = fields.Monetary('Currency Fee')
+  current_fee = fields.Monetary('Current Fee')
   requested_fee = fields.Monetary('Requested Fee')
   request_reason = fields.Text('Reason for request')
   people_inhouse = fields.Float('Total # people in household (including yourself)')
@@ -21,7 +21,6 @@ class FeeAdjustment(models.Model):
   total_income = fields.Monetary('Total after-tax income')
   paystub = fields.Binary('Paystub, Tax Return, W-2 Upload')
   board_approval = fields.Selection([('true', 'True'), ('false', 'False')], 'Board Approval')
-  fee = fields.Monetary('Fee')
 
   # Relations
   files = fields.Many2many('sccc.file', 'fee_adjustment', string='Files')

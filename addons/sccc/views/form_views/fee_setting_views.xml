@@ -41,11 +41,15 @@
                        <sheet>
                         <group>
                             <field widget="binary" height = "64" name="form_upload" filename="form_namex" />
+                            <field name="files" widget="selection"/>
+                            <field name="counselor" widget="selection"/>
                             <field name="added_date"/>
                             <field name="today_date"/>
                             <field name="fee" widget="monetary" options="{'currency_field': 'currency_id'}"/>
                             <field name="refered_to_fee"/>
                             <field name="currency" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+
+                            <separator string="Income Informations"/>
                             <field name="people_in"/>
                             <field name="client_employed"/>
                             <field name="monthly_gross" widget="monetary" options="{'currency_field': 'currency_id'}"/>
@@ -60,8 +64,6 @@
                             <field name="has_members"/>
                             <field name="gross_monthly" widget="monetary" options="{'currency_field': 'currency_id'}"/>
                             <field name="total_gross" widget="monetary" options="{'currency_field': 'currency_id'}"/>
-                            <field name="files"/>
-                            <field name="counselor"/>
                         </group>
                        </sheet>
                 </form>
