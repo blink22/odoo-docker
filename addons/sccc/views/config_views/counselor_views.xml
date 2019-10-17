@@ -1,0 +1,56 @@
+<odoo>
+    <!--Counselor Views-->​
+    <!--tree view-->
+    <record model="ir.ui.view" id="counselor_tree_view">
+              <field name="name">counselor list tree</field>
+              <field name="model">sccc.counselor</field>
+              <field name="arch" type="xml">
+                  <tree create="true">
+                      <field name="name"/>
+                      <field name="in_crawl"/>
+                      <field name="availability"/>
+                      <field name="files"/>
+                  </tree>
+              </field>
+    </record>
+​
+    <!--form view-->
+    <record model="ir.ui.view" id="counselor_form_view">
+          <field name="name">counselor.form</field>
+          <field name="model">sccc.counselor</field>
+          <field name="arch" type="xml">
+               <form string="Counselor Form">
+                   <sheet>
+                       <notebook>
+                       <page name="personal_details" string="Personal Details">
+                            <group>
+                              <field name="name"/>
+                              <field name="in_crawl"/>
+                              <field name="availability"/>
+                            </group>
+                       </page>
+                       <page name="caseload" string="Caseload">
+                           <group>
+                               <field name="files"/>
+                           </group>
+                       </page>
+                       </notebook>
+                   </sheet>
+                </form>
+          </field>
+    </record>
+​
+    ​<!--search view-->
+    <record model="ir.ui.view" id="counselor_search_view">
+      <field name="name">counselor list search</field>
+      <field name="model">sccc.counselor</field>
+      <field name="arch" type="xml">
+        <search>
+          <field name="name"/>
+          <field name="in_crawl"/>
+          <field name="availability"/>
+          <field name="files"/>
+        </search>
+      </field>
+    </record>
+</odoo>

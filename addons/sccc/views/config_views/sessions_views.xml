@@ -1,0 +1,42 @@
+<odoo>
+    <!--Sessions Views-->​
+    <!--tree view-->
+    <record model="ir.ui.view" id="sessions_tree_view">
+              <field name="name">sessions list tree</field>
+              <field name="model">sccc.sessions</field>
+              <field name="arch" type="xml">
+                  <tree create="true">
+                      <field name="session_name"/>
+                      <field name="files"/>
+                  </tree>
+              </field>
+    </record>
+
+    <!--form view-->
+    <record model="ir.ui.view" id="sessions_form_view">
+              <field name="name">sessions form</field>
+              <field name="model">sccc.sessions</field>
+              <field name="arch" type="xml">
+                   <form string="Sessions Form">
+                       <sheet>
+                        <group>
+                            <field name="session_name"/>
+                            <field name="files"/>
+                        </group>
+                       </sheet>
+                </form>
+              </field>
+    </record>
+
+    <!--search view-->
+    <record model="ir.ui.view" id="sessions_search_view">
+      <field name="name">sessions list search</field>
+      <field name="model">sccc.sessions</field>
+      <field name="arch" type="xml">
+        <search>
+          <field name="session_name"/>
+        </search>
+      </field>
+    </record>
+    ​
+</odoo>

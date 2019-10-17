@@ -1,0 +1,48 @@
+<odoo>
+    <!--Time Slots Views-->​
+    <!--tree view-->
+    <record model="ir.ui.view" id="time_slots_tree_view">
+              <field name="name">time_slots list tree</field>
+              <field name="model">sccc.time_slots</field>
+              <field name="arch" type="xml">
+                  <tree create="true">
+                      <field name="name"/>
+                      <field name="from_time"/>
+                      <field name="to_time"/>
+                      <field name="day_of_week"/>
+                      <field name="files"/>
+                  </tree>
+              </field>
+    </record>
+
+    <!--form view-->
+    <record model="ir.ui.view" id="time_slots_form_view">
+              <field name="name">time_slots form</field>
+              <field name="model">sccc.time_slots</field>
+              <field name="arch" type="xml">
+                   <form string="Time Slots Form">
+                       <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="from_time"/>
+                            <field name="to_time"/>
+                            <field name="day_of_week"/>
+                            <field name="files"/>
+                        </group>
+                       </sheet>
+                </form>
+              </field>
+    </record>
+
+    <!--search view-->
+    <record model="ir.ui.view" id="time_slots_search_view">
+      <field name="name">time_slots list search</field>
+      <field name="model">sccc.time_slots</field>
+      <field name="arch" type="xml">
+        <search>
+          <field name="name"/>
+        </search>
+      </field>
+    </record>
+    ​
+</odoo>

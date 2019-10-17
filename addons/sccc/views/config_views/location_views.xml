@@ -1,0 +1,49 @@
+<odoo>
+    <!--Location Views-->​
+    <!--tree view-->
+    <record model="ir.ui.view" id="location_tree_view">
+              <field name="name">location list tree</field>
+              <field name="model">sccc.location</field>
+              <field name="arch" type="xml">
+                  <tree create="true">
+                      <field name="name"/>
+                      <field name="location_id"/>
+                  </tree>
+              </field>
+    </record>
+​
+    <!--form view-->
+    <record model="ir.ui.view" id="location_form_view">
+              <field name="name">location form</field>
+              <field name="model">sccc.location</field>
+              <field name="arch" type="xml">
+                   <form string="Location Form">
+                       <sheet>
+                        <group>
+                            <field name="name"/>
+                        </group>
+                       </sheet>
+                </form>
+              </field>
+    </record>
+
+    <!--search view-->
+    <record model="ir.ui.view" id="location_search_view">
+      <field name="name">location list search</field>
+      <field name="model">sccc.location</field>
+      <field name="arch" type="xml">
+        <search>
+          <field name="name"/>
+          <field name="location_id"/>
+        </search>
+      </field>
+    </record>
+​
+    <!-- Sequences for sccc.location_id_generate -->
+        <record id="location_id_generate" model="ir.sequence">
+            <field name="name">Location ID Generate</field>
+            <field name="code">sccc.location_id_generate</field>
+            <field name="prefix"></field>
+            <field name="padding">1</field>
+        </record>
+</odoo>
