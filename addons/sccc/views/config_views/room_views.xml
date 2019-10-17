@@ -1,0 +1,43 @@
+<odoo>
+    <!--Room Views-->​
+    <!--tree view-->
+    <record model="ir.ui.view" id="room_tree_view">
+              <field name="name">room list tree</field>
+              <field name="model">sccc.room</field>
+              <field name="arch" type="xml">
+                  <tree create="true">
+                      <field name="name"/>
+                      <field name="location"/>
+                      <field name="type"/>
+                  </tree>
+              </field>
+    </record>
+​
+    <!--form view-->
+    <record model="ir.ui.view" id="room_form_view">
+              <field name="name">room form</field>
+              <field name="model">sccc.room</field>
+              <field name="arch" type="xml">
+                   <form string="Room Form">
+                        <group>
+                            <field name="name"/>
+                            <field name="location" />
+                            <field name="type"/>
+                        </group>
+                </form>
+              </field>
+    </record>
+​
+    ​<!--search view-->
+    <record model="ir.ui.view" id="room_search_view">
+      <field name="name">room list search</field>
+      <field name="model">sccc.room</field>
+      <field name="arch" type="xml">
+        <search>
+          <field name="name"/>
+          <field name="location"/>
+          <field name="type"/>
+        </search>
+      </field>
+    </record>
+</odoo>

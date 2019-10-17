@@ -98,20 +98,21 @@
         <menuitem name="Calendar" id="sccc.calendar" parent="sccc.menu_root"  action="action_calendar" sequence="1"/>
         <menuitem name="Files" id="sccc.files" parent="sccc.menu_root"  action="action_files" sequence="2"/>
         <menuitem name="Clients" id="sccc.clients" parent="sccc.menu_root"  action="action_clients" sequence="3"/>
-        <menuitem name="Payments" id="sccc.payments" parent="sccc.menu_root"  action="action_payments" sequence="4"/>
-        <menuitem name="Config" id="sccc.config" parent="sccc.menu_root"  action="action_locations" sequence="5"/>
-            <menuitem name="Locations" id="sccc.menu_location" parent="sccc.config"  action="action_locations"/>
+        <menuitem name="Forms" id="sccc.custom_forms" parent="sccc.menu_root"  action="action_fam_assessment" sequence="4"/>
+            <menuitem name="Individual Assessment" id="sccc.menu_individual_assessment" parent="sccc.custom_forms"  action="action_individual_assessment"/>
+            <menuitem name="Family Assessment" id="sccc.menu_fam_assessment" parent="sccc.custom_forms"  action="action_fam_assessment"/>
+            <menuitem name="Fee Adjustment" id="sccc.menu_fee_adjustment" parent="sccc.custom_forms"  action="action_fee_adjustment"/>
+            <menuitem name="Fee Setting" id="sccc.menu_fee_setting" parent="sccc.custom_forms"  action="action_fee_setting"/>
+        <menuitem name="Payments" id="sccc.payments" parent="sccc.menu_root"  action="action_payments" sequence="5"/>        
+        <menuitem name="Config" id="sccc.config" parent="sccc.menu_root"  action="action_locations" sequence="6"/>
             <menuitem name="Rooms" id="sccc.menu_room" parent="sccc.config"  action="action_room"/>
+            <menuitem name="Locations" id="sccc.menu_location" parent="sccc.config"  action="action_locations"/>
             <menuitem name="Staff" id="sccc.menu_counselor" parent="sccc.config"  action="action_counselor"/>
-            <menuitem name="Ethnicity" id="sccc.menu_ethnicity" parent="sccc.config"  action="action_ethnicity"/>
-            <menuitem name="Fam Assessment" id="sccc.menu_fam_assessment" parent="sccc.config"  action="action_fam_assessment"/>
-            <menuitem name="Fee Adjustment" id="sccc.menu_fee_adjustment" parent="sccc.config"  action="action_fee_adjustment"/>
-            <menuitem name="Fee Setting" id="sccc.menu_fee_setting" parent="sccc.config"  action="action_fee_setting"/>
-            <menuitem name="Individual Assessment" id="sccc.menu_individual_assessment" parent="sccc.config"  action="action_individual_assessment"/>
+            <!-- <menuitem name="Ethnicity" id="sccc.menu_ethnicity" parent="sccc.config"  action="action_ethnicity"/>
             <menuitem name="Language" id="sccc.menu_language" parent="sccc.config"  action="action_language"/>
             <menuitem name="Progress Notes" id="sccc.menu_progress_notes" parent="sccc.config"  action="action_progress_notes"/>
             <menuitem name="SCCC Appointment Type" id="sccc.menu_sccc_appointment_type" parent="sccc.config"  action="action_sccc_appointment_type"/>
             <menuitem name="Sessions" id="sccc.menu_sessions" parent="sccc.config"  action="action_sessions"/>
-            <menuitem name="Time Slots" id="sccc.menu_time_slots" parent="sccc.config"  action="action_time_slots"/>
+            <menuitem name="Time Slots" id="sccc.menu_time_slots" parent="sccc.config"  action="action_time_slots"/> -->
 
 </odoo>

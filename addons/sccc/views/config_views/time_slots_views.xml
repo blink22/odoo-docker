@@ -7,7 +7,8 @@
               <field name="arch" type="xml">
                   <tree create="true">
                       <field name="name"/>
-                      <field name="time"/>
+                      <field name="from_time"/>
+                      <field name="to_time"/>
                       <field name="day_of_week"/>
                       <field name="files"/>
                   </tree>
@@ -23,7 +24,8 @@
                        <sheet>
                         <group>
                             <field name="name"/>
-                            <field name="time"/>
+                            <field name="from_time"/>
+                            <field name="to_time"/>
                             <field name="day_of_week"/>
                             <field name="files"/>
                         </group>

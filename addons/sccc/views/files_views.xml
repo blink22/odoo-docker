@@ -6,8 +6,9 @@
               <field name="model">sccc.file</field>
               <field name="arch" type="xml">
                   <tree create="true">
-                      <field name="file_number"/>
                       <field name="name"/>
+                      <field name="file_number"/>
+                      <field name="additional_notes"/>
                       <field name="out_reach"/>
                       <field name="preferred_gender"/>
                       <field name="intake_date"/>
@@ -20,7 +21,6 @@
                       <field name="terminated"/>
                       <field name="lgbtq_counselor"/>
                       <field name="other_considerations"/>
-                      <field name="additional_notes"/>
                       <field name="counselor"/>
                       <field name="meetings"/>
                       <field name="sessions"/>
@@ -43,37 +43,94 @@
               <field name="model">sccc.file</field>
               <field name="arch" type="xml">
                    <form string="File Form">
-                       <sheet>
+                      <sheet>
                         <group>
-                            <field name="file_number"/>
-                            <field name="name"/>
-                            <field name="out_reach"/>
-                            <field name="preferred_gender"/>
-                            <field name="intake_date"/>
-                            <field name="fee" widget="monetary" options="{'currency_field': 'currency_id'}"/>
-                            <field name="balance" widget="monetary" options="{'currency_field': 'currency_id'}"/>
-                            <field name="double_fee"/>
-                            <field name="created_on"/>
-                            <field name="on_waitlist"/>
-                            <field name="attended_session"/>
-                            <field name="terminated"/>
-                            <field name="lgbtq_counselor"/>
-                            <field name="other_considerations"/>
-                            <field name="additional_notes"/>
-                            <field name="counselor"/>
-                            <field name="meetings"/>
-                            <field name="sessions"/>
-                            <field name="fee_setting"/>
-                            <field name="fee_adjustment"/>
-                            <field name="payments"/>
-                            <field name="individual_assessment"/>
-                            <field name="fam_assessment"/>
-                            <field name="sccc_appointment_type"/>
-                            <field name="availability"/>
-                            <field name="progress_notes"/>
-                            <field name="clients"/>
+                          <table>
+                            <tr>
+                              <td style="width: 50%">
+                                <group>
+                                  <field name="name"/>
+                                </group>
+                              </td>
+                              <td style="width: 50%">
+                                <group>
+                                  <field name="file_number"/>
+                                </group>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td style="width: 100%">
+                                <group>
+                                  <field name="additional_notes"/>
+                                </group>
+                              </td>
+                            </tr>
+                            <tr>
+                              <notebook>
+                                <page string="General Info">
+                                  <table style='width:100%;' border='0'>
+                                    <tr>
+                                      <td style="width: 50%">
+                                        <group>
+                                          <field name="clients" widget="many2many_tags"/>
+                                          <field name="sccc_appointment_type" widget="selection"/>
+                                        </group>
+                                      </td>
+                                      <td style="width: 50%">
+                                        <group>
+                                          <field name="out_reach"/>
+                                          <field name="created_on"/>
+                                          <field name="on_waitlist"/>
+                                          <field name="double_fee"/>
+                                          <field name="attended_session"/>
+                                        </group>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td style="width: 100%">
+                                        <group>
+                                          <field name="intake_date"/>
+                                          <field name="availability"/>
+                                          <field name="lgbtq_counselor"/>
+                                          <field name="preferred_gender"/>
+                                          <field name="preferred_age"/>
+                                          <field name="other_considerations"/>
+                                        </group>
+                                      </td>
+                                    </tr>
+                                  </table>
+                                </page>
+                                <page string="Financial Info">
+                                </page>
+                                <page string="Forms">
+                                </page>
+                                <page string="Counseling History">
+                                </page>
+                              </notebook>
+                            </tr>
+                          </table>
+                            <!-- <field name="fee" widget="monetary" options="{'currency_field': 'currency_id'}" colspan="2"/>
+                            <field name="balance" widget="monetary" options="{'currency_field': 'currency_id'}" colspan="2"/>
+                            
+                            
+                            
+                            <field name="terminated" colspan="2"/>
+                            
+                            <field name="other_considerations" colspan="2"/>
+                            <field name="counselor" colspan="2"/>
+                            <field name="meetings" colspan="2"/>
+                            <field name="sessions" colspan="2"/>
+                            <field name="fee_setting" colspan="2"/>
+                            <field name="fee_adjustment" colspan="2"/>
+                            <field name="payments" colspan="2"/>
+                            <field name="individual_assessment" colspan="2"/>
+                            <field name="fam_assessment" colspan="2"/>
+                            
+                            <field name="availability" colspan="2"/>
+                            <field name="progress_notes" colspan="2"/> -->
+                            
                         </group>
-                       </sheet>
+                      </sheet>
                 </form>
               </field>
     </record>

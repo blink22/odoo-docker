@@ -6,23 +6,23 @@
               <field name="model">sccc.fam_assessment</field>
               <field name="arch" type="xml">
                   <tree create="true">
-                      <field name="intake"/>
+                      <!-- <field name="intake"/> -->
                       <field name="date"/>
                       <field name="therapy_type"/>
                       <field name="language_needs"/>
                       <field name="individual_counseling"/>
-                      <field name="outstanding_balance"/>
-                      <field name="mandated_therapy"/>
-                      <field name="mandated_therapy_agency"/>
-                      <field name="mandated_attachments"/>
-                      <field name="bringing_reason"/>
-                      <field name="concerns"/>
-                      <field name="referral"/>
-                      <field name="able_assign"/>
+                      <!-- <field name="outstanding_balance"/> -->
+                      <!-- <field name="mandated_therapy"/> -->
+                      <!-- <field name="mandated_therapy_agency"/> -->
+                      <!-- <field name="mandated_attachments"/> -->
+                      <!-- <field name="bringing_reason"/> -->
+                      <!-- <field name="concerns"/> -->
+                      <!-- <field name="referral"/> -->
+                      <!-- <field name="able_assign"/> -->
                       <field name="client"/>
                       <field name="appointment_date"/>
                       <field name="fee"/>
-                      <field name="additional_notes"/>
+                      <!-- <field name="additional_notes"/> -->
                       <field name="file"/>
                       <field name="counselor"/>
                   </tree>
