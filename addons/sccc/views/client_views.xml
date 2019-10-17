@@ -44,35 +44,53 @@
               <field name="arch" type="xml">
                    <form string="Client Form">
                        <sheet>
-                        <group>
-                            <field name="name" readonly="1"/>
-                            <field name="first_name"/>
-                            <field name="last_name"/>
-                            <field name="email"/>
-                            <field name="date_of_birth"/>
-                            <field name="age" readonly="1"/>
-                            <field name="gender"/>
-                            <field name="gender_pronouns"/>
-                            <field name="out_reach"/>
-                            <field name="cell_phone"/>
-                            <field name="found_us"/>
-                            <field name="street"/>
-                            <field name="apt_no"/>
-                            <field name="city"/>
-                            <field name="zip_code"/>
-                            <field name="other"/>
-                            <field name="brought_him"/>
-                            <field name="first_visit"/>
-                            <field name="when_first_visit"/>
-                            <field name="have_children"/>
-                            <field name="in_counseling"/>
-                            <field name="in_counseling_with"/>
-                            <field name="counseling_type"/>
-                            <field name="interset"/>
-                            <field name="files"/>
-                            <field name="client_ethnicity"/>
-                            <field name="client_language"/>
-                        </group>
+                        <notebook>
+                          <page string="Personal Details">
+                            <group>
+                              <field name="name" readonly="1"/>
+                              <field name="first_name"/>
+                              <field name="last_name"/>
+
+                              <separator string="Personal Info"/>
+                              <field name="date_of_birth"/>
+                              <field name="age" readonly="1"/>
+                              <field name="gender"/>
+                              <field name="gender_pronouns"/>
+                              <field name="client_ethnicity" widget="selection"/>
+                              <field name="client_language" widget="selection"/>
+
+                              <separator string="Address"/>
+                              <field name="street"/>
+                              <field name="apt_no"/>
+                              <field name="city"/>
+                              <field name="zip_code"/>
+
+                              <separator string="Contact"/>
+                              <field name="email"/>
+                              <field name="cell_phone"/>
+                              <field name="other"/>
+
+                              <!-- <separator string="Emergency Contact"/> -->
+
+                              <separator string="MISC"/>
+                              <field name="found_us"/>
+                            </group>
+                          </page>
+                          <page string="Other Info">
+                            <group>
+                              <field name="brought_him"/>
+                              <field name="first_visit"/>
+                              <field name="when_first_visit"/>
+                              <!-- <field name="out_reach"/> -->
+                              <field name="have_children"/>
+                              <field name="in_counseling"/>
+                              <field name="in_counseling_with"/>
+                              <field name="counseling_type"/>
+                              <field name="interset"/>
+                              <!-- <field name="files"/> -->
+                            </group>
+                          </page>
+                        </notebook>
                        </sheet>
                 </form>
               </field>

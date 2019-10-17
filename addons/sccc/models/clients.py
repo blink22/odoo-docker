@@ -28,7 +28,7 @@ class Clients(models.Model):
   in_counseling = fields.Selection([('true', 'Yes'), ('false', 'No')], 'Are you now in counseling?')
   in_counseling_with = fields.Text('If yes, with whom')
   counseling_type = fields.Selection([('a', 'A'), ('b', 'B')], 'What kind of counseling do you want?')
-  interset = fields.Selection([('a', 'A'), ('b', 'B')], 'Interset in online psychotherapy')
+  interset = fields.Selection([('a', 'A'), ('b', 'B')], 'Interested in online psychotherapy')
 
   # Relations
   files = fields.Many2many('sccc.file', 'clients', string='Files')
