@@ -56,49 +56,64 @@
               <field name="model">sccc.individual_assessment</field>
               <field name="arch" type="xml">
                    <form string="Individual Assessment Form">
-                       <sheet>
+                      <sheet>
                         <group>
-                            <field name="intake"/>
-                            <field name="date"/>
-                            <field name="goals"/>
-                            <field name="relationship"/>
-                            <field name="employed"/>
-                            <field name="physical_health"/>
-                            <field name="therapy"/>
-                            <field name="therapy_reason"/>
-                            <field name="client_other_services"/>
-                            <field name="client_other_services_specify"/>
-                            <field name="client_services"/>
-                            <field name="client_services_specify"/>
-                            <field name="psychiatric"/>
-                            <field name="psychiatric_reason"/>
-                            <field name="client_meds"/>
-                            <field name="client_meds_reason"/>
-                            <field name="client_attend_session"/>
-                            <field name="anger_management"/>
-                            <field name="anger_management_yes"/>
-                            <field name="social_service"/>
-                            <field name="criminal_justice"/>
-                            <field name="homocidal_client"/>
-                            <field name="person_threatened"/>
-                            <field name="ind_suicidal_thoughts"/>
-                            <field name="actively_suicidal"/>
-                            <field name="specific_means"/>
-                            <field name="means_access"/>
-                            <field name="plan_suicide"/>
-                            <field name="immediate_intent"/>
-                            <field name="attempted_suicide"/>
-                            <field name="long_ago"/>
-                            <field name="what_means"/>
-                            <field name="suicidal_thoughts"/>
-                            <field name="occurence_often"/>
-                            <field name="help_stop_thoughts"/>
-                            <field name="additional_notes"/>
-                            <field name="file"/>
-                            <field name="counselor"/>
-                            <field name="ethnicity"/>
-                            <field name="client"/>
+                          <field name="client" widget="selection"/>
+                          <field name="file" widget="selection"/>
                         </group>
+                        <notebook>
+                          <page string="Counselor Form">
+                            <group>
+                              <field name="intake" widget="binary" height = "64" filename="intake_namex"/>
+                              <field name="date"/>
+                              <field name="counselor" widget="selection"/>
+                              <field name="relationship" widget="selection"/>
+                              <field name="ethnicity" widget="many2many_tags"/>
+                              <field name="employed"/>
+
+                              <field name="physical_health"/>
+                              <field name="therapy"/>
+                              <field name="therapy_reason"/>
+                              <field name="client_other_services"/>
+                              <field name="client_other_services_specify"/>
+                              <field name="client_services"/>
+                              <field name="client_services_specify"/>
+                              <field name="psychiatric"/>
+                              <field name="psychiatric_reason"/>
+                              <field name="client_meds"/>
+                              <field name="client_meds_reason"/>
+                              <field name="client_attend_session"/>
+                              <field name="anger_management"/>
+                              <field name="anger_management_yes"/>
+                              <field name="social_service"/>
+                              <field name="criminal_justice"/>
+                              <field name="homocidal_client"/>
+                              <field name="person_threatened"/>
+                              <field name="ind_suicidal_thoughts"/>
+                            </group>
+                          </page>
+                          <page string="Suicide Assessment">
+                            <group>
+                              <field name="actively_suicidal"/>
+                              <field name="specific_means"/>
+                              <field name="means_access"/>
+                              <field name="plan_suicide"/>
+                              <field name="immediate_intent"/>
+                              <field name="attempted_suicide"/>
+                              <field name="long_ago"/>
+                              <field name="what_means"/>
+                              <field name="suicidal_thoughts"/>
+                              <field name="occurence_often"/>
+                              <field name="help_stop_thoughts"/>
+                            </group>
+                          </page>
+                          <page string="Additional Notes">
+                            <group>
+                              <field name="goals"/>
+                              <field name="additional_notes"/>
+                            </group>
+                          </page>
+                        </notebook>
                        </sheet>
                 </form>
               </field>
