@@ -2,14 +2,15 @@ from odoo import models, fields, api
 class ProgressNotes(models.Model):
   _name = 'sccc.progress_notes'
 
-  date = fields.Date('Date')
-  synopsis = fields.Text('Synopsis')
-  goals = fields.Text('Self-Described Goals')
-  documentation = fields.Text('Documentation')
-  follow_up = fields.Text('Intended Follow Up')
+  name = fields.Char('Name')
+  created_on = fields.Date('Created On')
+  date = fields.Date('Date Of Session')
+  synopsis = fields.Text('Synopsis: overview, themes, client concerns, mood')
+  goals = fields.Text('Self-described goals/resources (recent changes?)')
+  documentation = fields.Text('Documentation: Legal/ethical matters, safety concerns')
+  follow_up = fields.Text('Intended follow-up: phone calls, consultatios, refferals')
   next_session = fields.Date('Next Session')
 
   # Relations
   counselor = fields.Many2one('sccc.counselor', string='Counselor')
   files = fields.Many2many('sccc.file', 'progress_notes', string='Files')
-  clients = fields.Many2one('sccc.client', string='Clients')

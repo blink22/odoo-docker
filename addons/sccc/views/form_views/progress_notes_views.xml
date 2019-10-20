@@ -6,6 +6,8 @@
               <field name="model">sccc.progress_notes</field>
               <field name="arch" type="xml">
                   <tree create="true">
+                      <field name="name"/>
+                      <field name="created_on"/>
                       <field name="date"/>
                       <field name="synopsis"/>
                       <field name="goals"/>
@@ -13,7 +15,6 @@
                       <field name="follow_up"/>
                       <field name="next_session"/>
                       <field name="files"/>
-                      <field name="clients"/>
                       <field name="counselor"/>
                   </tree>
               </field>
@@ -28,7 +29,6 @@
                        <sheet>
                         <group>
                             <field name="files" widget="many2many_tags"/>
-                            <field name="clients" widget="selection"/>
                             <field name="counselor" widget="selection"/>
                             <field name="date"/>
                             <field name="synopsis"/>

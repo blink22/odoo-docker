@@ -6,33 +6,19 @@
               <field name="model">sccc.file</field>
               <field name="arch" type="xml">
                   <tree create="true">
-                      <field name="name"/>
                       <field name="file_number"/>
-                      <field name="additional_notes"/>
-                      <field name="out_reach"/>
-                      <field name="preferred_gender"/>
+                      <field name="name"/>
+                      <field name="clients"/>
                       <field name="intake_date"/>
-                      <field name="fee"/>
-                      <field name="balance"/>
-                      <field name="double_fee"/>
-                      <field name="created_on"/>
-                      <field name="on_waitlist"/>
-                      <field name="attended_session"/>
-                      <field name="terminated"/>
-                      <field name="lgbtq_counselor"/>
-                      <field name="other_considerations"/>
-                      <field name="counselor"/>
-                      <field name="meetings"/>
-                      <field name="sessions"/>
-                      <field name="fee_setting"/>
-                      <field name="fee_adjustment"/>
-                      <field name="payments"/>
-                      <field name="individual_assessment"/>
-                      <field name="fam_assessment"/>
                       <field name="sccc_appointment_type"/>
                       <field name="availability"/>
-                      <field name="progress_notes"/>
-                      <field name="clients"/>
+                      <field name="on_waitlist"/>
+                      <field name="double_fee"/>
+                      <field name="lgbtq_counselor"/>
+                      <field name="preferred_gender"/>
+                      <field name="preferred_age"/>
+                      <field name="other_considerations"/>
+                      <field name="additional_notes"/>
                   </tree>
               </field>
     </record>

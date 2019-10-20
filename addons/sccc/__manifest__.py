@@ -34,7 +34,6 @@
         'views/config_views/counselor_views.xml',
         'views/config_views/location_views.xml',
         'views/config_views/room_views.xml',
-        'views/config_views/ethnicity_views.xml',
         'views/config_views/language_views.xml',
         'views/config_views/sccc_appointment_type_views.xml',
         'views/config_views/sessions_views.xml',
