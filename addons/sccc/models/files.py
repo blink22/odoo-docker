@@ -34,7 +34,7 @@ class Files(models.Model):
     payments = fields.Many2many('sccc.payments', 'files', string='Payments')
     individual_assessment = fields.Many2one('sccc.individual_assessment', string='Individual Assessment Form')
     fam_assessment = fields.Many2one('sccc.fam_assessment', string='FAM Assessment Form')
-    sccc_appointment_type = fields.Many2many('sccc.sccc_appointment_type', 'files', string='SCCC Appointment Type')
+    appointment_types = fields.Many2many('sccc.appointment_type', 'files', string='Appointment Type')
     availability = fields.Many2many('sccc.time_slots', 'files', string='Availability (Time Slots)')
     progress_notes = fields.Many2many('sccc.progress_notes', 'files', string='Progress Notes')
     clients = fields.Many2many('sccc.client', 'files', string='Clients')

@@ -10,7 +10,7 @@
                       <field name="name"/>
                       <field name="clients"/>
                       <field name="intake_date"/>
-                      <field name="sccc_appointment_type"/>
+                      <field name="appointment_types"/>
                       <field name="availability"/>
                       <field name="on_waitlist"/>
                       <field name="double_fee"/>
@@ -48,7 +48,7 @@
                                       <td style="width: 30%">
                                         <group>
                                           <field name="clients" widget="many2many_tags"/>
-                                          <field name="sccc_appointment_type" widget="many2many_tags"/>
+                                          <field name="appointment_types" widget="many2many_tags"/>
                                         </group>
                                       </td>
                                       <td >
@@ -65,7 +65,7 @@
                                       <td style="width: 100%">
                                         <group>
                                           <field name="intake_date"/>
-                                          <field name="availability"/>
+                                          <field name="availability" widget="many2many_tags"/>
                                           <field name="lgbtq_counselor"/>
                                           <field name="preferred_gender"/>
                                           <field name="preferred_age"/>
@@ -79,7 +79,7 @@
                                   <group>
                                     <field name="fee" widget="monetary" options="{'currency_field': 'currency_id'}"/>
                                     <field name="balance" widget="monetary" options="{'currency_field': 'currency_id'}"/>
-                                    <field name="payments"/>
+                                    <field name="payments" widget="many2many_tags"/>
                                   </group>
                                 </page>
                                 <page string="Forms">
@@ -92,8 +92,8 @@
                                 </page>
                                 <page string="Counseling History">
                                   <group>
-                                    <field name="meetings"/>
-                                    <field name="progress_notes"/>
+                                    <field name="meetings" widget="many2many_tags"/>
+                                    <field name="progress_notes" widget="many2many_tags"/>
                                   </group>
                                 </page>
                               </notebook>

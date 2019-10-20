@@ -16,7 +16,7 @@ class Counselors(models.Model):
     
     # Relations
     files = fields.Many2many('sccc.file', 'counselor', string='Case Load')
-    files_numbers = fields.Many2many('sccc.file', 'file_counselor_rel', 'file_id', 'counselor_id', string='Files #')
+    files_numbers = fields.Integer(related='files.file_number', string='Files #')
     fam_assessment = fields.One2many('sccc.fam_assessment', 'counselor', string='Fam Assessment')
 
     @api.depends('last_name', 'first_name')

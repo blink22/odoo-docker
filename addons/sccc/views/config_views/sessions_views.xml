@@ -22,7 +22,7 @@
                        <sheet>
                         <group>
                             <field name="session_name"/>
-                            <field name="files"/>
+                            <field name="files" widget="many2many_tags"/>
                         </group>
                        </sheet>
                 </form>

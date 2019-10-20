@@ -35,7 +35,7 @@
         'views/config_views/location_views.xml',
         'views/config_views/room_views.xml',
         'views/config_views/language_views.xml',
-        'views/config_views/sccc_appointment_type_views.xml',
+        'views/config_views/appointment_type_views.xml',
         'views/config_views/sessions_views.xml',
         'views/config_views/time_slots_views.xml',
 

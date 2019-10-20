@@ -26,7 +26,7 @@
                        <sheet>
                         <group>
                           <field name="name"/>
-                          <field name="files"/>
+                          <field name="files" widget="many2many_tags"/>
                           <field name="counselor"/>
                           <field name="date"/>
                           <field name="description_tag"/>
