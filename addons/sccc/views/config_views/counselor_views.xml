@@ -6,9 +6,11 @@
               <field name="model">sccc.counselor</field>
               <field name="arch" type="xml">
                   <tree create="true">
-                      <field name="name"/>
+                      <field name="first_name"/>
+                      <field name="last_name"/>
                       <field name="in_crawl"/>
                       <field name="availability"/>
+                      <field name="departments"/>
                       <field name="files"/>
                   </tree>
               </field>
@@ -24,9 +26,11 @@
                        <notebook>
                        <page name="personal_details" string="Personal Details">
                             <group>
-                              <field name="name"/>
+                              <field name="first_name"/>
+                              <field name="last_name"/>
                               <field name="in_crawl"/>
                               <field name="availability"/>
+                              <field name="departments" widget="selection"/>
                             </group>
                        </page>
                        <page name="caseload" string="Caseload">

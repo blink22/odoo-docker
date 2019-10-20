@@ -5,6 +5,12 @@ class IndividualAssessment(models.Model):
   intake = fields.Binary('Upload Intake Form')
   date = fields.Date('Date & Time')
   goals = fields.Text('Self-Described Goals')
+  ethnicity = fields.Selection([('American Indian/Native American/Alaskan Native', 'American Indian/Native American/Alaskan Native'),
+                                ('Asian', 'Asian'), ('Black', 'Black'), ('Latina/o/x', 'Latina/o/x'),
+                                ('Middle Eastern or North African','Middle Eastern or North African'), ('Mixed','Mixed'), 
+                                ('Native Hawaiian or Pacific Islander','Native Hawaiian or Pacific Islander'), 
+                                ('White','White'), ('Other','Other'), ('Declines to Specify','Declines to Specify')], 'Ethnicity')
+                                
   relationship = fields.Selection([('married', 'Married'), ('single', 'Single'), ('divorced', 'Divorced')], 'Relationship Status')
   employed = fields.Selection([('yes', 'Yes'), ('no', 'No')], 'Currently Employed?')
   physical_health = fields.Text('How is client\'s physical health?')
@@ -42,5 +48,4 @@ class IndividualAssessment(models.Model):
   # Relations
   file = fields.One2many('sccc.file', 'individual_assessment', string='File')
   counselor = fields.Many2one('sccc.counselor', string='Counselor')
-  ethnicity = fields.Many2many('sccc.ethnicity', 'individual_assessment', string='Ethnicity')
   client = fields.Many2one('sccc.client', string='Client')

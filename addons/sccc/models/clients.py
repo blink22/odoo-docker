@@ -10,29 +10,43 @@ class Clients(models.Model):
   first_name = fields.Char('First Name')
   out_reach = fields.Boolean('Outreach?')
   gender = fields.Selection([ ('m', 'Male'), ('f', 'Female') ], 'Gender')
-  gender_pronouns = fields.Selection([('HE/SHE', 'HE/SHE'), ('HIM/HER', 'HIM/HER'), ('HIS/HER', 'HIS/HER'), ('HIS/HERS', 'HIS/HERS'), ('HIMSELF/HERSELF', 'HIMSELF/HERSELF')], 'Gender Pronouns')
+  gender_pronouns = fields.Selection([('She/Her/Hers', 'She/Her/Hers'), ('He/Him/His', 'He/Him/His'), 
+                                      ('They/Them/Theirs', 'They/Them/Theirs'), ('Not Listed', 'Not Listed')], 'Gender Pronouns')
+
+  ethnicity = fields.Selection([('American Indian/Native American/Alaskan Native', 'American Indian/Native American/Alaskan Native'),
+                                ('Asian', 'Asian'), ('Black', 'Black'), ('Latina/o/x', 'Latina/o/x'),
+                                ('Middle Eastern or North African','Middle Eastern or North African'), ('Mixed','Mixed'), 
+                                ('Native Hawaiian or Pacific Islander','Native Hawaiian or Pacific Islander'), 
+                                ('White','White'), ('Other','Other'), ('Declines to Specify','Declines to Specify')], 'Ethnicity')
+  
   date_of_birth = fields.Date('Date of Birth')
   age = fields.Integer('Age', compute='_calculate_age', store="True")
   email = fields.Char('Email')
   cell_phone = fields.Char('Cell #')
-  found_us = fields.Selection([('friend', 'Friend'), ('ads', 'Ads')], 'How did client find out about us?')
+
+  found_us = fields.Selection([('Friend', 'Friend'), ('Advertisement', 'Advertisement'),
+                               ('Family member','Family member'), ('Mandated','Mandated'), ('Guidance counselor','Guidance counselor'), 
+                               ('Outreach','Outreach'), ('Website','Website'), ('Other','Other'), ('Google, etc.','Google, etc.')], 'How did client find out about us?')
   street = fields.Char('Street')
   apt_no = fields.Char('Apt/Suite No')
   city = fields.Char('City')
   zip_code = fields.Char('Zip')
   other = fields.Char('Other #')
   brought_him = fields.Text('What brings you to the center?')
-  first_visit = fields.Selection([('true', 'Yes'), ('false', 'No')], 'Is this your first visit?')
+  first_visit = fields.Selection([('yes', 'Yes'), ('no', 'No')], 'Is this your first visit?')
   when_first_visit = fields.Text('If no, when was it?')
-  have_children = fields.Selection([('true', 'Yes'), ('false', 'No')], 'Have children?')
-  in_counseling = fields.Selection([('true', 'Yes'), ('false', 'No')], 'Are you now in counseling?')
+  have_children = fields.Selection([('yes', 'Yes'), ('no', 'No')], 'Have children?')
+  in_counseling = fields.Selection([('yes', 'Yes'), ('no', 'No')], 'Are you now in counseling?')
   in_counseling_with = fields.Text('If yes, with whom')
-  counseling_type = fields.Selection([('a', 'A'), ('b', 'B')], 'What kind of counseling do you want?')
-  interset = fields.Selection([('a', 'A'), ('b', 'B')], 'Interested in online psychotherapy')
+
+  counseling_type = fields.Selection([('Individual', 'Individual'), ('Family', 'Family'),
+                                      ('Couple', 'Couple'), ('Group', 'Group')], 'What kind of counseling do you want?')
+  interset = fields.Selection([('yes', 'Yes'), ('yes', 'Yes')], 'Interested in online psychotherapy?')
+  identify_center = fields.Selection([('yes', 'Yes'), ('no', 'No')], 'When calling your cell phone, may we identify the center?')
+  voicemail = fields.Selection([('yes', 'Yes'), ('no', 'No')], 'Is there a working voicemail that you check at this #?')
 
   # Relations
   files = fields.Many2many('sccc.file', 'clients', string='Files')
-  client_ethnicity = fields.Many2one('sccc.ethnicity', string='Ethnicity')
   client_language = fields.Many2one('sccc.language', string='Language')
 
   @api.depends('last_name', 'first_name')
@@ -54,3 +68,10 @@ class Clients(models.Model):
       self.age = int(years)
     else:
       self.age = 0
+
+  @api.onchange('email')
+  def validate_mail(self):
+    if self.email:
+      match = re.match('^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$', self.email)
+      if match == None:
+        raise ValidationError('Not a valid E-mail ID')

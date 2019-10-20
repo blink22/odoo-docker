@@ -31,7 +31,7 @@
                       <!-- <field name="counseling_type"/> -->
                       <!-- <field name="interset"/> -->
                       <field name="files"/>
-                      <field name="client_ethnicity"/>
+                      <field name="ethnicity"/>
                       <field name="client_language"/>
                   </tree>
               </field>
@@ -54,9 +54,9 @@
                               <separator string="Personal Info"/>
                               <field name="date_of_birth"/>
                               <field name="age" readonly="1"/>
-                              <field name="gender"/>
-                              <field name="gender_pronouns"/>
-                              <field name="client_ethnicity" widget="selection"/>
+                              <field name="gender" widget="selection"/>
+                              <field name="gender_pronouns" widget="selection"/>
+                              <field name="ethnicity" widget="selection"/>
                               <field name="client_language" widget="selection"/>
 
                               <separator string="Address"/>
@@ -69,24 +69,26 @@
                               <field name="email"/>
                               <field name="cell_phone"/>
                               <field name="other"/>
+                              <field name="identify_center" widget="selection"/>
+                              <field name="voicemail" widget="selection"/>
 
                               <!-- <separator string="Emergency Contact"/> -->
 
                               <separator string="MISC"/>
-                              <field name="found_us"/>
+                              <field name="found_us" widget="selection"/>
                             </group>
                           </page>
                           <page string="Other Info">
                             <group>
                               <field name="brought_him"/>
-                              <field name="first_visit"/>
+                              <field name="first_visit" widget="radio"/>
                               <field name="when_first_visit"/>
                               <!-- <field name="out_reach"/> -->
-                              <field name="have_children"/>
-                              <field name="in_counseling"/>
+                              <field name="have_children" widget="radio"/>
+                              <field name="in_counseling" widget="radio"/>
                               <field name="in_counseling_with"/>
-                              <field name="counseling_type"/>
-                              <field name="interset"/>
+                              <field name="counseling_type" widget="selection"/>
+                              <field name="interset" widget="radio"/>
                               <!-- <field name="files"/> -->
                             </group>
                           </page>

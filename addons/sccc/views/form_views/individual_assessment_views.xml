@@ -68,7 +68,7 @@
                               <field name="date"/>
                               <field name="counselor" widget="selection"/>
                               <field name="relationship" widget="selection"/>
-                              <field name="ethnicity" widget="many2many_tags"/>
+                              <field name="ethnicity" widget="selection"/>
                               <field name="employed"/>
 
                               <field name="physical_health"/>
