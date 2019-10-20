@@ -3,13 +3,13 @@ class ProgressNotes(models.Model):
   _name = 'sccc.progress_notes'
 
   name = fields.Char('Name')
-  created_on = fields.Date('Created On')
   date = fields.Date('Date Of Session')
   synopsis = fields.Text('Synopsis: overview, themes, client concerns, mood')
   goals = fields.Text('Self-described goals/resources (recent changes?)')
   documentation = fields.Text('Documentation: Legal/ethical matters, safety concerns')
   follow_up = fields.Text('Intended follow-up: phone calls, consultatios, refferals')
   next_session = fields.Date('Next Session')
+  created_on = fields.Datetime("Date")
 
   # Relations
   counselor = fields.Many2one('sccc.counselor', string='Counselor')

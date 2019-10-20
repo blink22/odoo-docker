@@ -7,6 +7,7 @@ class Calendar(models.Model):
     start_date = fields.Datetime('Start Date/Time')
     end_date = fields.Datetime('End Date/Time')
     duration = fields.Float('Duration')
+    created_on = fields.Datetime("Date")
     
     # Relations
     room = fields.Many2one('sccc.room', string='Room')

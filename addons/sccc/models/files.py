@@ -11,12 +11,11 @@ class Files(models.Model):
     preferred_age = fields.Selection([ ('1', '21'), ('2', '22') ], 'Preferred Age')
     intake_date = fields.Date('Intake Date')
     
-    currency_id = fields.Integer(compute='_get_currency', store="True")
+    currency_id = fields.Integer(compute='_get_currency', store=True)
     fee = fields.Monetary('Fee')
     balance = fields.Monetary('Balance')
     double_fee = fields.Boolean('Double Fee Hold')
 
-    created_on = fields.Date('Created On',)
     on_waitlist = fields.Boolean('On Waitlist?')
     attended_session = fields.Boolean('Has Attended Session?')
     terminated = fields.Boolean('Terminated?')
@@ -24,6 +23,7 @@ class Files(models.Model):
     lgbtq_counselor = fields.Boolean('Would like LGBTQ Counselor?')
     other_considerations = fields.Text('Other Considerations?')
     additional_notes = fields.Char('Additional Notes')
+    created_on = fields.Datetime("Date")
 
     # Relations
     counselor = fields.Many2many('sccc.counselor', 'files', string='Counselor')
@@ -34,7 +34,7 @@ class Files(models.Model):
     payments = fields.Many2many('sccc.payments', 'files', string='Payments')
     individual_assessment = fields.Many2one('sccc.individual_assessment', string='Individual Assessment Form')
     fam_assessment = fields.Many2one('sccc.fam_assessment', string='FAM Assessment Form')
-    sccc_appointment_type = fields.Many2many('sccc.sccc_appointment_type', 'files', string='SCCC Appointment Type')
+    appointment_types = fields.Many2many('sccc.appointment_type', 'files', string='Appointment Type')
     availability = fields.Many2many('sccc.time_slots', 'files', string='Availability (Time Slots)')
     progress_notes = fields.Many2many('sccc.progress_notes', 'files', string='Progress Notes')
     clients = fields.Many2many('sccc.client', 'files', string='Clients')

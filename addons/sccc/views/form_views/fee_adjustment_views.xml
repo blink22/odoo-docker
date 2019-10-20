@@ -25,6 +25,7 @@
                       <!-- <field name="board_approval"/> -->
                       <field name="files"/>
                       <field name="counselor"/>
+                      <field name="create_date"/>
                   </tree>
               </field>
     </record>

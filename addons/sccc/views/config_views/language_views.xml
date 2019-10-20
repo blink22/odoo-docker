@@ -10,6 +10,7 @@
                       <field name="local"/>
                       <field name="code"/>
                       <field name="clients"/>
+                      <field name="create_date"/>
                   </tree>
               </field>
     </record>

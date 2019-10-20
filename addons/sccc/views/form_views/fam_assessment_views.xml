@@ -25,6 +25,7 @@
                       <!-- <field name="additional_notes"/> -->
                       <field name="file"/>
                       <field name="counselor"/>
+                      <field name="create_date"/>
                   </tree>
               </field>
     </record>

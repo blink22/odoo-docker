@@ -46,6 +46,7 @@
                       <field name="counselor"/>
                       <field name="ethnicity"/>
                       <field name="client"/>
+                      <field name="create_date"/>
                   </tree>
               </field>
     </record>

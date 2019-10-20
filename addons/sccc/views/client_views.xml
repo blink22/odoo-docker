@@ -33,6 +33,7 @@
                       <field name="files"/>
                       <field name="ethnicity"/>
                       <field name="client_language"/>
+                      <field name="create_date"/>
                   </tree>
               </field>
     </record>

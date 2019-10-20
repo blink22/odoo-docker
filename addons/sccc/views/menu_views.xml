@@ -73,9 +73,9 @@
       <field name="res_model">sccc.progress_notes</field>
       <field name="view_mode">tree,form</field>
     </record>
-    <record model="ir.actions.act_window" id="action_sccc_appointment_type">
-      <field name="name">SCCC Appointment Type</field>
-      <field name="res_model">sccc.sccc_appointment_type</field>
+    <record model="ir.actions.act_window" id="action_appointment_type">
+      <field name="name">Appointment Type</field>
+      <field name="res_model">sccc.appointment_type</field>
       <field name="view_mode">tree,form</field>
     </record>
     <record model="ir.actions.act_window" id="action_sessions">
@@ -106,7 +106,7 @@
             <menuitem name="Staff" id="sccc.menu_counselor" parent="sccc.config"  action="action_counselor"/>
             <!-- 
             <menuitem name="Language" id="sccc.menu_language" parent="sccc.config"  action="action_language"/>
-            <menuitem name="SCCC Appointment Type" id="sccc.menu_sccc_appointment_type" parent="sccc.config"  action="action_sccc_appointment_type"/>
+            <menuitem name="SCCC Appointment Type" id="sccc.menu_appointment_type" parent="sccc.config"  action="action_appointment_type"/>
             <menuitem name="Sessions" id="sccc.menu_sessions" parent="sccc.config"  action="action_sessions"/>
             <menuitem name="Time Slots" id="sccc.menu_time_slots" parent="sccc.config"  action="action_time_slots"/> -->
 

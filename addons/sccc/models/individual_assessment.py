@@ -44,6 +44,7 @@ class IndividualAssessment(models.Model):
   occurence_often = fields.Text('How often do they occur?')
   help_stop_thoughts = fields.Text('Does anything help stop those thoughts?')
   additional_notes = fields.Text('Any Additional Notes')
+  created_on = fields.Datetime("Date")
 
   # Relations
   file = fields.One2many('sccc.file', 'individual_assessment', string='File')

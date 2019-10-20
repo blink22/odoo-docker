@@ -5,6 +5,7 @@ class TimeSlots(models.Model):
   from_time = fields.Float('From')
   to_time = fields.Float('To')
   day_of_week = fields.Char('Day of Week')
+  created_on = fields.Datetime("Date")
 
   # Relations
   files = fields.Many2many('sccc.file', 'availability', string='Files')

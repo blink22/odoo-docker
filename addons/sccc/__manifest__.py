@@ -35,7 +35,7 @@
         'views/config_views/location_views.xml',
         'views/config_views/room_views.xml',
         'views/config_views/language_views.xml',
-        'views/config_views/sccc_appointment_type_views.xml',
+        'views/config_views/appointment_type_views.xml',
         'views/config_views/sessions_views.xml',
         'views/config_views/time_slots_views.xml',
 
@@ -45,6 +45,7 @@
         'views/form_views/fee_setting_views.xml',
         'views/form_views/progress_notes_views.xml'
     ],
+    'auto_install' : True,
     # only loaded in demonstration mode
     'demo': [
         'demo/demo.xml',

@@ -9,6 +9,7 @@
                       <field name="name"/>
                       <field name="location"/>
                       <field name="type"/>
+                      <field name="create_date"/>
                   </tree>
               </field>
     </record>

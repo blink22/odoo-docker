@@ -10,7 +10,7 @@ class FamAssessment(models.Model):
   therapy_type = fields.Selection([('a', 'A'), ('b', 'B')], 'What type of therapy is this?')
   language_needs = fields.Text('Does family/couple have any language needs?')
   individual_counseling = fields.Selection([('yes', 'Yes'), ('no', 'No')], 'Family/Couple members received individual counseling?')
-  currency_id = fields.Integer(compute='_get_currency', store="True")
+  currency_id = fields.Integer(compute='_get_currency', store=True)
   outstanding_balance = fields.Monetary('Any outstanding balance?')
   mandated_therapy = fields.Selection([('yes', 'Yes'), ('no', 'No')], 'Is client mandated to attend therapy?')
   mandated_therapy_agency = fields.Text('If yes, which agency?')
@@ -27,6 +27,7 @@ class FamAssessment(models.Model):
   appointment_date = fields.Date('Date/time of appointment')
   fee = fields.Monetary('Fee')
   additional_notes = fields.Text('Additional notes')
+  created_on = fields.Datetime("Date")
 
   # Relations
   file = fields.One2many('sccc.file', 'fam_assessment', string='File')

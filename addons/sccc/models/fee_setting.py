@@ -5,7 +5,7 @@ class FeeSetting(models.Model):
   form_upload = fields.Binary ('Upload Fee Form')
   added_date = fields.Date('Date added to system')
   today_date = fields.Date('Today\'s date')
-  currency_id = fields.Integer(compute='_get_currency', store="True")
+  currency_id = fields.Integer(compute='_get_currency', store=True)
   fee = fields.Monetary('Fee Set at')
   refered_to_fee = fields.Selection([ ('yes', 'Yes'), ('no', 'No') ], 'Referred to Fee Review Committee?')
   currency = fields.Monetary('Currency')
@@ -24,7 +24,8 @@ class FeeSetting(models.Model):
   has_members = fields.Selection([ ('yes', 'Yes'), ('no', 'No') ], 'Are there any other members in client\'s family ')
   gross_monthly = fields.Monetary('What is gross monthly income of others')
   total_gross = fields.Monetary('Total Gross Monthly Income')
-
+  created_on = fields.Datetime("Date")
+  
   # Relations
   files = fields.Many2one('sccc.file', string='File')
   counselor = fields.Many2one('sccc.counselor', string='Counselor')

@@ -12,6 +12,7 @@
                       <field name="amount_due"/>
                       <field name="amount_paid"/>
                       <field name="payment_method"/>
+                      <field name="create_date"/>
                   </tree>
               </field>
     </record>
@@ -25,7 +26,7 @@
                        <sheet>
                         <group>
                           <field name="name"/>
-                          <field name="files"/>
+                          <field name="files" widget="many2many_tags"/>
                           <field name="counselor"/>
                           <field name="date"/>
                           <field name="description_tag"/>
