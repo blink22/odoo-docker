@@ -16,6 +16,7 @@
                       <field name="next_session"/>
                       <field name="files"/>
                       <field name="counselor"/>
+                      <field name="create_date"/>
                   </tree>
               </field>
     </record>

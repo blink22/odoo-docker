@@ -45,6 +45,7 @@
         'views/form_views/fee_setting_views.xml',
         'views/form_views/progress_notes_views.xml'
     ],
+    'auto_install' : True,
     # only loaded in demonstration mode
     'demo': [
         'demo/demo.xml',

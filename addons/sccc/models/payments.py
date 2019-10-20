@@ -22,6 +22,7 @@ class Payments(models.Model):
     payment_method = fields.Selection([ ('cash', 'Cash'),
                                         ('credit_card', 'Credit Card'),
                                         ('other','Other') ], 'Payment Method')
+    created_on = fields.Datetime("Date")
 
     # Relations
     files = fields.Many2many('sccc.file', 'payments', string='Files')

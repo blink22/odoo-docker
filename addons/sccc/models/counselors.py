@@ -3,7 +3,7 @@ from odoo import models, fields, api
 class Counselors(models.Model):
     _name = 'sccc.counselor'
 
-    name = fields.Char('Name', compute='_set_name', store="True")
+    name = fields.Char('Name', compute='_set_name', store=True)
     last_name = fields.Char('Last Name')
     first_name = fields.Char('First Name')
     in_crawl = fields.Boolean('In Crawl')
@@ -12,9 +12,11 @@ class Counselors(models.Model):
     departments = fields.Selection([('Administration', 'Administration'), ('Counselors', 'Counselors'),
                                     ('Directors', 'Directors'), ('Front Desk', 'Front Desk'),
                                     ('Psychiatry', 'Psychiatry'), ('Coordinators', 'Coordinators')], 'Departments')
-
+    created_on = fields.Datetime("Date")
+    
     # Relations
     files = fields.Many2many('sccc.file', 'counselor', string='Case Load')
+    files_numbers = fields.Many2many('sccc.file', 'file_counselor_rel', 'file_id', 'counselor_id', string='Files #')
     fam_assessment = fields.One2many('sccc.fam_assessment', 'counselor', string='Fam Assessment')
 
     @api.depends('last_name', 'first_name')

@@ -19,6 +19,7 @@
                       <field name="preferred_age"/>
                       <field name="other_considerations"/>
                       <field name="additional_notes"/>
+                      <field name="create_date"/>
                   </tree>
               </field>
     </record>

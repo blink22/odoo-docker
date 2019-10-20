@@ -13,7 +13,7 @@
                       <field name="end_date"/>
                       <field name="duration" widget="float_time"/>
                       <field name="room"/>
-
+                      <field name="create_date"/>
                   </tree>
               </field>
     </record>

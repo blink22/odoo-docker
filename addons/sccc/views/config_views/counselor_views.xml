@@ -11,7 +11,9 @@
                       <field name="in_crawl"/>
                       <field name="availability"/>
                       <field name="departments"/>
-                      <field name="files"/>
+                      <!-- <field name="files"/> -->
+                      <field name="files_numbers"/>
+                      <field name="create_date"/>
                   </tree>
               </field>
     </record>
@@ -36,6 +38,7 @@
                        <page name="caseload" string="Caseload">
                            <group>
                                <field name="files"/>
+                               <!-- <field name="files_numbers"/> -->
                            </group>
                        </page>
                        </notebook>

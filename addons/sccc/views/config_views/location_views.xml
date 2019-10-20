@@ -8,6 +8,7 @@
                   <tree create="true">
                       <field name="name"/>
                       <field name="location_id"/>
+                      <field name="create_date"/>
                   </tree>
               </field>
     </record>

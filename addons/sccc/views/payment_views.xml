@@ -12,6 +12,7 @@
                       <field name="amount_due"/>
                       <field name="amount_paid"/>
                       <field name="payment_method"/>
+                      <field name="create_date"/>
                   </tree>
               </field>
     </record>

@@ -4,11 +4,13 @@
     <record model="ir.ui.view" id="room_tree_view">
               <field name="name">room list tree</field>
               <field name="model">sccc.room</field>
+              <field name="priority" eval="1"/>
               <field name="arch" type="xml">
                   <tree create="true">
                       <field name="name"/>
                       <field name="location"/>
                       <field name="type"/>
+                      <field name="create_date"/>
                   </tree>
               </field>
     </record>

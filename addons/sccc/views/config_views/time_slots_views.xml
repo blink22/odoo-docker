@@ -11,6 +11,7 @@
                       <field name="to_time"/>
                       <field name="day_of_week"/>
                       <field name="files"/>
+                      <field name="create_date"/>
                   </tree>
               </field>
     </record>
