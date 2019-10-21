@@ -7,7 +7,7 @@
               <field name="arch" type="xml">
                   <tree create="true">
                       <field name="name"/>
-                      <field name="files"/>
+                      <field name="files" widget="many2many_tags"/>
                       <field name="counselor"/>
                       <field name="start_date"/>
                       <field name="end_date"/>

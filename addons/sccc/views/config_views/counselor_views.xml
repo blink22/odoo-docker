@@ -11,7 +11,7 @@
                       <field name="in_crawl"/>
                       <field name="availability"/>
                       <field name="departments"/>
-                      <field name="files"/>
+                      <field name="files" widget="many2many_tags"/>
                       <field name="create_date"/>
                   </tree>
               </field>

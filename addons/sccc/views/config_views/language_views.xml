@@ -9,7 +9,7 @@
                       <field name="name"/>
                       <field name="local"/>
                       <field name="code"/>
-                      <field name="clients"/>
+                      <field name="clients" widget="many2many_tags"/>
                       <field name="create_date"/>
                   </tree>
               </field>

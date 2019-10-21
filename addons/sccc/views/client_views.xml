@@ -30,7 +30,7 @@
                       <!-- <field name="in_counseling_with"/> -->
                       <!-- <field name="counseling_type"/> -->
                       <!-- <field name="interset"/> -->
-                      <field name="files"/>
+                      <field name="files" widget="many2many_tags"/>
                       <field name="ethnicity"/>
                       <field name="client_language"/>
                       <field name="create_date"/>

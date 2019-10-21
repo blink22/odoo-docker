@@ -14,7 +14,7 @@
                       <field name="documentation"/>
                       <field name="follow_up"/>
                       <field name="next_session"/>
-                      <field name="files"/>
+                      <field name="files" widget="many2many_tags"/>
                       <field name="counselor"/>
                       <field name="create_date"/>
                   </tree>

@@ -24,7 +24,7 @@
                       <field name="total_income"/>
                       <!-- <field name="paystub"/> -->
                       <!-- <field name="board_approval"/> -->
-                      <field name="files"/>
+                      <field name="files" widget="many2many_tags"/>
                       <field name="counselor"/>
                       <field name="create_date"/>
                   </tree>
