@@ -6,7 +6,7 @@
               <field name="model">sccc.payment</field>
               <field name="arch" type="xml">
                   <tree create="true">
-                      <field name="files"/>
+                      <field name="files" widget="many2many_tags"/>
                       <field name="name"/>
                       <field name="date"/>
                       <field name="amount_due"/>

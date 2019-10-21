@@ -8,7 +8,7 @@
                   <tree create="true">
                       <field name="file_number"/>
                       <field name="name"/>
-                      <field name="clients"/>
+                      <field name="clients" widget="many2many_tags"/>
                       <field name="intake_date"/>
                       <field name="appointment_types"/>
                       <field name="availability"/>
