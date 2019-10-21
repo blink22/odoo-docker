@@ -13,4 +13,4 @@ class ProgressNotes(models.Model):
 
   # Relations
   counselor = fields.Many2one('sccc.counselor', string='Counselor')
-  files = fields.Many2many('sccc.file', 'progress_notes', string='Files')
+  files = fields.Many2many('sccc.file', 'progress_notes_file_rel', string='Files')

@@ -11,5 +11,5 @@ class Calendar(models.Model):
     
     # Relations
     room = fields.Many2one('sccc.room', string='Room')
-    files = fields.Many2many('sccc.file', 'meetings', string='Files')
+    files = fields.Many2many('sccc.file', 'calendar_file_rel', string='Files')
     counselor = fields.Many2one('sccc.counselor', string='Counselor')

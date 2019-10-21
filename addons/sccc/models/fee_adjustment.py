@@ -2,6 +2,8 @@ from odoo import models, fields, api
 from datetime import date, datetime
 class FeeAdjustment(models.Model):
   _name = 'sccc.fee_adjustment'
+
+  name = fields.Char('Name')
   upload_fee = fields.Binary('Upload Fee Form')
   added_date = fields.Date('Date added to system')
   today_date = fields.Date('Today\'s date')
@@ -24,7 +26,7 @@ class FeeAdjustment(models.Model):
   created_on = fields.Datetime("Date")
 
   # Relations
-  files = fields.Many2many('sccc.file', 'fee_adjustment', string='Files')
+  files = fields.Many2many('sccc.file', 'fee_adjustment_file_rel', string='Files')
   counselor = fields.Many2one('sccc.counselor', string='Counselor')
 
   def _get_currency(self):

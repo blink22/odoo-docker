@@ -7,6 +7,7 @@
               <field name="arch" type="xml">
                   <tree create="true">
                       <!-- <field name="upload_fee"/> -->
+                      <field name="name"/>
                       <field name="added_date"/>
                       <field name="today_date"/>
                       <field name="currency"/>
@@ -38,6 +39,7 @@
                    <form string="Fee Adjustment Form">
                        <sheet>
                         <group>
+                          <field name="name"/>
                           <field name="files" widget="many2many_tags"/>
                           <field widget="binary" height = "64" name="upload_fee" filename="upload_fee_namex" />
                           <field name="counselor" widget="selection"/>
