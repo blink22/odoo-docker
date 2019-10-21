@@ -2,6 +2,8 @@ from odoo import models, fields, api
 from datetime import date, datetime
 class FeeAdjustment(models.Model):
   _name = 'sccc.fee_adjustment'
+
+  name = fields.Char('Name')
   upload_fee = fields.Binary('Upload Fee Form')
   added_date = fields.Date('Date added to system')
   today_date = fields.Date('Today\'s date')
