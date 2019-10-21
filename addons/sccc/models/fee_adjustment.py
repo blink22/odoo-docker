@@ -26,7 +26,7 @@ class FeeAdjustment(models.Model):
   created_on = fields.Datetime("Date")
 
   # Relations
-  files = fields.Many2many('sccc.file', 'fee_adjustment', string='Files')
+  files = fields.Many2many('sccc.file', 'fee_adjustment_file_rel', string='Files')
   counselor = fields.Many2one('sccc.counselor', string='Counselor')
 
   def _get_currency(self):

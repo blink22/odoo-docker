@@ -8,4 +8,4 @@ class TimeSlots(models.Model):
   created_on = fields.Datetime("Date")
 
   # Relations
-  files = fields.Many2many('sccc.file', 'availability', string='Files')
+  files = fields.Many2many('sccc.file', 'time_slots_file_rel', string='Files')

@@ -26,18 +26,18 @@ class Files(models.Model):
     created_on = fields.Datetime("Date")
 
     # Relations
-    counselor = fields.Many2many('sccc.counselor', 'files', string='Counselor')
-    meetings = fields.Many2many('sccc.calendar', 'files', string='Meetings')
-    sessions = fields.Many2many('sccc.sessions', 'files', string='Sessions')
+    counselor = fields.Many2many('sccc.counselor', 'counselor_file_rel', string='Counselor')
+    meetings = fields.Many2many('sccc.calendar', 'calendar_file_rel', string='Meetings')
+    sessions = fields.Many2many('sccc.sessions', 'sessions_file_rel', string='Sessions')
     fee_setting = fields.Many2one('sccc.fee_setting', string='Fee Setting Form')
-    fee_adjustment = fields.Many2many('sccc.fee_adjustment', 'files', string='Fee Adjustment Form')
-    payments = fields.Many2many('sccc.payments', 'files', string='Payments')
+    fee_adjustment = fields.Many2many('sccc.fee_adjustment', 'fee_adjustment_file_rel', string='Fee Adjustment Form')
+    payments = fields.Many2many('sccc.payment', 'payment_file_rel', string='Payments')
     individual_assessment = fields.Many2one('sccc.individual_assessment', string='Individual Assessment Form')
     fam_assessment = fields.Many2one('sccc.fam_assessment', string='FAM Assessment Form')
-    appointment_types = fields.Many2many('sccc.appointment_type', 'files', string='Appointment Type')
-    availability = fields.Many2many('sccc.time_slots', 'files', string='Availability (Time Slots)')
-    progress_notes = fields.Many2many('sccc.progress_notes', 'files', string='Progress Notes')
-    clients = fields.Many2many('sccc.client', 'files', string='Clients')
+    appointment_types = fields.Many2many('sccc.appointment_type', 'appointment_type_file_rel', string='Appointment Type')
+    availability = fields.Many2many('sccc.time_slots', 'time_slots_file_rel', string='Availability (Time Slots)')
+    progress_notes = fields.Many2many('sccc.progress_notes', 'progress_notes_file_rel', string='Progress Notes')
+    clients = fields.Many2many('sccc.client', 'client_file_rel', string='Clients')
 
     def _get_currency(self):
         user_obj = self.pool.get('res.users')

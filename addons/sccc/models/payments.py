@@ -25,5 +25,5 @@ class Payments(models.Model):
     created_on = fields.Datetime("Date")
 
     # Relations
-    files = fields.Many2many('sccc.file', 'payments', string='Files')
+    files = fields.Many2many('sccc.file', 'payment_file_rel', string='Files')
     counselor = fields.Many2one('sccc.counselor', string='Counselor')

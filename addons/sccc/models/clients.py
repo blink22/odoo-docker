@@ -47,7 +47,7 @@ class Clients(models.Model):
   created_on = fields.Datetime("Date")
   
   # Relations
-  files = fields.Many2many('sccc.file', 'clients', string='Files')
+  files = fields.Many2many('sccc.file', 'client_file_rel', string='Files')
   client_language = fields.Many2one('sccc.language', string='Language')
 
   @api.depends('last_name', 'first_name')

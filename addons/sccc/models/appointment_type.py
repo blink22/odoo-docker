@@ -6,4 +6,4 @@ class AppointmentType(models.Model):
   created_on = fields.Datetime("Date")
 
   # Relations
-  files = fields.Many2many('sccc.file', 'appointment_types', string='Files')
+  files = fields.Many2many('sccc.file', 'appointment_type_file_rel', string='Files')
