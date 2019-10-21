@@ -7,6 +7,7 @@ class Calendar(models.Model):
     start_date = fields.Datetime('Start Date/Time')
     end_date = fields.Datetime('End Date/Time')
     duration = fields.Float('Duration')
+    status = fields.Char('Status')
     created_on = fields.Datetime("Date")
     
     # Relations
