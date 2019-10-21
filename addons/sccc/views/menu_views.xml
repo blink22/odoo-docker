@@ -44,7 +44,7 @@
     </record>
 
     <record model="ir.actions.act_window" id="action_fam_assessment">
-      <field name="name">Fam Assessment</field>
+      <field name="name">Familty Assessment</field>
       <field name="res_model">sccc.fam_assessment</field>
       <field name="view_mode">tree,form</field>
     </record>

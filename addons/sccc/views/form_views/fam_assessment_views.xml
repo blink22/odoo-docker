@@ -5,8 +5,9 @@
               <field name="name">fam_assessment list tree</field>
               <field name="model">sccc.fam_assessment</field>
               <field name="arch" type="xml">
-                  <tree create="true">
+                  <tree create="true" string="Family Assessment">
                       <!-- <field name="intake"/> -->
+                      <field name="name"/>
                       <field name="date"/>
                       <field name="therapy_type"/>
                       <field name="language_needs"/>
@@ -35,16 +36,17 @@
               <field name="name">fam_assessment form</field>
               <field name="model">sccc.fam_assessment</field>
               <field name="arch" type="xml">
-                   <form string="Fam Assessment Form">
+                   <form string="Family Assessment Form">
                        <sheet>
                         <group>
                           <field name="file" widget="selection"/>
                           <field name="client" widget="selection"/>
                           <notebook>
-                            <page string="FAM Assessment">
+                            <page string="Family Assessment">
                               <group>
                                 <field widget="binary" height = "64" name="intake" filename="intake_namex" />
                                 <field name="date"/>
+                                <field name="name"/>
                                 <field name="counselor" widget="selection"/>
                                 <field name="therapy_type" widget="selection"/>
                                 <field name="language_needs"/>
