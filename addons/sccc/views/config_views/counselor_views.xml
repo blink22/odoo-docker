@@ -12,6 +12,8 @@
                       <field name="availability"/>
                       <field name="departments"/>
                       <field name="files" widget="many2many_tags"/>
+                      <field name="ethnicity"/>
+                      <field name="language"/>
                       <field name="create_date"/>
                   </tree>
               </field>
@@ -32,6 +34,9 @@
                               <field name="in_crawl"/>
                               <field name="availability"/>
                               <field name="departments" widget="selection"/>
+                              <field name="location" widget="many2many_tags"/>
+                              <field name="ethnicity" widget="selection"/>
+                              <field name="language"/>
                             </group>
                        </page>
                        <page name="caseload" string="Caseload">

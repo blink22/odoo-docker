@@ -13,7 +13,7 @@
                       <field name="appointment_types"/>
                       <field name="availability"/>
                       <field name="on_waitlist"/>
-                      <field name="double_fee"/>
+                      <field name="hold"/>
                       <field name="lgbtq_counselor"/>
                       <field name="preferred_gender"/>
                       <field name="preferred_age"/>
@@ -56,7 +56,7 @@
                                           <field name="out_reach"/>
                                           <field name="created_on"/>
                                           <field name="on_waitlist"/>
-                                          <field name="double_fee"/>
+                                          <field name="hold"/>
                                           <field name="attended_session"/>
                                         </group>
                                       </td>
@@ -124,7 +124,7 @@
           <field name="intake_date"/>
           <field name="availability"/>
           <field name="on_waitlist"/>
-          <field name="double_fee"/>
+          <field name="hold"/>
           <field name="lgbtq_counselor"/>
           <field name="other_considerations"/>
           <field name="additional_notes"/>

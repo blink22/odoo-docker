@@ -12,6 +12,7 @@
                       <field name="start_date"/>
                       <field name="end_date"/>
                       <field name="duration" widget="float_time"/>
+                      <field name="status"/>
                       <field name="room"/>
                       <field name="create_date"/>
                   </tree>
@@ -36,6 +37,7 @@
                               <field name="start_date"/>
                               <field name="end_date"/>
                               <field name="duration" widget="float_time"/>
+                              <field name="status"/>
                               <field name="room"/>
                             </group>
                         </page>
@@ -57,6 +59,7 @@
           <field name="start_date"/>
           <field name="end_date"/>
           <field name="duration" widget="float_time"/>
+          <field name="status"/>
           <field name="room"/>
         </search>
       </field>

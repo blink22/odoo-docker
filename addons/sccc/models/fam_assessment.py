@@ -5,6 +5,7 @@ from odoo import models, fields, api
 class FamAssessment(models.Model):
   _name = 'sccc.fam_assessment'
 
+  name = fields.Char('Name')
   intake = fields.Binary('Upload Intake Form')
   date = fields.Date('Date & Time')
   therapy_type = fields.Selection([('a', 'A'), ('b', 'B')], 'What type of therapy is this?')

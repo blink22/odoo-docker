@@ -14,7 +14,7 @@ class Files(models.Model):
     currency_id = fields.Integer(compute='_get_currency', store=True)
     fee = fields.Monetary('Fee')
     balance = fields.Monetary('Balance')
-    double_fee = fields.Boolean('Double Fee Hold')
+    hold = fields.Boolean('Hold')
 
     on_waitlist = fields.Boolean('On Waitlist?')
     attended_session = fields.Boolean('Has Attended Session?')
