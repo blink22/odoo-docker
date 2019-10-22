@@ -10,3 +10,4 @@ class Locations(models.Model):
     # Relations
     room = fields.One2many('sccc.room', 'location', string='Room')
     counselor = fields.Many2one('sccc.counselor', string='Counselor')
+    meeting = fields.One2many('sccc.calendar', 'location', string='Meeting')
