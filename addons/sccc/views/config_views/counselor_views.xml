@@ -9,7 +9,10 @@
                       <field name="first_name"/>
                       <field name="last_name"/>
                       <field name="in_crawl"/>
+                      <field name="out_of_office"/>
+                      <field name="lgbtq"/>
                       <field name="availability"/>
+                      <field name="trained_for"/>
                       <field name="departments"/>
                       <field name="files" widget="many2many_tags"/>
                       <field name="ethnicity"/>
@@ -29,14 +32,34 @@
                        <notebook>
                        <page name="personal_details" string="Personal Details">
                             <group>
+                              <field name="in_crawl"/>
+                              <field name="out_of_office"/>
                               <field name="first_name"/>
                               <field name="last_name"/>
-                              <field name="in_crawl"/>
-                              <field name="availability"/>
                               <field name="departments" widget="selection"/>
                               <field name="location" widget="many2many_tags"/>
+                              <field name="trained_for" widget="selection"/>
+                              <field name="lgbtq"/>
+                              <field name="availability" widget="many2many_tags"/>
+
+                              <separator string="Personal Info"/>
+                              <field name="date_of_birth"/>
+                              <field name="age" readonly="1"/>
+                              <field name="gender" widget="selection"/>
+                              <field name="gender_pronouns" widget="selection"/>
                               <field name="ethnicity" widget="selection"/>
                               <field name="language"/>
+
+                              <separator string="Address"/>
+                              <field name="street"/>
+                              <field name="apt_no"/>
+                              <field name="city"/>
+                              <field name="zip_code"/>
+
+                              <separator string="Contact"/>
+                              <field name="email"/>
+                              <field name="cell_phone"/>
+                              <field name="other"/>
                             </group>
                        </page>
                        <page name="caseload" string="Caseload">

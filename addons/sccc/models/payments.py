@@ -27,3 +27,4 @@ class Payments(models.Model):
     # Relations
     files = fields.Many2many('sccc.file', 'payment_file_rel', string='Files')
     counselor = fields.Many2one('sccc.counselor', string='Counselor')
+    meetings = fields.Many2many('sccc.calendar', 'payment_calendar_rel', string='Meetings')
