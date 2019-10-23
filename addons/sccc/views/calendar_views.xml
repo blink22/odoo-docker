@@ -38,8 +38,8 @@
                               <field name="end_date"/>
                               <field name="non_transferrable"/>
                               <field name="appointment_type" widget="selection"/>
-                              <field name="room"/>
                               <field name="location"/>
+                              <field name="room"/>
                             </group>
                         </page>
                         <page name="recurrence" string="Recurrence">

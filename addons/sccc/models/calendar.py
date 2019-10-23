@@ -1,6 +1,7 @@
 from odoo import models, fields, api
 from datetime import datetime
 from dateutil.relativedelta import relativedelta
+import json
 
 class Calendar(models.Model):
     _name = 'sccc.calendar'
@@ -37,10 +38,10 @@ class Calendar(models.Model):
     client_attend = fields.Boolean('Did Client Attend?')
 
     created_on = fields.Datetime("Date")
-    
+
     # Relations
-    room = fields.Many2one('sccc.room', string='Room')
     location = fields.Many2one('sccc.location', string='Location')
+    room = fields.Many2one('sccc.room', string='Room')
     files = fields.Many2many('sccc.file', 'calendar_file_rel', string='File')
     counselor = fields.Many2one('sccc.counselor', string='Counselor')
     progress_notes = fields.Many2many('sccc.progress_notes', 'progress_notes_calendar_rel', string='Progress Notes')
@@ -51,6 +52,16 @@ class Calendar(models.Model):
         record = super(Calendar, self).create(form_object)
         self.check_repeat(form_object, record.until_count)
         return record
+
+    @api.onchange('location')
+    def selected_location(self):
+        self.room = False
+        res = {}
+        if self.location:
+            res['domain']={'room':[('location.location_id', '=', self.location.location_id)]}
+        else:
+            res['domain']={'room':[('id', '=', -1)]}
+        return res
 
     def check_repeat(self, form_object, limit):
         if form_object['recurrent']:
