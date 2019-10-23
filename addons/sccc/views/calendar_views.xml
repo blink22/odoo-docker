@@ -99,8 +99,9 @@
             <field name="model">sccc.calendar</field>
             <field name="arch" type="xml">
                 <calendar string="Calendar" date_start="start_date" date_stop="end_date" color="room">
-                    <field name="name"/>
-                    <field name="room"/>
+                    <field name="user_ids" write_model="res.users" write_field="name"/>
+                    <field name="counselor"/>
+                    <field name="files"/>
                 </calendar>
             </field>
     </record>

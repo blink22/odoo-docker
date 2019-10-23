@@ -44,6 +44,8 @@ class Calendar(models.Model):
     room = fields.Many2one('sccc.room', string='Room')
     files = fields.Many2many('sccc.file', 'calendar_file_rel', string='File')
     counselor = fields.Many2one('sccc.counselor', string='Counselor')
+    user_ids = fields.Many2many('res.users', string='Attendees', track_visibility='onchange', readonly=True, 
+                              states={'draft': [('readonly', False)]}, default=lambda self: self.env.user)
     progress_notes = fields.Many2many('sccc.progress_notes', 'progress_notes_calendar_rel', string='Progress Notes')
     payment = fields.Many2many('sccc.payment', 'payment_calendar_rel', string='Payment')
 
