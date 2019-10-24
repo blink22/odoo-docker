@@ -38,8 +38,8 @@ class Calendar(models.Model):
     room = fields.Many2one('sccc.room', string='Room')
     
     files = fields.Many2many('sccc.file', 'calendar_file_rel', string='File')
-    client_attend = fields.Many2many('sccc.file', 'calendar_file_rel', column1="calendar_id",column2="file_id",string='Did Client Attend?')
-
+    client_attend = fields.Many2many('sccc.file', 'calendar_attendance_file_rel', string='Did Client Attend?')
+    
     counselor = fields.Many2one('sccc.counselor', string='Counselor')
     user_ids = fields.Many2many('res.users', string='Attendees', track_visibility='onchange', readonly=True, 
                               states={'draft': [('readonly', False)]}, default=lambda self: self.env.user)
@@ -63,7 +63,7 @@ class Calendar(models.Model):
         return res
 
     @api.onchange('files')
-    def selected_location(self):
+    def selected_files(self):
         self.client_attend = False
         if self.files:
             self.client_attend = self.files
