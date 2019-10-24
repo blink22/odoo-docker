@@ -1,6 +1,7 @@
 from odoo import models, fields, api
 class AppointmentType(models.Model):
   _name = 'sccc.appointment_type'
+  _description = 'Appointment Type'
   name = fields.Char('Name')
   
   created_on = fields.Datetime("Date")

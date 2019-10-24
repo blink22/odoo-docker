@@ -2,6 +2,7 @@ from odoo import models, fields, api
 
 class Rooms(models.Model):
     _name = 'sccc.room'
+    _description = 'Rooms'
 
     name = fields.Char('Room Name')
     type = fields.Selection([ ('family', 'FAMILY'),('mirror', 'MIRROR'), ('individual','INDIVIDUAL') ], 'Type')

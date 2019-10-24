@@ -5,6 +5,7 @@ import json
 
 class Calendar(models.Model):
     _name = 'sccc.calendar'
+    _description = 'Meetings'
 
     name = fields.Char('Meeting Title')
     start_date = fields.Datetime('Start At')

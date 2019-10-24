@@ -1,6 +1,8 @@
 from odoo import models, fields, api
 class Sessions(models.Model):
   _name = 'sccc.sessions'
+  _description = 'Sessions'
+
   session_name = fields.Char('Session Name')
   created_on = fields.Datetime("Date")
 

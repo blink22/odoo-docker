@@ -4,6 +4,7 @@ from dateutil.relativedelta import relativedelta
 
 class Clients(models.Model):
   _name = 'sccc.client'
+  _description = 'Clients'
   
   name = fields.Char('Name', compute='_set_name', store=True)
   last_name = fields.Char('Last Name')

@@ -1,6 +1,8 @@
 from odoo import models, fields, api
 class TimeSlots(models.Model):
   _name = 'sccc.time_slots'
+  _description = 'Time Slots'
+
   name = fields.Char('Name')
   from_time = fields.Float('From')
   to_time = fields.Float('To')
