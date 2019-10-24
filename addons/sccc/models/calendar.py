@@ -28,13 +28,6 @@ class Calendar(models.Model):
     repeat_every = fields.Selection([('Day(s)', 'Day(s)'), ('Week(s)', 'Week(s)'), ('Month(s)', 'Month(s)'), ('Year(s)', 'Year(s)')], 'Unit')
     repeat_every_count = fields.Integer('Repeat Every')
     until_count = fields.Integer('Number of repetitions')
-    mon = fields.Boolean('Mon')
-    tue = fields.Boolean('Tue')
-    wed = fields.Boolean('Wed')
-    thu = fields.Boolean('Thu')
-    fri = fields.Boolean('Fri')
-    sat = fields.Boolean('Sat')
-    sun = fields.Boolean('Sun')
 
     client_attend = fields.Boolean('Did Client Attend?')
 
