@@ -62,6 +62,13 @@ class Calendar(models.Model):
             res['domain']={'room':[('id', '=', -1)]}
         return res
 
+    @api.onchange('files')
+    def selected_location(self):
+        self.client_attend = False
+        if self.files:
+            self.client_attend = self.files
+            
+
     def check_repeat(self, form_object, limit):
         if form_object['recurrent']:
             if limit > 0 and form_object['start_date'] and form_object['end_date']:

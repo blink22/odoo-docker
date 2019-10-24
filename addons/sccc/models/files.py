@@ -18,7 +18,10 @@ class Files(models.Model):
     hold = fields.Boolean('Hold')
 
     on_waitlist = fields.Boolean('On Waitlist?')
-    attended_session = fields.Boolean('Has Attended Session?')
+    attended_session = fields.Boolean('Attended Session?')
+    late = fields.Boolean('Late (NC)')
+    left_early = fields.Boolean('Left Early (NC)')
+    absent = fields.Boolean('Absent')
     terminated = fields.Boolean('Terminated?')
     
     lgbtq_counselor = fields.Boolean('Would like LGBTQ Counselor?')
