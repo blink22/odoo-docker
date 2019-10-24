@@ -1,6 +1,7 @@
 from odoo import models, fields, api
 class FeeSetting(models.Model):
   _name = 'sccc.fee_setting'
+  _description = 'Fee Settings'
 
   form_upload = fields.Binary ('Upload Fee Form')
   added_date = fields.Date('Date added to system')

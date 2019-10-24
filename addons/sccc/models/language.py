@@ -2,6 +2,7 @@ from odoo import models, fields, api
 
 class Language(models.Model):
   _name = 'sccc.language'
+  _description = 'Language'
 
   name = fields.Char('Language Name')
   local = fields.Char('Language local')

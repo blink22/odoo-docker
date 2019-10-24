@@ -2,6 +2,7 @@ from odoo import models, fields, api
 from datetime import date, datetime
 class FeeAdjustment(models.Model):
   _name = 'sccc.fee_adjustment'
+  _description = 'Fee Adjustments'
 
   name = fields.Char('Name')
   upload_fee = fields.Binary('Upload Fee Form')

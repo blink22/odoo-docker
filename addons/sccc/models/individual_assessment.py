@@ -1,6 +1,7 @@
 from odoo import models, fields, api
 class IndividualAssessment(models.Model):
   _name = 'sccc.individual_assessment'
+  _description = 'Individual Assessments'
 
   intake = fields.Binary('Upload Intake Form')
   date = fields.Date('Date & Time')

@@ -2,6 +2,7 @@ from odoo import models, fields, api
 
 class Counselors(models.Model):
     _name = 'sccc.counselor'
+    _description = 'Counselors'
 
     name = fields.Char('Name', compute='_set_name', store=True)
     last_name = fields.Char('Last Name')

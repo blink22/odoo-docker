@@ -1,6 +1,7 @@
 from odoo import models, fields, api
 class ProgressNotes(models.Model):
   _name = 'sccc.progress_notes'
+  _description = 'Progress Notes'
 
   name = fields.Char('Name')
   date = fields.Date('Date Of Session')

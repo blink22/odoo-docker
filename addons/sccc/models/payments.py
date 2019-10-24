@@ -2,6 +2,7 @@ from odoo import models, fields, api
 
 class Payments(models.Model):
     _name = 'sccc.payment'
+    _description = 'Payments'
 
     name = fields.Char('Fee Title')
     description_tag = fields.Selection([ ('session', 'Session'),
@@ -22,7 +23,7 @@ class Payments(models.Model):
     payment_method = fields.Selection([ ('cash', 'Cash'),
                                         ('credit_card', 'Credit Card'),
                                         ('other','Other') ], 'Payment Method')
-    created_on = fields.Datetime("Date")
+    created_on = fields.Datetime("Created On")
 
     # Relations
     files = fields.Many2many('sccc.file', 'payment_file_rel', string='Files')

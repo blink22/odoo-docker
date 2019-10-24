@@ -23,7 +23,18 @@
                   </tree>
               </field>
     </record>
-​
+​   <record model="ir.ui.view" id="file_tree_view2">
+              <field name="name">file list</field>
+              <field name="model">sccc.file</field>
+              <field name="priority">17</field>
+              <field name="arch" type="xml">
+                <tree edit="true" editable="top">
+                  <field name="name"/>
+                  <field name="file_number"/>
+                  <field name="attended_session"/>
+                </tree>
+              </field>
+    </record>
     <!--form view-->
     <record model="ir.ui.view" id="file_form_view">
               <field name="name">file form</field>

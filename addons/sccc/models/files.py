@@ -1,6 +1,7 @@
 from odoo import models, fields, api
 class Files(models.Model):
     _name = 'sccc.file'
+    _description = 'Files'
 
     _rec_name = 'file_number'
     file_number = fields.Integer('File #')

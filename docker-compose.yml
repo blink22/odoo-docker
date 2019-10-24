@@ -2,7 +2,7 @@ version: '2'
 services:
   odoo:
     container_name: odoo
-    image: odoo:12.0
+    image: odoo:13.0
     restart: always
     tty: true
     command: -- --dev=reload

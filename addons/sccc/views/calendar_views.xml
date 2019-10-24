@@ -53,19 +53,12 @@
                               <field name="repeat_every" widget="selection" colspan="1" nolabel="1"/>
                               <field name="until_count" colspan="2"/>
                             </group>
-                            <group>
-                              <field name="mon"/>
-                              <field name="tue"/>
-                              <field name="wed"/>
-                              <field name="thu"/>
-                              <field name="fri"/>
-                              <field name="sat"/>
-                              <field name="sun"/>
-                            </group>
                         </page>
                         <page name="day_of_session" string="Day of Session">
                             <group>
-                              <field name="client_attend"/>
+                              <!-- <field name="client_attend"/> -->
+                              <field name="client_attend"
+                                context="{'tree_view_ref':'sccc.file_tree_view2'}"/>
                               <field name="payment" widget="many2many_tags"/>
                               <field name="progress_notes" widget="many2many_tags"/>
                             </group>

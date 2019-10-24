@@ -4,6 +4,7 @@ from odoo import models, fields, api
 # If so, who were they assigned to? : many2one
 class FamAssessment(models.Model):
   _name = 'sccc.fam_assessment'
+  _description = 'Family Assessments'
 
   name = fields.Char('Name')
   intake = fields.Binary('Upload Intake Form')
