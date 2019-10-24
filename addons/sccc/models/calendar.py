@@ -29,14 +29,17 @@ class Calendar(models.Model):
     repeat_every_count = fields.Integer('Repeat Every')
     until_count = fields.Integer('Number of repetitions')
 
-    client_attend = fields.Boolean('Did Client Attend?')
+    # client_attend = fields.Boolean('Did Client Attend?')
 
     created_on = fields.Datetime("Date")
 
     # Relations
     location = fields.Many2one('sccc.location', string='Location')
     room = fields.Many2one('sccc.room', string='Room')
+    
     files = fields.Many2many('sccc.file', 'calendar_file_rel', string='File')
+    client_attend = fields.Many2many('sccc.file', 'calendar_file_rel', column1="calendar_id",column2="file_id",string='Did Client Attend?')
+
     counselor = fields.Many2one('sccc.counselor', string='Counselor')
     user_ids = fields.Many2many('res.users', string='Attendees', track_visibility='onchange', readonly=True, 
                               states={'draft': [('readonly', False)]}, default=lambda self: self.env.user)

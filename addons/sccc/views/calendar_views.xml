@@ -56,7 +56,9 @@
                         </page>
                         <page name="day_of_session" string="Day of Session">
                             <group>
-                              <field name="client_attend"/>
+                              <!-- <field name="client_attend"/> -->
+                              <field name="client_attend"
+                                context="{'tree_view_ref':'sccc.file_tree_view2'}"/>
                               <field name="payment" widget="many2many_tags"/>
                               <field name="progress_notes" widget="many2many_tags"/>
                             </group>
