@@ -11,3 +11,6 @@ class Rooms(models.Model):
     # Relations
     location = fields.Many2one('sccc.location', string='Location')
     meeting = fields.One2many('sccc.calendar', 'room', string='Meeting')
+
+    def get_rooms(self):
+        return self.browse([])

@@ -40,7 +40,7 @@
     <record model="ir.actions.act_window" id="action_calendar">
       <field name="name">Calendar</field>
       <field name="res_model">sccc.calendar</field>
-      <field name="view_mode">tree,form,calendar</field>
+      <field name="view_mode">tree,form,calendar,kanban</field>
     </record>
 
     <record model="ir.actions.act_window" id="action_fam_assessment">

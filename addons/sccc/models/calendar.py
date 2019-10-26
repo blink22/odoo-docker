@@ -8,6 +8,7 @@ class Calendar(models.Model):
     _description = 'Meetings'
 
     name = fields.Char('Meeting Title')
+    image = fields.Binary('Image')
     start_date = fields.Datetime('Start At')
     end_date = fields.Datetime('End At')
     
@@ -45,7 +46,7 @@ class Calendar(models.Model):
                               states={'draft': [('readonly', False)]}, default=lambda self: self.env.user)
     progress_notes = fields.Many2many('sccc.progress_notes', 'progress_notes_calendar_rel', string='Progress Notes')
     payment = fields.Many2many('sccc.payment', 'payment_calendar_rel', string='Payment')
-
+    
     @api.model
     def create(self, form_object):
         record = super(Calendar, self).create(form_object)
@@ -87,6 +88,3 @@ class Calendar(models.Model):
 
                 new_record = super(Calendar, self).create(form_object)
                 self.check_repeat(form_object, limit-1)
-
-            
-
