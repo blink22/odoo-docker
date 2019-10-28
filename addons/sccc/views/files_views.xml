@@ -28,10 +28,12 @@
               <field name="model">sccc.file</field>
               <field name="priority">17</field>
               <field name="arch" type="xml">
-                <tree edit="true" editable="top">
-                  <field name="name"/>
-                  <field name="file_number"/>
+                <tree edit="true" editable="top" create="false" delete="false">
+                  <field name="name" width="100px"/>
                   <field name="attended_session"/>
+                  <field name="late"/>
+                  <field name="left_early"/>
+                  <field name="absent"/>
                 </tree>
               </field>
     </record>
@@ -69,6 +71,9 @@
                                           <field name="on_waitlist"/>
                                           <field name="hold"/>
                                           <field name="attended_session"/>
+                                          <field name="late"/>
+                                          <field name="left_early"/>
+                                          <field name="absent"/>
                                         </group>
                                       </td>
                                     </tr>
@@ -90,7 +95,8 @@
                                   <group>
                                     <field name="fee" widget="monetary" options="{'currency_field': 'currency_id'}"/>
                                     <field name="balance" widget="monetary" options="{'currency_field': 'currency_id'}"/>
-                                    <field name="payments" widget="many2many_tags"/>
+                                    <field name="payments"/>
+                                    <field name="account_moves" widget="many2many_tags"/>
                                   </group>
                                 </page>
                                 <page string="Forms">

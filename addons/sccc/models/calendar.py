@@ -1,4 +1,4 @@
-from odoo import models, fields, api
+from odoo import models, fields, api, exceptions
 from datetime import datetime
 from dateutil.relativedelta import relativedelta
 import json
@@ -6,10 +6,11 @@ import json
 class Calendar(models.Model):
     _name = 'sccc.calendar'
     _description = 'Meetings'
+    _order = "start_date asc"
 
-    name = fields.Char('Meeting Title')
-    start_date = fields.Datetime('Start At')
-    end_date = fields.Datetime('End At')
+    name = fields.Char('Meeting Title', required=True)
+    start_date = fields.Datetime('Start At', required=True)
+    end_date = fields.Datetime('End At', required=True)
     
     status = fields.Selection([('Hold', 'Hold'), ('Match', 'Match'),
                                     ('Confirmed', 'Confirmed'), ('Cancelled', 'Cancelled')], 'Status')
@@ -34,20 +35,21 @@ class Calendar(models.Model):
     created_on = fields.Datetime("Date")
 
     # Relations
-    location = fields.Many2one('sccc.location', string='Location')
-    room = fields.Many2one('sccc.room', string='Room')
+    location = fields.Many2one('sccc.location', string='Location', required=True)
+    room = fields.Many2one('sccc.room', string='Room', required=True)
     
-    files = fields.Many2many('sccc.file', 'calendar_file_rel', string='File')
-    client_attend = fields.Many2many('sccc.file', 'calendar_file_rel', column1="calendar_id",column2="file_id",string='Did Client Attend?')
-
-    counselor = fields.Many2one('sccc.counselor', string='Counselor')
+    files = fields.Many2many('sccc.file', 'calendar_file_rel', string='File', required=True)
+    client_attend = fields.Many2many('sccc.file', 'calendar_attendance_file_rel', string='Did Client Attend?')
+    
+    counselor = fields.Many2one('sccc.counselor', string='Counselor', required=True)
     user_ids = fields.Many2many('res.users', string='Attendees', track_visibility='onchange', readonly=True, 
                               states={'draft': [('readonly', False)]}, default=lambda self: self.env.user)
     progress_notes = fields.Many2many('sccc.progress_notes', 'progress_notes_calendar_rel', string='Progress Notes')
     payment = fields.Many2many('sccc.payment', 'payment_calendar_rel', string='Payment')
-
+    
     @api.model
     def create(self, form_object):
+        # self.validate_object(form_object)
         record = super(Calendar, self).create(form_object)
         self.check_repeat(form_object, record.until_count)
         return record
@@ -61,6 +63,40 @@ class Calendar(models.Model):
         else:
             res['domain']={'room':[('id', '=', -1)]}
         return res
+
+    @api.onchange('files')
+    def selected_files(self):
+        self.client_attend = False
+        if self.files:
+            self.client_attend = self.files
+            
+    # def validate_object(self, form_object):
+    #     records = super(Calendar, self).search([['room', '=', form_object['room']]])
+    #     for record in records:
+    #         print('------------------------------')
+    #         print('record koko- ', str(record.start_date))
+    #         print('record - ', str(record.end_date))
+    #         print('record - ', record.room.id)
+    #         print('form_object - ', str(form_object['start_date']))
+    #         print('form_object - ', str(form_object['end_date']))
+    #         print('form_object - ', form_object['room'])
+    #         if form_object['room'] == record.room:
+    #             record_start_end_delta = relativedelta(record.start_date , record.end_date)
+    #             print('start_end_delta', start_end_delta)
+    #             form_start_to_start_delta
+    #             form_start_to_start_delta
+    #             form_start_to_start_delta
+    #             if str(form_object['start_date']) <= str(record.end_date):
+    #                 print('error')
+    #             if str(form_object['start_date']) >= str(record.start_date) and str(form_object['start_date']) <= str(record.end_date):
+    #                 print('error')
+    #     records = super(Calendar, self).search([['room', '=', form_object['room'], 
+    #                                             ['start_date', '>=', form_object['start_date'], 
+    #                                             ['end_date', '>=', form_object['start_date']]]])
+    #     count = len(records)
+    #     print('count', count)
+    #     if count > 0:
+    #         raise exceptions.ValidationError('-Already has a meeting assigned ! \n-You may choose a different Room or Time.')
 
     def check_repeat(self, form_object, limit):
         if form_object['recurrent']:
@@ -80,6 +116,3 @@ class Calendar(models.Model):
 
                 new_record = super(Calendar, self).create(form_object)
                 self.check_repeat(form_object, limit-1)
-
-            
-

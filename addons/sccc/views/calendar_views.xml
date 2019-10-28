@@ -56,7 +56,6 @@
                         </page>
                         <page name="day_of_session" string="Day of Session">
                             <group>
-                              <!-- <field name="client_attend"/> -->
                               <field name="client_attend"
                                 context="{'tree_view_ref':'sccc.file_tree_view2'}"/>
                               <field name="payment" widget="many2many_tags"/>
@@ -87,16 +86,65 @@
     </record>
 
     <!--calendar view-->
+    <template id="assets_backend" name="handling assets" inherit_id="web.assets_backend">
+        <xpath expr="." position="inside">
+            <script type="text/javascript" src="/sccc/static/src/js/custom_calendar.js"/>
+        </xpath>
+    </template>
     <record model="ir.ui.view" id="sccc_calendar_view">
             <field name="name">sccc calendar</field>
             <field name="model">sccc.calendar</field>
             <field name="arch" type="xml">
-                <calendar string="Calendar" date_start="start_date" date_stop="end_date" color="room">
+                <calendar string="Calendar" date_start="start_date" date_stop="end_date" color="room" mode="day">
                     <field name="user_ids" write_model="res.users" write_field="name"/>
                     <field name="counselor"/>
                     <field name="files"/>
                 </calendar>
             </field>
     </record>
-    ​
+    <record model="ir.ui.view" id="My_kanban">
+        <field name="name">Kanban</field>
+        <field name="model">sccc.calendar</field>
+        <field name="arch" type="xml">
+            <kanban default_group_by="room" default_order="start_date" group_create="false" group_delete="false" group_edit="false">
+                <field name="name"/>
+                <field name="counselor"/>
+                <field name="files"/>
+                <templates>
+                    <t t-name="kanban-box">
+                      <div class="oe_kanban_vignette oe_semantic_html_override">
+                        <!-- <a type="open"><img t-att-src="kanban_image('sccc.calendar', 'image_small', record.image.value)" class="oe_kanban_image"/></a> -->
+                        <div class="oe_kanban_details">
+                          <div class="row">
+                            <div class="col">
+                              <ul style="background-color: #dddddd;">
+                                <li>
+                                  <h4>
+                                    <a type="open">
+                                      <field name="name"/>
+                                    </a>
+                                  </h4>
+                                </li>
+                                <li>
+                                  <h4>
+                                    <t t-if="record.start_date.raw_value"><field name="start_date"/></t>
+                                  </h4>
+                                </li>
+                              </ul>
+                            </div>
+                            <div class="col">
+                              <div name="tags"/>
+                                <ul>
+                                  <li>Counselor: <field name="counselor"/></li>
+                                  <li>Files: <field name="files"/></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
 </odoo>
