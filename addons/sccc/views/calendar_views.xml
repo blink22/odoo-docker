@@ -56,7 +56,6 @@
                         </page>
                         <page name="day_of_session" string="Day of Session">
                             <group>
-                              <!-- <field name="client_attend"/> -->
                               <field name="client_attend"
                                 context="{'tree_view_ref':'sccc.file_tree_view2'}"/>
                               <field name="payment" widget="many2many_tags"/>
@@ -114,7 +113,7 @@
                 <templates>
                     <t t-name="kanban-box">
                       <div class="oe_kanban_vignette oe_semantic_html_override">
-                        <!-- <a type="open"><img t-att-src="kanban_image('sccc.calendar', 'image_small', record.id.value)" class="oe_kanban_image"/></a> -->
+                        <!-- <a type="open"><img t-att-src="kanban_image('sccc.calendar', 'image_small', record.image.value)" class="oe_kanban_image"/></a> -->
                         <div class="oe_kanban_details">
                           <div class="row">
                             <div class="col">

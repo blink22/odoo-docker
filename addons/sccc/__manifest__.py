@@ -20,8 +20,7 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base'],
-
+    'depends': ['account', 'payment'],
     # always loaded
     'data': [
         'security/ir.model.access.csv',
@@ -30,6 +29,7 @@
         'views/client_views.xml',
         'views/payment_views.xml',
         'views/calendar_views.xml',
+        'views/account_move_views.xml',
 
         'views/config_views/counselor_views.xml',
         'views/config_views/location_views.xml',

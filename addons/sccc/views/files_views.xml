@@ -95,7 +95,8 @@
                                   <group>
                                     <field name="fee" widget="monetary" options="{'currency_field': 'currency_id'}"/>
                                     <field name="balance" widget="monetary" options="{'currency_field': 'currency_id'}"/>
-                                    <field name="payments" widget="many2many_tags"/>
+                                    <field name="payments"/>
+                                    <field name="account_moves" widget="many2many_tags"/>
                                   </group>
                                 </page>
                                 <page string="Forms">
