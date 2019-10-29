@@ -1,10 +1,12 @@
 from odoo import models, fields, api
+from random import randint
+
 class Files(models.Model):
     _name = 'sccc.file'
     _description = 'Files'
 
     _rec_name = 'file_number'
-    file_number = fields.Integer('File #')
+    file_number = fields.Char('File #', readonly=True)
 
     name = fields.Char('File Name')
     out_reach = fields.Boolean('Outreach?')
@@ -12,6 +14,17 @@ class Files(models.Model):
     preferred_age = fields.Selection([ ('1', '21'), ('2', '22') ], 'Preferred Age')
     intake_date = fields.Date('Intake Date')
     
+    # Appointment types
+    type_1 = fields.Boolean('Individual Counseling')
+    type_2 = fields.Boolean('Psychiatry')
+    type_3 = fields.Boolean('TAPP - Individual')
+    type_4 = fields.Boolean('TAPP - Group')
+    type_5 = fields.Boolean('Intake')
+    type_6 = fields.Boolean('Group Counseling')
+    type_7 = fields.Boolean('Couples/Family Counseling')
+    type_8 = fields.Boolean('WeCounsel')
+    type_9 = fields.Boolean('Other')
+
     currency_id = fields.Integer(compute='_get_currency', store=True)
     fee = fields.Monetary('Fee')
     balance = fields.Monetary('Balance')
@@ -38,11 +51,15 @@ class Files(models.Model):
     payments = fields.Many2many('sccc.payment', 'payment_file_rel', string='Payments')
     individual_assessment = fields.Many2one('sccc.individual_assessment', string='Individual Assessment Form')
     fam_assessment = fields.Many2one('sccc.fam_assessment', string='FAM Assessment Form')
-    appointment_types = fields.Many2many('sccc.appointment_type', 'appointment_type_file_rel', string='Appointment Type')
     availability = fields.Many2many('sccc.time_slots', 'time_slots_file_rel', string='Availability (Time Slots)')
     progress_notes = fields.Many2many('sccc.progress_notes', 'progress_notes_file_rel', string='Progress Notes')
     clients = fields.Many2many('sccc.client', 'client_file_rel', string='Clients')
     account_moves = fields.Many2many('account.move', 'account_file_rel', string='Account Moves')
+
+    @api.model
+    def create(self, form_object):
+        form_object['file_number'] = randint(0,999999)
+        return super(Files, self).create(form_object)
 
     def _get_currency(self):
         user_obj = self.pool.get('res.users')

@@ -12,6 +12,5 @@ access_sccc_location,sccc.location,sccc.model_sccc_location,,1,1,1,1
 access_sccc_payment,sccc.payment,sccc.model_sccc_payment,,1,1,1,1
 access_sccc_progress_notes,sccc.progress_notes,sccc.model_sccc_progress_notes,,1,1,1,1
 access_sccc_room,sccc.room,sccc.model_sccc_room,,1,1,1,1
-access_sccc_appointment_type,sccc.appointment_type,sccc.model_sccc_appointment_type,,1,1,1,1
 access_sccc_sessions,sccc.sessions,sccc.model_sccc_sessions,,1,1,1,1
 access_sccc_time_slots,sccc.time_slots,sccc.model_sccc_time_slots,,1,1,1,1

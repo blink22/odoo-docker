@@ -6,7 +6,7 @@ class Clients(models.Model):
   _name = 'sccc.client'
   _description = 'Clients'
   
-  name = fields.Char('Name', compute='_set_name', store=True)
+  name = fields.Char('Name', compute='_set_name', store=True, readonly=True)
   last_name = fields.Char('Last Name')
   first_name = fields.Char('First Name')
   out_reach = fields.Boolean('Outreach?')
@@ -21,7 +21,7 @@ class Clients(models.Model):
                                 ('White','White'), ('Other','Other'), ('Declines to Specify','Declines to Specify')], 'Ethnicity')
   
   date_of_birth = fields.Date('Date of Birth')
-  age = fields.Integer('Age', compute='_calculate_age', store=True)
+  age = fields.Integer('Age', compute='_calculate_age', store=True, readonly=True)
   email = fields.Char('Email')
   cell_phone = fields.Char('Cell #')
 
@@ -42,14 +42,14 @@ class Clients(models.Model):
 
   counseling_type = fields.Selection([('Individual', 'Individual'), ('Family', 'Family'),
                                       ('Couple', 'Couple'), ('Group', 'Group')], 'What kind of counseling do you want?')
-  interset = fields.Selection([('yes', 'Yes'), ('yes', 'Yes')], 'Interested in online psychotherapy?')
+  interset = fields.Selection([('yes', 'Yes'), ('no', 'No')], 'Interested in online psychotherapy?')
   identify_center = fields.Selection([('yes', 'Yes'), ('no', 'No')], 'When calling your cell phone, may we identify the center?')
   voicemail = fields.Selection([('yes', 'Yes'), ('no', 'No')], 'Is there a working voicemail that you check at this #?')
+  client_language = fields.Char('Language')
   created_on = fields.Datetime("Date")
   
   # Relations
   files = fields.Many2many('sccc.file', 'client_file_rel', string='Files')
-  client_language = fields.Many2one('sccc.language', string='Language')
 
   @api.depends('last_name', 'first_name')
   def _set_name(self):

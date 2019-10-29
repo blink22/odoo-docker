@@ -44,7 +44,7 @@
                           <field widget="binary" height = "64" name="upload_fee" filename="upload_fee_namex" />
                           <field name="counselor" widget="selection"/>
                           <field name="added_date"/>
-                          <field name="today_date" readonly="1"/>
+                          <field name="today_date"/>
                           <field name="currency" widget="monetary" options="{'currency_field': 'currency_id'}"/>
                           <field name="current_fee" widget="monetary" options="{'currency_field': 'currency_id'}"/>
                           <field name="requested_fee" widget="monetary" options="{'currency_field': 'currency_id'}"/>

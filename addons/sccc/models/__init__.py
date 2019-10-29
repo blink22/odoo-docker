@@ -15,6 +15,5 @@ from . import locations
 from . import payments
 from . import progress_notes
 from . import rooms
-from . import appointment_type
 from . import sessions
 from . import time_slots

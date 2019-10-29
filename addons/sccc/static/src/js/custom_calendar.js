@@ -19,8 +19,15 @@ odoo.define('sccc.sccc_calendar_view', function (require) {
       var res = this._super.apply(this, arguments);
       return _.extend(res, {
         minTime: '08:00:00',
-        maxTime: '21:00:00'
+        maxTime: '21:00:00',
       });
     },
+  });
+
+  var CalendarView = require('web.CalendarView');
+
+  CalendarView.include({
+    jsLibs : ['/sccc/static/src/js/fullcalendar.js'],
+
   });
 });

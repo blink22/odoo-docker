@@ -13,4 +13,4 @@ class Rooms(models.Model):
     meeting = fields.One2many('sccc.calendar', 'room', string='Meeting')
 
     def get_rooms(self):
-        return self.browse([])
+        return self.search([])

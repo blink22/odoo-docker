@@ -10,7 +10,6 @@
                       <field name="name"/>
                       <field name="clients" widget="many2many_tags"/>
                       <field name="intake_date"/>
-                      <field name="appointment_types"/>
                       <field name="availability"/>
                       <field name="on_waitlist"/>
                       <field name="hold"/>
@@ -61,7 +60,16 @@
                                       <td style="width: 30%">
                                         <group>
                                           <field name="clients" widget="many2many_tags"/>
-                                          <field name="appointment_types" widget="many2many_tags"/>
+                                          <separator string="Appointment Type"/>
+                                          <field name="type_1"/>
+                                          <field name="type_2"/>
+                                          <field name="type_3"/>
+                                          <field name="type_4"/>
+                                          <field name="type_5"/>
+                                          <field name="type_6"/>
+                                          <field name="type_7"/>
+                                          <field name="type_8"/>
+                                          <field name="type_9"/>
                                         </group>
                                       </td>
                                       <td >
