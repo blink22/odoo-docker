@@ -55,19 +55,18 @@ class Files(models.Model):
     clients = fields.Many2many('sccc.client', 'client_file_rel', string='Clients')
     account_moves = fields.Many2many('account.move', 'account_move_file_rel', string='Account Invoices')
     payments = fields.Many2many('account.payment', 'account_payment_file_rel', string='Payments')
-    lines = fields.Many2many('account.move.line', 'account_move_line_file_rel', string='Lines')
 
-    @api.onchange('account_moves')
-    def handle_account_moves(self):
-        print('self', self.account_moves)
-        for move in self.account_moves:
-            print('move', move.display_name)
-            print('journal', move.journal_id)
-            print('journal', move.journal_id)
-            for line2 in move.transaction_ids:
-                print('line2', line2.display_name)
-            for line in move.invoice_line_ids:
-                print('line', line.name)
+    # @api.onchange('account_moves')
+    # def handle_account_moves(self):
+    #     print('self', self.account_moves)
+    #     for move in self.account_moves:
+    #         print('move', move.display_name)
+    #         print('journal', move.journal_id)
+    #         print('journal', move.journal_id)
+    #         for line2 in move.transaction_ids:
+    #             print('line2', line2.display_name)
+    #         for line in move.invoice_line_ids:
+    #             print('line', line.name)
 
     @api.model
     def create(self, form_object):
