@@ -5,13 +5,11 @@
               <field name="name">time_slots list tree</field>
               <field name="model">sccc.time_slots</field>
               <field name="arch" type="xml">
-                  <tree create="true">
-                      <field name="name"/>
+                  <tree create="true" edit="true" delete="true" editable="bottom">
+                      <field name="day_of_week"/>
                       <field name="from_time"/>
                       <field name="to_time"/>
-                      <field name="day_of_week"/>
-                      <field name="files" widget="many2many_tags"/>
-                      <field name="create_date"/>
+                      <!-- <field name="files" widget="many2many_tags"/> -->
                   </tree>
               </field>
     </record>
@@ -23,12 +21,11 @@
               <field name="arch" type="xml">
                    <form string="Time Slots Form">
                        <sheet>
-                        <group>
-                            <field name="name"/>
+                        <group col="9">
+                            <field name="day_of_week"/>
                             <field name="from_time"/>
                             <field name="to_time"/>
-                            <field name="day_of_week"/>
-                            <field name="files" widget="many2many_tags"/>
+                            <!-- <field name="files" widget="many2many_tags"/> -->
                         </group>
                        </sheet>
                 </form>
@@ -41,7 +38,7 @@
       <field name="model">sccc.time_slots</field>
       <field name="arch" type="xml">
         <search>
-          <field name="name"/>
+          <field name="day_of_week"/>
         </search>
       </field>
     </record>

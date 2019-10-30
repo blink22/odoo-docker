@@ -16,7 +16,7 @@ class Counselors(models.Model):
                                       ('They/Them/Theirs', 'They/Them/Theirs'), ('Not Listed', 'Not Listed')], 'Gender Pronouns')
 
     date_of_birth = fields.Date('Date of Birth')
-    age = fields.Integer('Age', compute='_calculate_age', store=True)
+    age = fields.Integer('Age', compute='_calculate_age', store=True, readonly=True)
     street = fields.Char('Street')
     apt_no = fields.Char('Apt/Suite No')
     city = fields.Char('City')
@@ -30,7 +30,7 @@ class Counselors(models.Model):
 
     departments = fields.Selection([('Administration', 'Administration'), ('Counselors', 'Counselors'),
                                     ('Directors', 'Directors'), ('Front Desk', 'Front Desk'),
-                                    ('Psychiatry', 'Psychiatry'), ('Coordinators', 'Coordinators')], 'Departments')
+                                    ('Psychiatry', 'Psychiatry'), ('Coordinators', 'Coordinators')], 'Department')
 
     ethnicity = fields.Selection([('American Indian/Native American/Alaskan Native', 'American Indian/Native American/Alaskan Native'),
                                 ('Asian', 'Asian'), ('Black', 'Black'), ('Latina/o/x', 'Latina/o/x'),

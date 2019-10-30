@@ -20,7 +20,7 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['account', 'payment'],
+    'depends': ['account', 'payment', 'as_time'],
     # always loaded
     'data': [
         'security/ir.model.access.csv',
@@ -30,12 +30,11 @@
         'views/payment_views.xml',
         'views/calendar_views.xml',
         'views/account_move_views.xml',
-
+        'views/account_payment_views.xml',
         'views/config_views/counselor_views.xml',
         'views/config_views/location_views.xml',
         'views/config_views/room_views.xml',
         'views/config_views/language_views.xml',
-        'views/config_views/appointment_type_views.xml',
         'views/config_views/sessions_views.xml',
         'views/config_views/time_slots_views.xml',
 
@@ -44,6 +43,9 @@
         'views/form_views/fee_adjustment_views.xml',
         'views/form_views/fee_setting_views.xml',
         'views/form_views/progress_notes_views.xml'
+    ],
+    'css': [
+        'static/src/css/custom_radio.css'
     ],
     'auto_install' : True,
     # only loaded in demonstration mode

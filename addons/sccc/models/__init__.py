@@ -2,6 +2,7 @@
 
 from . import models
 from . import account_move
+from . import account_payment
 from . import calendar
 from . import clients
 from . import counselors
@@ -15,6 +16,5 @@ from . import locations
 from . import payments
 from . import progress_notes
 from . import rooms
-from . import appointment_type
 from . import sessions
 from . import time_slots

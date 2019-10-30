@@ -1,13 +1,15 @@
 from odoo import models, fields, api
+from odoo.addons.as_time.models import alsw
 class TimeSlots(models.Model):
   _name = 'sccc.time_slots'
   _description = 'Time Slots'
-
-  name = fields.Char('Name')
-  from_time = fields.Float('From')
-  to_time = fields.Float('To')
-  day_of_week = fields.Char('Day of Week')
-  created_on = fields.Datetime("Date")
+  _rec_name = 'day_of_week'
+  
+  from_time = alsw.Time('From')
+  to_time = alsw.Time('To')
+  day_of_week = fields.Selection([('Saturday','Saturday'),('Sunday','Sunday'),('Monday','Monday'),
+                                  ('Tuesday','Tuesday'),('Wednesday','Wednesday'),('Thursday','Thursday'),
+                                  ('Friday','Friday')], 'Day of Week')
 
   # Relations
   files = fields.Many2many('sccc.file', 'time_slots_file_rel', string='Files')
