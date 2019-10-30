@@ -55,9 +55,9 @@
                             <tr>
                               <notebook>
                                 <page string="General Info">
-                                  <table style='width:100%;' border='0'>
+                                  <!-- <table style='width:100%;' border='0'>
                                     <tr>
-                                      <td style="width: 30%">
+                                      <td style="width: 30%"> -->
                                         <group>
                                           <field name="clients" widget="many2many_tags"/>
                                           <separator string="Appointment Type"/>
@@ -70,10 +70,11 @@
                                           <field name="type_7"/>
                                           <field name="type_8"/>
                                           <field name="type_9"/>
-                                        </group>
+                                        <!-- </group>
                                       </td>
                                       <td >
-                                        <group>
+                                        <group> -->
+                                          <!-- <separator string="Client Attendance"/> -->
                                           <field name="out_reach"/>
                                           <field name="created_on"/>
                                           <field name="on_waitlist"/>
@@ -82,12 +83,12 @@
                                           <field name="late"/>
                                           <field name="left_early"/>
                                           <field name="absent"/>
-                                        </group>
-                                      </td>
+                                        <!-- </group> -->
+                                      <!-- </td>
                                     </tr>
                                     <tr>
-                                      <td style="width: 100%">
-                                        <group>
+                                      <td style="width: 100%"> -->
+                                        <!-- <group> -->
                                           <field name="intake_date"/>
                                           <field name="availability"/>
                                           <field name="lgbtq_counselor"/>
@@ -95,15 +96,15 @@
                                           <field name="preferred_age"/>
                                           <field name="other_considerations"/>
                                         </group>
-                                      </td>
+                                      <!-- </td>
                                     </tr>
-                                  </table>
+                                  </table> -->
                                 </page>
                                 <page string="Financial Info">
                                   <group>
                                     <field name="fee" widget="monetary" options="{'currency_field': 'currency_id'}"/>
                                     <field name="balance" widget="monetary" options="{'currency_field': 'currency_id'}"/>
-                                    <field name="account_moves" widget="many2many_tags"/>
+                                    <field name="account_moves"/>
                                     <field name="payments"/>
                                     <field name="lines" domain="[('id', 'in', account_moves.line_ids)]"/>
                                   </group>

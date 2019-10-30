@@ -6,6 +6,6 @@ class account_payment(models.Model):
   # Relations
   files = fields.Many2many('sccc.file', 'account_payment_file_rel', string='File #')
 
-  # def unlink(self):
-  #   result = models.Model.unlink(self)
-  #   return result
+  def unlink(self):
+    result = models.Model.unlink(self)
+    return result

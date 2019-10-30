@@ -53,7 +53,7 @@ class Files(models.Model):
     availability = fields.Many2many('sccc.time_slots', 'time_slots_file_rel', string='Availability (Time Slots)')
     progress_notes = fields.Many2many('sccc.progress_notes', 'progress_notes_file_rel', string='Progress Notes')
     clients = fields.Many2many('sccc.client', 'client_file_rel', string='Clients')
-    account_moves = fields.Many2many('account.move', 'account_move_file_rel', string='Account Moves')
+    account_moves = fields.Many2many('account.move', 'account_move_file_rel', string='Account Invoices')
     payments = fields.Many2many('account.payment', 'account_payment_file_rel', string='Payments')
     lines = fields.Many2many('account.move.line', 'account_move_line_file_rel', string='Lines')
 
