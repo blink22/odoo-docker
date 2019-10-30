@@ -10,12 +10,12 @@
                       <field name="name"/>
                       <field name="clients" widget="many2many_tags"/>
                       <field name="intake_date"/>
-                      <field name="availability"/>
+                      <field name="availability" widget="many2many_tags"/>
                       <field name="on_waitlist"/>
                       <field name="hold"/>
                       <field name="lgbtq_counselor"/>
-                      <field name="preferred_gender"/>
-                      <field name="preferred_age"/>
+                      <!-- <field name="preferred_gender"/>
+                      <field name="preferred_age"/> -->
                       <field name="other_considerations"/>
                       <field name="additional_notes"/>
                       <field name="create_date"/>
@@ -89,7 +89,7 @@
                                       <td style="width: 100%">
                                         <group>
                                           <field name="intake_date"/>
-                                          <field name="availability" widget="many2many_tags"/>
+                                          <field name="availability"/>
                                           <field name="lgbtq_counselor"/>
                                           <field name="preferred_gender"/>
                                           <field name="preferred_age"/>
@@ -103,8 +103,9 @@
                                   <group>
                                     <field name="fee" widget="monetary" options="{'currency_field': 'currency_id'}"/>
                                     <field name="balance" widget="monetary" options="{'currency_field': 'currency_id'}"/>
-                                    <field name="payments"/>
                                     <field name="account_moves" widget="many2many_tags"/>
+                                    <field name="payments"/>
+                                    <field name="lines" domain="[('id', 'in', account_moves.line_ids)]"/>
                                   </group>
                                 </page>
                                 <page string="Forms">

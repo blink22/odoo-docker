@@ -64,7 +64,7 @@
                        </page>
                        <page name="caseload" string="Caseload">
                            <group>
-                               <field name="files" widget="many2many_tags"/>
+                               <field name="files"/>
                            </group>
                        </page>
                        </notebook>

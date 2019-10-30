@@ -48,13 +48,26 @@ class Files(models.Model):
     sessions = fields.Many2many('sccc.sessions', 'sessions_file_rel', string='Sessions')
     fee_setting = fields.Many2one('sccc.fee_setting', string='Fee Setting Form')
     fee_adjustment = fields.Many2many('sccc.fee_adjustment', 'fee_adjustment_file_rel', string='Fee Adjustment Form')
-    payments = fields.Many2many('sccc.payment', 'payment_file_rel', string='Payments')
     individual_assessment = fields.Many2one('sccc.individual_assessment', string='Individual Assessment Form')
     fam_assessment = fields.Many2one('sccc.fam_assessment', string='FAM Assessment Form')
     availability = fields.Many2many('sccc.time_slots', 'time_slots_file_rel', string='Availability (Time Slots)')
     progress_notes = fields.Many2many('sccc.progress_notes', 'progress_notes_file_rel', string='Progress Notes')
     clients = fields.Many2many('sccc.client', 'client_file_rel', string='Clients')
-    account_moves = fields.Many2many('account.move', 'account_file_rel', string='Account Moves')
+    account_moves = fields.Many2many('account.move', 'account_move_file_rel', string='Account Moves')
+    payments = fields.Many2many('account.payment', 'account_payment_file_rel', string='Payments')
+    lines = fields.Many2many('account.move.line', 'account_move_line_file_rel', string='Lines')
+
+    @api.onchange('account_moves')
+    def handle_account_moves(self):
+        print('self', self.account_moves)
+        for move in self.account_moves:
+            print('move', move.display_name)
+            print('journal', move.journal_id)
+            print('journal', move.journal_id)
+            for line2 in move.transaction_ids:
+                print('line2', line2.display_name)
+            for line in move.invoice_line_ids:
+                print('line', line.name)
 
     @api.model
     def create(self, form_object):
