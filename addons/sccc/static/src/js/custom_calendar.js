@@ -23,4 +23,10 @@ odoo.define('sccc.sccc_calendar_view', function (require) {
       });
     },
   });
+
+  var CalendarView = require('web.CalendarView');
+
+  CalendarView.include({
+    jsLibs : ['/sccc/static/src/js/fullcalendar.js'],
+  });
 });
