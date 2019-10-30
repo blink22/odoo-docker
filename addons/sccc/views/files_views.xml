@@ -106,7 +106,6 @@
                                     <field name="balance" widget="monetary" options="{'currency_field': 'currency_id'}"/>
                                     <field name="account_moves"/>
                                     <field name="payments"/>
-                                    <field name="lines" domain="[('id', 'in', account_moves.line_ids)]"/>
                                   </group>
                                 </page>
                                 <page string="Forms">
