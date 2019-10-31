@@ -5357,14 +5357,6 @@ var DayTableMixin = FC.DayTableMixin = {
 	renderHeadTrHtml: function() {
 		// var rpc = require ('web.rpc');
 		var rooms = [];
-		this._rpc({
-			model: 'sccc.room',
-			method: 'get_rooms'
-		}). then (function (data) {
-			console.log('data', data)
-			alert(data)
-			rooms = data;
-		});
 		return '' +
 			'<tr>' +
 				(this.isRTL ? '' : this.renderHeadIntroHtml()) +

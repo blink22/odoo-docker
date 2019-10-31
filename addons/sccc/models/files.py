@@ -11,7 +11,7 @@ class Files(models.Model):
     name = fields.Char('File Name')
     out_reach = fields.Boolean('Outreach?')
     preferred_gender = fields.Selection([ ('m', 'Male'), ('f', 'Female') ], 'Preferred Gender')
-    preferred_age = fields.Selection([ ('1', '21'), ('2', '22') ], 'Preferred Age')
+    preferred_age = fields.Selection([ ('Below', 'Below'), ('Similar', 'Similar'), ('Above', 'Above')], 'Preferred Age')
     intake_date = fields.Date('Intake Date')
     
     # Appointment types
@@ -28,9 +28,9 @@ class Files(models.Model):
     currency_id = fields.Integer(compute='_get_currency', store=True)
     fee = fields.Monetary('Fee')
     balance = fields.Monetary('Balance')
-    hold = fields.Boolean('Hold')
+    hold = fields.Boolean('Double Fee Hold')
 
-    on_waitlist = fields.Boolean('On Waitlist?')
+    on_waitlist = fields.Boolean('Waitlist?')
     attended_session = fields.Boolean('Attended Session?')
     late = fields.Boolean('Late (NC)')
     left_early = fields.Boolean('Left Early (NC)')
