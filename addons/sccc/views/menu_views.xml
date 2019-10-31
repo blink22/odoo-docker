@@ -84,7 +84,7 @@
       <field name="view_mode">tree,form</field>
     </record>
     <!-- Menu Builder -->
-    <menuitem name="SCCC" id="sccc.menu_root" sequence="0"/>
+    <menuitem name="SCCC" id="sccc.menu_root" sequence="0" web_icon="sccc,static/description/icon.png"/>
         <menuitem name="Calendar" id="sccc.calendar" parent="sccc.menu_root"  action="action_calendar" sequence="1"/>
         <menuitem name="Files" id="sccc.files" parent="sccc.menu_root"  action="action_files" sequence="2"/>
         <menuitem name="Clients" id="sccc.clients" parent="sccc.menu_root"  action="action_clients" sequence="3"/>
