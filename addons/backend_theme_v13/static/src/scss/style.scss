@@ -7,7 +7,6 @@
     src: url(/backend_theme_v13/static/src/font/Roboto-Regular.ttf)
 }
 
-
 $gray-base:              #000;
 $gray-darker:            lighten($gray-base, 13.5%);
 $gray-dark:              #666;
@@ -76,6 +75,14 @@ body {
 }
 
 .btn-primary {
+
+    color: #fff;
+    background-color: $brand-secondary;
+    border-color: $brand-secondary;
+
+}
+
+.btn-primary:disabled {
 
     color: #fff;
     background-color: $brand-secondary;
@@ -221,19 +228,15 @@ oe_highlight {
 }
 
 a {
-
     color: $brand-secondary;
     text-decoration: none;
     background-color: transparent;
     -webkit-text-decoration-skip: objects;
-
 }
 
 a:hover {
-
     color: $brand-secondary-dark;
     text-decoration: none;
-
 }
 
 
