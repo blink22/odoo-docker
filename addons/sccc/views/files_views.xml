@@ -118,8 +118,8 @@
                                 </page>
                                 <page string="Counseling History">
                                   <group>
-                                    <field name="meetings" widget="many2many_tags"/>
-                                    <field name="progress_notes" widget="many2many_tags"/>
+                                    <field name="meetings" context="{'tree_view_ref':'sccc.calendar_tree_view2'}"/>
+                                    <field name="progress_notes"/>
                                   </group>
                                 </page>
                               </notebook>

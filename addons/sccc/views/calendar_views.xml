@@ -8,16 +8,34 @@
                   <tree create="true">
                       <field name="name"/>
                       <field name="files" widget="many2many_tags"/>
+                      <field name="client_attend" widget="many2many_tags"/>
                       <field name="counselor"/>
                       <field name="start_date"/>
                       <field name="end_date"/>
                       <field name="status"/>
+                      <field name="location"/>
                       <field name="room"/>
                       <field name="create_date"/>
                   </tree>
               </field>
     </record>
 
+    <record model="ir.ui.view" id="calendar_tree_view2">
+              <field name="name">calendar list tree</field>
+              <field name="model">sccc.calendar</field>
+              <field name="arch" type="xml">
+                  <tree>
+                      <field name="create_date"/>
+                      <field name="files" widget="many2many_tags"/>
+                      <field name="counselor"/>
+                      <field name="start_date"/>
+                      <field name="end_date"/>
+                      <field name="status"/>
+                      <field name="location"/>
+                      <field name="room"/>
+                  </tree>
+              </field>
+    </record>
     <!--form view-->
     <record model="ir.ui.view" id="calendar_form_view">
               <field name="name">calendar form</field>

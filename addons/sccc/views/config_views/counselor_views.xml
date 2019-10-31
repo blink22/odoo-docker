@@ -40,7 +40,7 @@
                               <field name="location" widget="many2many_tags"/>
                               <field name="trained_for" widget="selection"/>
                               <field name="lgbtq"/>
-                              <field name="availability" widget="many2many_tags"/>
+                              <field name="availability"/>
 
                               <separator string="Personal Info"/>
                               <field name="date_of_birth"/>
