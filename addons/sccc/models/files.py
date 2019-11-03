@@ -4,12 +4,10 @@ from random import randint
 class Files(models.Model):
     _name = 'sccc.file'
     _description = 'Files'
-
-    #_rec_name = 'file_number'
     _rec_name = 'combination'
     combination = fields.Char (string='File', compute='_compute_fields_combination')
-    file_number = fields.Char('File #', readonly=True)
 
+    file_number = fields.Char('File #', readonly=True)
     name = fields.Char('File Name', readonly=True)
     out_reach = fields.Boolean('Outreach?')
     preferred_gender = fields.Selection([ ('m', 'Male'), ('f', 'Female') ], 'Preferred Gender')
