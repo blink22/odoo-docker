@@ -25,9 +25,6 @@ class Files(models.Model):
     type_8 = fields.Boolean('WeCounsel')
     type_9 = fields.Boolean('Other')
 
-    currency_id = fields.Integer(compute='_get_currency', store=True)
-    fee = fields.Monetary('Fee')
-    balance = fields.Monetary('Balance')
     hold = fields.Boolean('Double Fee Hold')
 
     on_waitlist = fields.Boolean('Waitlist?')
@@ -72,12 +69,3 @@ class Files(models.Model):
     def create(self, form_object):
         form_object['file_number'] = randint(0,999999)
         return super(Files, self).create(form_object)
-
-    def _get_currency(self):
-        user_obj = self.pool.get('res.users')
-        currency_obj = self.pool.get('res.currency')
-        user = user_obj.browse(cr, uid, uid, context = context)
-        if user.company_id:
-            self.currency_id = user.company_id.currency_id.id
-        else:
-            self.currency_id = currency_obj.search(cr, uid, [('rate', '=', 1.0)])[0]

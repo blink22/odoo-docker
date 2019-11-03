@@ -102,8 +102,6 @@
                                 </page>
                                 <page string="Financial Info">
                                   <group>
-                                    <field name="fee" widget="monetary" options="{'currency_field': 'currency_id'}"/>
-                                    <field name="balance" widget="monetary" options="{'currency_field': 'currency_id'}"/>
                                     <field name="account_moves"/>
                                     <field name="payments"/>
                                   </group>
