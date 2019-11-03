@@ -4,15 +4,14 @@ from random import randint
 class Files(models.Model):
     _name = 'sccc.file'
     _description = 'Files'
+    _rec_name = 'combination'
+    combination = fields.Char (string='File', compute='_compute_fields_combination')
 
-    _rec_name = 'file_number'
     file_number = fields.Char('File #', readonly=True)
-
-    name = fields.Char('File Name')
+    name = fields.Char('File Name', readonly=True)
     out_reach = fields.Boolean('Outreach?')
     preferred_gender = fields.Selection([ ('m', 'Male'), ('f', 'Female') ], 'Preferred Gender')
     preferred_age = fields.Selection([ ('Below', 'Below'), ('Similar', 'Similar'), ('Above', 'Above')], 'Preferred Age')
-    intake_date = fields.Date('Intake Date')
     
     # Appointment types
     type_1 = fields.Boolean('Individual Counseling')
@@ -25,25 +24,23 @@ class Files(models.Model):
     type_8 = fields.Boolean('WeCounsel')
     type_9 = fields.Boolean('Other')
 
-    currency_id = fields.Integer(compute='_get_currency', store=True)
-    fee = fields.Monetary('Fee')
-    balance = fields.Monetary('Balance')
     hold = fields.Boolean('Double Fee Hold')
 
     on_waitlist = fields.Boolean('Waitlist?')
+
+    last_true_attendance = fields.Integer('True Attend')
     attended_session = fields.Boolean('Attended Session?')
     late = fields.Boolean('Late (NC)')
     left_early = fields.Boolean('Left Early (NC)')
     absent = fields.Boolean('Absent')
     terminated = fields.Boolean('Terminated?')
     
-    lgbtq_counselor = fields.Boolean('Would like LGBTQ Counselor?')
+    lgbtq_provider = fields.Boolean('Would like LGBTQ Counselor?')
     other_considerations = fields.Text('Other Considerations?')
     additional_notes = fields.Char('Additional Notes')
-    created_on = fields.Datetime("Date")
 
     # Relations
-    counselor = fields.Many2many('sccc.counselor', 'counselor_file_rel', string='Counselor')
+    provider = fields.Many2many('sccc.provider', 'provider_file_rel', string='Provider')
     meetings = fields.Many2many('sccc.calendar', 'calendar_file_rel', string='Meetings')
     sessions = fields.Many2many('sccc.sessions', 'sessions_file_rel', string='Sessions')
     fee_setting = fields.Many2one('sccc.fee_setting', string='Fee Setting Form')
@@ -52,7 +49,7 @@ class Files(models.Model):
     fam_assessment = fields.Many2one('sccc.fam_assessment', string='FAM Assessment Form')
     availability = fields.Many2many('sccc.time_slots', 'time_slots_file_rel', string='Availability (Time Slots)')
     progress_notes = fields.Many2many('sccc.progress_notes', 'progress_notes_file_rel', string='Progress Notes')
-    clients = fields.Many2many('sccc.client', 'client_file_rel', string='Clients')
+    clients = fields.Many2many('sccc.client', 'client_file_rel', string='Clients', required=True)
     account_moves = fields.Many2many('account.move', 'account_move_file_rel', string='Account Invoices')
     payments = fields.Many2many('account.payment', 'account_payment_file_rel', string='Payments')
 
@@ -68,16 +65,50 @@ class Files(models.Model):
     #         for line in move.invoice_line_ids:
     #             print('line', line.name)
 
+    @api.onchange('attended_session')
+    def handle_attendance1(self):
+        if self.attended_session:
+            self.late = False
+            self.left_early = False
+            self.absent = False
+
+    @api.onchange('late')
+    def handle_attendance2(self):
+        if self.late:
+            self.attended_session = False
+            self.left_early = False
+            self.absent = False
+
+    @api.onchange('left_early')
+    def handle_attendance3(self):
+        if self.left_early:
+            self.late = False
+            self.attended_session = False
+            self.absent = False
+
+    @api.onchange('absent')
+    def handle_attendance4(self):
+        if self.absent:
+            self.late = False
+            self.left_early = False
+            self.attended_session = False
+
+    @api.depends('file_number', 'name') 
+    def _compute_fields_combination(self):
+        for file in self:
+            file.combination = file.file_number + ' - ' + file.name
+
     @api.model
     def create(self, form_object):
         form_object['file_number'] = randint(0,999999)
+        name = ''
+        i = 0
+        clients = self.env['sccc.client'].search([('id', 'in', form_object['clients'][0][2])])
+        while i < len(clients):
+            name += clients[i].name
+            if i < len(clients)-1:
+                name += ', '
+            i += 1
+        
+        form_object['name'] = name
         return super(Files, self).create(form_object)
-
-    def _get_currency(self):
-        user_obj = self.pool.get('res.users')
-        currency_obj = self.pool.get('res.currency')
-        user = user_obj.browse(cr, uid, uid, context = context)
-        if user.company_id:
-            self.currency_id = user.company_id.currency_id.id
-        else:
-            self.currency_id = currency_obj.search(cr, uid, [('rate', '=', 1.0)])[0]

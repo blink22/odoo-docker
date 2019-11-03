@@ -26,7 +26,7 @@ class Clients(models.Model):
   cell_phone = fields.Char('Cell #')
 
   found_us = fields.Selection([('Friend', 'Friend'), ('Advertisement', 'Advertisement'),
-                               ('Family member','Family member'), ('Mandated','Mandated'), ('Guidance counselor','Guidance counselor'), 
+                               ('Family member','Family member'), ('Mandated','Mandated'), ('Guidance Counselor','Guidance Counselor'), 
                                ('Outreach','Outreach'), ('Website','Website'), ('Other','Other'), ('Google, etc.','Google, etc.')], 'How did client find out about us?')
   street = fields.Char('Street')
   apt_no = fields.Char('Apt/Suite No')
@@ -61,7 +61,7 @@ class Clients(models.Model):
     if self.first_name:
       first_name = str(self.first_name)
 
-    self.name = last_name + ", " + first_name
+    self.name = first_name + ' ' + last_name
 
   @api.depends('date_of_birth') 
   def _calculate_age(self):

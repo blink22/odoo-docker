@@ -29,7 +29,7 @@ class FeeSetting(models.Model):
   
   # Relations
   files = fields.Many2one('sccc.file', string='File')
-  counselor = fields.Many2one('sccc.counselor', string='Counselor')
+  provider = fields.Many2one('sccc.provider', string='Provider')
   
   def _get_currency(self):
     user_obj = self.pool.get('res.users')

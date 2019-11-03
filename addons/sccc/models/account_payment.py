@@ -5,6 +5,7 @@ class account_payment(models.Model):
   
   # Relations
   files = fields.Many2many('sccc.file', 'account_payment_file_rel', string='File #')
+  meetings = fields.Many2many('sccc.calendar', 'account_payment_calendar_rel', string='Meetings')
 
   def unlink(self):
     result = models.Model.unlink(self)

@@ -13,9 +13,9 @@
       <field name="view_mode">tree,form</field>
     </record>
 
-    <record model="ir.actions.act_window" id="action_counselor">
+    <record model="ir.actions.act_window" id="action_provider">
       <field name="name">Staff</field>
-      <field name="res_model">sccc.counselor</field>
+      <field name="res_model">sccc.provider</field>
       <field name="view_mode">tree,form</field>
     </record>
 ​
@@ -28,12 +28,6 @@
     <record model="ir.actions.act_window" id="action_clients">
       <field name="name">Clients</field>
       <field name="res_model">sccc.client</field>
-      <field name="view_mode">tree,form</field>
-    </record>
-
-    <record model="ir.actions.act_window" id="action_payments">
-      <field name="name">Payments</field>
-      <field name="res_model">sccc.payment</field>
       <field name="view_mode">tree,form</field>
     </record>
 
@@ -94,11 +88,10 @@
             <menuitem name="Fee Adjustment" id="sccc.menu_fee_adjustment" parent="sccc.custom_forms"  action="action_fee_adjustment"/>
             <menuitem name="Fee Setting" id="sccc.menu_fee_setting" parent="sccc.custom_forms"  action="action_fee_setting"/>
             <menuitem name="Progress Notes" id="sccc.menu_progress_notes" parent="sccc.custom_forms"  action="action_progress_notes"/>
-        <menuitem name="Payments" id="sccc.payment" parent="sccc.menu_root"  action="action_payments" sequence="5"/>        
-        <menuitem name="Config" id="sccc.config" parent="sccc.menu_root"  action="action_locations" sequence="6"/>
+        <menuitem name="Config" id="sccc.config" parent="sccc.menu_root"  action="action_locations" sequence="5"/>
             <menuitem name="Rooms" id="sccc.menu_room" parent="sccc.config"  action="action_room"/>
             <menuitem name="Locations" id="sccc.menu_location" parent="sccc.config"  action="action_locations"/>
-            <menuitem name="Staff" id="sccc.menu_counselor" parent="sccc.config"  action="action_counselor"/>
+            <menuitem name="Staff" id="sccc.menu_provider" parent="sccc.config"  action="action_provider"/>
             <!-- 
             <menuitem name="Language" id="sccc.menu_language" parent="sccc.config"  action="action_language"/>
             <menuitem name="Sessions" id="sccc.menu_sessions" parent="sccc.config"  action="action_sessions"/>

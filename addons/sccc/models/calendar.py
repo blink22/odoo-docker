@@ -41,11 +41,12 @@ class Calendar(models.Model):
     files = fields.Many2many('sccc.file', 'calendar_file_rel', string='File', required=True)
     client_attend = fields.Many2many('sccc.file', 'calendar_attendance_file_rel', string='Did Client Attend?')
     
-    counselor = fields.Many2one('sccc.counselor', string='Counselor', required=True)
+    provider = fields.Many2one('sccc.provider', string='Provider', required=True)
     user_ids = fields.Many2many('res.users', string='Attendees', track_visibility='onchange', readonly=True, 
                               states={'draft': [('readonly', False)]}, default=lambda self: self.env.user)
     progress_notes = fields.Many2many('sccc.progress_notes', 'progress_notes_calendar_rel', string='Progress Notes')
-    payment = fields.Many2many('sccc.payment', 'payment_calendar_rel', string='Payment')
+    account_moves = fields.Many2many('account.move', 'account_move_calendar_rel', string='Account Invoices')
+    payments = fields.Many2many('account.payment', 'account_payment_calendar_rel', string='Payments')
     
     @api.model
     def create(self, form_object):

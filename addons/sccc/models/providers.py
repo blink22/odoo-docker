@@ -1,8 +1,8 @@
 from odoo import models, fields, api
 
-class Counselors(models.Model):
-    _name = 'sccc.counselor'
-    _description = 'Counselors'
+class Providers(models.Model):
+    _name = 'sccc.provider'
+    _description = 'Providers'
 
     name = fields.Char('Name', compute='_set_name', store=True)
     last_name = fields.Char('Last Name')
@@ -42,10 +42,10 @@ class Counselors(models.Model):
     created_on = fields.Datetime("Date")
     
     # Relations
-    availability = fields.Many2many('sccc.time_slots', 'time_slots_counselor_rel', string='Availability (Time Slots)')
-    files = fields.Many2many('sccc.file', 'counselor_file_rel', string='Case Load')
-    fam_assessment = fields.One2many('sccc.fam_assessment', 'counselor', string='Fam Assessment')
-    location = fields.One2many('sccc.location', 'counselor', string='Location')
+    availability = fields.Many2many('sccc.time_slots', 'time_slots_provider_rel', string='Availability (Time Slots)')
+    files = fields.Many2many('sccc.file', 'provider_file_rel', string='Case Load')
+    fam_assessment = fields.One2many('sccc.fam_assessment', 'provider', string='Fam Assessment')
+    location = fields.One2many('sccc.location', 'provider', string='Location')
 
     @api.depends('last_name', 'first_name')
     def _set_name(self):

@@ -27,7 +27,7 @@
                       <!-- <field name="gross_monthly" options="{'currency_field': 'currency_id'}"/> -->
                       <field name="total_gross" options="{'currency_field': 'currency_id'}"/>
                       <field name="files"/>
-                      <field name="counselor"/>
+                      <field name="provider"/>
                       <field name="create_date"/>
                   </tree>
               </field>
@@ -43,7 +43,7 @@
                         <group>
                             <field widget="binary" height = "64" name="form_upload" filename="form_namex" />
                             <field name="files" widget="selection"/>
-                            <field name="counselor" widget="selection"/>
+                            <field name="provider" widget="selection"/>
                             <field name="added_date"/>
                             <field name="today_date"/>
                             <field name="fee" widget="monetary" options="{'currency_field': 'currency_id'}"/>

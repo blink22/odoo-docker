@@ -13,6 +13,6 @@ class ProgressNotes(models.Model):
   created_on = fields.Datetime("Date")
 
   # Relations
-  counselor = fields.Many2one('sccc.counselor', string='Counselor')
+  provider = fields.Many2one('sccc.provider', string='Provider')
   files = fields.Many2many('sccc.file', 'progress_notes_file_rel', string='Files')
   meetings = fields.Many2many('sccc.calendar', 'progress_notes_calendar_rel', string='Meetings')
