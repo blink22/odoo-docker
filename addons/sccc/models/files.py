@@ -53,18 +53,6 @@ class Files(models.Model):
     account_moves = fields.Many2many('account.move', 'account_move_file_rel', string='Account Invoices')
     payments = fields.Many2many('account.payment', 'account_payment_file_rel', string='Payments')
 
-    # @api.onchange('account_moves')
-    # def handle_account_moves(self):
-    #     print('self', self.account_moves)
-    #     for move in self.account_moves:
-    #         print('move', move.display_name)
-    #         print('journal', move.journal_id)
-    #         print('journal', move.journal_id)
-    #         for line2 in move.transaction_ids:
-    #             print('line2', line2.display_name)
-    #         for line in move.invoice_line_ids:
-    #             print('line', line.name)
-
     @api.onchange('attended_session')
     def handle_attendance1(self):
         if self.attended_session:

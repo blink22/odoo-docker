@@ -30,8 +30,6 @@ class Calendar(models.Model):
     repeat_every_count = fields.Integer('Repeat Every')
     until_count = fields.Integer('Number of repetitions')
 
-    # client_attend = fields.Boolean('Did Client Attend?')
-
     created_on = fields.Datetime("Date")
 
     # Relations
@@ -45,9 +43,10 @@ class Calendar(models.Model):
     user_ids = fields.Many2many('res.users', string='Attendees', track_visibility='onchange', readonly=True, 
                               states={'draft': [('readonly', False)]}, default=lambda self: self.env.user)
     progress_notes = fields.Many2many('sccc.progress_notes', 'progress_notes_calendar_rel', string='Progress Notes')
+    
     account_moves = fields.Many2many('account.move', 'account_move_calendar_rel', string='Account Invoices')
     payments = fields.Many2many('account.payment', 'account_payment_calendar_rel', string='Payments')
-    
+            
     @api.model
     def create(self, form_object):
         # self.validate_object(form_object)
@@ -65,11 +64,33 @@ class Calendar(models.Model):
             res['domain']={'room':[('id', '=', -1)]}
         return res
 
+    def get_moves(self):
+        moves = []
+        self.account_moves = False
+        if self.files:
+            for file in self.files:
+                for move in file.account_moves:
+                    moves.append(move.id)
+        self.account_moves = [(6, 0, moves)]
+
+    def get_payments(self):
+        payments = []
+        if self.files:
+            for file in self.files:
+                for payment in file.payments:
+                    payments.append(payment.id)
+        self.payments = [(6, 0, payments)]
+
     @api.onchange('files')
     def selected_files(self):
         self.client_attend = False
+        self.account_moves = False
+        self.payments = False
         if self.files:
             self.client_attend = self.files
+            self.get_moves()
+            self.get_payments()
+            
             
     # def validate_object(self, form_object):
     #     records = super(Calendar, self).search([['room', '=', form_object['room']]])
