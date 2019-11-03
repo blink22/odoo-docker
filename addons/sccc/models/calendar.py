@@ -45,7 +45,8 @@ class Calendar(models.Model):
     user_ids = fields.Many2many('res.users', string='Attendees', track_visibility='onchange', readonly=True, 
                               states={'draft': [('readonly', False)]}, default=lambda self: self.env.user)
     progress_notes = fields.Many2many('sccc.progress_notes', 'progress_notes_calendar_rel', string='Progress Notes')
-    payment = fields.Many2many('sccc.payment', 'payment_calendar_rel', string='Payment')
+    account_moves = fields.Many2many('account.move', 'account_move_calendar_rel', string='Account Invoices')
+    payments = fields.Many2many('account.payment', 'account_payment_calendar_rel', string='Payments')
     
     @api.model
     def create(self, form_object):

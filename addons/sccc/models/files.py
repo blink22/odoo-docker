@@ -7,7 +7,7 @@ class Files(models.Model):
 
     #_rec_name = 'file_number'
     _rec_name = 'combination'
-    combination = fields.Char (string='Combination', compute='_compute_fields_combination')
+    combination = fields.Char (string='File', compute='_compute_fields_combination')
     file_number = fields.Char('File #', readonly=True)
 
     name = fields.Char('File Name', readonly=True)
@@ -29,6 +29,8 @@ class Files(models.Model):
     hold = fields.Boolean('Double Fee Hold')
 
     on_waitlist = fields.Boolean('Waitlist?')
+
+    last_true_attendance = fields.Integer('True Attend')
     attended_session = fields.Boolean('Attended Session?')
     late = fields.Boolean('Late (NC)')
     left_early = fields.Boolean('Left Early (NC)')
@@ -65,7 +67,35 @@ class Files(models.Model):
     #         for line in move.invoice_line_ids:
     #             print('line', line.name)
 
-    @api.depends( 'file_number' , 'name' ) 
+    @api.onchange('attended_session')
+    def handle_attendance1(self):
+        if self.attended_session:
+            self.late = False
+            self.left_early = False
+            self.absent = False
+
+    @api.onchange('late')
+    def handle_attendance2(self):
+        if self.late:
+            self.attended_session = False
+            self.left_early = False
+            self.absent = False
+
+    @api.onchange('left_early')
+    def handle_attendance3(self):
+        if self.left_early:
+            self.late = False
+            self.attended_session = False
+            self.absent = False
+
+    @api.onchange('absent')
+    def handle_attendance4(self):
+        if self.absent:
+            self.late = False
+            self.left_early = False
+            self.attended_session = False
+
+    @api.depends('file_number', 'name') 
     def _compute_fields_combination(self):
         for file in self:
             file.combination = file.file_number + ' - ' + file.name

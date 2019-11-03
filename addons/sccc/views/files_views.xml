@@ -27,7 +27,7 @@
               <field name="priority">17</field>
               <field name="arch" type="xml">
                 <tree edit="true" editable="top" create="false" delete="false">
-                  <field name="name" width="100px"/>
+                  <field name="combination" width="100px"/>
                   <field name="attended_session"/>
                   <field name="late"/>
                   <field name="left_early"/>

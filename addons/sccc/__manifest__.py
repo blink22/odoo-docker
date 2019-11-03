@@ -27,7 +27,6 @@
         'views/menu_views.xml',
         'views/files_views.xml',
         'views/client_views.xml',
-        'views/payment_views.xml',
         'views/calendar_views.xml',
         'views/account_move_views.xml',
         'views/account_payment_views.xml',

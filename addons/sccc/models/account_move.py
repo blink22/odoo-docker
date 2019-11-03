@@ -5,6 +5,7 @@ class CustomAccountInvoice(models.Model):
     
     # Relations
     files = fields.Many2many('sccc.file', 'account_move_file_rel', string='Files')
+    meetings = fields.Many2many('sccc.calendar', 'account_move_calendar_rel', string='Meetings')
 
     def unlink(self):
         for move in self:

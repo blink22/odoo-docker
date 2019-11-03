@@ -13,7 +13,6 @@ from . import files
 from . import individual_assessment
 from . import language
 from . import locations
-from . import payments
 from . import progress_notes
 from . import rooms
 from . import sessions
