@@ -8,11 +8,10 @@ class Files(models.Model):
     _rec_name = 'file_number'
     file_number = fields.Char('File #', readonly=True)
 
-    name = fields.Char('File Name')
+    name = fields.Char('File Name', readonly=True)
     out_reach = fields.Boolean('Outreach?')
     preferred_gender = fields.Selection([ ('m', 'Male'), ('f', 'Female') ], 'Preferred Gender')
     preferred_age = fields.Selection([ ('Below', 'Below'), ('Similar', 'Similar'), ('Above', 'Above')], 'Preferred Age')
-    intake_date = fields.Date('Intake Date')
     
     # Appointment types
     type_1 = fields.Boolean('Individual Counseling')
@@ -37,7 +36,6 @@ class Files(models.Model):
     lgbtq_counselor = fields.Boolean('Would like LGBTQ Counselor?')
     other_considerations = fields.Text('Other Considerations?')
     additional_notes = fields.Char('Additional Notes')
-    created_on = fields.Datetime("Date")
 
     # Relations
     counselor = fields.Many2many('sccc.counselor', 'counselor_file_rel', string='Counselor')
@@ -49,7 +47,7 @@ class Files(models.Model):
     fam_assessment = fields.Many2one('sccc.fam_assessment', string='FAM Assessment Form')
     availability = fields.Many2many('sccc.time_slots', 'time_slots_file_rel', string='Availability (Time Slots)')
     progress_notes = fields.Many2many('sccc.progress_notes', 'progress_notes_file_rel', string='Progress Notes')
-    clients = fields.Many2many('sccc.client', 'client_file_rel', string='Clients')
+    clients = fields.Many2many('sccc.client', 'client_file_rel', string='Clients', required=True)
     account_moves = fields.Many2many('account.move', 'account_move_file_rel', string='Account Invoices')
     payments = fields.Many2many('account.payment', 'account_payment_file_rel', string='Payments')
 
@@ -68,4 +66,14 @@ class Files(models.Model):
     @api.model
     def create(self, form_object):
         form_object['file_number'] = randint(0,999999)
+        name = ''
+        i = 0
+        clients = self.env['sccc.client'].search([('id', 'in', form_object['clients'][0][2])])
+        while i < len(clients):
+            name += clients[i].name
+            if i < len(clients)-1:
+                name += ', '
+            i += 1
+        
+        form_object['name'] = name
         return super(Files, self).create(form_object)

@@ -9,7 +9,6 @@
                       <field name="file_number"/>
                       <field name="name"/>
                       <field name="clients" widget="many2many_tags"/>
-                      <field name="intake_date"/>
                       <field name="availability" widget="many2many_tags"/>
                       <field name="on_waitlist"/>
                       <field name="hold"/>
@@ -74,23 +73,18 @@
                                       </td>
                                       <td >
                                         <group> -->
-                                          <!-- <separator string="Client Attendance"/> -->
+                                          <separator string="MISC"/>
                                           <field name="out_reach"/>
-                                          <field name="created_on"/>
                                           <field name="on_waitlist"/>
                                           <field name="hold"/>
-                                          <field name="attended_session"/>
-                                          <field name="late"/>
-                                          <field name="left_early"/>
-                                          <field name="absent"/>
                                         <!-- </group> -->
                                       <!-- </td>
                                     </tr>
                                     <tr>
                                       <td style="width: 100%"> -->
                                         <!-- <group> -->
-                                          <field name="intake_date"/>
                                           <field name="availability"/>
+                                          <separator string="Counselor Preferences"/>
                                           <field name="lgbtq_counselor"/>
                                           <field name="preferred_gender"/>
                                           <field name="preferred_age"/>
@@ -145,7 +139,6 @@
           <field name="file_number"/>
           <field name="name"/>
           <field name="clients"/>
-          <field name="intake_date"/>
           <field name="availability"/>
           <field name="on_waitlist"/>
           <field name="hold"/>
