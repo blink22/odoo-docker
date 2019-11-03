@@ -10,3 +10,10 @@ class account_payment(models.Model):
   def unlink(self):
     result = models.Model.unlink(self)
     return result
+
+  @api.model
+  def create(self, object):
+    file_ids = self.env.context.get('file_ids')
+    object['files'] = [[6, False, file_ids]]
+    return super(account_payment, self).create(object)
+    
