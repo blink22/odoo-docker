@@ -8,8 +8,7 @@
                   <tree create="true">
                       <field name="name"/>
                       <field name="files" widget="many2many_tags"/>
-                      <field name="client_attend" widget="many2many_tags"/>
-                      <field name="counselor"/>
+                      <field name="provider"/>
                       <field name="start_date"/>
                       <field name="end_date"/>
                       <field name="status"/>
@@ -27,7 +26,7 @@
                   <tree>
                       <field name="create_date"/>
                       <field name="files" widget="many2many_tags"/>
-                      <field name="counselor"/>
+                      <field name="provider"/>
                       <field name="start_date"/>
                       <field name="end_date"/>
                       <field name="status"/>
@@ -51,7 +50,7 @@
                         <notebook>
                         <page name="general_info" string="General Info">
                             <group>
-                              <field name="counselor"/>
+                              <field name="provider"/>
                               <field name="start_date"/>
                               <field name="end_date"/>
                               <field name="non_transferrable"/>
@@ -94,7 +93,7 @@
         <search>
           <field name="name"/>
           <field name="files"/>
-          <field name="counselor"/>
+          <field name="provider"/>
           <field name="start_date"/>
           <field name="end_date"/>
           <field name="status"/>
@@ -115,7 +114,7 @@
             <field name="arch" type="xml">
                 <calendar string="Calendar" date_start="start_date" date_stop="end_date" color="room" mode="day">
                     <field name="user_ids" write_model="res.users" write_field="name"/>
-                    <field name="counselor"/>
+                    <field name="provider"/>
                     <field name="files"/>
                 </calendar>
             </field>
@@ -126,7 +125,7 @@
         <field name="arch" type="xml">
             <kanban default_group_by="room" default_order="start_date" group_create="false" group_delete="false" group_edit="false">
                 <field name="name"/>
-                <field name="counselor"/>
+                <field name="provider"/>
                 <field name="files"/>
                 <templates>
                     <t t-name="kanban-box">
@@ -153,7 +152,7 @@
                             <div class="col">
                               <div name="tags"/>
                                 <ul>
-                                  <li>Counselor: <field name="counselor"/></li>
+                                  <li>Provider: <field name="provider"/></li>
                                   <li>Files: <field name="files"/></li>
                                 </ul>
                               </div>

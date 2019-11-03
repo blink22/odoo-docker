@@ -27,7 +27,7 @@
                         <group>
                           <field name="name"/>
                           <field name="files" widget="many2many_tags"/>
-                          <field name="counselor"/>
+                          <field name="provider"/>
                           <field name="date"/>
                           <field name="description_tag"/>
                           <field name="amount_due"/>

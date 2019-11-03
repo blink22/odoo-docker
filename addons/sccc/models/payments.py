@@ -16,7 +16,7 @@ class Payments(models.Model):
                                          ('correction', 'Correction'),
                                          ('phone_session', 'Phone Session'),
                                          ('group', 'Group'),
-                                         ('counselor_no_show','Counselor No Show') ], 'Description Tag')
+                                         ('provider_no_show','Provider No Show') ], 'Description Tag')
     date = fields.Date('Date')
     amount_due = fields.Float('Amount Due')
     amount_paid = fields.Float('Amount Paid')
@@ -27,5 +27,5 @@ class Payments(models.Model):
 
     # Relations
     files = fields.Many2many('sccc.file', 'payment_file_rel', string='Files')
-    counselor = fields.Many2one('sccc.counselor', string='Counselor')
+    provider = fields.Many2one('sccc.provider', string='Provider')
     meetings = fields.Many2many('sccc.calendar', 'payment_calendar_rel', string='Meetings')

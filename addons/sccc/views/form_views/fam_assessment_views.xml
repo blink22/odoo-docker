@@ -25,7 +25,7 @@
                       <field name="fee"/>
                       <!-- <field name="additional_notes"/> -->
                       <field name="file"/>
-                      <field name="counselor"/>
+                      <field name="provider"/>
                       <field name="create_date"/>
                   </tree>
               </field>
@@ -47,7 +47,7 @@
                                 <field widget="binary" height = "64" name="intake" filename="intake_namex" />
                                 <field name="date"/>
                                 <field name="name"/>
-                                <field name="counselor" widget="selection"/>
+                                <field name="provider" widget="selection"/>
                                 <field name="therapy_type" widget="selection"/>
                                 <field name="language_needs"/>
                                 <field name="individual_counseling" widget="selection"/>

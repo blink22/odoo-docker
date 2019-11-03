@@ -12,7 +12,7 @@
                       <field name="availability" widget="many2many_tags"/>
                       <field name="on_waitlist"/>
                       <field name="hold"/>
-                      <field name="lgbtq_counselor"/>
+                      <field name="lgbtq_provider"/>
                       <!-- <field name="preferred_gender"/>
                       <field name="preferred_age"/> -->
                       <field name="other_considerations"/>
@@ -84,8 +84,8 @@
                                       <td style="width: 100%"> -->
                                         <!-- <group> -->
                                           <field name="availability"/>
-                                          <separator string="Counselor Preferences"/>
-                                          <field name="lgbtq_counselor"/>
+                                          <separator string="Provider Preferences"/>
+                                          <field name="lgbtq_provider"/>
                                           <field name="preferred_gender"/>
                                           <field name="preferred_age"/>
                                           <field name="other_considerations"/>
@@ -120,7 +120,7 @@
                             <!--   
                             <field name="terminated" colspan="2"/>
                             <field name="other_considerations" colspan="2"/>
-                            <field name="counselor" colspan="2"/>                            
+                            <field name="provider" colspan="2"/>                            
                             <field name="sessions" colspan="2"/>
                             <field name="availability" colspan="2"/>
                              -->
@@ -142,7 +142,7 @@
           <field name="availability"/>
           <field name="on_waitlist"/>
           <field name="hold"/>
-          <field name="lgbtq_counselor"/>
+          <field name="lgbtq_provider"/>
           <field name="other_considerations"/>
           <field name="additional_notes"/>
         </search>

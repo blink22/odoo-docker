@@ -5,7 +5,9 @@ class Files(models.Model):
     _name = 'sccc.file'
     _description = 'Files'
 
-    _rec_name = 'file_number'
+    #_rec_name = 'file_number'
+    _rec_name = 'combination'
+    combination = fields.Char (string='Combination', compute='_compute_fields_combination')
     file_number = fields.Char('File #', readonly=True)
 
     name = fields.Char('File Name', readonly=True)
@@ -33,12 +35,12 @@ class Files(models.Model):
     absent = fields.Boolean('Absent')
     terminated = fields.Boolean('Terminated?')
     
-    lgbtq_counselor = fields.Boolean('Would like LGBTQ Counselor?')
+    lgbtq_provider = fields.Boolean('Would like LGBTQ Counselor?')
     other_considerations = fields.Text('Other Considerations?')
     additional_notes = fields.Char('Additional Notes')
 
     # Relations
-    counselor = fields.Many2many('sccc.counselor', 'counselor_file_rel', string='Counselor')
+    provider = fields.Many2many('sccc.provider', 'provider_file_rel', string='Provider')
     meetings = fields.Many2many('sccc.calendar', 'calendar_file_rel', string='Meetings')
     sessions = fields.Many2many('sccc.sessions', 'sessions_file_rel', string='Sessions')
     fee_setting = fields.Many2one('sccc.fee_setting', string='Fee Setting Form')
@@ -62,6 +64,11 @@ class Files(models.Model):
     #             print('line2', line2.display_name)
     #         for line in move.invoice_line_ids:
     #             print('line', line.name)
+
+    @api.depends( 'file_number' , 'name' ) 
+    def _compute_fields_combination(self):
+        for file in self:
+            file.combination = file.file_number + ' - ' + file.name
 
     @api.model
     def create(self, form_object):

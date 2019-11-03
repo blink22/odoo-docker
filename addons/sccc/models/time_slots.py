@@ -13,4 +13,4 @@ class TimeSlots(models.Model):
 
   # Relations
   files = fields.Many2many('sccc.file', 'time_slots_file_rel', string='Files')
-  counselor = fields.Many2many('sccc.counselor', 'time_slots_counselor_rel', string='Availability (Time Slots)')
+  provider = fields.Many2many('sccc.provider', 'time_slots_provider_rel', string='Availability (Time Slots)')

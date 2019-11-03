@@ -1,9 +1,9 @@
 <odoo>
-    <!--Counselor Views-->​
+    <!--Provider Views-->​
     <!--tree view-->
-    <record model="ir.ui.view" id="counselor_tree_view">
-              <field name="name">counselor list tree</field>
-              <field name="model">sccc.counselor</field>
+    <record model="ir.ui.view" id="provider_tree_view">
+              <field name="name">provider list tree</field>
+              <field name="model">sccc.provider</field>
               <field name="arch" type="xml">
                   <tree create="true">
                       <field name="first_name"/>
@@ -23,11 +23,11 @@
     </record>
 ​
     <!--form view-->
-    <record model="ir.ui.view" id="counselor_form_view">
-          <field name="name">counselor.form</field>
-          <field name="model">sccc.counselor</field>
+    <record model="ir.ui.view" id="provider_form_view">
+          <field name="name">provider.form</field>
+          <field name="model">sccc.provider</field>
           <field name="arch" type="xml">
-               <form string="Counselor Form">
+               <form string="Provider Form">
                    <sheet>
                        <notebook>
                        <page name="personal_details" string="Personal Details">
@@ -74,9 +74,9 @@
     </record>
 ​
     ​<!--search view-->
-    <record model="ir.ui.view" id="counselor_search_view">
-      <field name="name">counselor list search</field>
-      <field name="model">sccc.counselor</field>
+    <record model="ir.ui.view" id="provider_search_view">
+      <field name="name">provider list search</field>
+      <field name="model">sccc.provider</field>
       <field name="arch" type="xml">
         <search>
           <field name="name"/>

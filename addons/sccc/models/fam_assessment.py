@@ -34,8 +34,8 @@ class FamAssessment(models.Model):
   # Relations
   file = fields.One2many('sccc.file', 'fam_assessment', string='File')
   client = fields.Many2one('sccc.client', 'Client')
-  counselor = fields.Many2one('sccc.counselor', string='Counselor')
-  # assigned_to = fields.Many2many('sccc.counselor', string='If so, who were they assigned to?')
+  provider = fields.Many2one('sccc.provider', string='provider')
+  # assigned_to = fields.Many2many('sccc.provider', string='If so, who were they assigned to?')
 
   def _get_currency(self):
     user_obj = self.pool.get('res.users')

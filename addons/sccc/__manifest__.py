@@ -31,7 +31,7 @@
         'views/calendar_views.xml',
         'views/account_move_views.xml',
         'views/account_payment_views.xml',
-        'views/config_views/counselor_views.xml',
+        'views/config_views/provider_views.xml',
         'views/config_views/location_views.xml',
         'views/config_views/room_views.xml',
         'views/config_views/language_views.xml',

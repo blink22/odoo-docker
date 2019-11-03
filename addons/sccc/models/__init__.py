@@ -5,7 +5,7 @@ from . import account_move
 from . import account_payment
 from . import calendar
 from . import clients
-from . import counselors
+from . import providers
 from . import fam_assessment
 from . import fee_adjustment
 from . import fee_setting

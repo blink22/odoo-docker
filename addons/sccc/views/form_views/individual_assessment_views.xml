@@ -44,7 +44,7 @@
                       <!-- <field name="occurence_often"/> -->
                       <!-- <field name="help_stop_thoughts"/> -->
                       <!-- <field name="additional_notes"/> -->
-                      <!-- <field name="counselor"/> -->
+                      <!-- <field name="provider"/> -->
                       <!-- <field name="ethnicity"/> -->
                       <!-- <field name="client"/> -->
                       <field name="write_date" string="Modified Date"/>
@@ -66,11 +66,11 @@
                           <field name="file" widget="selection"/>
                         </group>
                         <notebook>
-                          <page string="Counselor Form">
+                          <page string="Provider Form">
                             <group>
                               <field name="intake" widget="binary" height = "64" filename="intake_namex"/>
                               <field name="date"/>
-                              <field name="counselor" widget="selection"/>
+                              <field name="provider" widget="selection"/>
                               <field name="relationship" widget="selection"/>
                               <field name="ethnicity" widget="selection"/>
                               <field name="ethnicity_other"/>
