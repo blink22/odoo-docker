@@ -13,3 +13,8 @@ class CustomAccountInvoice(models.Model):
             #     raise UserError(_("You cannot delete an entry which has been posted once."))
             move.line_ids.unlink()
         return models.Model.unlink(self)
+    
+    def action_invoice_register_payment(self):
+        return self.env['account.payment']\
+            .with_context(active_ids=self.ids, active_model='account.move', active_id=self.id, file_ids=self.files.ids)\
+            .action_register_payment()
