@@ -108,7 +108,7 @@
             <field name="name">sccc calendar</field>
             <field name="model">sccc.calendar</field>
             <field name="arch" type="xml">
-                <calendar string="Calendar" date_start="start_date" date_stop="end_date" color="room" mode="week">
+                <calendar string="Calendar" date_start="start_date" date_stop="end_date" color="room" mode="day">
                     <field name="user_ids" write_model="res.users" write_field="name"/>
                     <field name="provider"/>
                     <field name="files"/>
