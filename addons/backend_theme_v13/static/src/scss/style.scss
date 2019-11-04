@@ -33,6 +33,10 @@ body {
     font-family: "Roboto";
 }
 
+.o_event_title {
+    white-space: pre-wrap;
+}
+
 .o_radio_input:checked + label {
     border: $brand-secondary;
     color: $brand-secondary;
