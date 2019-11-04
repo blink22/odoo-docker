@@ -30,8 +30,36 @@ $brand-primary-dark: darken($brand-primary, 10%);
 $brand-secondary-dark: darken($brand-secondary, 10%);
 
 body {
-
     font-family: "Roboto";
+}
+
+.o_radio_input:checked + label {
+    border: $brand-secondary;
+    color: $brand-secondary;
+    border-style: solid;
+    width: 40px;
+    text-align: center;
+}
+.o_radio_input:checked + label::before {
+    visibility: hidden;
+}
+
+.o_radio_input + label::before {
+    visibility: hidden;
+}
+.o_radio_input:checked + label::after {
+    visibility: hidden;
+}
+
+.o_radio_input + label::after {
+    visibility: hidden;
+}
+.o_radio_input + label {
+    border: $gray-light;
+    color: $gray-light;
+    border-style: solid;
+    width: 40px;
+    text-align: center;
 }
 
 .o_loading {
