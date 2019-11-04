@@ -8,6 +8,9 @@ class Calendar(models.Model):
     _description = 'Meetings'
     _order = "start_date asc"
 
+    _rec_name = 'combination'
+    combination = fields.Char('Details', compute='_compute_fields_combination')
+
     name = fields.Char('Meeting Title', required=True)
     start_date = fields.Datetime('Start At', required=True)
     end_date = fields.Datetime('End At', required=True)
@@ -46,7 +49,18 @@ class Calendar(models.Model):
     
     account_moves = fields.Many2many('account.move', 'account_move_calendar_rel', string='Account Invoices')
     payments = fields.Many2many('account.payment', 'account_payment_calendar_rel', string='Payments')
-            
+
+    @api.depends('provider') 
+    def _compute_fields_combination(self):
+        for meeting in self:
+            meeting.combination = meeting.name
+            if meeting.provider:
+                meeting.combination += '\n'
+                meeting.combination += meeting.provider.name
+            for file in meeting.files:
+                meeting.combination += '\n'
+                meeting.combination += file.file_number + ' - ' + file.name
+
     @api.model
     def create(self, form_object):
         # self.validate_object(form_object)
