@@ -104,11 +104,6 @@
     </record>
 
     <!--calendar view-->
-    <template id="assets_backend" name="handling assets" inherit_id="web.assets_backend">
-        <xpath expr="." position="inside">
-            <script type="text/javascript" src="/sccc/static/src/js/custom_calendar.js"/>
-        </xpath>
-    </template>
     <record model="ir.ui.view" id="sccc_calendar_view">
             <field name="name">sccc calendar</field>
             <field name="model">sccc.calendar</field>
