@@ -20,7 +20,7 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['account', 'payment', 'as_time', 'backend_theme_v13'],
+    'depends': ['account', 'payment', 'as_time', 'backend_theme_v13', 'web_view_calendar_column'],
     # always loaded
     'data': [
         'security/ir.model.access.csv',
@@ -42,9 +42,6 @@
         'views/form_views/fee_adjustment_views.xml',
         'views/form_views/fee_setting_views.xml',
         'views/form_views/progress_notes_views.xml'
-    ],
-    'css': [
-        'static/src/css/custom_radio.css'
     ],
     'auto_install' : True,
     # only loaded in demonstration mode
