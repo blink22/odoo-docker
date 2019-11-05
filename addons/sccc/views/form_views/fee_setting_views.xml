@@ -7,13 +7,15 @@
               <field name="arch" type="xml">
                   <tree create="true">
                       <!-- <field name="form_upload"/> -->
-                      <field name="added_date"/>
-                      <field name="today_date"/>
+                      <field name="combination"/>
+                      <field name="file"/>
+                      <!-- <field name="added_date"/> -->
+                      <!-- <field name="today_date"/> -->
                       <field name="fee"/>
-                      <field name="refered_to_fee"/>
-                      <field name="currency"/>
+                      <!-- <field name="refered_to_fee"/> -->
+                      <!-- <field name="currency"/> -->
                       <!-- <field name="people_in"/> -->
-                      <field name="client_employed"/>
+                      <!-- <field name="client_employed"/> -->
                       <!-- <field name="monthly_gross"/> -->
                       <!-- <field name="source_of_salary"/> -->
                       <!-- <field name="public_assistance"/> -->
@@ -25,9 +27,9 @@
                       <!-- <field name="client_source"/> -->
                       <!-- <field name="has_members"/> -->
                       <!-- <field name="gross_monthly"/> -->
-                      <field name="total_gross"/>
-                      <field name="file"/>
-                      <field name="provider"/>
+                      <!-- <field name="total_gross"/> -->
+                      
+                      <!-- <field name="provider"/> -->
                       <field name="create_date"/>
                   </tree>
               </field>
@@ -41,6 +43,7 @@
                    <form string="Fee Setting Form">
                        <sheet>
                         <group>
+                            <field name="combination"/>
                             <field widget="binary" height = "64" name="form_upload" filename="form_namex" />
                             <field name="file" widget="selection"/>
                             <field name="provider" widget="selection"/>

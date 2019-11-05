@@ -2,6 +2,8 @@ from odoo import models, fields, api
 class FeeSetting(models.Model):
   _name = 'sccc.fee_setting'
   _description = 'Fee Settings'
+  _rec_name = 'combination'
+  combination = fields.Char(string='Form Name', compute='_compute_fields_combination', store=True)
 
   form_upload = fields.Binary ('Upload Fee Form')
   added_date = fields.Date('Date added to system', required=True)
@@ -30,3 +32,8 @@ class FeeSetting(models.Model):
   # Relations
   file = fields.Many2one('sccc.file', string='File #', required=True)
   provider = fields.Many2one('sccc.provider', string='Provider')
+
+  @api.depends('file', 'added_date') 
+  def _compute_fields_combination(self):
+    for form in self:
+      form.combination = str(form.file.file_number) + ' - ' + str(form.file.name) + ' Fee Adjustment ' + str(form.added_date)
