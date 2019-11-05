@@ -61,7 +61,7 @@
                    <form string="Individual Assessment Form">
                       <sheet>
                         <group>
-                          <!-- <field name="client" widget="selection"/> -->
+                          <field name="combination"/>
                           <field name="file" widget="selection"/>
                         </group>
                         <notebook>

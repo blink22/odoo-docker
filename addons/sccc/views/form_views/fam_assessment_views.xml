@@ -39,6 +39,7 @@
                    <form string="Family Assessment Form">
                        <sheet>
                         <group>
+                          <field name="combination"/>
                           <field name="file" widget="selection"/>
                           <notebook>
                             <page string="Family Assessment">

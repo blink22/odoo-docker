@@ -29,6 +29,7 @@
                    <form string="Progress Notes Form">
                        <sheet>
                         <group>
+                            <field name="combination"/>
                             <field name="file" widget="selection"/>
                             <field name="provider" widget="selection"/>
                             <field name="date"/>
