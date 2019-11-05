@@ -4,7 +4,7 @@ class FeeAdjustment(models.Model):
   _name = 'sccc.fee_adjustment'
   _description = 'Fee Adjustments'
 
-  name = fields.Char('Name')
+  name = fields.Char('Form Name')
   upload_fee = fields.Binary('Upload Fee Form')
   added_date = fields.Date('Date added to system')
   today_date = fields.Date('Today\'s date', readonly=True)

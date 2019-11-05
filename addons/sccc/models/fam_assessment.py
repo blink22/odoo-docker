@@ -6,10 +6,10 @@ class FamAssessment(models.Model):
   _name = 'sccc.fam_assessment'
   _description = 'Family Assessments'
   _rec_name = 'combination'
-  combination = fields.Char(string='Name', compute='_compute_fields_combination')
+  combination = fields.Char(string='Form Name', compute='_compute_fields_combination', store=True)
 
   intake = fields.Binary('Upload Intake Form')
-  date = fields.Date('Intake Date')
+  date = fields.Date('Intake Date', required=True)
   therapy_type = fields.Selection([('Family', 'Family'), ('Couple', 'Couple'), ('Child','Child')], 'Therapy Type')
   language_needs = fields.Text('Does family/couple have any language needs?')
   
@@ -32,12 +32,12 @@ class FamAssessment(models.Model):
   created_on = fields.Datetime("Date")
 
   # Relations
-  file = fields.One2many('sccc.file', 'fam_assessment', string='File')
+  file = fields.Many2one('sccc.file', string='File', required=True)
   clients = fields.Many2many('sccc.client', 'fam_assessment_clients_rel', string='Family/Couple members received individual counseling?')
   provider = fields.Many2one('sccc.provider', string='Intake Provider')
   # assigned_to = fields.Many2many('sccc.provider', string='If so, who were they assigned to?')
 
   @api.depends('file', 'date') 
   def _compute_fields_combination(self):
-    for fam in self:
-      fam.combination = fam.combination + ' Family Assessment ' + fam.date
+    for form in self:
+      form.combination = form.file.file_number + ' - ' + form.file.name + ' Family Assessment ' + form.date
