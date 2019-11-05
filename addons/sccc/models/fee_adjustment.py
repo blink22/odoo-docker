@@ -8,7 +8,7 @@ class FeeAdjustment(models.Model):
 
   upload_fee = fields.Binary('Upload Fee Form')
   added_date = fields.Date('Date added to system', required=True)
-  today_date = fields.Date('Today\'s date', readonly=True)
+  today_date = fields.Date('Today\'s date')
   currency = fields.Char('Currency')
   current_fee = fields.Float('Current Fee')
   requested_fee = fields.Float('Requested Fee')
@@ -28,9 +28,9 @@ class FeeAdjustment(models.Model):
 
   # Relations
   file = fields.Many2one('sccc.file', string='File #', required=True)
-  provider = fields.Many2one('sccc.provider', string='provider')
+  provider = fields.Many2one('sccc.provider', string='Provider')
 
-  @api.depends('file', 'added_date') 
+  @api.depends('file') 
   def _compute_fields_combination(self):
     for form in self:
-      form.combination = str(form.file.file_number) + ' - ' + str(form.file.name) + ' Fee Adjustment ' + str(form.added_date)
+      form.combination = str(form.file.file_number) + ' - ' + str(form.file.name) + ' Fee Adjustment'
