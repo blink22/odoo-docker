@@ -70,7 +70,7 @@
                               <field name="email"/>
                               <field name="cell_phone"/>
                               <field name="other"/>
-                              <field name="identify_center" widget="radio" options="{'horizontal': true}" class="radio-toolbar"/>
+                              <field name="identify_center" widget="radio" options="{'horizontal': true}"/>
                               <field name="voicemail" widget="radio" options="{'horizontal': true}"/>
 
                               <!-- <separator string="Emergency Contact"/> -->
