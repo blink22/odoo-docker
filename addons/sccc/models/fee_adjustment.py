@@ -23,7 +23,7 @@ class FeeAdjustment(models.Model):
   other_income = fields.Float('Any other monthly after-tax income')
   total_income = fields.Float('Total after-tax income')
   paystub = fields.Binary('Paystub, Tax Return, W-2 Upload')
-  board_approval = fields.Selection([('true', 'True'), ('false', 'False')], 'Board Approval')
+  board_approval = fields.Selection([('yes', 'Yes'), ('no', 'No')], 'Board Approval')
   created_on = fields.Datetime("Date")
 
   # Relations
