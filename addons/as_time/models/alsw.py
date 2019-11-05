@@ -17,10 +17,10 @@ class Time(models.Field):
 
     @staticmethod
     def to_string(value):
-        time_format = "%m/%d/%y %I:%M %p"
+        time_format = "%m/%d/%Y %I:%M %p"
         return value.strftime(time_format) if value else False
 
     @staticmethod
     def to_time(value):
-        time_format = "%m/%d/%y %I:%M %p"
+        time_format = "%m/%d/%Y %I:%M %p"
         return datetime.strptime(value, time_format).time() if value else False
