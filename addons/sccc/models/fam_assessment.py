@@ -19,14 +19,14 @@ class FamAssessment(models.Model):
   # Is this right?
   mandated_attachments = fields.Binary('If Mandated, attach documents here')
   #
-  bringing_reason = fields.Text('What is your sense of what is bringing this couple/family?')
+  bringing_reason = fields.Text('What is your sense of what is bringing this couple/family in?')
   concerns = fields.Text('Please document your concerns')
   referral = fields.Text('Any other referrals made to this couple/family?')
   able_assign = fields.Selection([('yes', 'Yes'), ('no', 'No')], 'Were you able to assign this couple/family?')
   # Is this right?
   
   #
-  appointment_date = fields.Date('Date/time of appointment')
+  appointment_date = fields.Datetime('Date/time of appointment')
   fee = fields.Float('Fee')
   additional_notes = fields.Text('Additional notes')
   created_on = fields.Datetime("Date")
