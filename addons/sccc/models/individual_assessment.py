@@ -3,7 +3,7 @@ class IndividualAssessment(models.Model):
   _name = 'sccc.individual_assessment'
   _description = 'Individual Assessments'
   _rec_name = 'combination'
-  combination = fields.Char(string='Form Name', compute='_compute_fields_combination')
+  combination = fields.Char(string='Form Name', compute='_compute_fields_combination', store=True)
 
   intake = fields.Binary('Upload Intake Form')
   date = fields.Date('Date', required=True)

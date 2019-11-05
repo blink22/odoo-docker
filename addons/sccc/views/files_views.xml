@@ -106,9 +106,9 @@
                                 </page>
                                 <page string="Forms">
                                   <group>
-                                    <field name="individual_assessment" widget="selection"/>
-                                    <field name="fam_assessment" widget="selection"/>
-                                    <field name="fee_setting" widget="selection"/>
+                                    <field name="individual_assessment" widget="many2many_tags"/>
+                                    <field name="fam_assessment" widget="many2many_tags"/>
+                                    <field name="fee_setting" widget="many2many_tags"/>
                                     <field name="fee_adjustment" widget="many2many_tags"/>
                                   </group>
                                 </page>

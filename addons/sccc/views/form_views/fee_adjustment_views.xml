@@ -7,7 +7,7 @@
               <field name="arch" type="xml">
                   <tree create="true">
                       <!-- <field name="upload_fee"/> -->
-                      <field name="name"/>
+                      <field name="combination"/>
                       <field name="added_date"/>
                       <field name="today_date"/>
                       <field name="currency"/>
@@ -24,7 +24,7 @@
                       <field name="total_income"/>
                       <!-- <field name="paystub"/> -->
                       <!-- <field name="board_approval"/> -->
-                      <field name="files" widget="many2many_tags"/>
+                      <field name="file"/>
                       <field name="provider"/>
                       <field name="create_date"/>
                   </tree>
@@ -39,27 +39,27 @@
                    <form string="Fee Adjustment Form">
                        <sheet>
                         <group>
-                          <field name="name"/>
-                          <field name="files" widget="many2many_tags"/>
+                          <field name="combination"/>
+                          <field name="file" widget="selection"/>
                           <field widget="binary" height = "64" name="upload_fee" filename="upload_fee_namex" />
                           <field name="provider" widget="selection"/>
                           <field name="added_date"/>
                           <field name="today_date"/>
-                          <field name="currency" widget="monetary" options="{'currency_field': 'currency_id'}"/>
-                          <field name="current_fee" widget="monetary" options="{'currency_field': 'currency_id'}"/>
-                          <field name="requested_fee" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+                          <field name="currency"/>
+                          <field name="current_fee"/>
+                          <field name="requested_fee"/>
                           <field name="request_reason"/>
 
                           <separator string="Income Information"/>                          
                           <field name="people_inhouse"/>
                           <field name="ages"/>
-                          <field name="monthly_gross" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+                          <field name="monthly_gross"/>
                           <field name="income_source"/>
-                          <field name="monthly_net" widget="monetary" options="{'currency_field': 'currency_id'}"/>
-                          <field name="partner_monthly_net" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+                          <field name="monthly_net"/>
+                          <field name="partner_monthly_net"/>
                           <field name="net_source"/>
-                          <field name="other_income" widget="monetary" options="{'currency_field': 'currency_id'}"/>
-                          <field name="total_income" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+                          <field name="other_income"/>
+                          <field name="total_income"/>
                           <field widget="binary" height = "64" name="paystub" filename="paystub_namex" />
                           <field name="board_approval"/>
                         </group>

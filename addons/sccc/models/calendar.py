@@ -9,7 +9,7 @@ class Calendar(models.Model):
     _order = "start_date asc"
 
     _rec_name = 'combination'
-    combination = fields.Char('Details', compute='_compute_fields_combination')
+    combination = fields.Char('Details', compute='_compute_fields_combination', store=True)
 
     name = fields.Char('Meeting Title', required=True)
     start_date = fields.Datetime('Start At', required=True)
