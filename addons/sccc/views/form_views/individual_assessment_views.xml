@@ -104,7 +104,6 @@
                           </page>
                           <page string="Suicide Assessment">
                             <group>
-                              <field name="actively_suicidal" widget="radio" options="{'horizontal': true}"/>
                               <field name="specific_means"/>
                               <field name="means_access"/>
                               <field name="plan_suicide"/>
