@@ -40,4 +40,4 @@ class FamAssessment(models.Model):
   @api.depends('file', 'date') 
   def _compute_fields_combination(self):
     for form in self:
-      form.combination = form.file.file_number + ' - ' + form.file.name + ' Family Assessment ' + form.date
+      form.combination = str(form.file.file_number) + ' - ' + str(form.file.name) + ' Family Assessment ' + str(form.date)
