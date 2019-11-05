@@ -9,7 +9,6 @@ class FeeAdjustment(models.Model):
   upload_fee = fields.Binary('Upload Fee Form')
   added_date = fields.Date('Date added to system', required=True)
   today_date = fields.Date('Today\'s date', readonly=True)
-  currency_id = fields.Integer(compute='_get_currency', store=True)
   currency = fields.Char('Currency')
   current_fee = fields.Float('Current Fee')
   requested_fee = fields.Float('Requested Fee')
