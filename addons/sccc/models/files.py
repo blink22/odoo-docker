@@ -12,6 +12,13 @@ class Files(models.Model):
     out_reach = fields.Boolean('Outreach?')
     preferred_gender = fields.Selection([ ('m', 'Male'), ('f', 'Female') ], 'Preferred Gender')
     preferred_age = fields.Selection([ ('Below', 'Below'), ('Similar', 'Similar'), ('Above', 'Above')], 'Preferred Age')
+
+    if_group = fields.Selection([ ('1', 'Pesonal & Relational Support'), 
+                                  ('2', 'Healing From Betrayal'), 
+                                  ('3', 'Community Mindfulness & Compassion'),
+                                  ('4', 'Best Practice Parenting'),
+                                  ('5', 'Rage Resolution & Stress Navigation'),
+                                  ('6', 'Teen')], 'If Group:')
     
     # Appointment types
     type_1 = fields.Boolean('Individual Counseling')
@@ -28,6 +35,7 @@ class Files(models.Model):
 
     on_waitlist = fields.Boolean('Waitlist?')
 
+    active_client = fields.Boolean('Active Client?')
     last_true_attendance = fields.Integer('True Attend')
     attended_session = fields.Boolean('Attended Session?')
     late = fields.Boolean('Late (NC)')

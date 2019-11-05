@@ -69,6 +69,8 @@
                                           <field name="type_7"/>
                                           <field name="type_8"/>
                                           <field name="type_9"/>
+
+                                          <field name="if_group"/>
                                         <!-- </group>
                                       </td>
                                       <td >
@@ -77,6 +79,8 @@
                                           <field name="out_reach"/>
                                           <field name="on_waitlist"/>
                                           <field name="hold"/>
+                                          <field name="attended_session"/>
+                                          <field name="active_client"/>
                                         <!-- </group> -->
                                       <!-- </td>
                                     </tr>
