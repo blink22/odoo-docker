@@ -2,10 +2,11 @@ from odoo import models, fields, api
 class IndividualAssessment(models.Model):
   _name = 'sccc.individual_assessment'
   _description = 'Individual Assessments'
+  _rec_name = 'combination'
+  combination = fields.Char(string='Form Name', compute='_compute_fields_combination', store=True)
 
-  name = fields.Char('Name')
   intake = fields.Binary('Upload Intake Form')
-  date = fields.Date('Date & Time')
+  date = fields.Date('Date', required=True)
   goals = fields.Text('Self-Described Goals')
   ethnicity = fields.Selection([('American Indian/Native American/Alaskan Native', 'American Indian/Native American/Alaskan Native'),
                                 ('Asian', 'Asian'), ('Black', 'Black'), ('Latina/o/x', 'Latina/o/x'),
@@ -52,6 +53,11 @@ class IndividualAssessment(models.Model):
   additional_notes = fields.Text('Any Additional Notes')
 
   # Relations
-  file = fields.One2many('sccc.file', 'individual_assessment', string='File', required=True)
+  file = fields.Many2one('sccc.file', string='File', required=True)
   provider = fields.Many2one('sccc.provider', string='Provider')
   client = fields.Many2one('sccc.client', string='Client')
+
+  @api.depends('file', 'date') 
+  def _compute_fields_combination(self):
+    for form in self:
+      form.combination = str(form.file.file_number) + ' - ' + str(form.file.name) + ' Individual Assessment ' + str(form.date)

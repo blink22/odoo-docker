@@ -6,16 +6,16 @@
               <field name="model">sccc.progress_notes</field>
               <field name="arch" type="xml">
                   <tree create="true">
-                      <field name="name"/>
-                      <field name="created_on"/>
-                      <field name="date"/>
-                      <field name="synopsis"/>
-                      <field name="goals"/>
-                      <field name="documentation"/>
-                      <field name="follow_up"/>
-                      <field name="next_session"/>
-                      <field name="files" widget="many2many_tags"/>
-                      <field name="provider"/>
+                      <field name="combination"/>
+                      <!-- <field name="created_on"/> -->
+                      <!-- <field name="date"/> -->
+                      <!-- <field name="synopsis"/> -->
+                      <!-- <field name="goals"/> -->
+                      <!-- <field name="documentation"/> -->
+                      <!-- <field name="follow_up"/> -->
+                      <!-- <field name="next_session"/> -->
+                      <field name="file" widget="selection"/>
+                      <!-- <field name="provider"/> -->
                       <field name="create_date"/>
                   </tree>
               </field>
@@ -29,7 +29,8 @@
                    <form string="Progress Notes Form">
                        <sheet>
                         <group>
-                            <field name="files" widget="many2many_tags"/>
+                            <field name="combination"/>
+                            <field name="file" widget="selection"/>
                             <field name="provider" widget="selection"/>
                             <field name="date"/>
                             <field name="synopsis"/>

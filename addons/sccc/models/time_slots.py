@@ -4,7 +4,7 @@ class TimeSlots(models.Model):
   _name = 'sccc.time_slots'
   _description = 'Time Slots'
   _rec_name = 'combination'
-  combination = fields.Char(string='Availability', compute='_compute_fields_combination')
+  combination = fields.Char(string='Availability', compute='_compute_fields_combination', store=True)
   
   from_time = alsw.Time('From')
   to_time = alsw.Time('To')

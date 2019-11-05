@@ -7,8 +7,8 @@
               <field name="arch" type="xml">
                   <tree create="true">
                       <!-- <field name="intake"/> -->
+                      <field name="combination"/>
                       <field name="file"/>
-                      <field name="name"/>
                       <!-- <field name="date"/>
                       <field name="goals"/>
                       <field name="relationship"/>
@@ -47,8 +47,8 @@
                       <!-- <field name="provider"/> -->
                       <!-- <field name="ethnicity"/> -->
                       <!-- <field name="client"/> -->
-                      <field name="write_date" string="Modified Date"/>
                       <field name="create_date"/>
+                      <field name="write_date" string="Modified Date"/>
                   </tree>
               </field>
     </record>
@@ -61,8 +61,7 @@
                    <form string="Individual Assessment Form">
                       <sheet>
                         <group>
-                          <!-- <field name="client" widget="selection"/> -->
-                          <field name="name"/>
+                          <field name="combination"/>
                           <field name="file" widget="selection"/>
                         </group>
                         <notebook>

@@ -7,27 +7,29 @@
               <field name="arch" type="xml">
                   <tree create="true">
                       <!-- <field name="form_upload"/> -->
-                      <field name="added_date"/>
-                      <field name="today_date"/>
-                      <field name="fee" options="{'currency_field': 'currency_id'}"/>
-                      <field name="refered_to_fee"/>
-                      <field name="currency" options="{'currency_field': 'currency_id'}"/>
+                      <field name="combination"/>
+                      <field name="file"/>
+                      <!-- <field name="added_date"/> -->
+                      <!-- <field name="today_date"/> -->
+                      <field name="fee"/>
+                      <!-- <field name="refered_to_fee"/> -->
+                      <!-- <field name="currency"/> -->
                       <!-- <field name="people_in"/> -->
-                      <field name="client_employed"/>
-                      <!-- <field name="monthly_gross" options="{'currency_field': 'currency_id'}"/> -->
+                      <!-- <field name="client_employed"/> -->
+                      <!-- <field name="monthly_gross"/> -->
                       <!-- <field name="source_of_salary"/> -->
                       <!-- <field name="public_assistance"/> -->
-                      <!-- <field name="monthly_income" options="{'currency_field': 'currency_id'}"/> -->
+                      <!-- <field name="monthly_income"/> -->
                       <!-- <field name="source_of_pa_salary"/> -->
                       <!-- <field name="pa_source"/> -->
                       <!-- <field name="source_of_client_income"/> -->
                       <!-- <field name="source_of_client"/> -->
                       <!-- <field name="client_source"/> -->
                       <!-- <field name="has_members"/> -->
-                      <!-- <field name="gross_monthly" options="{'currency_field': 'currency_id'}"/> -->
-                      <field name="total_gross" options="{'currency_field': 'currency_id'}"/>
-                      <field name="files"/>
-                      <field name="provider"/>
+                      <!-- <field name="gross_monthly"/> -->
+                      <!-- <field name="total_gross"/> -->
+                      
+                      <!-- <field name="provider"/> -->
                       <field name="create_date"/>
                   </tree>
               </field>
@@ -41,30 +43,30 @@
                    <form string="Fee Setting Form">
                        <sheet>
                         <group>
+                            <field name="combination"/>
                             <field widget="binary" height = "64" name="form_upload" filename="form_namex" />
-                            <field name="files" widget="selection"/>
+                            <field name="file" widget="selection"/>
                             <field name="provider" widget="selection"/>
-                            <field name="added_date"/>
                             <field name="today_date"/>
-                            <field name="fee" widget="monetary" options="{'currency_field': 'currency_id'}"/>
-                            <field name="refered_to_fee"/>
-                            <field name="currency" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+                            <field name="fee"/>
+                            <field name="refered_to_fee"  widget="radio" options="{'horizontal': true}"/>
+                            <field name="currency"/>
 
                             <separator string="Income Informations"/>
                             <field name="people_in"/>
-                            <field name="client_employed"/>
-                            <field name="monthly_gross" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+                            <field name="client_employed"  widget="radio" options="{'horizontal': true}"/>
+                            <field name="monthly_gross"/>
                             <field name="source_of_salary"/>
-                            <field name="public_assistance"/>
-                            <field name="monthly_income" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+                            <field name="public_assistance"  widget="radio" options="{'horizontal': true}"/>
+                            <field name="monthly_income"/>
                             <field name="source_of_pa_salary"/>
                             <field name="pa_source"/>
-                            <field name="source_of_client_income"/>
+                            <field name="source_of_client_income"  widget="radio" options="{'horizontal': true}"/>
                             <field name="source_of_client"/>
                             <field name="client_source"/>
-                            <field name="has_members"/>
-                            <field name="gross_monthly" widget="monetary" options="{'currency_field': 'currency_id'}"/>
-                            <field name="total_gross" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+                            <field name="has_members"  widget="radio" options="{'horizontal': true}"/>
+                            <field name="gross_monthly"/>
+                            <field name="total_gross"/>
                         </group>
                        </sheet>
                 </form>
@@ -77,7 +79,7 @@
       <field name="model">sccc.fee_setting</field>
       <field name="arch" type="xml">
         <search>
-          <field name="added_date"/>
+          <field name="create_date"/>
         </search>
       </field>
     </record>

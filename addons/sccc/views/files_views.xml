@@ -69,6 +69,8 @@
                                           <field name="type_7"/>
                                           <field name="type_8"/>
                                           <field name="type_9"/>
+
+                                          <field name="if_group"/>
                                         <!-- </group>
                                       </td>
                                       <td >
@@ -77,6 +79,8 @@
                                           <field name="out_reach"/>
                                           <field name="on_waitlist"/>
                                           <field name="hold"/>
+                                          <field name="attended_session"/>
+                                          <field name="active_client"/>
                                         <!-- </group> -->
                                       <!-- </td>
                                     </tr>
@@ -102,9 +106,9 @@
                                 </page>
                                 <page string="Forms">
                                   <group>
-                                    <field name="individual_assessment" widget="selection"/>
-                                    <field name="fam_assessment" widget="selection"/>
-                                    <field name="fee_setting" widget="selection"/>
+                                    <field name="individual_assessment" widget="many2many_tags"/>
+                                    <field name="fam_assessment" widget="many2many_tags"/>
+                                    <field name="fee_setting" widget="many2many_tags"/>
                                     <field name="fee_adjustment" widget="many2many_tags"/>
                                   </group>
                                 </page>
