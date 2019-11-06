@@ -55,15 +55,14 @@ class Calendar(models.Model):
         for meeting in self:
             meeting.combination = meeting.name
             if meeting.provider:
-                meeting.combination += '\n'
-                meeting.combination += meeting.provider.name
+                # meeting.combination += '\n'
+                meeting.combination += '[ ' + meeting.provider.name + ' ]'
             for file in meeting.files:
-                meeting.combination += '\n'
-                meeting.combination += file.file_number + ' - ' + file.name
+                # meeting.combination += '\n'
+                meeting.combination += '[ ' + file.file_number + ' - ' + file.name + ' ]'
 
     @api.model
     def create(self, form_object):
-        # self.validate_object(form_object)
         record = super(Calendar, self).create(form_object)
         self.check_repeat(form_object, record.until_count)
         return record
@@ -105,35 +104,6 @@ class Calendar(models.Model):
             self.get_moves()
             self.get_payments()
             
-            
-    # def validate_object(self, form_object):
-    #     records = super(Calendar, self).search([['room', '=', form_object['room']]])
-    #     for record in records:
-    #         print('------------------------------')
-    #         print('record koko- ', str(record.start_date))
-    #         print('record - ', str(record.end_date))
-    #         print('record - ', record.room.id)
-    #         print('form_object - ', str(form_object['start_date']))
-    #         print('form_object - ', str(form_object['end_date']))
-    #         print('form_object - ', form_object['room'])
-    #         if form_object['room'] == record.room:
-    #             record_start_end_delta = relativedelta(record.start_date , record.end_date)
-    #             print('start_end_delta', start_end_delta)
-    #             form_start_to_start_delta
-    #             form_start_to_start_delta
-    #             form_start_to_start_delta
-    #             if str(form_object['start_date']) <= str(record.end_date):
-    #                 print('error')
-    #             if str(form_object['start_date']) >= str(record.start_date) and str(form_object['start_date']) <= str(record.end_date):
-    #                 print('error')
-    #     records = super(Calendar, self).search([['room', '=', form_object['room'], 
-    #                                             ['start_date', '>=', form_object['start_date'], 
-    #                                             ['end_date', '>=', form_object['start_date']]]])
-    #     count = len(records)
-    #     print('count', count)
-    #     if count > 0:
-    #         raise exceptions.ValidationError('-Already has a meeting assigned ! \n-You may choose a different Room or Time.')
-
     def check_repeat(self, form_object, limit):
         if form_object['recurrent']:
             if limit > 0 and form_object['start_date'] and form_object['end_date']:

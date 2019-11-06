@@ -37,6 +37,17 @@ body {
     white-space: pre-wrap;
 }
 
+.fc-time-grid .fc-slats td {
+    height: 3.5em;
+    border-bottom: 0;
+}
+.o_calendar_view .fc-event .fc-content {
+    white-space: normal;
+    margin: 0px 0px;
+    font-size: 1.1em;
+    font-weight: 500;
+}
+
 .o_radio_input:checked + label {
     border: $brand-secondary;
     color: $brand-secondary;
