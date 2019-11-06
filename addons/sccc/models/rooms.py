@@ -11,3 +11,13 @@ class Rooms(models.Model):
     # Relations
     location = fields.Many2one('sccc.location', string='Location')
     meeting = fields.One2many('sccc.calendar', 'room', string='Meeting')
+
+    @api.model
+    def get_rooms(self):
+        recs = self.search([])
+        result = {}
+        index = 1
+        for rec in recs:
+            result[index] = rec.name
+            index += 1
+        return result

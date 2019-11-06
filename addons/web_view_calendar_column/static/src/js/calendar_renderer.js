@@ -5,6 +5,7 @@ odoo.define('web_view_calendar_column.CalendarRenderer', function (require) {
     var core = require('web.core');
     var qweb = core.qweb;
     var _t = core._t;
+    var rpc = require('web.rpc');
     CalendarRenderer.include({
         _initCalendar: function () {
             var self = this;
@@ -82,15 +83,20 @@ odoo.define('web_view_calendar_column.CalendarRenderer', function (require) {
         _renderEvents: function () {
             var self = this;
             this.$calendar.fullCalendar('removeEvents');
-            if (this.state.columns)
-                 _.each(Object.entries(this.state.columns), function (column) {
-                    self.$calendar.fullCalendar('addResource', {
-                      id: column[0],
-                      title: column[1]
+            if (this.state.columns) {
+                rpc.query({
+                    model: 'sccc.room',
+                    method: 'get_rooms'
+                }).then(function(result) {
+                    _.each(Object.entries(result), function (column) {
+                        self.$calendar.fullCalendar('addResource', {
+                          id: column[0],
+                          title: column[1]
+                        });
                     });
                 });
-            this.$calendar.fullCalendar(
-                'addEventSource', this.state.data);
+            }
+            this.$calendar.fullCalendar('addEventSource', this.state.data);
         },
     });
 });
