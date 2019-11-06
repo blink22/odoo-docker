@@ -61,7 +61,7 @@ class Providers(models.Model):
         if self.first_name:
             first_name = str(self.first_name)
 
-        self.name = last_name + ", " + first_name
+        self.name = first_name + ", " + last_name
 
     @api.depends('date_of_birth') 
     def _calculate_age(self):

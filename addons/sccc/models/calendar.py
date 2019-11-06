@@ -56,10 +56,10 @@ class Calendar(models.Model):
             meeting.combination = meeting.name
             if meeting.provider:
                 # meeting.combination += '\n'
-                meeting.combination += '[ ' + meeting.provider.name + ' ]'
+                meeting.combination += ' ( ' + meeting.provider.name + ' )'
             for file in meeting.files:
                 # meeting.combination += '\n'
-                meeting.combination += '[ ' + file.file_number + ' - ' + file.name + ' ]'
+                meeting.combination += '( ' + file.file_number + ' - ' + file.name + ' )'
 
     @api.model
     def create(self, form_object):
