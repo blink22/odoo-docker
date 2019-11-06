@@ -97,7 +97,6 @@
           <field name="provider"/>
           <field name="start_date"/>
           <field name="end_date"/>
-          <field name="status"/>
           <field name="room"/>
         </search>
       </field>
@@ -108,10 +107,11 @@
             <field name="name">sccc calendar</field>
             <field name="model">sccc.calendar</field>
             <field name="arch" type="xml">
-                <calendar string="Calendar" date_start="start_date" date_stop="end_date" color="room" mode="day" event_open_popup="True">
+                <calendar string="Calendar" date_start="start_date" date_stop="end_date" color="location" mode="day" event_open_popup="True">
                     <field name="user_ids" write_model="res.users" write_field="name"/>
                     <field name="provider"/>
                     <field name="files"/>
+                    <field name="location"/>
                     <field name="room"/>
                 </calendar>
             </field>

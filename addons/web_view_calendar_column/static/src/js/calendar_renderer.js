@@ -5,6 +5,7 @@ odoo.define('web_view_calendar_column.CalendarRenderer', function (require) {
     var core = require('web.core');
     var qweb = core.qweb;
     var _t = core._t;
+    var rpc = require('web.rpc');
     CalendarRenderer.include({
         _initCalendar: function () {
             var self = this;
@@ -55,38 +56,42 @@ odoo.define('web_view_calendar_column.CalendarRenderer', function (require) {
                 },
                 // Dirty hack to ensure a correct first render
                 eventAfterAllRender: function () {
-                    $(window).trigger('resize');
+                    // $(window).trigger('resize');
+                    var htmlColleaction = document.getElementsByClassName('o_calendar_button_today btn btn-primary');
+                    if(htmlColleaction.length > 0) {
+                        htmlColleaction[0].click();
+                    }
                 },
                 viewRender: function (view) {
                     // compute mode from view.name which is either 'month', 'agendaWeek' or 'agendaDay'
                     var mode = view.name === 'month' ? 'month' : (view.name === 'agendaWeek' ? 'week' : 'day');
                     // compute title: in week mode, display the week number
                     var title = mode === 'week' ? view.intervalStart.week() : view.title;
-                    self.trigger_up('viewUpdated', {
-                        mode: mode,
-                        title: title,
-                    });
                 },
                 //eventResourceEditable: true, // except for between resources
                 height: 'parent',
                 unselectAuto: false,
                 locale: locale, // reset locale when fullcalendar has already been instanciated before now
             });
-
             this.$calendar.fullCalendar(fc_options);
         },
         _renderEvents: function () {
             var self = this;
             this.$calendar.fullCalendar('removeEvents');
-            if (this.state.columns)
-                 _.each(Object.entries(this.state.columns), function (column) {
-                    self.$calendar.fullCalendar('addResource', {
-                      id: column[0],
-                      title: column[1]
+            if (this.state.columns) {
+                rpc.query({
+                    model: 'sccc.room',
+                    method: 'get_rooms'
+                }).then(function(result) {
+                    _.each(Object.entries(result), function (column) {
+                        self.$calendar.fullCalendar('addResource', {
+                          id: column[0],
+                          title: column[1]
+                        });
                     });
                 });
-            this.$calendar.fullCalendar(
-                'addEventSource', this.state.data);
+            }
+            this.$calendar.fullCalendar('addEventSource', this.state.data);
         },
     });
 });

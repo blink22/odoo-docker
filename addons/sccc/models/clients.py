@@ -24,7 +24,7 @@ class Clients(models.Model):
   
   date_of_birth = fields.Date('Date of Birth')
   age = fields.Integer('Age', compute='_calculate_age', store=True, readonly=True)
-  email = fields.Char('Email')
+  email = fields.Char('Email', required=True)
   cell_phone = fields.Char('Cell #')
 
   found_us = fields.Selection([('Friend', 'Friend'), ('Advertisement', 'Advertisement'),

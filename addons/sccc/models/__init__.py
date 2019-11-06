@@ -3,6 +3,7 @@
 from . import models
 from . import account_move
 from . import account_payment
+from . import user
 from . import calendar
 from . import clients
 from . import providers

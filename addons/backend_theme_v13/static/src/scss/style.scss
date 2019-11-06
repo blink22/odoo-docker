@@ -33,8 +33,19 @@ body {
     font-family: "Roboto";
 }
 
-.o_event_title {
-    white-space: pre-wrap;
+tr[data-time] {
+    height: 50px;
+}
+
+.fc-time-grid .fc-slats td {
+    height: 3.5em;
+    border-bottom: 0;
+}
+.o_calendar_view .fc-event .fc-content {
+    white-space: normal;
+    margin: 0px 0px;
+    font-size: 0.9em;
+    font-weight: 600;
 }
 
 .o_radio_input:checked + label {

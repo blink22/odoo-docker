@@ -2,7 +2,6 @@ odoo.define('web_view_calendar_column.CalendarModel', function (require) {
     "use strict";
 
     var CalendarModel = require('web.CalendarModel');
-
     CalendarModel.include({
         load: function (params) {
             this.fieldColumn = params.fieldColumn;
