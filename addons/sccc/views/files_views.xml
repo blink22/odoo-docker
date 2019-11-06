@@ -100,7 +100,7 @@
                                 </page>
                                 <page string="Financial Info">
                                   <group>
-                                    <field name="account_moves"/>
+                                    <field name="account_moves" context="{'default_type': 'out_invoice'}" domain="[('type', '=', 'out_invoice')]"/>
                                     <field name="payments"/>
                                   </group>
                                 </page>
