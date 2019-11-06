@@ -16,8 +16,6 @@ class Rooms(models.Model):
     def get_rooms(self):
         recs = self.search([])
         result = {}
-        index = 1
         for rec in recs:
-            result[index] = rec.name
-            index += 1
+            result[rec.id] = rec.name
         return result

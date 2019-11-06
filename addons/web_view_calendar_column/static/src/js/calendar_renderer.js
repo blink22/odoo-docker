@@ -67,17 +67,12 @@ odoo.define('web_view_calendar_column.CalendarRenderer', function (require) {
                     var mode = view.name === 'month' ? 'month' : (view.name === 'agendaWeek' ? 'week' : 'day');
                     // compute title: in week mode, display the week number
                     var title = mode === 'week' ? view.intervalStart.week() : view.title;
-                    self.trigger_up('viewUpdated', {
-                        mode: mode,
-                        title: title,
-                    });
                 },
                 //eventResourceEditable: true, // except for between resources
                 height: 'parent',
                 unselectAuto: false,
                 locale: locale, // reset locale when fullcalendar has already been instanciated before now
             });
-
             this.$calendar.fullCalendar(fc_options);
         },
         _renderEvents: function () {
