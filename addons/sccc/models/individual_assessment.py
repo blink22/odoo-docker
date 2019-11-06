@@ -30,7 +30,7 @@ class IndividualAssessment(models.Model):
   psychiatric = fields.Selection([('yes', 'Yes'), ('no', 'No')], 'Any Psychiatric hospitalizations?')
   psychiatric_reason = fields.Text('When? How long? Why?')
   client_meds = fields.Selection([('yes', 'Yes'), ('no', 'No')], 'Is client taking medications?')
-  client_meds_reason = fields.Text('What? How much? Reason?')
+  client_meds_reason = fields.Text('What? How much? Why? (please describe)')
   client_attend_session = fields.Selection([('yes', 'Yes'), ('no', 'No')], 'Is client mandated to attend counseling?')
   anger_management = fields.Selection([('yes', 'Yes'), ('no', 'No')], 'Is client mandated to attend anger management?')
   anger_management_yes = fields.Text('If either Yes, please describe')
@@ -39,6 +39,8 @@ class IndividualAssessment(models.Model):
   homocidal_client = fields.Selection([('yes', 'Yes'), ('no', 'No')], 'Does client self report as HOMICIDAL?')
   person_threatened = fields.Char('If Yes, try to get the name of the person threatened')
   ind_suicidal_thoughts = fields.Selection([('yes', 'Yes'), ('no', 'No')], 'Indication of Suicidal thoughts')
+  ind_actively_suicidal_thoughts = fields.Selection([('yes', 'Yes'), ('no', 'No')], 'Indication of Actively Suicidal (wants to kill themselves)?')
+
   specific_means = fields.Text('Do they have specific means for Suicide? (explain)')
   means_access = fields.Text('Do they have access to those means? (If yes, explain)')
   plan_suicide = fields.Text('Do they have a plan for suicide? (explain)')
