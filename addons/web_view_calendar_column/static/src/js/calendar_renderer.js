@@ -55,7 +55,11 @@ odoo.define('web_view_calendar_column.CalendarRenderer', function (require) {
                 },
                 // Dirty hack to ensure a correct first render
                 eventAfterAllRender: function () {
-                    $(window).trigger('resize');
+                    // $(window).trigger('resize');
+                    var htmlColleaction = document.getElementsByClassName('o_calendar_button_today btn btn-primary');
+                    if(htmlColleaction.length > 0) {
+                        htmlColleaction[0].click();
+                    }
                 },
                 viewRender: function (view) {
                     // compute mode from view.name which is either 'month', 'agendaWeek' or 'agendaDay'
