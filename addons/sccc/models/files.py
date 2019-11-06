@@ -62,6 +62,7 @@ class Files(models.Model):
     clients = fields.Many2many('sccc.client', 'client_file_rel', string='Clients', required=True)
     account_moves = fields.Many2many('account.move', 'account_move_file_rel', string='Account Invoices')
     payments = fields.Many2many('account.payment', 'account_payment_file_rel', string='Payments')
+    user = fields.One2many('res.users', 'file', string='Customer Account')
 
     @api.onchange('attended_session')
     def handle_attendance1(self):
@@ -109,4 +110,6 @@ class Files(models.Model):
             i += 1
         
         form_object['name'] = name
+        user = self.env['res.users'].create({'name': name, 'email': clients[0].email, 'login': clients[0].email})
+        form_object['user'] = user
         return super(Files, self).create(form_object)
