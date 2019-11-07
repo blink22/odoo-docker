@@ -56,6 +56,7 @@ class Files(models.Model):
     individual_assessment = fields.One2many('sccc.individual_assessment', 'file', string='Individual Assessment Form')
     fam_assessment = fields.One2many('sccc.fam_assessment', 'file', string='FAM Assessment Form')
     fee_setting = fields.One2many('sccc.fee_setting', 'file', string='Fee Setting Form')
+    tapp_intake = fields.One2many('sccc.tapp_intake', 'file', string='TAPP Intake Form')
 
     availability = fields.Many2many('sccc.time_slots', 'time_slots_file_rel', string='Availability (Time Slots)')
     progress_notes = fields.Many2many('sccc.progress_notes', 'progress_notes_file_rel', string='Progress Notes')

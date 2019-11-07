@@ -41,6 +41,7 @@
         'views/form_views/fam_assessment_views.xml',
         'views/form_views/fee_adjustment_views.xml',
         'views/form_views/fee_setting_views.xml',
+        'views/form_views/tapp_intake_views.xml',
         'views/form_views/progress_notes_views.xml'
     ],
     'auto_install' : True,

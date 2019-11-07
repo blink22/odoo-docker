@@ -1,0 +1,225 @@
+<odoo>
+  <record model="ir.ui.view" id="tapp_intake_tree_view">
+    <field name="name">tapp_intake list tree</field>
+    <field name="model">sccc.tapp_intake</field>
+    <field name="arch" type="xml">
+        <tree create="true">
+            <field name="combination"/>
+            <field name="file"/>
+            <field name="create_date"/>
+            <field name="write_date" string="Modified Date"/>
+        </tree>
+    </field>
+  </record>
+  <record model="ir.ui.view" id="tapp_intake_form_view">
+    <field name="name">tapp intake form</field>
+    <field name="model">sccc.tapp_intake</field>
+    <field name="arch" type="xml">
+      <form string="TAPP Intake Form">
+        <sheet>
+          <group>
+            <field name="combination"/>
+            <field name="file" widget="selection"/>
+            <field name="client" widget="selection"/>
+            <field name="date"/>
+            <field name="is_retake"/>
+            <field name="interviewer"/>
+            <field name="control_number"/>
+            <field name="enter"/>
+            
+            <separator string="RELATIONSHIP STATUS"/>
+            <field name="marital_status"/>
+            <field name="number_of_children"/>
+            <field name="number_not"/>
+            <field name="partner_name"/>
+            <field name="relationship" widget="selection"/>
+            <field name="relationship_other"/>
+            <field name="partner_age"/>
+            <field name="relationship_years"/>
+            <field name="living_together" widget="radio" options="{'horizontal': true}"/>
+            <field name="partner_address"/>
+            <field name="address_years"/>
+            <field name="reconcile" widget="radio" options="{'horizontal': true}"/>
+            <field name="partner_home_phone"/>
+            <field name="partner_work_phone"/>
+            <field name="all_household_members"/>
+
+            <separator string="CURRENT CRIMINAL OFFENSE (THIS SECTION MUST BE FILLED OUT COMPLETELY WITH DCFS OR MINUTE ORDER)"/>
+            <field name="case_number"/>
+            <field name="current_charge"/>
+            <field name="incident_date"/>
+            <field name="incident_description"/>
+            <field name="arrest_date"/>
+            <field name="jail_days"/>
+            <field name="sentence_date"/>
+            <field name="court_date"/>
+            <field name="disposition" widget="selection"/>
+            <field name="disposition_other"/>
+            <field name="currently_on" widget="selection"/>
+            <field name="probation_years"/>
+            <field name="probation_end"/>
+            <field name="probation_conditions" widget="selection"/>
+            <field name="fine"/>
+            <field name="modified_order"/>
+            <field name="other_conditions"/>
+            <field name="probation_officer_name"/>
+            <field name="probation_officer_phone"/>
+            <field name="restraining_order" widget="radio" options="{'horizontal': true}"/>
+            <field name="restraining_order_yes"/>
+
+            <separator string="OTHER LAW ENFORCEMENT/CRIMINAL COURT INVOLVEMENT"/>
+            <field name="pending_criminal_charges"/>
+            <field name="police_called_home"/>
+            <field name="current_is_first" widget="radio" options="{'horizontal': true}"/>
+            <field name="violent_crimes_arrests"/>
+
+            <separator string="SUBSTANCE ABUSE"/>
+            <field name="alcohol_use" widget="radio" options="{'horizontal': true}"/>
+            <field name="substance_type"/>
+            <field name="how_consumed"/>
+            <field name="often_used"/>
+            <field name="last_time_used"/>
+            <field name="substance_type2"/>
+            <field name="how_consumed2"/>
+            <field name="often_used2"/>
+            <field name="last_time_used2"/>
+            <field name="substance_type3"/>
+            <field name="how_consumed3"/>
+            <field name="often_used3"/>
+            <field name="last_time_used3"/>
+
+            <field name="substance_abuser" widget="radio" options="{'horizontal': true}"/>
+            <field name="substance_dependent" widget="radio" options="{'horizontal': true}"/>
+            
+            <h4>Which alcohol or drug treatment or counseling programs or 12-Step programs or meetings you have attended</h4>
+            <field name="treatment_type1"/>
+            <field name="treatment_type2"/>
+            <field name="treatment_type3"/>
+            <field name="treatment_type4"/>
+            <field name="treatment_type5"/>
+            <field name="treatment_type6"/>
+            <field name="treatment_other"/>
+
+            <h4>Select all triggers that have provoked you to relapse in your substance abuse</h4>
+            <field name="provoked_type1"/>
+            <field name="provoked_type2"/>
+            <field name="provoked_type3"/>
+            <field name="provoked_type4"/>
+            <field name="provoked_type5"/>
+            <field name="provoked_type6"/>
+            <field name="provoked_type7"/>
+            <field name="provoked_type8"/>
+            <field name="provoked_other"/>
+
+            <h4>What you are doing now to maintain sobriety in your life?</h4>
+            <field name="sobriety_type1"/>
+            <field name="sobriety_type2"/>
+            <field name="sobriety_type3"/>
+            <field name="sobriety_type4"/>
+            <field name="sobriety_type5"/>
+            <field name="sobriety_type6"/>
+            <field name="sobriety_other"/>
+
+            <separator string="EMOTIONAL AND PHYSICAL HEALTH"/>
+            <field name="emotional_health" widget="selection"/>
+            <field name="attended_therapy" widget="radio" options="{'horizontal': true}"/>
+            <field name="describe_therapy_purpose"/>
+            <field name="hospitalized" widget="radio" options="{'horizontal': true}"/>
+            <field name="hospitalized_purpose"/>
+
+            <h4>What is you religious/spiritual practice?</h4>
+            <field name="religious_type1"/>
+            <field name="religious_type2"/>
+            <field name="religious_type3"/>
+            <field name="religious_type4"/>
+            <field name="religious_type5"/>
+            <field name="religious_type6"/>
+            <field name="religious_other"/>
+
+            <h4>What are your favorite hobbies, leisure and recreational activities?</h4>
+            <field name="hobby_type1"/>
+            <field name="hobby_type2"/>
+            <field name="hobby_type3"/>
+            <field name="hobby_type4"/>
+            <field name="hobby_type5"/>
+            <field name="hobby_type6"/>
+            <field name="hobby_type7"/>
+            <field name="hobby_type8"/>
+            <field name="hobby_type9"/>
+            <field name="hobby_type10"/>
+            <field name="hobby_type11"/>
+            <field name="hobby_type12"/>
+            <field name="hobby_type13"/>
+            <field name="hobby_type14"/>
+            <field name="hobby_type15"/>
+            <field name="hobby_other"/>
+
+            <field name="physical_activity" widget="selection"/>
+            <field name="physical_activity_description"/>
+            <field name="last_physical"/>
+            <field name="last_tested"/>
+            <field name="medical_conditions"/>
+            <field name="last_tested2"/>
+            <field name="prescribed_medication"/>
+
+            <separator string="EDUCATION, TRAINING &amp; MILITARY"/>
+            <field name="grade" widget="selection"/>
+            <field name="have_one" widget="selection"/>
+            <field name="degrees"/>
+            <field name="served_military" widget="radio" options="{'horizontal': true}"/>
+            <field name="service_branch"/>
+            <field name="military_training"/>
+            <field name="combat_action" widget="radio" options="{'horizontal': true}"/>
+            <field name="combat_action_where"/>
+            <field name="combat_action_when"/>
+
+            <separator string="WORK"/>
+            <field name="occupation"/>
+            <field name="hours_per_week"/>
+            <field name="company_name"/>
+            <field name="company_location"/>
+            <field name="job_years"/>
+            <field name="work_schedule"/>
+            <field name="hourly_wage"/>
+            <field name="monthly_income"/>
+            <field name="before_taxes"/>
+            <field name="after_taxes"/>
+            <field name="people_support"/>
+            <field name="other_sources"/>
+            <field name="three_occupations"/>
+
+            <separator string="SUPPORT"/>
+            <h4>What people are there in your life who will be supportive to you in your efforts to manage your anger?</h4>
+            <field name="anger_type1"/>
+            <field name="anger_type2"/>
+            <field name="anger_type3"/>
+            <field name="anger_type4"/>
+            <field name="anger_type5"/>
+            <field name="anger_type6"/>
+            <field name="anger_other"/>
+            <field name="supportive_group" widget="radio" options="{'horizontal': true}"/>
+            <field name="support_benefit"/>
+            
+            <separator string="IN CASE OF EMERGENCY NOTIFY (Other than partner/significant other)"/>
+            <field name="emergency_name"/>
+            <field name="emergency_phone"/>
+            <field name="emergency_relation"/>
+            <field name="emergency_street"/>
+            <field name="emergency_city"/>
+            <field name="emergency_zip"/>
+          </group>
+        </sheet>
+      </form>
+    </field>
+  </record>
+
+  <record model="ir.ui.view" id="fee_adjustment_search_view">
+    <field name="name">fee_adjustment list search</field>
+    <field name="model">sccc.fee_adjustment</field>
+    <field name="arch" type="xml">
+      <search>
+        <field name="create_date"/>
+      </search>
+    </field>
+  </record>
+</odoo>

@@ -52,6 +52,11 @@
       <field name="res_model">sccc.fee_setting</field>
       <field name="view_mode">tree,form</field>
     </record>
+    <record model="ir.actions.act_window" id="action_tapp_intake">
+      <field name="name">TAPP Intake</field>
+      <field name="res_model">sccc.tapp_intake</field>
+      <field name="view_mode">tree,form</field>
+    </record>
     <record model="ir.actions.act_window" id="action_individual_assessment">
       <field name="name">Individual Assessment</field>
       <field name="res_model">sccc.individual_assessment</field>
@@ -87,6 +92,7 @@
             <menuitem name="Family Assessment" id="sccc.menu_fam_assessment" parent="sccc.custom_forms"  action="action_fam_assessment"/>
             <menuitem name="Fee Adjustment" id="sccc.menu_fee_adjustment" parent="sccc.custom_forms"  action="action_fee_adjustment"/>
             <menuitem name="Fee Setting" id="sccc.menu_fee_setting" parent="sccc.custom_forms"  action="action_fee_setting"/>
+            <menuitem name="TAPP Intake" id="sccc.menu_tapp_intake" parent="sccc.custom_forms"  action="action_tapp_intake"/>
             <menuitem name="Progress Notes" id="sccc.menu_progress_notes" parent="sccc.custom_forms"  action="action_progress_notes"/>
         <menuitem name="Config" id="sccc.config" parent="sccc.menu_root"  action="action_locations" sequence="5"/>
             <menuitem name="Rooms" id="sccc.menu_room" parent="sccc.config"  action="action_room"/>

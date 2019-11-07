@@ -110,6 +110,7 @@
                                     <field name="fam_assessment" widget="many2many_tags"/>
                                     <field name="fee_setting" widget="many2many_tags"/>
                                     <field name="fee_adjustment" widget="many2many_tags"/>
+                                    <field name="tapp_intake" widget="many2many_tags"/>
                                   </group>
                                 </page>
                                 <page string="Counseling History">
