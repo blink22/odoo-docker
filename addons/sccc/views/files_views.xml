@@ -106,11 +106,18 @@
                                 </page>
                                 <page string="Forms">
                                   <group>
-                                    <field name="individual_assessment" widget="many2many_tags"/>
-                                    <field name="fam_assessment" widget="many2many_tags"/>
-                                    <field name="fee_setting" widget="many2many_tags"/>
-                                    <field name="fee_adjustment" widget="many2many_tags"/>
-                                    <field name="tapp_intake" widget="many2many_tags"/>
+                                    <field name="individual_assessment" widget="many2many"/>
+                                    <field name="fam_assessment" widget="many2many"/>
+                                    <field name="fee_setting" widget="many2many"/>
+                                    <field name="fee_adjustment" widget="many2many"/>
+                                    <field name="tapp_intake" widget="many2many"/>
+                                    <field name="x2"/>
+                                    <field name="tapp_termination_date"/>
+                                    <field name="tapp_dismissal_date"/>
+                                    <h4>Mandated for</h4>
+                                    <field name="mandated_for1"/>
+                                    <field name="mandated_for2"/>
+                                    <field name="tapp_referal" widget="selection"/>
                                   </group>
                                 </page>
                                 <page string="Counseling History">

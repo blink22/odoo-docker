@@ -196,5 +196,4 @@ class TappIntake(models.Model):
 
     @api.depends('file', 'date') 
     def _compute_fields_combination(self):
-      for form in self:
-        form.combination = str(form.file.file_number) + ' - ' + str(form.file.name) + ' TAPP Intake'
+      self.combination = str(self.file.file_number) + ' - ' + str(self.file.name) + ' TAPP Intake'
