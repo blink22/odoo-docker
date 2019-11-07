@@ -47,6 +47,16 @@ class Files(models.Model):
     other_considerations = fields.Text('Other Considerations?')
     additional_notes = fields.Char('Additional Notes')
 
+    x2 = fields.Boolean('X2', help='If a client completes the program and comes back a second time.')
+    tapp_termination_date = fields.Date('TAPP Termination Date')
+    tapp_dismissal_date = fields.Date('TAPP Dismissal Date')
+    mandated_for1 = fields.Boolean('Domestic Violence')
+    mandated_for2 = fields.Boolean('Anger Management')
+    tapp_referal = fields.Selection([('SCCC Couple','SCCC Couple'), ('SCCC Individual','SCCC Individual'), ('SCCC Group','SCCC Group'), 
+                                     ('SCCC Family','SCCC Family'), ('Other','Other'), ('Criminal','Criminal'),
+                                     ('DCFS','DCFS'), ('Probation','Probation'), ('Parole','Parole'),
+                                     ('AB109','AB109')], 'TAPP Referral')
+
     # Relations
     provider = fields.Many2many('sccc.provider', 'provider_file_rel', string='Provider')
     meetings = fields.Many2many('sccc.calendar', 'calendar_file_rel', string='Meetings')
@@ -56,6 +66,7 @@ class Files(models.Model):
     individual_assessment = fields.One2many('sccc.individual_assessment', 'file', string='Individual Assessment Form')
     fam_assessment = fields.One2many('sccc.fam_assessment', 'file', string='FAM Assessment Form')
     fee_setting = fields.One2many('sccc.fee_setting', 'file', string='Fee Setting Form')
+    tapp_intake = fields.One2many('sccc.tapp_intake', 'file', string='TAPP Intake Form')
 
     availability = fields.Many2many('sccc.time_slots', 'time_slots_file_rel', string='Availability (Time Slots)')
     progress_notes = fields.Many2many('sccc.progress_notes', 'progress_notes_file_rel', string='Progress Notes')
@@ -94,8 +105,7 @@ class Files(models.Model):
 
     @api.depends('file_number', 'name') 
     def _compute_fields_combination(self):
-        for file in self:
-            file.combination = str(file.file_number) + ' - ' + str(file.name)
+        self.combination = str(self.file_number) + ' - ' + str(self.name)
 
     @api.model
     def create(self, form_object):

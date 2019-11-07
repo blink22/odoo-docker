@@ -43,5 +43,4 @@ class FeeSetting(models.Model):
 
   @api.depends('file') 
   def _compute_fields_combination(self):
-    for form in self:
-      form.combination = str(form.file.file_number) + ' - ' + str(form.file.name) + ' Fee Setting Form'
+    self.combination = str(self.file.file_number) + ' - ' + str(self.file.name) + ' Fee Setting Form'

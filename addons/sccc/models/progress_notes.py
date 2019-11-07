@@ -20,5 +20,4 @@ class ProgressNotes(models.Model):
 
   @api.depends('file', 'date') 
   def _compute_fields_combination(self):
-    for form in self:
-      form.combination = str(form.file.file_number) + ' - ' + str(form.file.name) + ' Progress Note ' + str(form.date)
+    self.combination = str(self.file.file_number) + ' - ' + str(self.file.name) + ' Progress Note ' + str(self.date)

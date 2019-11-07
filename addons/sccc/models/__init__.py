@@ -7,6 +7,7 @@ from . import user
 from . import calendar
 from . import clients
 from . import providers
+from . import tapp_intake
 from . import fam_assessment
 from . import fee_adjustment
 from . import fee_setting

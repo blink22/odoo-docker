@@ -28,5 +28,4 @@ class TimeSlots(models.Model):
 
   @api.depends('from_time', 'to_time', 'day_of_week') 
   def _compute_fields_combination(self):
-    for slot in self:
-      slot.combination = slot.day_of_week + ' ' + str(slot.from_time) + ' - ' + str(slot.to_time)
+    self.combination = self.day_of_week + ' ' + str(self.from_time) + ' - ' + str(self.to_time)
