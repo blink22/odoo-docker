@@ -110,6 +110,16 @@
                                     <field name="fam_assessment" widget="many2many"/>
                                     <field name="fee_setting" widget="many2many"/>
                                     <field name="fee_adjustment" widget="many2many"/>
+                                  </group>
+                                </page>
+                                <page string="Counseling History">
+                                  <group>
+                                    <field name="meetings" context="{'tree_view_ref':'sccc.calendar_tree_view2'}"/>
+                                    <field name="progress_notes"/>
+                                  </group>
+                                </page>
+                                <page string="TAPP">
+                                  <group>
                                     <field name="tapp_intake" widget="many2many"/>
                                     <field name="x2"/>
                                     <field name="tapp_termination_date"/>
@@ -118,12 +128,6 @@
                                     <field name="mandated_for1"/>
                                     <field name="mandated_for2"/>
                                     <field name="tapp_referal" widget="selection"/>
-                                  </group>
-                                </page>
-                                <page string="Counseling History">
-                                  <group>
-                                    <field name="meetings" context="{'tree_view_ref':'sccc.calendar_tree_view2'}"/>
-                                    <field name="progress_notes"/>
                                   </group>
                                 </page>
                               </notebook>
