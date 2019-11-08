@@ -60,10 +60,10 @@ class Calendar(models.Model):
         for meeting in self:
             meeting.combination = meeting.name
             if meeting.provider:
-                # meeting.combination += '\n'
+                meeting.combination += '\n'
                 meeting.combination += ' ( ' + meeting.provider.name + ' )'
             for file in meeting.files:
-                # meeting.combination += '\n'
+                meeting.combination += '\n'
                 meeting.combination += '( ' + file.file_number + ' - ' + file.name + ' )'
 
     @api.model
