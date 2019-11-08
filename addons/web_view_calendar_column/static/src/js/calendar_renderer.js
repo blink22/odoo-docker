@@ -6,6 +6,7 @@ odoo.define('web_view_calendar_column.CalendarRenderer', function (require) {
     var qweb = core.qweb;
     var _t = core._t;
     var rpc = require('web.rpc');
+    var count = 1;
     CalendarRenderer.include({
         _initCalendar: function () {
             var self = this;
@@ -57,10 +58,13 @@ odoo.define('web_view_calendar_column.CalendarRenderer', function (require) {
                 // Dirty hack to ensure a correct first render
                 eventAfterAllRender: function () {
                     $(window).trigger('resize');
-                    // var htmlColleaction = document.getElementsByClassName('o_calendar_button_today btn btn-primary');
-                    // if(htmlColleaction.length > 0) {
-                    //     htmlColleaction[0].click();
-                    // }
+                    if(count === 1) {
+                        var htmlColleaction = document.getElementsByClassName('o_calendar_button_today btn btn-primary');
+                        if(htmlColleaction.length > 0) {
+                            htmlColleaction[0].click();
+                        }
+                        count = 0;
+                    }
                 },
                 viewRender: function (view) {
                     // compute mode from view.name which is either 'month', 'agendaWeek' or 'agendaDay'
