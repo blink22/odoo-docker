@@ -44,7 +44,7 @@ class Calendar(models.Model):
     location = fields.Many2one('sccc.location', string='Location', required=True)
     room = fields.Many2one('sccc.room', string='Room', required=True)
     
-    files = fields.Many2many('sccc.file', 'calendar_file_rel', string='File', required=True)
+    files = fields.Many2many('sccc.file', 'calendar_file_rel', string='File')
     client_attend = fields.Many2many('sccc.file', 'calendar_attendance_file_rel', string='Did Client Attend?')
     
     provider = fields.Many2one('sccc.provider', string='Provider')
