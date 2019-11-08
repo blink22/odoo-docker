@@ -1,6 +1,7 @@
 from odoo import models, fields, api, exceptions
 from datetime import datetime
 from dateutil.relativedelta import relativedelta
+from odoo.addons.as_time.models import alsw
 import json
 
 class Calendar(models.Model):
@@ -12,8 +13,12 @@ class Calendar(models.Model):
     combination = fields.Char('Details', compute='_compute_fields_combination', store=True)
 
     name = fields.Char('Meeting Title', required=True)
-    start_date = fields.Datetime('Start At', required=True)
-    end_date = fields.Datetime('End At', required=True)
+
+    date = fields.Date('Date', required=True)
+    start_time = alsw.Time('Start Time', required=True)
+    end_time = alsw.Time('End Time', required=True)
+    start_date = fields.Datetime('Start At')
+    end_date = fields.Datetime('End At')
     
     status = fields.Selection([('Hold', 'Hold'), ('Match', 'Match'),
                                     ('Confirmed', 'Confirmed'), ('Cancelled', 'Cancelled')], 'Status')
@@ -42,7 +47,7 @@ class Calendar(models.Model):
     files = fields.Many2many('sccc.file', 'calendar_file_rel', string='File', required=True)
     client_attend = fields.Many2many('sccc.file', 'calendar_attendance_file_rel', string='Did Client Attend?')
     
-    provider = fields.Many2one('sccc.provider', string='Provider', required=True)
+    provider = fields.Many2one('sccc.provider', string='Provider')
     user_ids = fields.Many2many('res.users', string='Attendees', track_visibility='onchange', readonly=True, 
                               states={'draft': [('readonly', False)]}, default=lambda self: self.env.user)
     progress_notes = fields.Many2many('sccc.progress_notes', 'progress_notes_calendar_rel', string='Progress Notes')
@@ -63,6 +68,11 @@ class Calendar(models.Model):
 
     @api.model
     def create(self, form_object):
+        start_date = form_object['date'] + ' ' + form_object['start_time']
+        end_date = form_object['date'] + ' ' + form_object['end_time']
+        form_object['start_date'] = datetime.strptime(start_date, "%Y-%m-%d %I:%M%p")
+        form_object['end_date'] = datetime.strptime(end_date, "%Y-%m-%d %I:%M%p")
+
         record = super(Calendar, self).create(form_object)
         self.check_repeat(form_object, record.until_count)
         return record
