@@ -83,11 +83,17 @@ odoo.define('web_view_calendar_column.CalendarRenderer', function (require) {
                     model: 'sccc.room',
                     method: 'get_rooms'
                 }).then(function(result) {
-                    _.each(Object.entries(result), function (column) {
-                        self.$calendar.fullCalendar('addResource', {
-                          id: column[0],
-                          title: column[1]
-                        });
+                    _.each(Object.entries(result[0]), function (column) {
+                        var location_id = result[1][column[0]];
+                        var location = self.state.filters.location.filters.find((item) => item.value === location_id);
+                        if(location.active) {
+                            self.$calendar.fullCalendar('addResource', {
+                            id: column[0],
+                            title: column[1]
+                            });
+                        } else {
+                            self.$calendar.fullCalendar('removeResource', column[0]);
+                        }
                     });
                 });
             }
