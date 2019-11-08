@@ -56,11 +56,11 @@ odoo.define('web_view_calendar_column.CalendarRenderer', function (require) {
                 },
                 // Dirty hack to ensure a correct first render
                 eventAfterAllRender: function () {
-                    // $(window).trigger('resize');
-                    var htmlColleaction = document.getElementsByClassName('o_calendar_button_today btn btn-primary');
-                    if(htmlColleaction.length > 0) {
-                        htmlColleaction[0].click();
-                    }
+                    $(window).trigger('resize');
+                    // var htmlColleaction = document.getElementsByClassName('o_calendar_button_today btn btn-primary');
+                    // if(htmlColleaction.length > 0) {
+                    //     htmlColleaction[0].click();
+                    // }
                 },
                 viewRender: function (view) {
                     // compute mode from view.name which is either 'month', 'agendaWeek' or 'agendaDay'
@@ -83,6 +83,9 @@ odoo.define('web_view_calendar_column.CalendarRenderer', function (require) {
                     model: 'sccc.room',
                     method: 'get_rooms'
                 }).then(function(result) {
+                    self.$calendar.fullCalendar('getResources').forEach(element => {
+                        self.$calendar.fullCalendar('removeResource', element);
+                    });
                     _.each(Object.entries(result[0]), function (column) {
                         var location_id = result[1][column[0]];
                         var location = self.state.filters.location.filters.find((item) => item.value === location_id);
@@ -92,11 +95,7 @@ odoo.define('web_view_calendar_column.CalendarRenderer', function (require) {
                                 id: column[0],
                                 title: column[1]
                                 });
-                            } else {
-                                self.$calendar.fullCalendar('removeResource', column[0]);    
                             }
-                        } else {
-                            self.$calendar.fullCalendar('removeResource', column[0]);
                         }
                     });
                 });
