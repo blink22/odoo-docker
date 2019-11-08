@@ -86,7 +86,7 @@ odoo.define('web_view_calendar_column.CalendarRenderer', function (require) {
                     _.each(Object.entries(result[0]), function (column) {
                         var location_id = result[1][column[0]];
                         var location = self.state.filters.location.filters.find((item) => item.value === location_id);
-                        if(location.active) {
+                        if(location && location.active) {
                             self.$calendar.fullCalendar('addResource', {
                             id: column[0],
                             title: column[1]
