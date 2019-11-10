@@ -40,7 +40,7 @@
               <field name="name">calendar form</field>
               <field name="model">sccc.calendar</field>
               <field name="arch" type="xml">
-                   <form string="Payment Form">
+                   <form string="Meeting Form">
                        <sheet>
                         <group>
                           <field name="name"/>

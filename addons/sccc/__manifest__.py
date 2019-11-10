@@ -20,10 +20,11 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['account', 'payment', 'as_time', 'backend_theme_v13', 'web_view_calendar_column'],
+    'depends': ['account', 'payment', 'as_time', 'backend_theme_v13'],
     # always loaded
     'data': [
         'security/ir.model.access.csv',
+        'views/assets.xml',
         'views/menu_views.xml',
         'views/files_views.xml',
         'views/client_views.xml',

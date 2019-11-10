@@ -1,4 +1,4 @@
-odoo.define('web_view_calendar_column.CalendarRenderer', function (require) {
+odoo.define('sccc.CalendarRenderer', function (require) {
     "use strict";
 
     var CalendarRenderer = require('web.CalendarRenderer');
@@ -65,6 +65,9 @@ odoo.define('web_view_calendar_column.CalendarRenderer', function (require) {
                         }
                         count = 0;
                     }
+                    self.state.filters.location.filters.forEach(filter => {
+                        filter.display = true;
+                    });
                 },
                 viewRender: function (view) {
                     // compute mode from view.name which is either 'month', 'agendaWeek' or 'agendaDay'

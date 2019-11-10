@@ -1,4 +1,4 @@
-odoo.define('web_view_calendar_column.CalendarView', function (require) {
+odoo.define('sccc.CalendarView', function (require) {
     "use strict";
 
     var CalendarView = require('web.CalendarView');
@@ -6,11 +6,11 @@ odoo.define('web_view_calendar_column.CalendarView', function (require) {
     CalendarView.include({
         jsLibs: [
             '/web/static/lib/fullcalendar/js/fullcalendar.js',
-            '/web_view_calendar_column/static/lib/scheduler.min.js'
+            '/sccc/static/lib/scheduler.min.js'
         ],
         cssLibs: [
             '/web/static/lib/fullcalendar/css/fullcalendar.css',
-            '/web_view_calendar_column/static/lib/scheduler.min.css'
+            '/sccc/static/lib/scheduler.min.css'
         ],
         init: function (viewInfo, params) {
             this._super.apply(this, arguments);

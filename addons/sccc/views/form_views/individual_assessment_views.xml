@@ -62,7 +62,7 @@
                               <field name="person_threatened"/>
                               <field name="ind_suicidal_thoughts" widget="radio" options="{'horizontal': true}"/>
                               <field name="ind_actively_suicidal_thoughts" widget="radio" options="{'horizontal': true}"/>
-                              <p style="color: #008DCA;background-color: antiquewhite;width: inherit;"> 
+                              <p style="color: #008DCA;background-color: antiquewhite;"> 
                                 If YES for either, complete the 'Suicide Assessment' tab (at top) and see the Safety Planning Guide 
                               </p>
                             </group>
