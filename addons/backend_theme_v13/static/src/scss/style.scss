@@ -36,6 +36,11 @@ body {
 tr[data-time] {
     height: 50px;
 }
+
+.o_horizontal_separator {
+    border-top: groove;
+}
+
 .o_event_title {
     white-space: pre-wrap;
 }
@@ -312,9 +317,9 @@ textarea, select, .o_form_view.o_form_editable .o_form_field_many2manytags,
 
 .o_input {
     border: 1px solid #ccc;
-    border-top-style: none;
-    border-right-style: none;
-    border-left-style: none;
+    //border-top-style: none;
+    //border-right-style: none;
+    //border-left-style: none;
     color: $gray;
 }
 
@@ -401,6 +406,17 @@ textarea, select, .o_form_view.o_form_editable .o_form_field_many2manytags,
         .o_form_sheet {
             border: 1px solid #d9d7d7;
             box-shadow: 0 5px 20px -15px black;
+
+            .o_inner_group {
+                border-collapse: separate;
+                border-spacing: 0 15px;
+                tbody {
+                    tr {
+                        text-align: center;
+                        padding: 5px;
+                    }
+                }
+            }
         }
     } 
 

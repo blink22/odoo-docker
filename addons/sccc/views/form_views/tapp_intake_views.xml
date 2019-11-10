@@ -189,6 +189,7 @@
             <field name="three_occupations"/>
 
             <separator string="SUPPORT"/>
+            <br/>
             <h4>What people are there in your life who will be supportive to you in your efforts to manage your anger?</h4>
             <field name="anger_type1"/>
             <field name="anger_type2"/>

@@ -41,6 +41,7 @@
                         <group>
                           <field name="combination"/>
                           <field name="file" widget="selection"/>
+                        </group>
                           <notebook>
                             <page string="Family Assessment">
                               <group>
@@ -69,7 +70,6 @@
                               </group>
                             </page>
                           </notebook>                            
-                        </group>
                        </sheet>
                 </form>
               </field>
