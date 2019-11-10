@@ -1,4 +1,4 @@
-odoo.define('web_view_calendar_column.CalendarModel', function (require) {
+odoo.define('sccc.CalendarModel', function (require) {
     "use strict";
 
     var CalendarModel = require('web.CalendarModel');

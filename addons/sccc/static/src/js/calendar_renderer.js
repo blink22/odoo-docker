@@ -1,4 +1,4 @@
-odoo.define('web_view_calendar_column.CalendarRenderer', function (require) {
+odoo.define('sccc.CalendarRenderer', function (require) {
     "use strict";
 
     var CalendarRenderer = require('web.CalendarRenderer');
