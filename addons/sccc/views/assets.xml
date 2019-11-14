@@ -9,6 +9,7 @@
             <script type="text/javascript" src="/sccc/static/src/js/calendar_model.js"/>
             <script type="text/javascript" src="/sccc/static/src/js/calendar_renderer.js"/>
             <script type="text/javascript" src="/sccc/static/src/js/calendar_controller.js"/>
+            <script type="text/javascript" src="/sccc/static/src/js/web_tree_dynamic_colored_field.js"/>
         </xpath>
     </template>
 </odoo>

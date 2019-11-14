@@ -56,6 +56,12 @@ class Files(models.Model):
                                      ('SCCC Family','SCCC Family'), ('Other','Other'), ('Criminal','Criminal'),
                                      ('DCFS','DCFS'), ('Probation','Probation'), ('Parole','Parole'),
                                      ('AB109','AB109')], 'TAPP Referral')
+    court_information = fields.Char('Court Information / Address')
+    tapp_progress_notes = fields.Text('TAPP Progress Notes')
+
+    #
+    at_risk = fields.Char('At-Risk')
+    at_risk_color = fields.Integer('At-Risk-Color', compute='compute_file_risk')
 
     # Relations
     provider = fields.Many2many('sccc.provider', 'provider_file_rel', string='Provider')
@@ -102,6 +108,20 @@ class Files(models.Model):
             self.late = False
             self.left_early = False
             self.attended_session = False
+
+    def compute_file_risk(self):
+        self.at_risk = ''
+        self.at_risk_color = 0
+        print('self.individual_assessment', self.individual_assessment)
+        for individual in self.individual_assessment:
+            if(individual.ind_suicidal_thoughts == 'yes'):
+                self.at_risk = 'SUICIDAL'
+                self.at_risk_color = 1
+            if(individual.ind_actively_suicidal_thoughts == 'yes'):
+                self.at_risk = 'SUICIDAL'
+                self.at_risk_color = 2
+                break
+
 
     @api.depends('file_number', 'name') 
     def _compute_fields_combination(self):
