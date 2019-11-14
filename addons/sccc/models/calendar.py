@@ -1,7 +1,7 @@
 from odoo import models, fields, api, exceptions
 from datetime import datetime
 from dateutil.relativedelta import relativedelta
-from odoo.addons.as_time.models import alsw
+from odoo.addons.sccc.models import alsw
 import json
 
 class Calendar(models.Model):
@@ -70,9 +70,18 @@ class Calendar(models.Model):
     def create(self, form_object):
         start_date = str(form_object['date']) + ' ' + str(form_object['start_time'])
         end_date = str(form_object['date']) + ' ' + str(form_object['end_time'])
-        form_object['start_date'] = datetime.strptime(start_date, "%Y-%m-%d %H:%M:%S")
-        form_object['end_date'] = datetime.strptime(end_date, "%Y-%m-%d %H:%M:%S")
 
+        fmt = '%Y-%m-%d %I:%M %p'
+        try:
+            start_date = datetime.strptime(start_date, fmt)
+            end_date = datetime.strptime(end_date, fmt)
+        except ValueError:
+            fmt = '%Y-%m-%d %H:%M:%S'
+            start_date = datetime.strptime(start_date, fmt)
+            end_date = datetime.strptime(end_date, fmt)
+
+        form_object['start_date'] = start_date
+        form_object['end_date'] = end_date
         record = super(Calendar, self).create(form_object)
         self.check_repeat(form_object, record.until_count)
         return record

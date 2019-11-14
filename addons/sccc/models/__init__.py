@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 from . import models
+from . import alsw
 from . import account_move
 from . import account_payment
 from . import user
