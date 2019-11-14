@@ -2,7 +2,7 @@
 from odoo import models
 from datetime import datetime, time
 from odoo.tools.misc import DEFAULT_SERVER_TIME_FORMAT
-
+import pytz
 class Time(models.Field):
     type = 'time'
     column_type = ('time', 'time')
@@ -18,9 +18,9 @@ class Time(models.Field):
     @staticmethod
     def to_string(value):
         time_format = "%m/%d/%Y %I:%M %p"
-        return value.strftime(time_format) if value else False
+        return value.strftime(time_format).astimezone(pytz.utc) if value else False
 
     @staticmethod
     def to_time(value):
         time_format = "%m/%d/%Y %I:%M %p"
-        return datetime.strptime(value, time_format).time() if value else False
+        return datetime.strptime(value, time_format).astimezone(pytz.utc).time() if value else False

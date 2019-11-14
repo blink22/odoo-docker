@@ -194,6 +194,6 @@ class TappIntake(models.Model):
     file = fields.Many2one('sccc.file', string='File', required=True)
     client = fields.Many2one('sccc.client', string='Client', required=True)
 
-    @api.depends('file', 'date') 
+    @api.depends('file') 
     def _compute_fields_combination(self):
       self.combination = str(self.file.file_number) + ' - ' + str(self.file.name) + ' TAPP Intake'

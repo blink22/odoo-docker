@@ -1,4 +1,4 @@
-odoo.define('alsw.time', function(require) {
+odoo.define('sccc.time', function(require) {
     "use strict";
 
     var basic_fields = require('web.basic_fields');
@@ -34,6 +34,7 @@ odoo.define('alsw.time', function(require) {
             if (this.field.trim) {
                 value = tConvert(value.trim());
             }
+            console.log('options', options)
             return this._super(value, options);
         },
     });

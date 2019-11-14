@@ -13,9 +13,9 @@
                       <field name="on_waitlist"/>
                       <field name="hold"/>
                       <field name="lgbtq_provider"/>
-                      <!-- <field name="preferred_gender"/>
-                      <field name="preferred_age"/> -->
                       <field name="other_considerations"/>
+                      <field name="at_risk_color" invisible="1"/>
+                      <field name="at_risk" options='{"bg_color": "red: at_risk_color == 2; green: at_risk_color == 1"}'/>
                       <field name="additional_notes"/>
                       <field name="create_date"/>
                   </tree>
@@ -106,10 +106,10 @@
                                 </page>
                                 <page string="Forms">
                                   <group>
-                                    <field name="individual_assessment" widget="many2many"/>
-                                    <field name="fam_assessment" widget="many2many"/>
-                                    <field name="fee_setting" widget="many2many"/>
-                                    <field name="fee_adjustment" widget="many2many"/>
+                                    <field name="individual_assessment"/>
+                                    <field name="fam_assessment"/>
+                                    <field name="fee_setting"/>
+                                    <field name="fee_adjustment"/>
                                   </group>
                                 </page>
                                 <page string="Counseling History">
@@ -120,7 +120,7 @@
                                 </page>
                                 <page string="TAPP">
                                   <group>
-                                    <field name="tapp_intake" widget="many2many"/>
+                                    <field name="tapp_intake"/>
                                     <field name="x2"/>
                                     <field name="tapp_termination_date"/>
                                     <field name="tapp_dismissal_date"/>
@@ -128,6 +128,8 @@
                                     <field name="mandated_for1"/>
                                     <field name="mandated_for2"/>
                                     <field name="tapp_referal" widget="selection"/>
+                                    <field name="court_information"/>
+                                    <field name="tapp_progress_notes"/>
                                   </group>
                                 </page>
                               </notebook>

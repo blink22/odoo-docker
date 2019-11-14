@@ -1,4 +1,4 @@
-odoo.define('alsw.field_utils', function (require) {
+odoo.define('sccc.field_utils', function (require) {
     "use strict";
 
     var fu = require('web.field_utils');
@@ -24,7 +24,7 @@ odoo.define('alsw.field_utils', function (require) {
     
         if (time.length > 1) { // If time format correct
             time = time.slice (1);  // Remove full string match value
-            time[5] = +time[0] < 12 ? 'AM' : 'PM'; // Set AM/PM
+            time[5] = +time[0] < 12 ? ' AM' : ' PM'; // Set AM/PM
             time[0] = +time[0] % 12 || 12; // Adjust hours
         }
         return time.join (''); // return adjusted time or original string
@@ -34,7 +34,7 @@ odoo.define('alsw.field_utils', function (require) {
         if (!value) {
             return false;
         }
-        var timePattern = time.getLangTimeFormat();
+        // var timePattern = time.getLangTimeFormat();
         // return moment('1970-01-01 ' + value).format(timePattern);
         return tConvert(value);
     }

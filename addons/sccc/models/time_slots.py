@@ -1,5 +1,5 @@
 from odoo import models, fields, api
-from odoo.addons.as_time.models import alsw
+from odoo.addons.sccc.models import alsw
 class TimeSlots(models.Model):
   _name = 'sccc.time_slots'
   _description = 'Time Slots'
