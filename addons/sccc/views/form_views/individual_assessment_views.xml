@@ -60,8 +60,9 @@
                               <field name="criminal_justice"/>
                               <field name="homocidal_client" widget="radio" options="{'horizontal': true}"/>
                               <field name="person_threatened"/>
-                              <field name="ind_suicidal_thoughts" widget="radio" options="{'horizontal': true}"/>
-                              <field name="ind_actively_suicidal_thoughts" widget="radio" options="{'horizontal': true}"/>
+                              <!-- <field name="ind_suicidal_thoughts" widget="radio" options="{'horizontal': true}"/> -->
+                              <!-- <field name="ind_actively_suicidal_thoughts" widget="radio" options="{'horizontal': true}"/> -->
+                              <field name="ind_suicidal_thoughts" widget="selection"/>
                               <p style="color: #008DCA;background-color: antiquewhite;"> 
                                 If YES for either, complete the 'Suicide Assessment' tab (at top) and see the Safety Planning Guide 
                               </p>
