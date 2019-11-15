@@ -54,7 +54,7 @@ class IndividualAssessment(models.Model):
   additional_notes = fields.Text('Any Additional Notes')
 
   # Relations
-  file = fields.Many2one('sccc.file', string='File', required=True)
+  file = fields.Many2one('sccc.file', string='File')
   provider = fields.Many2one('sccc.provider', string='Provider')
   client = fields.Many2one('sccc.client', string='Client')
 
