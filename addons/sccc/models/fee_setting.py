@@ -38,7 +38,7 @@ class FeeSetting(models.Model):
   total_gross = fields.Float('Total Gross Monthly Income')
   
   # Relations
-  file = fields.Many2one('sccc.file', string='File #', required=True)
+  file = fields.Many2one('sccc.file', string='File #')
   provider = fields.Many2one('sccc.provider', string='Provider')
 
   @api.depends('file') 

@@ -1,8 +1,10 @@
 from odoo import models, fields, api, exceptions
 from datetime import datetime
+from time import localtime, gmtime
 from dateutil.relativedelta import relativedelta
 from odoo.addons.sccc.models import alsw
 import json
+import pytz
 
 class Calendar(models.Model):
     _name = 'sccc.calendar'
@@ -41,8 +43,8 @@ class Calendar(models.Model):
     created_on = fields.Datetime("Date")
 
     # Relations
-    location = fields.Many2one('sccc.location', string='Location', required=True)
-    room = fields.Many2one('sccc.room', string='Room', required=True)
+    location = fields.Many2one('sccc.location', string='Location')
+    room = fields.Many2one('sccc.room', string='Room')
     
     files = fields.Many2many('sccc.file', 'calendar_file_rel', string='File')
     client_attend = fields.Many2many('sccc.file', 'calendar_attendance_file_rel', string='Did Client Attend?')
@@ -71,20 +73,21 @@ class Calendar(models.Model):
         start_date = str(form_object['date']) + ' ' + str(form_object['start_time'])
         end_date = str(form_object['date']) + ' ' + str(form_object['end_time'])
 
-        fmt = '%Y-%m-%d %I:%M %p'
-        try:
-            start_date = datetime.strptime(start_date, fmt)
-            end_date = datetime.strptime(end_date, fmt)
-        except ValueError:
-            fmt = '%Y-%m-%d %H:%M:%S'
-            start_date = datetime.strptime(start_date, fmt)
-            end_date = datetime.strptime(end_date, fmt)
+        form_object['start_date'] = self.format_date(start_date)
+        form_object['end_date'] = self.format_date(end_date)
 
-        form_object['start_date'] = start_date
-        form_object['end_date'] = end_date
         record = super(Calendar, self).create(form_object)
         self.check_repeat(form_object, record.until_count)
         return record
+
+    def format_date(self, date):
+        fmt = '%Y-%m-%d %I:%M %p'
+        try:
+            return datetime.strptime(date, fmt)
+        except ValueError:
+            fmt = '%Y-%m-%d %H:%M:%S'
+            return datetime.strptime(date, fmt)
+        
 
     @api.onchange('location')
     def selected_location(self):

@@ -32,7 +32,7 @@ class FamAssessment(models.Model):
   created_on = fields.Datetime("Date")
 
   # Relations
-  file = fields.Many2one('sccc.file', string='File', required=True)
+  file = fields.Many2one('sccc.file', string='File')
   clients = fields.Many2many('sccc.client', 'fam_assessment_clients_rel', string='Family/Couple members received individual counseling?')
   provider = fields.Many2one('sccc.provider', string='Intake Provider')
   # assigned_to = fields.Many2many('sccc.provider', string='If so, who were they assigned to?')

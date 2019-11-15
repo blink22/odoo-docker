@@ -34,7 +34,6 @@ odoo.define('sccc.time', function(require) {
             if (this.field.trim) {
                 value = tConvert(value.trim());
             }
-            console.log('options', options)
             return this._super(value, options);
         },
     });

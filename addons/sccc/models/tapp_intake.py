@@ -191,8 +191,8 @@ class TappIntake(models.Model):
     emergency_zip = fields.Char('Zip Code')
 
     # Relations
-    file = fields.Many2one('sccc.file', string='File', required=True)
-    client = fields.Many2one('sccc.client', string='Client', required=True)
+    file = fields.Many2one('sccc.file', string='File')
+    client = fields.Many2one('sccc.client', string='Client')
 
     @api.depends('file') 
     def _compute_fields_combination(self):

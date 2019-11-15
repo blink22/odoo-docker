@@ -27,7 +27,7 @@ class FeeAdjustment(models.Model):
   created_on = fields.Datetime("Date")
 
   # Relations
-  file = fields.Many2one('sccc.file', string='File #', required=True)
+  file = fields.Many2one('sccc.file', string='File #')
   provider = fields.Many2one('sccc.provider', string='Provider')
 
   @api.depends('file') 
