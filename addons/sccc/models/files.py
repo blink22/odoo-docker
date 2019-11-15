@@ -122,17 +122,16 @@ class Files(models.Model):
             self.attended_session = False
 
     def compute_file_risk(self):
-        self.at_risk = ''
-        self.at_risk_color = 0
-        print('self.individual_assessment', self.individual_assessment)
-        for individual in self.individual_assessment:
-            if(individual.ind_suicidal_thoughts == 'yes'):
-                self.at_risk = 'SUICIDAL'
-                self.at_risk_color = 1
-            if(individual.ind_actively_suicidal_thoughts == 'yes'):
-                self.at_risk = 'SUICIDAL'
-                self.at_risk_color = 2
-                break
+        for record in self:
+            record.at_risk = ''
+            record.at_risk_color = 0
+            for individual in record.individual_assessment:
+                if(individual.ind_suicidal_thoughts):
+                    record.at_risk = 'SUICIDAL'
+                    record.at_risk_color = 1
+                    if(individual.ind_suicidal_thoughts == '2'):
+                        record.at_risk_color = 2
+                        break
 
 
     @api.depends('file_number', 'name') 

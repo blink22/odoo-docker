@@ -38,8 +38,11 @@ class IndividualAssessment(models.Model):
   criminal_justice = fields.Boolean('Criminal Justice System')
   homocidal_client = fields.Selection([('yes', 'Yes'), ('no', 'No')], 'Does client self report as HOMICIDAL?')
   person_threatened = fields.Char('If Yes, try to get the name of the person threatened')
-  ind_suicidal_thoughts = fields.Selection([('yes', 'Yes'), ('no', 'No')], 'Indication of SUICIDAL THOUGHTS (ideation)')
-  ind_actively_suicidal_thoughts = fields.Selection([('yes', 'Yes'), ('no', 'No')], 'Indication of Actively Suicidal (wants to kill themselves)?')
+  # ind_suicidal_thoughts = fields.Selection([('yes', 'Yes'), ('no', 'No')], 'Indication of SUICIDAL THOUGHTS (ideation)')
+  # ind_actively_suicidal_thoughts = fields.Selection([('yes', 'Yes'), ('no', 'No')], 'Indication of Actively Suicidal (wants to kill themselves)?')
+
+  ind_suicidal_thoughts = fields.Selection([('1', 'Has indication of suicidal thoughts'), ('2', 'Has indication of actively suicida'), ('0', 'None')], 
+    'Does the client have an indication of suicidal thoughts or is actively suicidal?')
 
   specific_means = fields.Text('Do they have specific means for Suicide? (explain)')
   means_access = fields.Text('Do they have access to those means? (If yes, explain)')
