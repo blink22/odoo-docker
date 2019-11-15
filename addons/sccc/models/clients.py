@@ -52,6 +52,7 @@ class Clients(models.Model):
   
   # Relations
   files = fields.Many2many('sccc.file', 'client_file_rel', string='Files')
+  primary_files = fields.One2many('sccc.file', 'primary_client', string='Primary in Files')
 
   @api.depends('last_name', 'first_name')
   def _set_name(self):

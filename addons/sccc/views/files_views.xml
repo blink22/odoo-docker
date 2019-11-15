@@ -59,6 +59,7 @@
                                       <td style="width: 30%"> -->
                                         <group>
                                           <field name="clients" widget="many2many_tags"/>
+                                          <field name="primary_client" widget="selection"/>
                                           <separator string="Appointment Type"/>
                                           <field name="type_1"/>
                                           <field name="type_2"/>
