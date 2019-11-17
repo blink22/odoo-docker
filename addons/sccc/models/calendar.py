@@ -1,6 +1,5 @@
 from odoo import models, fields, api, exceptions
 from datetime import datetime
-from time import localtime, gmtime
 from dateutil.relativedelta import relativedelta
 from odoo.addons.sccc.models import alsw
 import json
@@ -16,9 +15,9 @@ class Calendar(models.Model):
 
     name = fields.Char('Meeting Title', required=True)
 
-    date = fields.Date('Date', required=True)
-    start_time = alsw.Time('Start Time', required=True)
-    end_time = alsw.Time('End Time', required=True)
+    # date = fields.Date('Date', required=True)
+    # start_time = alsw.Time('Start Time', required=True)
+    # end_time = alsw.Time('End Time', required=True)
     start_date = fields.Datetime('Start At')
     end_date = fields.Datetime('End At')
     
@@ -39,8 +38,6 @@ class Calendar(models.Model):
     repeat_every = fields.Selection([('Day(s)', 'Day(s)'), ('Week(s)', 'Week(s)'), ('Month(s)', 'Month(s)'), ('Year(s)', 'Year(s)')], 'Unit')
     repeat_every_count = fields.Integer('Repeat Every')
     until_count = fields.Integer('Number of repetitions')
-
-    created_on = fields.Datetime("Date")
 
     # Relations
     location = fields.Many2one('sccc.location', string='Location')
@@ -70,12 +67,12 @@ class Calendar(models.Model):
 
     @api.model
     def create(self, form_object):
-        start_date = str(form_object['date']) + ' ' + str(form_object['start_time'])
-        end_date = str(form_object['date']) + ' ' + str(form_object['end_time'])
+        # start_date = str(form_object['date']) + ' ' + str(form_object['start_time'])
+        # end_date = str(form_object['date']) + ' ' + str(form_object['end_time'])
 
-        form_object['start_date'] = self.format_date(start_date)
-        form_object['end_date'] = self.format_date(end_date)
-
+        # form_object['start_date'] = self.format_date(start_date)
+        # form_object['end_date'] = self.format_date(end_date)
+        
         record = super(Calendar, self).create(form_object)
         self.check_repeat(form_object, record.until_count)
         return record
@@ -87,7 +84,6 @@ class Calendar(models.Model):
         except ValueError:
             fmt = '%Y-%m-%d %H:%M:%S'
             return datetime.strptime(date, fmt)
-        
 
     @api.onchange('location')
     def selected_location(self):
