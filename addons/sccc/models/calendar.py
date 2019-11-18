@@ -67,23 +67,9 @@ class Calendar(models.Model):
 
     @api.model
     def create(self, form_object):
-        # start_date = str(form_object['date']) + ' ' + str(form_object['start_time'])
-        # end_date = str(form_object['date']) + ' ' + str(form_object['end_time'])
-
-        # form_object['start_date'] = self.format_date(start_date)
-        # form_object['end_date'] = self.format_date(end_date)
-        
         record = super(Calendar, self).create(form_object)
         self.check_repeat(form_object, record.until_count)
         return record
-
-    def format_date(self, date):
-        fmt = '%Y-%m-%d %I:%M %p'
-        try:
-            return datetime.strptime(date, fmt)
-        except ValueError:
-            fmt = '%Y-%m-%d %H:%M:%S'
-            return datetime.strptime(date, fmt)
 
     @api.depends('date')
     @api.depends('start_time')
