@@ -4,8 +4,6 @@ from dateutil.relativedelta import relativedelta
 from odoo.addons.sccc.models import alsw
 import json
 import pytz
-import logging
-_logger = logging.getLogger(__name__)
 
 class Calendar(models.Model):
     _name = 'sccc.calendar'
@@ -91,28 +89,20 @@ class Calendar(models.Model):
     @api.depends('start_time')
     def _compute_start_date(self, *args):
         for record in self:
-            _logger.info("START TIME")
             user_tz = self.env.user.partner_id.tz if self.env.user.partner_id.tz else 'US/Pacific'
-            _logger.info(user_tz)
             local_dt = pytz.timezone(user_tz).localize(datetime.combine(record.date,
                           record.start_time))
-            _logger.info(local_dt)
             utc_dt = local_dt.astimezone(pytz.utc).replace(tzinfo=None)
-            _logger.info(utc_dt)
             record.start_date = utc_dt
 
     @api.depends('date')
     @api.depends('end_time')
     def _compute_end_date(self, *args):
         for record in self:
-            _logger.info("END TIME")
             user_tz = self.env.user.partner_id.tz if self.env.user.partner_id.tz else 'US/Pacific'
-            _logger.info(user_tz)
             local_dt = pytz.timezone(str(user_tz)).localize(datetime.combine(record.date,
                           record.end_time))
-            _logger.info(local_dt)
             utc_dt = local_dt.astimezone(pytz.utc).replace(tzinfo=None)
-            _logger.info(utc_dt)
             record.end_date = utc_dt
 
     @api.onchange('location')
