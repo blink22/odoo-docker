@@ -85,10 +85,11 @@ class Files(models.Model):
 
     @api.onchange('clients')
     def selected_clients(self):
-        self.primary_client = False
         res = {}
         if self.clients:
             res['domain']={'primary_client':[('id', 'in', self.clients.ids)]}
+            if len(self.clients) == 1:
+                self.primary_client = self.clients.ids[0]
         else:
             res['domain']={'primary_client':[('id', '=', -1)]}
         return res
