@@ -17,7 +17,7 @@ class Calendar(models.Model):
 
     date = fields.Date('Date', required=True)
     start_time = alsw.Time('Start Time', required=True)
-    end_time = alsw.Time('Start Time', required=True)
+    end_time = alsw.Time('End Time', required=True)
     start_date = fields.Datetime(compute='_compute_start_date')
     end_date = fields.Datetime(compute='_compute_end_date')
     

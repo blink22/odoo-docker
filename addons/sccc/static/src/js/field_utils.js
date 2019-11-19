@@ -14,8 +14,7 @@ odoo.define('sccc.field_utils', function (require) {
         if (value === false) {
             return "";
         }
-        // return value;
-        return tConvert(value);
+        return value;
     }
 
     function tConvert (time) {
