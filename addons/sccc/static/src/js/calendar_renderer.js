@@ -32,9 +32,14 @@ odoo.define('sccc.CalendarRenderer', function (require) {
                 },
                 select: function (target_date, end_date, event, _js_event, resource) {
                     var data = {'start': target_date, 'end': end_date, 'resource': resource};
+                    
                     if (self.state.context.default_name) {
                         data.title = self.state.context.default_name;
                     }
+
+                    data.date = target_date.format('YYYY-MM-DD');
+                    data.start_time = target_date.format('hh:mm');
+                    data.end_time = end_date.format('hh:mm');
                     self.trigger_up('openCreate', data);
                     self.$calendar.fullCalendar('unselect');
                 },

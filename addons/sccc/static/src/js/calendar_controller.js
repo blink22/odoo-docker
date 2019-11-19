@@ -13,6 +13,12 @@ odoo.define('sccc.CalendarController', function (require) {
             }
             else
                 this.context['default_'+ this.model.fieldColumn] = false;
+            
+            if(event.data.date) {
+                this.context['default_date'] = event.data.date
+                this.context['default_start_time'] = event.data.start_time
+                this.context['default_end_time'] = event.data.end_time
+            }
             return this._super.apply(this, arguments);
         },
     });
