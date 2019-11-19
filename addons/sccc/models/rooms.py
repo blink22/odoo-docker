@@ -21,3 +21,13 @@ class Rooms(models.Model):
             result[rec.id] = rec.name
             result2[rec.id] = rec.location.id
         return [result,result2]
+
+    @api.model
+    def get_room(self, args):
+        recs = self.search([('id', '=', args['id'])])
+        room = {}
+        room['id'] = recs[0].id
+        room['name'] = recs[0].name
+        room['type'] = recs[0].type
+        room['location_id'] = recs[0].location.id
+        return room

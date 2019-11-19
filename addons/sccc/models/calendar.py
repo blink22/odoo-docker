@@ -93,9 +93,12 @@ class Calendar(models.Model):
 
     @api.onchange('location')
     def selected_location(self):
-        self.room = False
         res = {}
         if self.location:
+            if(self.room):
+                if(self.room.location.id != self.location.location_id):
+                    self.room = False
+
             res['domain']={'room':[('location.location_id', '=', self.location.location_id)]}
         else:
             res['domain']={'room':[('id', '=', -1)]}
