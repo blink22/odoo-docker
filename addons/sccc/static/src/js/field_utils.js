@@ -14,9 +14,8 @@ odoo.define('sccc.field_utils', function (require) {
         if (value === false) {
             return "";
         }
-        var timePattern = time.getLangTimeFormat();
-        return moment('1970-01-01 ' + value).format(timePattern);
-        // return value;
+        
+        return value;
     }
 
     function tConvert (time) {
