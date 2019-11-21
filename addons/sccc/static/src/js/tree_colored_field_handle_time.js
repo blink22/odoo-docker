@@ -3,6 +3,18 @@ odoo.define('sccc', function (require) {
 
     var ListRenderer = require('web.ListRenderer');
     var pyUtils = require("web.py_utils");
+    
+    function tConvert(time) {
+        // Check correct time format and split into components
+        time = time.toString().match (/^([01]\d|2[0-3])(:)([0-5]\d)(:[0-5]\d)?$/) || [time];
+      
+        if (time.length > 1) { // If time format correct
+            time = time.slice (1);  // Remove full string match value
+            time[5] = +time[0] < 12 ? ' AM' : ' PM'; // Set AM/PM
+            time[0] = +time[0] % 12 || 12; // Adjust hours
+        }
+        return time.join (''); // return adjusted time or original string
+    }
 
     ListRenderer.include({
         /**
@@ -36,9 +48,19 @@ odoo.define('sccc', function (require) {
             var $td = this._super.apply(this, arguments);
             var ctx = this.getEvalContext(record);
             this.applyColorize($td, record, node, ctx);
+            if(node.attrs.name === 'to_time' || node.attrs.name === 'from_time') {
+                this.handleTime($td, record, node, ctx)
+            }
             return $td;
         },
-
+        handleTime: function ($td, record, node, ctx) {
+          if($td[0].innerHTML.includes("PM") || $td[0].innerHTML.includes("pm") ||
+             $td[0].innerHTML.includes("AM") || $td[0].innerHTML.includes("am")) {
+              // do nothing
+          } else {
+              $td[0].innerHTML = tConvert($td[0].innerHTML)
+          }
+        },
         /**
          * Colorize the current cell depending on expressions provided.
          *

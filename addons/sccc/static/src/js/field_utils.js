@@ -14,8 +14,14 @@ odoo.define('sccc.field_utils', function (require) {
         if (value === false) {
             return "";
         }
-        
-        return value;
+        var should_convert = true;
+        var start_times = document.getElementsByName('start_time');
+        if(start_times.length == 1) {
+            if(start_times[0].localName === 'span') {
+                should_convert = false;
+            }
+        }
+        return should_convert? tConvert(value) : value;
     }
 
     function tConvert (time) {
