@@ -19,9 +19,9 @@ odoo.define('sccc', function (require) {
                     if (this.state.data.length && colorField in this.state.data[0].data) {
                         this.colorField = colorField;
                     } else {
-                        console.warn(
-                            "No field named '" + colorField + "' present in view."
-                        );
+                        // console.warn(
+                        //     "No field named '" + colorField + "' present in view."
+                        // );
                     }
                 }
             }
