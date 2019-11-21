@@ -4,7 +4,7 @@ from . import models
 from . import alsw
 from . import account_move
 from . import account_payment
-from . import user
+from . import partner
 from . import calendar
 from . import clients
 from . import providers

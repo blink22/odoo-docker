@@ -77,11 +77,10 @@ class Files(models.Model):
     availability = fields.Many2many('sccc.time_slots', 'time_slots_file_rel', string='Availability (Time Slots)')
     progress_notes = fields.Many2many('sccc.progress_notes', 'progress_notes_file_rel', string='Progress Notes')
     clients = fields.Many2many('sccc.client', 'client_file_rel', string='Clients', required=True)
-    primary_client = fields.Many2one('sccc.client', string='Primary Billing Contact')
+    primary_client = fields.Many2one('sccc.client', string='Primary Billing Contact', required=True)
     account_moves = fields.Many2many('account.move', 'account_move_file_rel', string='Account Invoices')
     payments = fields.Many2many('account.payment', 'account_payment_file_rel', string='Payments')
-    user = fields.One2many('res.users', 'file', string='Customer Account')
-
+    partner = fields.One2many('res.partner', 'file', string='Customer Account')
 
     @api.onchange('clients')
     def selected_clients(self):
@@ -144,14 +143,19 @@ class Files(models.Model):
         form_object['file_number'] = randint(0,999999)
         name = ''
         i = 0
+        email = ''
+        print('form', form_object)
         clients = self.env['sccc.client'].search([('id', 'in', form_object['clients'][0][2])])
         while i < len(clients):
             name += clients[i].name
+            if clients[i].id == form_object['primary_client']:
+                email = clients[i].email
+
             if i < len(clients)-1:
                 name += ', '
             i += 1
         
         form_object['name'] = name
-        user = self.env['res.users'].create({'name': name, 'email': clients[0].email, 'login': clients[0].email})
-        form_object['user'] = user
+        partner = self.env['res.partner'].create({'name': name, 'email': email, 'login': email, 'customer': 1})
+        form_object['partner'] = partner
         return super(Files, self).create(form_object)
