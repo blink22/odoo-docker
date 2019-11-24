@@ -101,27 +101,27 @@
                                 </page>
                                 <page string="Financial Info">
                                   <group>
-                                    <field name="account_moves" context="{'default_type': 'out_invoice'}" domain="[('type', '=', 'out_invoice')]"/>
+                                    <field name="account_moves" context="{'default_file': id, 'default_type': 'out_invoice'}" domain="[('type', '=', 'out_invoice')]"/>
                                     <field name="payments"/>
                                   </group>
                                 </page>
                                 <page string="Forms">
                                   <group>
-                                    <field name="individual_assessment"/>
-                                    <field name="fam_assessment"/>
-                                    <field name="fee_setting"/>
-                                    <field name="fee_adjustment"/>
+                                    <field name="individual_assessment" context="{'default_file': id}"/>
+                                    <field name="fam_assessment" context="{'default_file': id}"/>
+                                    <field name="fee_setting" context="{'default_file': id}"/>
+                                    <field name="fee_adjustment" context="{'default_file': id}"/>
                                   </group>
                                 </page>
                                 <page string="Counseling History">
                                   <group>
-                                    <field name="meetings" context="{'tree_view_ref':'sccc.calendar_tree_view2'}"/>
-                                    <field name="progress_notes"/>
+                                    <field name="meetings" context="{'default_files': [id], 'tree_view_ref':'sccc.calendar_tree_view2'}"/>
+                                    <field name="progress_notes" context="{'default_file': id}"/>
                                   </group>
                                 </page>
                                 <page string="TAPP">
                                   <group>
-                                    <field name="tapp_intake"/>
+                                    <field name="tapp_intake" context="{'default_file': id}"/>
                                     <field name="x2"/>
                                     <field name="tapp_termination_date"/>
                                     <field name="tapp_dismissal_date"/>
