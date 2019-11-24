@@ -101,8 +101,8 @@
                                 </page>
                                 <page string="Financial Info">
                                   <group>
-                                    <field name="account_moves" context="{'default_file': id, 'default_type': 'out_invoice'}" domain="[('type', '=', 'out_invoice')]"/>
-                                    <field name="payments"/>
+                                    <field name="account_moves" context="{'default_files': [id], 'default_type': 'out_invoice'}" domain="[('type', '=', 'out_invoice')]"/>
+                                    <field name="payments" context="{'default_files': [id]}"/>
                                   </group>
                                 </page>
                                 <page string="Forms">
