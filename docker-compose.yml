@@ -8,26 +8,26 @@ services:
     restart: always
     tty: true
     command: -- --dev=reload
-    depends_on:
-      - db
+    # depends_on:
+    #   - db
     ports:
       - "8069:8069"
     volumes:
       - odoo-data:/var/lib/odoo
       - ./config:/etc/odoo
       - ./addons:/mnt/extra-addons
-  db:
-    container_name: db
-    image: postgres:10
-    logging:
-      driver: none
-    environment:
-      - POSTGRES_DB=postgres
-      - POSTGRES_PASSWORD=odoo
-      - POSTGRES_USER=odoo
-      - PGDATA=/var/lib/postgresql/data/pgdata
-    volumes:
-      - db-data:/var/lib/postgresql/data/pgdata
+  # db:
+  #   container_name: db
+  #   image: postgres:10
+  #   logging:
+  #     driver: none
+  #   environment:
+  #     - POSTGRES_DB=postgres
+  #     - POSTGRES_PASSWORD=odoo
+  #     - POSTGRES_USER=odoo
+  #     - PGDATA=/var/lib/postgresql/data/pgdata
+  #   volumes:
+  #     - db-data:/var/lib/postgresql/data/pgdata
 volumes:
   odoo-data:
-  db-data:
+  # db-data:
