@@ -156,6 +156,6 @@ class Files(models.Model):
             i += 1
         
         form_object['name'] = name
-        partner = self.env['res.partner'].create({'name': name, 'email': email, 'customer': 1})
+        partner = self.env['res.partner'].create({'name': name, 'email': email})
         form_object['partner'] = partner
         return super(Files, self).create(form_object)
