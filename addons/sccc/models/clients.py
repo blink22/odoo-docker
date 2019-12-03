@@ -3,12 +3,16 @@ from datetime import date, datetime
 from dateutil.relativedelta import relativedelta
 from odoo.exceptions import ValidationError
 import re
+from random import randint
 
 class Clients(models.Model):
   _name = 'sccc.client'
   _description = 'Clients'
-  
+  _rec_name = 'combination'
+  combination = fields.Char (string='Client', compute='_compute_fields_combination', store=True)
+
   name = fields.Char('Name', compute='_set_name', store=True, readonly=True)
+  client_number = fields.Char('Client #', readonly=True)
   last_name = fields.Char('Last Name')
   first_name = fields.Char('First Name')
   out_reach = fields.Boolean('Outreach?')
@@ -53,6 +57,15 @@ class Clients(models.Model):
   # Relations
   files = fields.Many2many('sccc.file', 'client_file_rel', string='Files')
   primary_files = fields.One2many('sccc.file', 'primary_client', string='Primary in Files')
+
+  @api.model
+  def create(self, form_object):
+    form_object['client_number'] = randint(0,999999)
+    return super(Clients, self).create(form_object)
+
+  @api.depends('client_number', 'name') 
+  def _compute_fields_combination(self):
+    self.combination = str(self.client_number) + ' - ' + str(self.name)
 
   @api.depends('last_name', 'first_name')
   def _set_name(self):
