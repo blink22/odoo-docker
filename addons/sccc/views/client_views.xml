@@ -6,6 +6,7 @@
               <field name="model">sccc.client</field>
               <field name="arch" type="xml">
                   <tree create="true">
+                      <field name="client_number"/>
                       <field name="name"/>
                       <field name="first_name"/>
                       <field name="last_name"/>
@@ -48,6 +49,7 @@
                         <notebook>
                           <page string="Personal Details">
                             <group>
+                              <field name="client_number"/>
                               <field name="name"/>
                               <field name="first_name"/>
                               <field name="last_name"/>
