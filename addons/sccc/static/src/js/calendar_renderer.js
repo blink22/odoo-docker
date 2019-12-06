@@ -59,6 +59,8 @@ odoo.define('sccc.CalendarRenderer', function (require) {
                         }
                     }
                     element.find('.fc-content .fc-time').text(display_hour);
+
+                    element.find('.fc-bg').css({background: event.record.color});
                 },
                 // Dirty hack to ensure a correct first render
                 eventAfterAllRender: function () {

@@ -11,7 +11,7 @@ class Clients(models.Model):
   _rec_name = 'combination'
   combination = fields.Char (string='Client', compute='_compute_fields_combination', store=True)
 
-  name = fields.Char('Name', compute='_set_name', store=True, readonly=True)
+  name = fields.Char('Name', compute='_set_name', readonly=True)
   client_number = fields.Char('Client #', readonly=True)
   last_name = fields.Char('Last Name')
   first_name = fields.Char('First Name')

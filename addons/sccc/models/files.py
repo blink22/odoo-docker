@@ -5,10 +5,10 @@ class Files(models.Model):
     _name = 'sccc.file'
     _description = 'Files'
     _rec_name = 'combination'
-    combination = fields.Char (string='File', compute='_compute_fields_combination', store=True)
+    combination = fields.Char (string='File', compute='_compute_fields_combination')
 
     file_number = fields.Char('File #', readonly=True)
-    name = fields.Char('File Name', readonly=True)
+    name = fields.Char('File Name', readonly=True, compute='_compute_name')
     out_reach = fields.Boolean('Outreach?')
     preferred_gender = fields.Selection([ ('m', 'Male'), ('f', 'Female') ], 'Preferred Gender')
     preferred_age = fields.Selection([ ('Below', 'Below'), ('Similar', 'Similar'), ('Above', 'Above')], 'Preferred Age')
@@ -149,24 +149,35 @@ class Files(models.Model):
     def _compute_fields_combination(self):
         self.combination = str(self.file_number) + ' - ' + str(self.name)
 
-    @api.model
-    def create(self, form_object):
-        form_object['file_number'] = randint(0,999999)
+    def get_name_email(self, clients_ids, primary_id):
         name = ''
         i = 0
         email = ''
-        print('form', form_object)
-        clients = self.env['sccc.client'].search([('id', 'in', form_object['clients'][0][2])])
+        clients = self.env['sccc.client'].search([('id', 'in', clients_ids)])
         while i < len(clients):
             name += clients[i].name
-            if clients[i].id == form_object['primary_client']:
+            if clients[i].id == primary_id:
                 email = clients[i].email
 
             if i < len(clients)-1:
                 name += ', '
             i += 1
+        return [name, email]
+
+    @api.model
+    def create(self, form_object):
+        form_object['file_number'] = randint(0,999999)
         
-        form_object['name'] = name
-        partner = self.env['res.partner'].create({'name': name, 'email': email})
+        name_email = self.get_name_email(form_object['clients'][0][2], form_object['primary_client'])
+        form_object['name'] = name_email[0]
+        partner = self.env['res.partner'].create({'name': name_email[0], 'email': name_email[1]})
         form_object['partner'] = partner
         return super(Files, self).create(form_object)
+
+    def _compute_name(self):
+        self.name = ''
+        if self.clients:
+            name_email = self.get_name_email(self.clients.ids, self.primary_client)
+            self.name = name_email[0]
+            partner = self.env['res.partner'].create({'name': name_email[0], 'email': name_email[1]})  
+            self.partner = partner

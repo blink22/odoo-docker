@@ -11,7 +11,7 @@ class Calendar(models.Model):
     _order = "start_date asc"
 
     _rec_name = 'combination'
-    combination = fields.Char('Details', compute='_compute_fields_combination', store=True)
+    combination = fields.Char('Details', compute='_compute_fields_combination')
 
     name = fields.Char('Meeting Title', required=True)
 
@@ -23,6 +23,7 @@ class Calendar(models.Model):
     
     status = fields.Selection([('Hold', 'Hold'), ('Match', 'Match'),
                                     ('Confirmed', 'Confirmed'), ('Cancelled', 'Cancelled')], 'Status')
+    color = fields.Char('Color', compute='_compute_color')
 
     appointment_type = fields.Selection([('Individual Counseling', 'Individual Counseling'), ('Psychiatry', 'Psychiatry'),
                                     ('TAPP-Individual', 'TAPP-Individual'), ('TAPP-Group', 'TAPP-Group'),
@@ -54,16 +55,34 @@ class Calendar(models.Model):
     account_moves = fields.Many2many('account.move', 'account_move_calendar_rel', string='Account Invoices')
     payments = fields.Many2many('account.payment', 'account_payment_calendar_rel', string='Payments')
 
+    @api.depends('status')
+    def _compute_color(self):
+        for meeting in self:
+            meeting.color = ''
+            if meeting.status == 'Hold':
+                meeting.color = '#EDB183'
+            if meeting.status == 'Match':
+                meeting.color = '#A4D0D8'
+            if meeting.status == 'Confirmed':
+                meeting.color = '#B5D99C'
+
     @api.depends('provider') 
     def _compute_fields_combination(self):
         for meeting in self:
-            meeting.combination = meeting.name
+            meeting.combination = ''
             if meeting.provider:
-                meeting.combination += '\n'
-                meeting.combination += ' ( ' + meeting.provider.name + ' )'
+                meeting.combination += str(meeting.provider.last_name)
             for file in meeting.files:
                 meeting.combination += '\n'
-                meeting.combination += '( ' + file.file_number + ' - ' + file.name + ' )'
+                i = 0
+                for client in file.clients:
+                    if i > 0:
+                        i += 1
+                        meeting.combination += ', '
+                    meeting.combination += str(client.last_name)
+
+            meeting.combination += '\n'
+            meeting.combination += str(meeting.status)
 
     @api.model
     def create(self, form_object):
