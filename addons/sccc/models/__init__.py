@@ -20,3 +20,4 @@ from . import progress_notes
 from . import rooms
 from . import sessions
 from . import time_slots
+from . import square_payment

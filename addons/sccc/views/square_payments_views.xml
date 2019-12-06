@@ -1,0 +1,20 @@
+<odoo>
+    <record model="ir.ui.view" id="square_payments_tree_view">
+              <field name="name">square_payment list tree</field>
+              <field name="model">sccc.square_payment</field>
+              <field name="arch" type="xml">
+                  <tree create="false" delete="false">
+                    <field name="square_payment_id" />
+                    <field name="square_created_at" />
+                    <field name="square_amount" />
+                    <field name="square_amount_currency" />
+                    <field name="square_total" />
+                    <field name="square_total_currency" />
+                    <field name="square_status" />
+                    <field name="square_source" />
+                    <field name="square_order_id" />
+                    <field name="square_location_id" />
+                  </tree>
+              </field>
+    </record>
+</odoo>

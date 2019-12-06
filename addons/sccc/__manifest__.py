@@ -1,17 +1,19 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "sccc",
+    'name': "SCCC",
 
     'summary': """
-        Short (1 phrase/line) summary of the module's purpose, used as
-        subtitle on modules listing or apps.openerp.com""",
+        Southern California Counseling Center
+        """,
 
     'description': """
-        Long description of module's purpose
+        SCCC provides comprehensive counseling services at rates based on your ability to pay. 
+        We believe everyone should get the care they need, at rates they can afford, 
+        for as long as they need counseling.
     """,
 
-    'author': "My Company",
-    'website': "http://www.yourcompany.com",
+    'author': "SCCC",
+    'website': "https://sccc-la.org/",
 
     # Categories can be used to filter modules in modules listing
     # Check https://github.com/odoo/odoo/blob/13.0/odoo/addons/base/data/ir_module_category_data.xml
@@ -20,7 +22,7 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['account', 'payment', 'backend_theme_v13'],
+    'depends': ['account', 'payment', 'backend_theme_v13', 'mass_mailing'],
     # always loaded
     'data': [
         'security/ir.model.access.csv',
@@ -31,6 +33,7 @@
         'views/calendar_views.xml',
         'views/account_move_views.xml',
         'views/account_payment_views.xml',
+        'views/square_payments_views.xml',
         'views/config_views/provider_views.xml',
         'views/config_views/location_views.xml',
         'views/config_views/room_views.xml',
