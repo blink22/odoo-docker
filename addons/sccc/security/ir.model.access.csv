@@ -14,3 +14,4 @@ access_sccc_progress_notes,sccc.progress_notes,sccc.model_sccc_progress_notes,,1
 access_sccc_room,sccc.room,sccc.model_sccc_room,,1,1,1,1
 access_sccc_sessions,sccc.sessions,sccc.model_sccc_sessions,,1,1,1,1
 access_sccc_time_slots,sccc.time_slots,sccc.model_sccc_time_slots,,1,1,1,1
+access_sccc_square_payment,sccc.square_payment,sccc.model_sccc_square_payment,,1,1,1,1

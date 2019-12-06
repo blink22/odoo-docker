@@ -82,6 +82,11 @@
       <field name="res_model">sccc.time_slots</field>
       <field name="view_mode">tree,form</field>
     </record>
+    <record model="ir.actions.act_window" id="action_square_payments">
+      <field name="name">Payments</field>
+      <field name="res_model">sccc.square_payment</field>
+      <field name="view_mode">tree</field>
+    </record>
     <!-- Menu Builder -->
     <menuitem name="SCCC" id="sccc.menu_root" sequence="0" web_icon="sccc,static/description/icon.png"/>
         <menuitem name="Calendar" id="sccc.calendar" parent="sccc.menu_root"  action="action_calendar" sequence="1"/>
@@ -94,7 +99,10 @@
             <menuitem name="Fee Setting" id="sccc.menu_fee_setting" parent="sccc.custom_forms"  action="action_fee_setting"/>
             <menuitem name="TAPP Intake" id="sccc.menu_tapp_intake" parent="sccc.custom_forms"  action="action_tapp_intake"/>
             <menuitem name="Progress Notes" id="sccc.menu_progress_notes" parent="sccc.custom_forms"  action="action_progress_notes"/>
-        <menuitem name="Config" id="sccc.config" parent="sccc.menu_root"  action="action_locations" sequence="5"/>
+        
+        <menuitem name="Payments" id="sccc.payments" parent="sccc.menu_root"  action="action_square_payments" sequence="5"/>
+        
+        <menuitem name="Config" id="sccc.config" parent="sccc.menu_root"  action="action_locations" sequence="6"/>
             <menuitem name="Rooms" id="sccc.menu_room" parent="sccc.config"  action="action_room"/>
             <menuitem name="Locations" id="sccc.menu_location" parent="sccc.config"  action="action_locations"/>
             <menuitem name="Providers" id="sccc.menu_provider" parent="sccc.config"  action="action_provider"/>

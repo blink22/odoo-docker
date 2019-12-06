@@ -21,6 +21,17 @@ class Files(models.Model):
                                   ('6', 'Teen')], 'If Group:')
     
     # Appointment types
+    appointment_type = fields.Selection([
+        ('1', 'Individual Counseling'),
+        ('2', 'Psychiatry'),
+        ('3', 'TAPP - Individual'),
+        ('4', 'TAPP - Group'),
+        ('5', 'Intake'),
+        ('6', 'Group Counseling'),
+        ('7', 'Couples/Family Counseling'),
+        ('8', 'WeCounsel'),
+        ('9', 'Other')
+    ], 'Appointment Type')
     type_1 = fields.Boolean('Individual Counseling')
     type_2 = fields.Boolean('Psychiatry')
     type_3 = fields.Boolean('TAPP - Individual')

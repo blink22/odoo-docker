@@ -61,6 +61,8 @@
                                           <field name="clients" widget="many2many_tags"/>
                                           <field name="primary_client" widget="selection"/>
                                           <separator string="Appointment Type"/>
+                                          <field name="appointment_type" widget="selection" options="{'multiple': true}"/>
+                                          
                                           <field name="type_1"/>
                                           <field name="type_2"/>
                                           <field name="type_3"/>
