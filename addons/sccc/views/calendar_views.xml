@@ -114,6 +114,7 @@
                     <field name="files"/>
                     <field name="location"/>
                     <field name="room"/>
+                    <field name="color"/>
                 </calendar>
             </field>
     </record>
