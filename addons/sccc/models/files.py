@@ -155,7 +155,7 @@ class Files(models.Model):
         email = ''
         clients = self.env['sccc.client'].search([('id', 'in', clients_ids)])
         while i < len(clients):
-            name += clients[i].name
+            name += str(clients[i].name)
             if clients[i].id == primary_id:
                 email = clients[i].email
 
