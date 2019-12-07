@@ -175,9 +175,10 @@ class Files(models.Model):
         return super(Files, self).create(form_object)
 
     def _compute_name(self):
-        self.name = ''
-        if self.clients:
-            name_email = self.get_name_email(self.clients.ids, self.primary_client)
-            self.name = name_email[0]
-            partner = self.env['res.partner'].create({'name': name_email[0], 'email': name_email[1]})  
-            self.partner = partner
+        for record in self:
+            record.name = ''
+            if record.clients:
+                name_email = self.get_name_email(record.clients.ids, record.primary_client)
+                record.name = name_email[0]
+                partner = self.env['res.partner'].create({'name': name_email[0], 'email': name_email[1]})  
+                record.partner = partner
