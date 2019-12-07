@@ -147,7 +147,8 @@ class Files(models.Model):
 
     @api.depends('file_number', 'name') 
     def _compute_fields_combination(self):
-        self.combination = str(self.file_number) + ' - ' + str(self.name)
+        for record in self:
+            record.combination = str(record.file_number) + ' - ' + str(record.name)
 
     def get_name_email(self, clients_ids, primary_id):
         name = ''
