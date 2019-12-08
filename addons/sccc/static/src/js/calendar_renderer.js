@@ -80,8 +80,8 @@ odoo.define('sccc.CalendarRenderer', function (require) {
                     }
                     element.find('.fc-content .fc-time').text(display_hour);
                     element.find('.fc-content').css({'text-align': 'justify', '-webkit-text-emphasis': 'filled'})
-                    if(event.record && event.record.status) {
-                        element.find('.fc-bg').css({background: self.getColor(event.record.status[1])});
+                    if(event.record && event.record.meeting_status) {
+                        element.find('.fc-bg').css({background: self.getColor(event.record.meeting_status[1])});
                     }
                 },
                 // Dirty hack to ensure a correct first render
@@ -97,7 +97,7 @@ odoo.define('sccc.CalendarRenderer', function (require) {
                     self.state.filters.location.filters.forEach(filter => {
                         filter.display = true;
                     });
-                    self.state.filters.status.filters.forEach(filter => {
+                    self.state.filters.meeting_status.filters.forEach(filter => {
                         if(filter.label !== 'Cancelled') { 
                             filter.display = true;
                         }

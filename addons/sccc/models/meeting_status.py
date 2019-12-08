@@ -7,4 +7,4 @@ class MeetingStatus(models.Model):
   color = fields.Char('Color')
 
   # Relations
-  meetings  = fields.One2many('sccc.calendar', 'status', string='Meetings')
+  meetings  = fields.One2many('sccc.calendar', 'meeting_status', string='Meetings')

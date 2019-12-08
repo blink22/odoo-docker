@@ -14,8 +14,8 @@ odoo.define('sccc.CalendarModel', function (require) {
         },
         _loadCalendar: function () {
             var self = this;
-            self.data.filters['status'] = {
-                fieldName: "status",
+            self.data.filters['meeting_status'] = {
+                fieldName: "meeting_status",
                 title: "Status",
                 filters: [],
                 write_model: 'sccc.meeting_status',
@@ -72,7 +72,7 @@ odoo.define('sccc.CalendarModel', function (require) {
                 }
             }
             var field = this.fields[filter.fieldName];
-            if(filter.fieldName === 'status') {
+            if(filter.fieldName === 'meeting_status') {
                 return this._rpc({
                     model: 'sccc.meeting_status',
                     method: 'search_read',
