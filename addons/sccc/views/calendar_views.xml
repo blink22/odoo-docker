@@ -11,7 +11,7 @@
                       <field name="provider"/>
                       <field name="start_date"/>
                       <field name="end_date"/>
-                      <field name="status"/>
+                      <field name="meeting_status"/>
                       <field name="location"/>
                       <field name="room"/>
                       <field name="create_date"/>
@@ -29,7 +29,7 @@
                       <field name="provider"/>
                       <field name="start_date"/>
                       <field name="end_date"/>
-                      <field name="status"/>
+                      <field name="meeting_status"/>
                       <field name="location"/>
                       <field name="room"/>
                   </tree>
@@ -45,7 +45,7 @@
                         <group>
                           <field name="name"/>
                           <field name="files" widget="many2many_tags"/>
-                          <field name="status" options="{'no_create_edit': True}"/>
+                          <field name="meeting_status" options="{'no_create_edit': True}"/>
                         </group>
                         <notebook>
                         <page name="general_info" string="General Info">
@@ -114,7 +114,7 @@
                     <field name="files"/>
                     <field name="location"/>
                     <field name="room"/>
-                    <field name="status" write_field="name" options="{'no_create_edit': True}"/>
+                    <field name="meeting_status" write_field="name" options="{'no_create_edit': True}"/>
                 </calendar>
             </field>
     </record>

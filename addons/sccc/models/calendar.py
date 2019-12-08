@@ -37,7 +37,7 @@ class Calendar(models.Model):
     until_count = fields.Integer('Number of repetitions')
 
     # Relations
-    status = fields.Many2one('sccc.meeting_status', string='Status', required=True)
+    meeting_status = fields.Many2one('sccc.meeting_status', string='Status', required=True)
     location = fields.Many2one('sccc.location', string='Location')
     room = fields.Many2one('sccc.room', string='Room')
     
@@ -52,14 +52,14 @@ class Calendar(models.Model):
     account_moves = fields.Many2many('account.move', 'account_move_calendar_rel', string='Account Invoices')
     payments = fields.Many2many('account.payment', 'account_payment_calendar_rel', string='Payments')
 
-    @api.onchange('status')
+    @api.onchange('meeting_status')
     def selected_status(self):
-        if self.status.name == 'Cancelled':
+        if self.meeting_status.name == 'Cancelled':
             self.room = False
 
     @api.onchange('room')
     def selected_room(self):
-        if self.status.name == 'Cancelled':
+        if self.meeting_status.name == 'Cancelled':
             self.room = False
 
     @api.depends('provider') 
@@ -78,7 +78,7 @@ class Calendar(models.Model):
                     meeting.combination += str(client.last_name)
 
             meeting.combination += '\n'
-            meeting.combination += str(meeting.status.name)
+            meeting.combination += str(meeting.meeting_status.name)
 
     @api.model
     def create(self, form_object):
