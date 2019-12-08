@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <data noupdate="1">
+    <record id="meeting_status_1" model="sccc.meeting_status">
+      <field name="name">Hold</field>
+      <field name="color">#EDB183</field>
+    </record>
+    <record id="meeting_status_2" model="sccc.meeting_status">
+      <field name="name">Match</field>
+      <field name="color">#A4D0D8</field>
+    </record>
+    <record id="meeting_status_3" model="sccc.meeting_status">
+      <field name="name">Confirmed</field>
+      <field name="color">#B5D99C</field>
+    </record>
+    <record id="meeting_status_4" model="sccc.meeting_status">
+      <field name="name">Cancelled</field>
+      <field name="color">#f8d7da</field>
+    </record>
+  </data>
+</odoo>

@@ -21,10 +21,6 @@ class Calendar(models.Model):
     start_date = fields.Datetime(compute='_compute_start_date')
     end_date = fields.Datetime(compute='_compute_end_date')
     
-    status = fields.Selection([('Hold', 'Hold'), ('Match', 'Match'),
-                                    ('Confirmed', 'Confirmed'), ('Cancelled', 'Cancelled')], 'Status')
-    color = fields.Char('Color', compute='_compute_color')
-
     appointment_type = fields.Selection([('Individual Counseling', 'Individual Counseling'), ('Psychiatry', 'Psychiatry'),
                                     ('TAPP-Individual', 'TAPP-Individual'), ('TAPP-Group', 'TAPP-Group'),
                                     ('Intake', 'Intake'), ('Group Counseling', 'Group Counseling'),
@@ -41,6 +37,7 @@ class Calendar(models.Model):
     until_count = fields.Integer('Number of repetitions')
 
     # Relations
+    status = fields.Many2one('sccc.meeting_status', string='Status', required=True)
     location = fields.Many2one('sccc.location', string='Location')
     room = fields.Many2one('sccc.room', string='Room')
     
@@ -55,16 +52,15 @@ class Calendar(models.Model):
     account_moves = fields.Many2many('account.move', 'account_move_calendar_rel', string='Account Invoices')
     payments = fields.Many2many('account.payment', 'account_payment_calendar_rel', string='Payments')
 
-    @api.depends('status')
-    def _compute_color(self):
-        for meeting in self:
-            meeting.color = ''
-            if meeting.status == 'Hold':
-                meeting.color = '#EDB183'
-            if meeting.status == 'Match':
-                meeting.color = '#A4D0D8'
-            if meeting.status == 'Confirmed':
-                meeting.color = '#B5D99C'
+    @api.onchange('status')
+    def selected_status(self):
+        if self.status.name == 'Cancelled':
+            self.room = False
+
+    @api.onchange('room')
+    def selected_room(self):
+        if self.status.name == 'Cancelled':
+            self.room = False
 
     @api.depends('provider') 
     def _compute_fields_combination(self):
@@ -82,7 +78,7 @@ class Calendar(models.Model):
                     meeting.combination += str(client.last_name)
 
             meeting.combination += '\n'
-            meeting.combination += str(meeting.status)
+            meeting.combination += str(meeting.status.name)
 
     @api.model
     def create(self, form_object):

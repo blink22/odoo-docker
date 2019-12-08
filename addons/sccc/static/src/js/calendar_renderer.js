@@ -8,6 +8,26 @@ odoo.define('sccc.CalendarRenderer', function (require) {
     var rpc = require('web.rpc');
     var count = 1;
     CalendarRenderer.include({
+        getColor: function (key) {
+            if(key === 'Hold') return '#EDB183';
+            if(key === 'Match') return '#A4D0D8';
+            if(key === 'Confirmed') return '#B5D99C';
+            if(key === 'Cancelled') return '';
+
+            if (!key) {
+                return;
+            }
+            if (this.color_map[key]) {
+                return this.color_map[key];
+            }
+            // check if the key is a css color
+            if (typeof key === 'string' && key.match(/^((#[A-F0-9]{3})|(#[A-F0-9]{6})|((hsl|rgb)a?\(\s*(?:(\s*\d{1,3}%?\s*),?){3}(\s*,[0-9.]{1,4})?\))|)$/i)) {
+                return this.color_map[key] = key;
+            }
+            var index = (((_.keys(this.color_map).length + 1) * 5) % 24) + 1;
+            this.color_map[key] = index;
+            return index;
+        },
         _initCalendar: function () {
             var self = this;
 
@@ -59,11 +79,13 @@ odoo.define('sccc.CalendarRenderer', function (require) {
                         }
                     }
                     element.find('.fc-content .fc-time').text(display_hour);
-
-                    element.find('.fc-bg').css({background: event.record.color});
+                    element.find('.fc-content').css({'text-align': 'justify', '-webkit-text-emphasis': 'filled'})
+                    if(event.record && event.record.status) {
+                        element.find('.fc-bg').css({background: self.getColor(event.record.status[1])});
+                    }
                 },
                 // Dirty hack to ensure a correct first render
-                eventAfterAllRender: function () {
+                eventAfterAllRender: function () {                    
                     $(window).trigger('resize');
                     if(count === 1) {
                         var htmlColleaction = document.getElementsByClassName('o_calendar_button_today btn btn-primary');
@@ -74,6 +96,11 @@ odoo.define('sccc.CalendarRenderer', function (require) {
                     }
                     self.state.filters.location.filters.forEach(filter => {
                         filter.display = true;
+                    });
+                    self.state.filters.status.filters.forEach(filter => {
+                        if(filter.label !== 'Cancelled') { 
+                            filter.display = true;
+                        }
                     });
                 },
                 viewRender: function (view) {
@@ -103,13 +130,11 @@ odoo.define('sccc.CalendarRenderer', function (require) {
                     _.each(Object.entries(result[0]), function (column) {
                         var location_id = result[1][column[0]];
                         var location = self.state.filters.location.filters.find((item) => item.value === location_id);
-                        if(location) {
-                            if(location.active) {
-                                self.$calendar.fullCalendar('addResource', {
+                        if(location && location.active) {
+                            self.$calendar.fullCalendar('addResource', {
                                 id: column[0],
                                 title: column[1]
-                                });
-                            }
+                            });
                         }
                     });
                 });
