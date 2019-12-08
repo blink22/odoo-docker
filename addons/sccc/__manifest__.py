@@ -26,6 +26,10 @@
     # always loaded
     'data': [
         'security/ir.model.access.csv',
+
+        'data/meeting_status_seed.xml',
+        'data/appointment_type_seed.xml',
+
         'views/assets.xml',
         'views/menu_views.xml',
         'views/files_views.xml',

@@ -21,26 +21,26 @@ class Files(models.Model):
                                   ('6', 'Teen')], 'If Group:')
     
     # Appointment types
-    appointment_type = fields.Selection([
-        ('1', 'Individual Counseling'),
-        ('2', 'Psychiatry'),
-        ('3', 'TAPP - Individual'),
-        ('4', 'TAPP - Group'),
-        ('5', 'Intake'),
-        ('6', 'Group Counseling'),
-        ('7', 'Couples/Family Counseling'),
-        ('8', 'WeCounsel'),
-        ('9', 'Other')
-    ], 'Appointment Type')
-    type_1 = fields.Boolean('Individual Counseling')
-    type_2 = fields.Boolean('Psychiatry')
-    type_3 = fields.Boolean('TAPP - Individual')
-    type_4 = fields.Boolean('TAPP - Group')
-    type_5 = fields.Boolean('Intake')
-    type_6 = fields.Boolean('Group Counseling')
-    type_7 = fields.Boolean('Couples/Family Counseling')
-    type_8 = fields.Boolean('WeCounsel')
-    type_9 = fields.Boolean('Other')
+    # appointment_type = fields.Selection([
+    #     ('1', 'Individual Counseling'),
+    #     ('2', 'Psychiatry'),
+    #     ('3', 'TAPP - Individual'),
+    #     ('4', 'TAPP - Group'),
+    #     ('5', 'Intake'),
+    #     ('6', 'Group Counseling'),
+    #     ('7', 'Couples/Family Counseling'),
+    #     ('8', 'WeCounsel'),
+    #     ('9', 'Other')
+    # ], 'Appointment Type')
+    # type_1 = fields.Boolean('Individual Counseling')
+    # type_2 = fields.Boolean('Psychiatry')
+    # type_3 = fields.Boolean('TAPP - Individual')
+    # type_4 = fields.Boolean('TAPP - Group')
+    # type_5 = fields.Boolean('Intake')
+    # type_6 = fields.Boolean('Group Counseling')
+    # type_7 = fields.Boolean('Couples/Family Counseling')
+    # type_8 = fields.Boolean('WeCounsel')
+    # type_9 = fields.Boolean('Other')
 
     hold = fields.Boolean('Double Fee Hold')
 
@@ -75,6 +75,7 @@ class Files(models.Model):
     at_risk_color = fields.Integer('At-Risk-Color', compute='compute_file_risk')
 
     # Relations
+    appointment_types = fields.Many2many('sccc.appointment_type', 'appointment_type_file_rel', string='Appointment Type')
     provider = fields.Many2many('sccc.provider', 'provider_file_rel', string='Provider')
     meetings = fields.Many2many('sccc.calendar', 'calendar_file_rel', string='Meetings')
     sessions = fields.Many2many('sccc.sessions', 'sessions_file_rel', string='Sessions')
