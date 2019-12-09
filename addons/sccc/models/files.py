@@ -19,28 +19,6 @@ class Files(models.Model):
                                   ('4', 'Best Practice Parenting'),
                                   ('5', 'Rage Resolution & Stress Navigation'),
                                   ('6', 'Teen')], 'If Group:')
-    
-    # Appointment types
-    # appointment_type = fields.Selection([
-    #     ('1', 'Individual Counseling'),
-    #     ('2', 'Psychiatry'),
-    #     ('3', 'TAPP - Individual'),
-    #     ('4', 'TAPP - Group'),
-    #     ('5', 'Intake'),
-    #     ('6', 'Group Counseling'),
-    #     ('7', 'Couples/Family Counseling'),
-    #     ('8', 'WeCounsel'),
-    #     ('9', 'Other')
-    # ], 'Appointment Type')
-    # type_1 = fields.Boolean('Individual Counseling')
-    # type_2 = fields.Boolean('Psychiatry')
-    # type_3 = fields.Boolean('TAPP - Individual')
-    # type_4 = fields.Boolean('TAPP - Group')
-    # type_5 = fields.Boolean('Intake')
-    # type_6 = fields.Boolean('Group Counseling')
-    # type_7 = fields.Boolean('Couples/Family Counseling')
-    # type_8 = fields.Boolean('WeCounsel')
-    # type_9 = fields.Boolean('Other')
 
     hold = fields.Boolean('Double Fee Hold')
 

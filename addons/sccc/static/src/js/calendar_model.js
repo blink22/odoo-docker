@@ -14,13 +14,6 @@ odoo.define('sccc.CalendarModel', function (require) {
         },
         _loadCalendar: function () {
             var self = this;
-            self.data.filters['meeting_status'] = {
-                fieldName: "meeting_status",
-                title: "Status",
-                filters: [],
-                write_model: 'sccc.meeting_status',
-                write_field: 'name'
-            }
             return this._super.apply(this, arguments).then(function () {
                 self._compute_columns(self.data, self.data.data);
             });
@@ -98,6 +91,54 @@ odoo.define('sccc.CalendarModel', function (require) {
                             label: record.name,
                             active: !f || f.active,
                             avatar_model: 'sccc.meeting_status',
+                            color_index: record.name
+                        };
+                    });
+                    records.sort(function (f1,f2) {
+                        return _.string.naturalCmp(f2.label, f1.label);
+                    });
+                    filter.filters = records;
+                });
+            } else if(filter.fieldName === 'provider') {
+                return this._rpc({
+                    model: 'sccc.provider',
+                    method: 'search_read',
+                    domain: [],
+                    fields: [filter.write_field],
+                }).then(function (res) {
+                    var records = _.map(res, function (record) {
+                        var value = record.id;
+                        var f = _.find(filter.filters, function (f) {return f.value === value;});
+                        return {
+                            display: true,
+                            value: record.id,
+                            label: record.name,
+                            active: !f || f.active,
+                            avatar_model: 'sccc.provider',
+                            color_index: record.name
+                        };
+                    });
+                    records.sort(function (f1,f2) {
+                        return _.string.naturalCmp(f2.label, f1.label);
+                    });
+                    filter.filters = records;
+                });
+            } else if(filter.fieldName === 'files') {
+                return this._rpc({
+                    model: 'sccc.file',
+                    method: 'search_read',
+                    domain: [],
+                    fields: [filter.write_field],
+                }).then(function (res) {
+                    var records = _.map(res, function (record) {
+                        var value = record.id;
+                        var f = _.find(filter.filters, function (f) {return f.value === value;});
+                        return {
+                            display: true,
+                            value: record.id,
+                            label: record.name,
+                            active: !f || f.active,
+                            avatar_model: 'sccc.file',
                             color_index: record.name
                         };
                     });

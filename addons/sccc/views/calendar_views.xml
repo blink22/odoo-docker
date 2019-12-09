@@ -109,12 +109,12 @@
             <field name="model">sccc.calendar</field>
             <field name="arch" type="xml">
                 <calendar string="Calendar" date_start="start_date" date_stop="end_date" color="location" mode="day" event_open_popup="True">
-                    <field name="user_ids" write_model="res.users" write_field="name"/>
-                    <field name="provider"/>
-                    <field name="files"/>
+                    <!-- <field name="user_ids" write_model="res.users" write_field="name"/> -->
+                    <field name="provider" write_model="sccc.provider" write_field="name"/>
+                    <field name="files" write_model="sccc.file" write_field="name"/>
                     <field name="location"/>
                     <field name="room"/>
-                    <field name="meeting_status" write_field="name" options="{'no_create_edit': True}"/>
+                    <field name="meeting_status" write_model="sccc.meeting_status" write_field="name"/>
                 </calendar>
             </field>
     </record>
