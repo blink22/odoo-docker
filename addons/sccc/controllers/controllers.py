@@ -18,3 +18,14 @@ from odoo import http
 #         return http.request.render('sccc.object', {
 #             'object': obj
 #         })
+class Sccc(http.Controller):
+    # example request is
+    # http://localhost:8069/square/payments/webhook/
+    # body = {"params": {"data":"123"}}
+    # headers = Content-Type:application/json
+    @http.route('/square/payments/webhook', type='json', auth='public', methods=['POST'])
+    def fun(self, **post):
+        x = post.get('data')
+        # print('post', post)
+        # print('value', x)
+        return x
