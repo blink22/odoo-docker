@@ -16,32 +16,36 @@ class SquarePayment(models.Model):
   square_status = fields.Char('SquareStatus')
   square_source = fields.Char('SquareSource')
 
-  @api.model
-  def search_read(self, domain=None, fields=None, offset=0, limit=None, order=None):
-    http = urllib3.PoolManager()
-    URL = 'https://connect.squareup.com/v2/payments'
-    payments = http.request('GET', URL, 
-        headers={
-         'Square-Version': '2019-11-20',
-         'Authorization': 'Bearer EAAAEIajyYnvAZdDg-UcJP-2c1hPxDrnte9MUKOh1-myR-zG4yOLGaaJrRmrnsmJ'
-        }
-    )
-    payments = json.loads(payments.data.decode('utf-8'))
-    records = []
-    for payment in payments['payments']:
-      records.append(self.map_values(payment))
-    return records
+  # @api.model
+  # def search_read(self, domain=None, fields=None, offset=0, limit=None, order=None):
+  #   http = urllib3.PoolManager()
+  #   URL = 'https://connect.squareup.com/v2/payments'
+  #   payments = http.request('GET', URL, 
+  #       headers={
+  #        'Square-Version': '2019-11-20',
+  #        'Authorization': 'Bearer EAAAEIajyYnvAZdDg-UcJP-2c1hPxDrnte9MUKOh1-myR-zG4yOLGaaJrRmrnsmJ'
+  #       }
+  #   )
+  #   payments = json.loads(payments.data.decode('utf-8'))
+  #   records = []
+  #   for payment in payments['payments']:
+  #     records.append(self.map_values(payment))
+  #   return records
   
-  def map_values(self, payment):
-    return {
-      'square_payment_id': payment['id'],
-      'square_created_at': payment['created_at'],
-      'square_amount': payment['amount_money']['amount'],
-      'square_amount_currency': payment['amount_money']['currency'],
-      'square_total': payment['total_money']['amount'],
-      'square_total_currency': payment['total_money']['currency'],
-      'square_order_id': payment['order_id'],
-      'square_location_id': payment['location_id'],
-      'square_status': payment['status'],
-      'square_source': payment['source_type']
-    }
+  @api.model
+  def create(self, form_object):
+    return super(SquarePayment, self).create(form_object)
+
+  # def map_values(self, payment):
+  #   return {
+  #     'square_payment_id': payment['id'],
+  #     'square_created_at': payment['created_at'],
+  #     'square_amount': payment['amount_money']['amount'],
+  #     'square_amount_currency': payment['amount_money']['currency'],
+  #     'square_total': payment['total_money']['amount'],
+  #     'square_total_currency': payment['total_money']['currency'],
+  #     'square_order_id': payment['order_id'],
+  #     'square_location_id': payment['location_id'],
+  #     'square_status': payment['status'],
+  #     'square_source': payment['source_type']
+  #   }
